@@ -1,0 +1,73 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+import org.eu.awesomekalin.jta.mod.BuildTools
+
+plugins {
+    id "net.minecraftforge.gradle" version "+"
+}
+
+
+final BuildTools buildTools = new BuildTools(minecraftVersion, "forge", project)
+
+minecraft {
+    mappings channel: "official", version: minecraftVersion
+    runs {
+        configureEach {
+            property "forge.logging.markers", "REGISTRIES"
+            property "forge.logging.console.level", "debug"
+        }
+        client {}
+        server { args "--nogui" }
+    }
+}
+
+sourceSets.main.resources { srcDir "src/generated/resources" }
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(buildTools.javaLanguageVersion))
+    }
+    withSourcesJar()
+    withJavadocJar()
+}
+
+tasks.register("setupFiles") {
+    copy {
+        outputs.upToDateWhen { false }
+        from "src/main/mods.template.toml"
+        into "src/main/resources/META-INF"
+        filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
+        rename "(.+).template.toml", "\$1.toml"
+    }
+
+    delete fileTree("src/main/java/eu/org/awesomekalin/jta/mod")
+    delete fileTree("src/main/resources/assets")
+    delete fileTree("src/main/resources/data")
+
+    copy {
+        outputs.upToDateWhen { false }
+        from "../fabric/src/main/java/eu/org/awesomekalin/jta/mod"
+        into "src/main/java/eu/org/awesomekalin/jta/mod"
+    }
+
+    copy {
+        outputs.upToDateWhen { false }
+        from "../fabric/src/main/resources/assets"
+        into "src/main/resources/assets"
+    }
+
+    copy {
+        outputs.upToDateWhen { false }
+        from "../fabric/src/main/resources/data"
+        into "src/main/resources/data"
+    }
+}
+
+build {
+    doLast {
+        buildTools.copyBuildFile()
+    }
+}
