@@ -33,3 +33,4 @@ forge/build
 fabric/build
 buildSrc/build
 *run*
+!gradle/*
