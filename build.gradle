@@ -1,5 +1,6 @@
 plugins {
 	id "java"
+	id "com.github.johnrengelman.shadow" version "+" apply false
 }
 
 group "org.eu.awesomekalin.jta"
@@ -7,13 +8,35 @@ version rootProject.properties.version
 
 subprojects {
 	apply plugin: "java"
+	apply plugin: "com.github.johnrengelman.shadow"
+
+	configurations {
+		shadowImplementation
+		implementation.extendsFrom shadowImplementation
+	}
 
 	dependencies {
 		compileOnly "com.google.code.findbugs:jsr305:+"
+		shadowImplementation "org.mtr:Minecraft-Mappings-common:0.0.1"
+		shadowImplementation "com.github.jonafanho:Shadow-Libraries:master-SNAPSHOT"
 	}
 
 	repositories {
+		flatDir { dirs "../libs" }
 		maven { url "https://jitpack.io" }
+	}
+
+	shadowJar {
+		configurations = [project.configurations.shadowImplementation]
+		minimize {
+			exclude(dependency("org.mtr:Minecraft-Mappings-common:.*"))
+			exclude(dependency("org.mtr:Minecraft-Mappings-fabric-${minecraftVersion}:.*"))
+			exclude(dependency("org.mtr:Minecraft-Mappings-forge-${minecraftVersion}:.*"))
+		}
+
+		relocate "com.logisticscraft", "org.mtr.libraries.com.logisticscraft"
+		relocate "de.javagl", "org.mtr.libraries.de.javagl"
+		relocate "io.nayuki", "org.mtr.libraries.io.nayuki"
 	}
 
 	tasks.withType(Javadoc).tap {

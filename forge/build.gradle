@@ -24,6 +24,7 @@ sourceSets.main.resources { srcDir "src/generated/resources" }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
+    shadowImplementation "org.mtr:Minecraft-Mappings-forge-${minecraftVersion}:0.0.1-dev"
 }
 
 java {
@@ -43,14 +44,14 @@ tasks.register("setupFiles") {
         rename "(.+).template.toml", "\$1.toml"
     }
 
-    delete fileTree("src/main/java/eu/org/awesomekalin/jta/mod")
+    delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod")
     delete fileTree("src/main/resources/assets")
     delete fileTree("src/main/resources/data")
 
     copy {
         outputs.upToDateWhen { false }
-        from "../fabric/src/main/java/eu/org/awesomekalin/jta/mod"
-        into "src/main/java/eu/org/awesomekalin/jta/mod"
+        from "../fabric/src/main/java/org/eu/awesomekalin/jta/mod"
+        into "src/main/java/org/eu/awesomekalin/jta/mod"
     }
 
     copy {
@@ -71,3 +72,13 @@ build {
         buildTools.copyBuildFile()
     }
 }
+
+shadowJar {
+    finalizedBy "reobfShadowJar"
+}
+
+reobf {
+    shadowJar {}
+}
+
+assemble.dependsOn shadowJar
