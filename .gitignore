@@ -1,3 +1,11 @@
+# Gradle
+.gradle
+build
+forge/build
+fabric/build
+buildSrc/build
+*run*
+
 # Compiled class file
 *.class
 
@@ -25,12 +33,3 @@ replay_pid*
 
 # IntelliJ IDEA Settings
 .idea
-
-# Gradle
-.gradle
-build
-forge/build
-fabric/build
-buildSrc/build
-*run*
-!gradle/*

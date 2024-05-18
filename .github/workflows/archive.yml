@@ -1,0 +1,29 @@
+name: Upload to Archive.org
+on: push
+
+jobs:
+  job:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: |
+          pip install internetarchive
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+            
+      - name: Create bundle
+        run: git bundle create jesses_transit_addon-${{ github.sha }}.bundle --all
+
+      - name: Upload file to archive.org
+        run: |
+          ia configure -u ${{ secrets.IA_USER }} -p ${{ secrets.IA_PWD }}
+          ia upload jesses_transit_addon-${{ github.sha }} jesses_transit_addon-${{ github.sha }}.bundle --metadata="mediatype:software" --metadata="creator:Octagon Development" --metadata="Jesse" --metadata="title:jesses_transit_addon-${{ github.sha }}" --metadata="scanner:Jesse's Transit Addon Auto-Archive" --metadata="collection:open_source_software" --metadata="subject:pro;Minecraft;mod;forge;fabric;mappings;octagon development;jesse;mtr;transit;addon;minecraft transit railway" --metadata="originalurl:https://github.com/Jesses-Transit-Addon/Jesses-Transit-Addon" --retries 20
