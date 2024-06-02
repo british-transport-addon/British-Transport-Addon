@@ -18,7 +18,8 @@ subprojects {
 	dependencies {
 		compileOnly "com.google.code.findbugs:jsr305:+"
 		shadowImplementation "org.mtr:Minecraft-Mappings-common:0.0.1"
-		shadowImplementation "com.github.jonafanho:Shadow-Libraries:master-SNAPSHOT"
+		shadowImplementation "org.mtr:Shadow-Libraries-net:0.0.1"
+		shadowImplementation "org.mtr:Shadow-Libraries-util:0.0.1"
 	}
 
 	repositories {
@@ -27,12 +28,8 @@ subprojects {
 	}
 
 	shadowJar {
+		minimize()
 		configurations = [project.configurations.shadowImplementation]
-		minimize {
-			exclude(dependency("org.mtr:Minecraft-Mappings-common:.*"))
-			exclude(dependency("org.mtr:Minecraft-Mappings-fabric-${minecraftVersion}:.*"))
-			exclude(dependency("org.mtr:Minecraft-Mappings-forge-${minecraftVersion}:.*"))
-		}
 
 		relocate "com.logisticscraft", "org.mtr.libraries.com.logisticscraft"
 		relocate "de.javagl", "org.mtr.libraries.de.javagl"
