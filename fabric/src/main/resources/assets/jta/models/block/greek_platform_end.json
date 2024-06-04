@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [256, 128],
 	"textures": {
-		"2": "jta:block/greek_platform_end"
+		"2": "jta:block/greek_platform_end",
+		"particle": "jta:block/greek_platform_end"
 	},
 	"elements": [
 		{
