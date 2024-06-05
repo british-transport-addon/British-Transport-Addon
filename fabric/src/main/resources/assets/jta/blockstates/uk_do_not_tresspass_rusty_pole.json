@@ -1,0 +1,34 @@
+{
+    "variants": {
+        "facing=north,half=lower": {
+            "model": "jta:block/rusty_no_tresspass_bottom"
+        },
+        "facing=north,half=upper": {
+            "model": "jta:block/rusty_no_tresspass_top"
+        },
+        "facing=south,half=lower": {
+            "model": "jta:block/rusty_no_tresspass_bottom",
+            "y": 180
+        },
+        "facing=south,half=upper": {
+            "model": "jta:block/rusty_no_tresspass_top",
+            "y": 180
+        },
+        "facing=east,half=upper": {
+            "model": "jta:block/rusty_no_tresspass_top",
+            "y": 90
+        },
+        "facing=east,half=lower": {
+            "model": "jta:block/rusty_no_tresspass_bottom",
+            "y": 90
+        },
+        "facing=west,half=lower": {
+            "model": "jta:block/rusty_no_tresspass_bottom",
+            "y": -90
+        },
+        "facing=west,half=upper": {
+            "model": "jta:block/rusty_no_tresspass_top",
+            "y": -90
+        }
+    }
+}

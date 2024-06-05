@@ -48,9 +48,16 @@ tasks.register("setupFiles") {
         rename "(.+).template.toml", "\$1.toml"
     }
 
+    delete fileTree("src/main/java/org/mtr/mod")
     delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod")
     delete fileTree("src/main/resources/assets")
     delete fileTree("src/main/resources/data")
+
+    copy {
+        outputs.upToDateWhen { false }
+        from "../fabric/src/main/java/org/mtr/mod"
+        into "src/main/java/org/mtr/mod"
+    }
 
     copy {
         outputs.upToDateWhen { false }
