@@ -24,5 +24,15 @@
     "depends": {
         "fabric": "*",
         "minecraft": "@minecraft@"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.discord": "https://discord.gg/dHbppMjwRF",
+                "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/jesses-transit-addon",
+                "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
+                "modmenu.modrinth": "https://modrinth.com/mod/jta"
+            }
+        }
     }
 }
