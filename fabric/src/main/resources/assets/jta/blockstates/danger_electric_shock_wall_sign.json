@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/danger_electric_shock_wall_sign"
+        },
+        "facing=south": {
+            "model": "jta:block/danger_electric_shock_wall_sign",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/danger_electric_shock_wall_sign",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/danger_electric_shock_wall_sign",
+            "y": -90
+        }
+    }
+}
