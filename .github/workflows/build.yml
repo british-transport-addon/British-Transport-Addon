@@ -55,7 +55,7 @@ jobs:
           upload_translations: false
           download_translations: true
           push_translations: true
-          create_pull_request: false
+          create_pull_request: true
           project_id: '685566'
           token: ${{ secrets.CROWDIN_API_KEY }}
           config: 'crowdin.yml'
