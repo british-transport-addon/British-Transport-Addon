@@ -1,0 +1,3 @@
+files:
+  - source: /fabric/src/main/resources/assets/jta/lang/en_us.json
+    translation: /%locale_with_underscore%.json

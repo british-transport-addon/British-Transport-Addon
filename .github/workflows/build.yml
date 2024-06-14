@@ -47,13 +47,12 @@ jobs:
       - name: Upload Translations to Crowdin
         env:
           MY_KEY: ${{ secrets.CROWDIN_API_KEY }}
-        if: ${{ env.MY_KEY != '' && github.ref == 'refs/heads/master' }}
         uses: crowdin/github-action@master
         with:
           upload_sources: true
           upload_translations: false
-          download_translations: false
-          push_translations: false
+          download_translations: true
+          push_translations: true
           create_pull_request: false
           project_id: '685566'
           token: ${{ secrets.CROWDIN_API_KEY }}
