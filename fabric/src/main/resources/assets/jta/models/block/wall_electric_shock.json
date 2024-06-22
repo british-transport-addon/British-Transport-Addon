@@ -1,0 +1,51 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [128, 193],
+	"textures": {
+		"0": "jta:block/danger_electric_shock",
+		"particle": "jta:block/danger_electric_shock"
+	},
+	"elements": [
+		{
+			"from": [4.5, 2, -0.1],
+			"to": [10.9, 11.6, -0.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4.8, 3.4, -1.9]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.79585], "texture": "#missing"},
+				"south": {"uv": [1.125, 1.16062, 1.925, 1.95648], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.79585], "texture": "#missing"},
+				"up": {"uv": [0, 0, 0.8, 0], "rotation": 180, "texture": "#missing"},
+				"down": {"uv": [0, 0, 0.8, 0], "rotation": 180, "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, 8.5]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0, 8.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -47, 0],
+			"translation": [-1.5, 2, 3]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -47, 0],
+			"translation": [-1.5, 2, 3]
+		},
+		"ground": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, 5.75, 0]
+		},
+		"gui": {
+			"translation": [0, -0.25, 0],
+			"scale": [1.58, 1.58, 1.58]
+		},
+		"fixed": {
+			"rotation": [180, 0, 180],
+			"translation": [0, 0, -7]
+		}
+	}
+}

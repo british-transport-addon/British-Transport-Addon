@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/metrolink_contactless_reader"
+        },
+        "facing=south": {
+            "model": "jta:block/metrolink_contactless_reader",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/metrolink_contactless_reader",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/metrolink_contactless_reader",
+            "y": -90
+        }
+    }
+}

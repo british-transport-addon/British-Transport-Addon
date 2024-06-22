@@ -1,7 +1,22 @@
 {
 	"block.jta.greek_platform_end": "Greek Platform End",
-	"block.jta.uk_do_not_tresspass_rusty_pole": "UK Do Not Trespass with Rusty Pole",
-	"block.jta.danger_electric_shock_wall_sign": "Danger Electric Shock Wall Sign",
+	"block.jta.rusty_pole": "Rusty Pole",
+	"block.jta.rusty_electric_shock": "Electric Shock Sign (Rusty Pole)",
+	"block.jta.wall_electric_shock": "Electric Shock Sign (Wall)",
+	"block.jta.rusty_no_trespass": "No Trespass Sign (Rusty Pole)",
+	"block.jta.wall_no_trespass": "No Trespass Sign (Wall)",
+	"block.jta.rusty_stop_look_listen": "Stop Look Listen Sign (Rusty Pole)",
+	"block.jta.wall_stop_look_listen": "Stop Look Listen Sign (Wall)",
+	"block.jta.rusty_level_crossing": "Level Crossing Sign (Rusty Pole)",
+	"block.jta.wall_level_crossing": "Level Crossing Sign (Wall)",
+	"block.jta.rusty_do_not_cross": "Do Not Cross Sign (Rusty Pole)",
+	"block.jta.wall_do_not_cross": "Do Not Cross Sign (Wall)",
+	"block.jta.rusty_no_pavement_parking": "No Pavement Parking Sign (Rusty Pole)",
+	"block.jta.wall_no_pavement_parking": "No Pavement Parking Sign (Wall)",
+	"block.jta.british_trash_bin": "British Trash Bin",
+	"block.jta.metrolink_ticket_machine": "Ticket Machine (Metrolink)",
+	"block.jta.metrolink_contactless_reader": "Contactless Reader (Metrolink)",
+	"block.jta.lime_bricks": "Lime Bricks",
 	"itemGroup.jta.jta_blocks": "JTA Blocks",
-	"itemGroup.jta.jta_wall_signs": "JTA Wall Signs"
+	"itemGroup.jta.jta_signs": "JTA Signs"
 }

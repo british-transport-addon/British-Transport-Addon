@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "jta",
-    "version": "1.0.0-alpha.1",
+    "version": "1.0.0-alpha.3",
     "name": "Jesse's Transit Addon",
     "description": "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod",
     "authors": [
@@ -23,6 +23,17 @@
     ],
     "depends": {
         "fabric": "*",
-        "minecraft": "1.20.4"
+        "minecraft": "1.20.4",
+        "mtr": ">=4.0.0-beta-8 <4.1"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.discord": "https://discord.gg/dHbppMjwRF",
+                "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/jesses-transit-addon",
+                "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
+                "modmenu.modrinth": "https://modrinth.com/mod/jta"
+            }
+        }
     }
 }

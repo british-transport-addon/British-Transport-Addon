@@ -10,7 +10,6 @@ import org.apache.commons.io.IOUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.gradle.api.Project;
-import org.mtr.mapping.mixin.CreateAccessWidener;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,10 +37,6 @@ public class BuildTools {
         version = project.getVersion().toString();
         majorVersion = Integer.parseInt(minecraftVersion.split("\\.")[1]);
         javaLanguageVersion = majorVersion <= 16 ? 8 : majorVersion == 17 ? 16 : 17;
-
-        final Path accessWidenerPath = path.resolve("src/main/resources").resolve(loader.equals("fabric") ? "" : "META-INF");
-        Files.createDirectories(accessWidenerPath);
-        CreateAccessWidener.create(minecraftVersion, loader, accessWidenerPath.resolve(loader.equals("fabric") ? "jta.accesswidener" : "accesstransformer.cfg"));
     }
 
     public String getFabricVersion() {
@@ -69,7 +64,7 @@ public class BuildTools {
     public void copyBuildFile() throws IOException {
         final Path directory = path.getParent().resolve("build/release");
         Files.createDirectories(directory);
-        Files.copy(path.resolve(String.format("build/libs/%s-%s%s.jar", loader, version, loader.equals("fabric") ? "" : "-all")), directory.resolve(String.format("JTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(path.resolve(String.format("build/libs/%s-%s.jar", loader, version)), directory.resolve(String.format("JTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
     }
 
     private static JsonElement getJson(String url) {
