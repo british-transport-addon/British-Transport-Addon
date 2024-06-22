@@ -26,7 +26,7 @@ sourceSets.main.resources { srcDir "src/generated/resources" }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
-    shadowImplementation "org.mtr:Minecraft-Mappings-forge-${minecraftVersion}:0.0.1-dev"
+    implementation "org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server"
     annotationProcessor "org.spongepowered:mixin:+:processor"
 
 }
@@ -83,13 +83,3 @@ build {
         buildTools.copyBuildFile()
     }
 }
-
-shadowJar {
-    finalizedBy "reobfShadowJar"
-}
-
-reobf {
-    shadowJar {}
-}
-
-assemble.dependsOn shadowJar

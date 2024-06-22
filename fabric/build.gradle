@@ -19,10 +19,6 @@ dependencies {
     modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
 }
 
-repositories {
-    maven { url = "https://maven.terraformersmc.com/" }
-}
-
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(buildTools.javaLanguageVersion))
