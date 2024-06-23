@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.wallsigns;
+package org.eu.awesomekalin.jta.mod.blocks;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.jetbrains.annotations.Nullable;
@@ -21,7 +21,7 @@ public class WallSignBase extends DirectionalBlockExtension {
     @Override
     public void onPlaced2(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         assert placer != null;
-        final Direction facing = placer.getHorizontalFacing().rotateYClockwise();
+        final Direction facing = placer.getHorizontalFacing().getOpposite().rotateYClockwise().rotateYClockwise();
         world.setBlockState(pos, state.with(new Property<>(FACING.data), facing.data));
     }
 }
