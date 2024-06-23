@@ -1,9 +1,9 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.*;
+import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
@@ -13,6 +13,8 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 public class BlockInit {
     public static final BlockRegistryObject LIME_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GREEK_PLATFORM_END = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "greek_platform_end"), () -> new Block(new GreekPlatformEnd()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BRITISH_TICKET_BARRIER_ENTRANCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_ticket_barrier_entrance"), () -> new Block(new BritishTicketBarrier(true)), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BRITISH_TICKET_BARRIER_EXIT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_ticket_barrier_exit"), () -> new Block(new BritishTicketBarrier(false)), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_RAIL_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_rail_platform"), () -> new Block(new BritishRailPlatform(BlockHelper.createBlockSettings(true).strength(2), true)), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_TRASH_BIN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_trash_bin"), () -> new Block(new BritishTrashBin()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_TRASH_BIN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_trash_bin_alt"), () -> new Block(new BritishTrashBin()), CreativeTabInit.JTA_BLOCKS);

@@ -4,7 +4,6 @@ import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.BlockInit;
 import org.eu.awesomekalin.jta.mod.render.SimpleStationOperatorSignRender;
 import org.eu.awesomekalin.jta.mod.render.SimpleStationSignRender;
-import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
 import org.mtr.mapping.holder.Style;
 import org.mtr.mapping.registry.RegistryClient;

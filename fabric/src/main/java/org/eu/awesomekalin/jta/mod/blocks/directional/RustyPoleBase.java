@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
 

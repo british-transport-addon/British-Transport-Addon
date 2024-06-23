@@ -5,8 +5,6 @@ import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
 
-import javax.annotation.Nonnull;
-
 public class BritishTrashBin extends DirectionalBlockExtension {
     public BritishTrashBin() {
         super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
