@@ -15,5 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 
-public class BritishTicketBarrierFence{// requires implementation i dont know what the hell to do with a fence icl
+public class BritishTicketBarrierFence{
+
 }
