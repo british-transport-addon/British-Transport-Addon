@@ -1,39 +1,54 @@
 {
   "variants": {
-    "facing=north,open=closed": {
+    "facing=north,open=closed,locked=true": {
+      "model": "jta:block/british_ticket_barrier_exit_locked"
+    },
+    "facing=east,open=closed,locked=true": {
+      "model": "jta:block/british_ticket_barrier_exit_locked",
+      "y": 90
+    },
+    "facing=south,open=closed,locked=true": {
+      "model": "jta:block/british_ticket_barrier_exit_locked",
+      "y": 180
+    },
+    "facing=west,open=closed,locked=true": {
+      "model": "jta:block/british_ticket_barrier_exit_locked",
+      "y": 270
+    },
+    "facing=north,open=closed,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_closed"
     },
-    "facing=east,open=closed": {
+    "facing=east,open=closed,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_closed",
       "y": 90
     },
-    "facing=south,open=closed": {
+    "facing=south,open=closed,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_closed",
       "y": 180
     },
-    "facing=west,open=closed": {
+    "facing=west,open=closed,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_closed",
       "y": 270
     },
-    "facing=north,open=pending": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed"
+    "facing=north,open=pending,locked=false": {
+      "model": "jta:block/british_ticket_barrier_entrance_pending"
     },
-    "facing=east,open=pending": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed",
+    "facing=east,open=pending,locked=false": {
+      "model": "jta:block/british_ticket_barrier_entrance_pending",
       "y": 90
     },
-    "facing=south,open=pending": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed",
+    "facing=south,open=pending,locked=false": {
+      "model": "jta:block/british_ticket_barrier_entrance_pending",
       "y": 180
     },
-    "facing=west,open=pending": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed",
+    "facing=west,open=pending,locked=false": {
+      "model": "jta:block/british_ticket_barrier_entrance_pending",
       "y": 270
     },
-    "facing=north,open=open": {
+    "facing=north,open=open,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_open"
     },
-    "facing=east,open=open": {
+    "facing=east,open=open,locked=false": {
       "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 90
     },

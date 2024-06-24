@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/british_rail_simple_wall"
+        },
+        "facing=south": {
+            "model": "jta:block/british_rail_simple_wall",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/british_rail_simple_wall",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/british_rail_simple_wall",
+            "y": -90
+        }
+    }
+}

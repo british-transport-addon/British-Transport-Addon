@@ -34,10 +34,11 @@
 			"rotation": [0, 180, 0]
 		},
 		"gui": {
-			"rotation": [0, 180, 0]
+			"translation": [1.25, -0.75, 0]
 		},
 		"head": {
-			"translation": [0, 10, 0]
+			"rotation": [0, -180, 0],
+			"translation": [-1, 14.25, -7.5]
 		}
 	}
 }

@@ -513,11 +513,11 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [90, 0, 0],
-			"translation": [-6, 0, -2.5],
-			"scale": [1.32031, 1.32031, 1.32031]
+			"rotation": [0, 180, 0],
+			"scale": [0.5, 0.5, 0.5]
 		},
 		"gui": {
+			"rotation": [0, -180, 0],
 			"translation": [0, -3, 0],
 			"scale": [0.38867, 0.38867, 0.38867]
 		},
