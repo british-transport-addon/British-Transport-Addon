@@ -4,7 +4,7 @@ license = "LGPL-3.0-only"
 
 [[mods]]
 modId = "jta"
-version = "1.0.0-alpha.1"
+version = "1.0.0-alpha.3"
 displayName = "Jesse's Transit Addon"
 authors = ["AwesomeKalin55", "Jesse"]
 description = "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod"
@@ -22,4 +22,11 @@ modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.4]"
 ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId = "jta"
+mandatory = true
+versionRange = "[4.0.0-beta-8,4.1)"
+ordering = "AFTER"
 side = "BOTH"

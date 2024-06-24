@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/wall_do_not_cross"
+        },
+        "facing=south": {
+            "model": "jta:block/wall_do_not_cross",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/wall_do_not_cross",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/wall_do_not_cross",
+            "y": -90
+        }
+    }
+}

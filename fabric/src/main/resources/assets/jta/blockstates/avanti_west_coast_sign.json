@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/avanti_west_coast_sign"
+        },
+        "facing=south": {
+            "model": "jta:block/avanti_west_coast_sign",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/avanti_west_coast_sign",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/avanti_west_coast_sign",
+            "y": -90
+        }
+    }
+}

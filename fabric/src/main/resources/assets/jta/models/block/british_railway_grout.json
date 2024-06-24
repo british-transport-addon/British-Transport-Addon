@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/british_railway_grout"
+  },
+  "parent": "block/cube_all"
+}

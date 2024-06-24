@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/wall_no_smoking_or_vaping"
+        },
+        "facing=south": {
+            "model": "jta:block/wall_no_smoking_or_vaping",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/wall_no_smoking_or_vaping",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/wall_no_smoking_or_vaping",
+            "y": -90
+        }
+    }
+}

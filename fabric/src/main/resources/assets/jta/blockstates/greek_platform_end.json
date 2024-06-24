@@ -58,7 +58,7 @@
     },
     "facing=west,hinge=right,open=true": {
       "model": "jta:block/greek_platform_end_right_open",
-      "y": 90
+      "y": 270
     }
   }
 }

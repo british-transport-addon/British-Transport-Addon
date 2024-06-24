@@ -1,0 +1,7 @@
+{
+  "parent": "jta:block/british_ticket_barrier_base",
+  "textures": {
+    "sign": "jta:block/lane_control_cross_red_arrow"
+
+  }
+}
