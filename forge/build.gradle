@@ -26,9 +26,16 @@ sourceSets.main.resources { srcDir "src/generated/resources" }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
-    implementation "org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server"
+    implementation fg.deobf("org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server")
     annotationProcessor "org.spongepowered:mixin:+:processor"
 
+}
+
+mixin {
+    add sourceSets.main, "mtr.refmap.json"
+    config "mtr.mixins.json"
+    debug.verbose = true
+    debug.export = true
 }
 
 java {

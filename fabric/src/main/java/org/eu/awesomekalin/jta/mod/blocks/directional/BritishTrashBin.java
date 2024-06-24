@@ -1,12 +1,9 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
-import net.minecraft.text.MutableText;
-import net.minecraft.text.TextContent;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
-import org.mtr.mapping.mapper.ItemHelper;
 import org.mtr.mapping.mapper.PlayerHelper;
 import org.mtr.mapping.mapper.TextHelper;
 
