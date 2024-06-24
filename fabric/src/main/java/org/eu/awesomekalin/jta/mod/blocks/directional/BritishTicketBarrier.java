@@ -26,6 +26,13 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
     }
 
     @Override
+    public void onEntityCollision2(BlockState state, World world, BlockPos blockPos, Entity entity) {
+        if (!state.get(new Property<>(LOCKED.data))) {
+            super.onEntityCollision2(state, world, blockPos, entity);
+        }
+    }
+
+    @Override
     public void onPlaced2(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced2(world, pos, state, placer, itemStack);
         world.setBlockState(pos, state.with(new Property<>(LOCKED.data), false));
