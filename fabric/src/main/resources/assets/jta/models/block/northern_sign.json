@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"0": "jta:block/avanti_west_coast_sign",
-		"particle": "jta:block/avanti_west_coast_sign"
+		"0": "jta:block/northern_sign",
+		"particle": "jta:block/northern_sign"
 	},
 	"elements": [
 		{

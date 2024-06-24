@@ -26,7 +26,10 @@
 	"block.jta.emr_ticket_machine": "Ticket Machine (East Midlands Railway)",
 	"block.jta.metrolink_ticket_machine": "Ticket Machine (Metrolink)",
 	"block.jta.metrolink_contactless_reader": "Contactless Reader (Metrolink)",
+	"block.jta.british_railway_grout": "British Rail Grout",
 	"block.jta.lime_bricks": "Lime Bricks",
+	"block.jta.lime_bricks_slab": "Lime Bricks Slab",
+	"block.jta.lime_bricks_stairs": "Lime Bricks Stairs",
 	"itemGroup.jta.jta_blocks": "JTA Blocks",
 	"itemGroup.jta.jta_signs": "JTA Signs"
 }

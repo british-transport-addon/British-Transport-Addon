@@ -14,6 +14,7 @@ import org.mtr.mapping.mapper.StairsBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
+    public static final BlockRegistryObject BRITISH_RAILWAY_GROUT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_railway_grout"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject LIME_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject LIME_BRICKS_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks_slab"), () -> new Block(new SlabBlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GREEK_PLATFORM_END = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "greek_platform_end"), () -> new Block(new GreekPlatformEnd()), CreativeTabInit.JTA_BLOCKS);
