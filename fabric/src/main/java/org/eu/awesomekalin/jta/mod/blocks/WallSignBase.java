@@ -16,7 +16,7 @@ public class WallSignBase extends DirectionalBlockExtension {
         return IBlock.getVoxelShapeByDirection(0, 0, 0, 16, 16, 1, IBlock.getStatePropertySafe(state, FACING));
     }
     @Override
-    public void onPlaced2(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void onPlaced2(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         assert placer != null;
         final Direction facing = placer.getHorizontalFacing().getOpposite().rotateYClockwise().rotateYClockwise();
         world.setBlockState(pos, state.with(new Property<>(FACING.data), facing.data));
