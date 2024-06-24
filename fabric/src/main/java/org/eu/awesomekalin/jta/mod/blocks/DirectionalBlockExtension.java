@@ -1,6 +1,5 @@
 package org.eu.awesomekalin.jta.mod.blocks;
 
-import org.jetbrains.annotations.Nullable;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.DirectionHelper;
@@ -20,7 +19,7 @@ public abstract class DirectionalBlockExtension extends BlockExtension implement
     }
 
     @Override
-    public void onPlaced2(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void onPlaced2(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         assert placer != null;
         final Direction facing = placer.getHorizontalFacing().getOpposite();
         world.setBlockState(pos, state.with(new Property<>(FACING.data), facing.data));

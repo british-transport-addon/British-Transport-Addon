@@ -1,6 +1,5 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
-import org.jetbrains.annotations.Nullable;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
@@ -29,7 +28,7 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
     }
 
     @Override
-    public void onPlaced2(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+    public void onPlaced2(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         super.onPlaced2(world, pos, state, placer, itemStack);
         world.setBlockState(pos, state.with(new Property<>(LOCKED.data), false));
     }
