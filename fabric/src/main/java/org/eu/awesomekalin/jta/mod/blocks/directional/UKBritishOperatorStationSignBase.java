@@ -8,19 +8,33 @@ import org.mtr.mapping.mapper.BlockHelper;
 
 public class UKBritishOperatorStationSignBase extends DirectionalBlockEntityBase {
 
-    public UKBritishOperatorStationSignBase() {
+    private final Boolean isWhite;
+
+    public UKBritishOperatorStationSignBase(boolean white) {
         super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        isWhite = white;
     }
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new TileEntityBritishRailOperatorSign(blockPos, blockState);
+        if (isWhite) return new UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState); else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
     public static class TileEntityBritishRailOperatorSign extends BlockEntityExtension {
 
         public TileEntityBritishRailOperatorSign(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE.get(), pos, state);
+        }
+
+        public boolean shouldRender() {
+            return true;
+        }
+    }//Yes! Spam!
+
+    public static class TileEntityBritishRailOperatorSignWhite extends BlockEntityExtension {
+
+        public TileEntityBritishRailOperatorSignWhite(BlockPos pos, BlockState state) {
+            super(BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE.get(), pos, state);
         }
 
         public boolean shouldRender() {

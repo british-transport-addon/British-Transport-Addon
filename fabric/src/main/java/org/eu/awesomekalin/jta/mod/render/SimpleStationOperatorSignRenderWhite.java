@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.render;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishRailStationSignSimple;
+import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishOperatorStationSignBase;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -20,7 +20,8 @@ import java.util.Locale;
 
 import static org.eu.awesomekalin.jta.mod.Init.MOD_ID;
 
-public class SimpleStationSignRender<T extends UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+
+public class SimpleStationOperatorSignRenderWhite<T extends UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -31,7 +32,7 @@ public class SimpleStationSignRender<T extends UKBritishRailStationSignSimple.Ti
     private final boolean isDoubleSided;
     private final Identifier font;
 
-    public SimpleStationSignRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
+    public SimpleStationOperatorSignRenderWhite(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;

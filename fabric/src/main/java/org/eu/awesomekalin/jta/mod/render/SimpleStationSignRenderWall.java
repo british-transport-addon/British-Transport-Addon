@@ -19,6 +19,8 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 import javax.annotation.Nonnull;
 import java.util.Locale;
 
+import static org.eu.awesomekalin.jta.mod.Init.MOD_ID;
+
 public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpleWall.TileEntityBritishRailStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
@@ -43,7 +45,7 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Style.getEmptyMapped().withFont(new Identifier(MOD_ID, "britrln")); // TODO custom font not working
 
         if (!entity.shouldRender()) {
             return;
@@ -59,13 +61,12 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
         final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
         final Station station = InitClient.findStation(pos);
-        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled(IGui.formatStationName(station == null ? "" : station.getName())).toUpperCase(Locale.ROOT)), style);
+        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled(IGui.formatStationName(station == null ? "" : station.getName()))), style);
         final int textWidth = GraphicsHolder.getTextWidth(roundelText);
 
-        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX(), pos.getY(), pos.getZ());
+        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
-            graphicsHolderNew.rotateZDegrees(180);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
@@ -81,7 +82,7 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
 
         final float scale = Math.min((maxWidth) / textWidth, maxScale);
         graphicsHolder.scale(scale, scale, scale);
-        graphicsHolder.translate(0, 1.5, 0);
+        graphicsHolder.translate(0, -3.5, 0);
         graphicsHolder.drawText(roundelText, -textWidth / 2, 0, textColor, false, light);
 
         graphicsHolder.pop();
