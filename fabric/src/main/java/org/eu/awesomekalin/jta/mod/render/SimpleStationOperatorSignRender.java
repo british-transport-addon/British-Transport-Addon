@@ -47,7 +47,7 @@ public class SimpleStationOperatorSignRender<T extends UKBritishOperatorStationS
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped().withFont(new Identifier(MOD_ID, "britrln")); // TODO custom font not working
+        final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
         if (!entity.shouldRender()) {
             return;

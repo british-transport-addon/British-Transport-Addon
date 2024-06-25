@@ -35,8 +35,8 @@ public final class InitClient {
                         14 / 16F,
                         0.2F / 8,
                         0,
-                        -.4F,
-                        -0.2F,
+                        -.3F,
+                        -.1F,
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()

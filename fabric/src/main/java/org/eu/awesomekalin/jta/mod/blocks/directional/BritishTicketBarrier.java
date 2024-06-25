@@ -1,10 +1,15 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.mtr.mapping.holder.*;
+import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
+import org.mtr.mod.block.IBlock;
+import org.mtr.mod.data.TicketSystem;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 
 public class BritishTicketBarrier extends BlockTicketBarrier {
@@ -33,4 +38,6 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
         super.onPlaced2(world, pos, state, placer, itemStack);
         world.setBlockState(pos, state.with(new Property<>(LOCKED.data), false));
     }
+
+    // need to find a way to expand the hitbox horizontally coz tbh idk how.
 }

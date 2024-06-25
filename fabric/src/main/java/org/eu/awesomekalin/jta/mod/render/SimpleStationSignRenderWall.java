@@ -45,7 +45,7 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped().withFont(new Identifier(MOD_ID, "britrln")); // TODO custom font not working
+        final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
         if (!entity.shouldRender()) {
             return;
@@ -67,6 +67,8 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
+            graphicsHolderNew.rotateZDegrees(180);
+            graphicsHolderNew.rotateYDegrees(180);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
