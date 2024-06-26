@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/poster_abitofcautionwontkillyou_gap_version"
+        },
+        "facing=south": {
+            "model": "jta:block/poster_abitofcautionwontkillyou_gap_version",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/poster_abitofcautionwontkillyou_gap_version",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/poster_abitofcautionwontkillyou_gap_version",
+            "y": -90
+        }
+    }
+}

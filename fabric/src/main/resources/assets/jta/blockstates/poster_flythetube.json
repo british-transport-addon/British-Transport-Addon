@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/poster_flythetube"
+        },
+        "facing=south": {
+            "model": "jta:block/poster_flythetube",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/poster_flythetube",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/poster_flythetube",
+            "y": -90
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/poster_somewhere_shouldnt"
+        },
+        "facing=south": {
+            "model": "jta:block/poster_somewhere_shouldnt",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/poster_somewhere_shouldnt",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/poster_somewhere_shouldnt",
+            "y": -90
+        }
+    }
+}
