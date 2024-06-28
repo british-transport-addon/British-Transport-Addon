@@ -132,6 +132,16 @@ public class BlockInit {
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_simple"), () -> new Block(new UKBritishRailStationSignSimple()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SIMPLE_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_simple_wall"), () -> new Block(new UKBritishRailStationSignSimpleWall()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_TRI = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_tri"), () -> new Block(new UKBritishRailStationSignTri()), CreativeTabInit.JTA_SIGNS);
+	public static final BlockRegistryObject POSTER_LI_AVOIDING_POLICE_STAFF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_lu_avoiding_police_staff"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_MINDTHECLOSINGDOORS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_mindtheclosingdoors"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_FLYTHETUBE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_flythetube"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_GOINGTOHEATHROW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_goingtoheathrow"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_FREETHENIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_freethenight"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_NIGHTTUBEINFO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_nighttubeinfo"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_ABITOFCAUTIONWONTKILLYOU = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_abitofcautionwontkillyou"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_ABITOFCAUTIONWONTKILLYOU_GAP_VERSION = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_abitofcautionwontkillyou_gap_version"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_LEFT_BAG_UNATTENDED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_left_bag_unattended"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
+	public static final BlockRegistryObject POSTER_SOMEWHERE_SHOULDNT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_somewhere_shouldnt"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }
