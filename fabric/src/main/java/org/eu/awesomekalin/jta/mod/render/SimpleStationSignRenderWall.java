@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.render;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishRailStationSignSimple;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishRailStationSignSimpleWall;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
@@ -17,9 +16,6 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
-import java.util.Locale;
-
-import static org.eu.awesomekalin.jta.mod.Init.MOD_ID;
 
 public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpleWall.TileEntityBritishRailStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;

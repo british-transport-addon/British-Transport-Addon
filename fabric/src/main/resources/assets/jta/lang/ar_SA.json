@@ -1,7 +1,7 @@
 {
-	"block.jta.greek_platform_end": "نهاية المنصة اليونانية",
-	"block.jta.uk_do_not_trespass_rusty_pole": "المملكة المتحدة لا تتخطى مع البولي الروسي",
-	"block.jta.danger_electric_shock_wall_sign": "لوحة حائط الصدمة كهربائي خطر",
-	"itemGroup.jta.jta_blocks": "كتل JTA",
-	"itemGroup.jta.jta_wall_signs": "علامات جدار JTA"
+  "block.jta.greek_platform_end": "نهاية المنصة اليونانية",
+  "block.jta.uk_do_not_trespass_rusty_pole": "المملكة المتحدة لا تتخطى مع البولي الروسي",
+  "block.jta.danger_electric_shock_wall_sign": "لوحة حائط الصدمة كهربائي خطر",
+  "itemGroup.jta.jta_blocks": "كتل JTA",
+  "itemGroup.jta.jta_wall_signs": "علامات جدار JTA"
 }

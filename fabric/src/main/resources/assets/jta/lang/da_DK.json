@@ -1,7 +1,7 @@
 {
-	"block.jta.greek_platform_end": "Græsk Platform Slut",
-	"block.jta.uk_do_not_trespass_rusty_pole": "UK ikke Trespass med Rusty Pole",
-	"block.jta.danger_electric_shock_wall_sign": "Fare Elektrisk Shock Wall Skilt",
-	"itemGroup.jta.jta_blocks": "JTA Blokke",
-	"itemGroup.jta.jta_wall_signs": "JTA Vægskilte"
+  "block.jta.greek_platform_end": "Græsk Platform Slut",
+  "block.jta.uk_do_not_trespass_rusty_pole": "UK ikke Trespass med Rusty Pole",
+  "block.jta.danger_electric_shock_wall_sign": "Fare Elektrisk Shock Wall Skilt",
+  "itemGroup.jta.jta_blocks": "JTA Blokke",
+  "itemGroup.jta.jta_wall_signs": "JTA Vægskilte"
 }

@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/rusty_ahead_only"
-        },
-        "facing=south": {
-            "model": "jta:block/rusty_ahead_only",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/rusty_ahead_only",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/rusty_ahead_only",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_ahead_only"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_ahead_only",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_ahead_only",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_ahead_only",
+      "y": -90
     }
+  }
 }

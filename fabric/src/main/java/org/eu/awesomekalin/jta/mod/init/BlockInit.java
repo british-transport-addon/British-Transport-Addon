@@ -5,12 +5,10 @@ import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.mtr.mapping.holder.Block;
-import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.SlabBlockExtension;
-import org.mtr.mapping.mapper.StairsBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {

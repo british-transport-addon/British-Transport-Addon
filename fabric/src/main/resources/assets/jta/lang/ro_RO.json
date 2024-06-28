@@ -1,7 +1,7 @@
 {
-	"block.jta.greek_platform_end": "Platforma greacă s-a încheiat",
-	"block.jta.uk_do_not_trespass_rusty_pole": "UK Do not Trespass with Rusty Pole",
-	"block.jta.danger_electric_shock_wall_sign": "Semn de perete de şoc electric periculos",
-	"itemGroup.jta.jta_blocks": "Blocuri JTA",
-	"itemGroup.jta.jta_wall_signs": "Semnele Zid JTA"
+  "block.jta.greek_platform_end": "Platforma greacă s-a încheiat",
+  "block.jta.uk_do_not_trespass_rusty_pole": "UK Do not Trespass with Rusty Pole",
+  "block.jta.danger_electric_shock_wall_sign": "Semn de perete de şoc electric periculos",
+  "itemGroup.jta.jta_blocks": "Blocuri JTA",
+  "itemGroup.jta.jta_wall_signs": "Semnele Zid JTA"
 }

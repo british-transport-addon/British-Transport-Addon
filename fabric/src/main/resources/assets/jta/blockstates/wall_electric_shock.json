@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/wall_electric_shock"
-        },
-        "facing=south": {
-            "model": "jta:block/wall_electric_shock",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/wall_electric_shock",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/wall_electric_shock",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_electric_shock"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_electric_shock",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_electric_shock",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_electric_shock",
+      "y": -90
     }
+  }
 }

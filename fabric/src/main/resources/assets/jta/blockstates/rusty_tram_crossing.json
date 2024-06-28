@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/rusty_tram_crossing"
-        },
-        "facing=south": {
-            "model": "jta:block/rusty_tram_crossing",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/rusty_tram_crossing",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/rusty_tram_crossing",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_tram_crossing"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_tram_crossing",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_tram_crossing",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_tram_crossing",
+      "y": -90
     }
+  }
 }

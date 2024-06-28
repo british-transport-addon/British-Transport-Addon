@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/northern_ticket_machine"
-        },
-        "facing=south": {
-            "model": "jta:block/northern_ticket_machine",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/northern_ticket_machine",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/northern_ticket_machine",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/northern_ticket_machine"
+    },
+    "facing=south": {
+      "model": "jta:block/northern_ticket_machine",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/northern_ticket_machine",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/northern_ticket_machine",
+      "y": -90
     }
+  }
 }

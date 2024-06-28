@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/rusty_speed_30"
-        },
-        "facing=south": {
-            "model": "jta:block/rusty_speed_30",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/rusty_speed_30",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/rusty_speed_30",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_speed_30"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_speed_30",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_speed_30",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_speed_30",
+      "y": -90
     }
+  }
 }

@@ -1,7 +1,7 @@
 {
-	"block.jta.greek_platform_end": "Греческая платформа конец",
-	"block.jta.uk_do_not_trespass_rusty_pole": "UK Do Not Trespass with Rusty Pole",
-	"block.jta.danger_electric_shock_wall_sign": "Знак Стена Опасного Электрического Электрического Электричества",
-	"itemGroup.jta.jta_blocks": "Блоки JTA",
-	"itemGroup.jta.jta_wall_signs": "Знаки JTA Wall"
+  "block.jta.greek_platform_end": "Греческая платформа конец",
+  "block.jta.uk_do_not_trespass_rusty_pole": "UK Do Not Trespass with Rusty Pole",
+  "block.jta.danger_electric_shock_wall_sign": "Знак Стена Опасного Электрического Электрического Электричества",
+  "itemGroup.jta.jta_blocks": "Блоки JTA",
+  "itemGroup.jta.jta_wall_signs": "Знаки JTA Wall"
 }

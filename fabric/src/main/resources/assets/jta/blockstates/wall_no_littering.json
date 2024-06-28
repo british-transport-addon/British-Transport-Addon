@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/wall_no_littering"
-        },
-        "facing=south": {
-            "model": "jta:block/wall_no_littering",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/wall_no_littering",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/wall_no_littering",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_no_littering"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_no_littering",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_no_littering",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_no_littering",
+      "y": -90
     }
+  }
 }

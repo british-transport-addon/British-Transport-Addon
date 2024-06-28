@@ -16,9 +16,6 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
-import java.util.Locale;
-
-import static org.eu.awesomekalin.jta.mod.Init.MOD_ID;
 
 public class SimpleStationSignRender<T extends UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;

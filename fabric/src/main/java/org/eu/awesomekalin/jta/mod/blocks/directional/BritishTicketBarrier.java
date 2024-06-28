@@ -1,15 +1,10 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
-import org.mtr.mod.block.IBlock;
-import org.mtr.mod.data.TicketSystem;
 
-import javax.annotation.Nonnull;
 import java.util.List;
 
 public class BritishTicketBarrier extends BlockTicketBarrier {
