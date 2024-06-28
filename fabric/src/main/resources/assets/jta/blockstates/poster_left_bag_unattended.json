@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=north": {
+            "model": "jta:block/poster_left_bag_unattended"
+        },
+        "facing=south": {
+            "model": "jta:block/poster_left_bag_unattended",
+            "y": 180
+        },
+        "facing=east": {
+            "model": "jta:block/poster_left_bag_unattended",
+            "y": 90
+        },
+        "facing=west": {
+            "model": "jta:block/poster_left_bag_unattended",
+            "y": -90
+        }
+    }
+}

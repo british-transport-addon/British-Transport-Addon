@@ -115,6 +115,17 @@
 	"block.jta.lime_bricks": "Lime Bricks",
 	"block.jta.lime_bricks_slab": "Lime Bricks Slab",
 	"block.jta.lime_bricks_stairs": "Lime Bricks Stairs",
+	"block.jta.poster_lu_avoiding_police_staff": "Avoiding Staff and Police BTP Poster",
+	"block.jta.poster_mindtheclosingdoors": "Mind the Closing Doors LU Poster",
+	"block.jta.poster_flythetube": "Fly The Tube LU Poster",
+	"block.jta.poster_goingtoheathrow": "Going To Heathrow LU Poster",
+	"block.jta.poster_freethenight": "Free The Night LU Poster",
+	"block.jta.poster_nighttubeinfo": "LU Night Tube Information Poster",
+	"block.jta.poster_abitofcautionwontkillyou": "A bit of caution won't kill you LU Poster",
+	"block.jta.poster_abitofcautionwontkillyou_gap_version": "Being careful won't hurt you LU Poster",
+	"block.jta.poster_left_bag_unattended": "Have they left a bag unattended BTP Poster",
+	"block.jta.poster_somewhere_shouldnt": "Are they somewhere they shouldn't be BTP Poster",
 	"itemGroup.jta.jta_blocks": "JTA Blocks",
-	"itemGroup.jta.jta_signs": "JTA Signs"
+	"itemGroup.jta.jta_signs": "JTA Signs",
+	"itemGroup.jta.jta_posters": "JTA Posters"
 }
