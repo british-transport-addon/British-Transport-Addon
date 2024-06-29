@@ -3,7 +3,7 @@
   "textures": {
     "1": "jta:block/british_trash_bin/base",
     "2": "jta:block/british_trash_bin/bee",
-    "3": "jta:block/british_trash_bin/iron_trapdoor",
+    "3": "minecraft:block/iron_trapdoor",
     "4": "jta:block/british_trash_bin/basefood",
     "5": "jta:block/british_trash_bin/cig"
   },

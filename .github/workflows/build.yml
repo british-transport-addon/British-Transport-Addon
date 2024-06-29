@@ -39,23 +39,43 @@ jobs:
         with:
           name: Fabric and Forge ${{ matrix.minecraft }}
           path: build/release/
-  crowdin:
+  potato:
+    strategy:
+      fail-fast: false
+      matrix:
+        minecraft: [ 1.16.5, 1.17.1, 1.18.2, 1.19.2, 1.19.4, 1.20.1, 1.20.4 ]
+
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
       - name: Checkout repository
         uses: actions/checkout@main
-      - name: Upload Translations to Crowdin
-        env:
-          MY_KEY: ${{ secrets.CROWDIN_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: crowdin/github-action@master
+
+      - name: Validate gradle wrapper
+        uses: gradle/actions/wrapper-validation@main
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@main
         with:
-          upload_sources: true
-          upload_translations: false
-          download_translations: true
-          push_translations: true
-          create_pull_request: true
-          project_id: '685566'
-          token: ${{ secrets.CROWDIN_API_KEY }}
-          config: 'crowdin.yml'
+          java-version: 17
+          distribution: 'zulu'
+
+      - name: Make gradle wrapper executable
+        run: chmod +x ./gradlew
+
+      - name: Setup Fabric files
+        run: ./gradlew fabric:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
+        
+      - name: Setup Potato PC Textures
+        run: ./gradlew fabric:setupPotato -PminecraftVersion="${{ matrix.minecraft }}"
+
+      - name: Setup Forge files
+        run: ./gradlew forge:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
+
+      - name: Build ${{ matrix.minecraft }}
+        run: ./gradlew build -PminecraftVersion="${{ matrix.minecraft }}"
+
+      - name: Capture release artifacts
+        uses: actions/upload-artifact@main
+        with:
+          name: Fabric and Forge ${{ matrix.minecraft }} Potato PC Version
+          path: build/release/

@@ -1,0 +1,25 @@
+name: Crowdin
+on: push
+
+jobs:
+    crowdin:
+        runs-on: ubuntu-latest
+        permissions: write-all
+        if: github.ref == 'refs/heads/main'
+        steps:
+        - name: Checkout repository
+            uses: actions/checkout@main
+        - name: Upload Translations to Crowdin
+            env:
+            MY_KEY: ${{ secrets.CROWDIN_API_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            uses: crowdin/github-action@master
+            with:
+            upload_sources: true
+            upload_translations: false
+            download_translations: true
+            push_translations: true
+            create_pull_request: true
+            project_id: '685566'
+            token: ${{ secrets.CROWDIN_API_KEY }}
+            config: 'crowdin.yml'
