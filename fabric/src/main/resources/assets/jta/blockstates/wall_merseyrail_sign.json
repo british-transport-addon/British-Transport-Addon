@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_merseyrail_sign"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_merseyrail_sign",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_merseyrail_sign",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_merseyrail_sign",
+      "y": -90
+    }
+  }
+}

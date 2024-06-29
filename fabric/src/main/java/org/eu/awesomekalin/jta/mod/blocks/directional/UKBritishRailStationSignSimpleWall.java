@@ -20,7 +20,7 @@ public class UKBritishRailStationSignSimpleWall extends DirectionalBlockEntityBa
     public static class TileEntityBritishRailStationSign extends BlockEntityExtension {
 
         public TileEntityBritishRailStationSign(BlockPos pos, BlockState state) {
-            super(BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE.get(), pos, state);
+            super(BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE_WALL.get(), pos, state);
         }
 
         public boolean shouldRender() {

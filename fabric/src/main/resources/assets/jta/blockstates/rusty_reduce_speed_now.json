@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_reduce_speed_now"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_reduce_speed_now",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_reduce_speed_now",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_reduce_speed_now",
+      "y": -90
+    }
+  }
+}
