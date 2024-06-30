@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_tramway"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_tramway",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_tramway",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_tramway",
+      "y": -90
+    }
+  }
+}
