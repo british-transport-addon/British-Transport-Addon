@@ -1,4 +1,9 @@
 {
+	"block.jta.aws": "AWS Magnet",
+	"block.jta.british_road_bollard": "British Road Bollard",
+	"block.jta.belisha_base": "Belisha Base",
+	"block.jta.belisha_pole": "Belisha Pole",
+	"block.jta.belisha_top": "Belisha Lamp",
 	"block.jta.greek_platform_end": "Greek Platform End",
 	"block.jta.rusty_pole": "Rusty Pole",
 	"block.jta.rusty_no_entry": "No Entry (Rusty Pole)",
