@@ -12,6 +12,19 @@ public final class InitClient {
 
     public static void init() {
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.MANCHESTER_SIGN_SQUARE,
+                dispatcher -> new ManchesterSignSquareRender<>(
+                        dispatcher,
+                        14 / 16F,
+                        0.2F / 8,
+                        0,
+                        0F,
+                        .5F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
                 dispatcher -> new SimpleStationSignRender<>(
                         dispatcher,
@@ -171,6 +184,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_TURN_RIGHT_AHEAD);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_AHEAD_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_AHEAD_ONLY);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD);
         REGISTRY_CLIENT.init();
     }
 }

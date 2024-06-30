@@ -6,6 +6,14 @@ import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
 public class BlockEntityTypeInit {
+    public static final BlockEntityTypeRegistryObject<ManchesterSignSquare.TileEntityManchesterStationSign> MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "manchester_sign_square"
+            ),
+        ManchesterSignSquare.TileEntityManchesterStationSign::new,
+        BlockInit.MANCHESTER_SIGN_SQUARE::get
+    );
     public static final BlockEntityTypeRegistryObject<UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

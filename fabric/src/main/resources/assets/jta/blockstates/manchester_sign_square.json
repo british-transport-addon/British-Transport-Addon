@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/manchester_square"
+    },
+    "facing=south": {
+      "model": "jta:block/manchester_square",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/manchester_square",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/manchester_square",
+      "y": -90
+    }
+  }
+}

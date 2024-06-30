@@ -9,7 +9,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/lutrack_tunnel_intersection_l/metal047.png
+map_Kd metal047.png
 
 newmtl Material.009
 Ns 250.000000
@@ -19,7 +19,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/lutrack_tunnel_intersection_l/metal036dark.png
+map_Kd metal036dark.png
 
 newmtl Material.010
 Ns 250.000000
@@ -29,7 +29,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/lutrack_tunnel_intersection_l/concrete044dark.png
+map_Kd concrete044dark.png
 
 newmtl Material.011
 Ns 250.000000
@@ -39,7 +39,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/lutrack_tunnel_intersection_l/metal009dark.png
+map_Kd metal009dark.png
 
 newmtl m_2ce78855-7c09-7887-1e53-47e34f69bc4a
 Ns 0.000000
@@ -49,7 +49,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/working/platform_edge.png
+map_Kd platform_edge.png
 
 newmtl m_4a505511-6ab7-2f68-1ccc-871fb03ac5ab
 Ns 0.000000
@@ -59,7 +59,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/working/platform.png
+map_Kd platform.png
 
 newmtl m_9859badb-d317-93cc-15ae-288d6a05158f
 Ns 0.000000
@@ -69,7 +69,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/working/tactile_pavement.png
+map_Kd tactile_pavement.png
 
 newmtl m_bd81134d-f1c7-8e53-0456-788fa3175592
 Ns 0.000000
@@ -79,7 +79,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/working/dont_pass_the_yellow_line.png
+map_Kd dont_pass_the_yellow_line.png
 
 newmtl m_f0c4864a-0399-503b-6a8f-9132ea818df0
 Ns 0.000000
@@ -89,4 +89,4 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:/Users/emzyy/Desktop/Jesses-Transit-Addon/fabric/src/main/resources/assets/jta/rails/working/polished_blackstone.png
+map_Kd polished_blackstone.png
