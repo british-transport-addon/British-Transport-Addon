@@ -1,3 +1,19 @@
 {
-  "parent": "jta:block/aws"
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/aws"
+    },
+    "facing=south": {
+      "model": "jta:block/aws",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/aws",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/aws",
+      "y": -90
+    }
+  }
 }

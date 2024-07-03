@@ -3,6 +3,7 @@ package org.eu.awesomekalin.jta.mod;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.BlockInit;
 import org.eu.awesomekalin.jta.mod.render.*;
+import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.RenderLayer;
 import org.mtr.mapping.holder.Style;
 import org.mtr.mapping.registry.RegistryClient;
@@ -185,6 +186,9 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_AHEAD_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_AHEAD_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD);
+
+        REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
+
         REGISTRY_CLIENT.init();
     }
 }
