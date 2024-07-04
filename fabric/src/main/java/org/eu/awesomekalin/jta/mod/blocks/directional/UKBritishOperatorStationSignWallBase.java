@@ -17,7 +17,9 @@ public class UKBritishOperatorStationSignWallBase extends DirectionalBlockEntity
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        if (isWhite) return new UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState); else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
+        if (isWhite)
+            return new UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
     public static class TileEntityBritishRailOperatorSign extends BlockEntityExtension {

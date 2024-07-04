@@ -6,8 +6,7 @@ import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockWithEntity;
 
-public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implements BlockWithEntity
-{
+public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implements BlockWithEntity {
 
     private final Boolean isWhite;
 
@@ -18,7 +17,8 @@ public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implemen
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        if (isWhite) return new TileEntityBritishRailOperatorSignWhite(blockPos, blockState); else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
+        if (isWhite) return new TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
     public static class TileEntityBritishRailOperatorSign extends BlockEntityExtension {

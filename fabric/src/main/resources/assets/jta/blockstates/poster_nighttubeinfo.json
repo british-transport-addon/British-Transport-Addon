@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/poster_nighttubeinfo"
-        },
-        "facing=south": {
-            "model": "jta:block/poster_nighttubeinfo",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/poster_nighttubeinfo",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/poster_nighttubeinfo",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/poster_nighttubeinfo"
+    },
+    "facing=south": {
+      "model": "jta:block/poster_nighttubeinfo",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/poster_nighttubeinfo",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/poster_nighttubeinfo",
+      "y": -90
     }
+  }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/gray_electrical_box"
+    },
+    "facing=south": {
+      "model": "jta:block/gray_electrical_box",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/gray_electrical_box",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/gray_electrical_box",
+      "y": -90
+    }
+  }
+}

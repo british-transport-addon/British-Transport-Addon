@@ -13,6 +13,7 @@ public class Init {
     public static final String MOD_ID = "jta";
     public static final Logger LOGGER = LogManager.getLogger("Jesses-Transit-Addon");
     public static final Registry REGISTRY = new Registry();
+
     public static void init() {
         BlockInit.INIT();
         BlockEntityTypeInit.INIT();

@@ -1,23 +1,90 @@
 {
-	"credit": "Made with Blockbench",
-	"texture_size": [168, 300],
-	"textures": {
-		"4": "jta:block/free_the_night",
-		"particle": "jta:block/free_the_night"
-	},
-	"elements": [
-		{
-			"from": [5, 1, 0.1],
-			"to": [11, 10, 0.1],
-			"rotation": {"angle": 0, "axis": "y", "origin": [4, 1, 1.1]},
-			"faces": {
-				"north": {"uv": [0, 0, 0.57143, 0.48], "texture": "#4"},
-				"east": {"uv": [0, 0, 0, 0.48], "texture": "#4"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#4"},
-				"west": {"uv": [0, 0, 0, 0.48], "texture": "#4"},
-				"up": {"uv": [0, 0, 0.57143, 0], "texture": "#4"},
-				"down": {"uv": [0, 0, 0.57143, 0], "texture": "#4"}
-			}
-		}
-	]
+  "credit": "Made with Blockbench",
+  "texture_size": [
+    168,
+    300
+  ],
+  "textures": {
+    "4": "jta:block/free_the_night",
+    "particle": "jta:block/free_the_night"
+  },
+  "elements": [
+    {
+      "from": [
+        5,
+        1,
+        0.1
+      ],
+      "to": [
+        11,
+        10,
+        0.1
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          4,
+          1,
+          1.1
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            0.57143,
+            0.48
+          ],
+          "texture": "#4"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0.48
+          ],
+          "texture": "#4"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#4"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0.48
+          ],
+          "texture": "#4"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0.57143,
+            0
+          ],
+          "texture": "#4"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0.57143,
+            0
+          ],
+          "texture": "#4"
+        }
+      }
+    }
+  ]
 }

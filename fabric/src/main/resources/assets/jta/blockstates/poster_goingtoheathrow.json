@@ -1,19 +1,19 @@
 {
-    "variants": {
-        "facing=north": {
-            "model": "jta:block/poster_goingtoheathrow"
-        },
-        "facing=south": {
-            "model": "jta:block/poster_goingtoheathrow",
-            "y": 180
-        },
-        "facing=east": {
-            "model": "jta:block/poster_goingtoheathrow",
-            "y": 90
-        },
-        "facing=west": {
-            "model": "jta:block/poster_goingtoheathrow",
-            "y": -90
-        }
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/poster_goingtoheathrow"
+    },
+    "facing=south": {
+      "model": "jta:block/poster_goingtoheathrow",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/poster_goingtoheathrow",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/poster_goingtoheathrow",
+      "y": -90
     }
+  }
 }

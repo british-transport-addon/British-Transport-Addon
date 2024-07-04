@@ -9,7 +9,7 @@ import javax.annotation.Nonnull;
 public class BelishaTop extends DirectionalBlockExtension {
 
     public BelishaTop() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, (blockState) -> 10).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Nonnull

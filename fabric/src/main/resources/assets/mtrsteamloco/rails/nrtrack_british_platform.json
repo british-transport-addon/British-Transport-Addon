@@ -1,5 +1,5 @@
 {
-    "name": "National Rail - British Platform",
-    "model": "mtrsteamloco:rails/nrtrack_british_platform/track.obj",
-    "repeatInterval": 0.9
+  "name": "National Rail - British Platform",
+  "model": "mtrsteamloco:rails/nrtrack_british_platform/track.obj",
+  "repeatInterval": 0.9
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/belisha_top_with_cover"
+    },
+    "facing=south": {
+      "model": "jta:block/belisha_top_with_cover",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/belisha_top_with_cover",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/belisha_top_with_cover",
+      "y": -90
+    }
+  }
+}

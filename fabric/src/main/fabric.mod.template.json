@@ -1,39 +1,39 @@
 {
-    "schemaVersion": 1,
-    "id": "jta",
-    "version": "@version@",
-    "name": "Jesse's Transit Addon",
-    "description": "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod",
-    "authors": [
-        "AwesomeKalin55",
-        "Jesse"
+  "schemaVersion": 1,
+  "id": "jta",
+  "version": "@version@",
+  "name": "Jesse's Transit Addon",
+  "description": "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod",
+  "authors": [
+    "AwesomeKalin55",
+    "Jesse"
+  ],
+  "license": "LGPL-3.0-only",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.eu.awesomekalin.jta.init.MainFabric"
     ],
-    "license": "LGPL-3.0-only",
-    "icon": "icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "org.eu.awesomekalin.jta.init.MainFabric"
-        ],
-        "client": [
-            "org.eu.awesomekalin.jta.init.MainFabricClient"
-        ]
-    },
-    "mixins": [
-    ],
-    "depends": {
-        "fabric": "*",
-        "minecraft": "@minecraft@",
-        "mtr": ">=4.0.0-beta-8 <4.1"
-    },
-    "custom": {
-        "modmenu": {
-            "links": {
-                "modmenu.discord": "https://discord.gg/dHbppMjwRF",
-                "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/jesses-transit-addon",
-                "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
-                "modmenu.modrinth": "https://modrinth.com/mod/jta"
-            }
-        }
+    "client": [
+      "org.eu.awesomekalin.jta.init.MainFabricClient"
+    ]
+  },
+  "mixins": [
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": "@minecraft@",
+    "mtr": ">=4.0.0-beta-8 <4.1"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/dHbppMjwRF",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/jesses-transit-addon",
+        "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
+        "modmenu.modrinth": "https://modrinth.com/mod/jta"
+      }
     }
+  }
 }

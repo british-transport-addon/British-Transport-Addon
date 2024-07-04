@@ -38,13 +38,13 @@ tasks.register("setupFiles") {
 }
 
 tasks.register("setupPotato") {
-	delete fileTree("src/main/resources/assets/jta/textures")
+    delete fileTree("src/main/resources/assets/jta/textures")
 
-	copy {
-		outputs.upToDateWhen { true }
-		from "../potatoTex"
-		into "src/main/resources/assets/jta/textures"
-	}
+    copy {
+        outputs.upToDateWhen { true }
+        from "../potatoTex"
+        into "src/main/resources/assets/jta/textures"
+    }
 }
 
 build {
