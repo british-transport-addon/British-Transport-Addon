@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_s_car_stop"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_s_car_stop",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_s_car_stop",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_s_car_stop",
+      "y": -90
+    }
+  }
+}

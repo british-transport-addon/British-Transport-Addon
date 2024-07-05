@@ -4,13 +4,13 @@ import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
 
-public class BritishLargeElectricalBox extends DirectionalBlockExtension {
-    public BritishLargeElectricalBox() {
+public class BritishSmallElectricalBox extends DirectionalBlockExtension {
+    public BritishSmallElectricalBox() {
         super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return BlockHelper.shapeUnion(Block.createCuboidShape(-12, 0, 0, 28, 26, 8));
+        return BlockHelper.shapeUnion(Block.createCuboidShape(-2, 0, 0, 18, 26, 8));
     }
 }

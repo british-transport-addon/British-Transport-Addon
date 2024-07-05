@@ -11,6 +11,6 @@ public class BritishElectricalBox extends DirectionalBlockExtension {
 
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return BlockHelper.shapeUnion(Block.createCuboidShape(0, 0, 0, 16, 26, 16));
+        return BlockHelper.shapeUnion(Block.createCuboidShape(-2, 0, 0, 18, 26, 8));
     }
 }

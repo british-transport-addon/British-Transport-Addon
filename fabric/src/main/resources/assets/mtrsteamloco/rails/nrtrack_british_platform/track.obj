@@ -1,4 +1,6 @@
-
+# Blender 3.6.9
+# www.blender.org
+mtllib track.mtl
 o cube
 v -1.715211 1.057377 0.525325
 v -1.596130 1.057370 0.524909

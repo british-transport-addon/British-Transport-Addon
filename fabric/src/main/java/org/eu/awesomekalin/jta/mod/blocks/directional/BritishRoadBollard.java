@@ -11,6 +11,6 @@ public class BritishRoadBollard extends DirectionalBlockExtension {
 
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return BlockHelper.shapeUnion(Block.createCuboidShape(4, 0, 4, 12, 12, 12));
+        return BlockHelper.shapeUnion(Block.createCuboidShape(4, 0, 4, 12, 16, 12));
     }
 }
