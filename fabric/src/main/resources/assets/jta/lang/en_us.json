@@ -1,4 +1,6 @@
 {
+  "block.jta.black_bollard": "Black Bollard",
+  "block.jta.black_large_bollard": "Black Large Bollard",
   "block.jta.cig_pile_1": "Cig Pile 1",
   "block.jta.cig_pile_2": "Cig Pile 2",
   "block.jta.gas_pipeline": "Gas Pipeline",
@@ -20,6 +22,8 @@
   "block.jta.dark_green_tiny_electrical_box": "Tiny Electrical Box (Dark Green)",
   "block.jta.aws": "AWS Magnet",
   "block.jta.british_road_bollard": "British Road Bollard",
+  "block.jta.british_road_bollard_alt": "British Road Bollard (Alt)",
+  "block.jta.british_road_bollard_alt_black": "British Road Bollard (Alt, Black)",
   "block.jta.belisha_base": "Belisha Base",
   "block.jta.belisha_pole": "Belisha Pole",
   "block.jta.belisha_top": "Belisha Lamp",
