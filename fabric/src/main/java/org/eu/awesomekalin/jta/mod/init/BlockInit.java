@@ -15,8 +15,8 @@ public class BlockInit {
     public static final BlockRegistryObject POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "postbox"), () -> new Block(new Postbox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GOLD_POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gold_postbox"), () -> new Block(new Postbox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SPEED_CAMERA = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SPEED_CAMERA_LEFT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_left"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SPEED_CAMERA_RIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_right"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SPEED_CAMERA_LEFT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_left"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SPEED_CAMERA_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_pole"), () -> new Block(new SpeedCameraPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject CIG_PILE_1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_1"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject CIG_PILE_2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_2"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
