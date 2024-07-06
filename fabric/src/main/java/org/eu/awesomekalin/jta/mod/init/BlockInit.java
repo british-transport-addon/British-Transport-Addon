@@ -12,6 +12,8 @@ import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
+    public static final BlockRegistryObject CIG_PILE_1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_1"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject CIG_PILE_2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_2"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GAS_PIPLINE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gas_pipeline"), () -> new Block(new GasPipeline()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_ELECTRICAL_BOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_electrical_box"), () -> new Block(new BritishElectricalBox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GRAY_ELECTRICAL_BOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_electrical_box"), () -> new Block(new BritishElectricalBox()), CreativeTabInit.JTA_BLOCKS);
@@ -68,6 +70,8 @@ public class BlockInit {
     public static final BlockRegistryObject WALL_ONLY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_only"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_REDUCE_SPEED_NOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_reduce_speed_now"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_REDUCE_SPEED_NOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_reduce_speed_now"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_GIVE_WAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_give_way"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_GIVE_WAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_give_way"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_TRAIN_CROSSING = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_train_crossing"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_TRAIN_CROSSING = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_train_crossing"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_TRAM_CROSSING = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_tram_crossing"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
