@@ -45,6 +45,7 @@ public class BlockInit {
     public static final BlockRegistryObject BELISHA_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_pole"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_pole"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_SIDE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_side"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject STREET_LIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "street_light"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_TOP_WITH_COVER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top_with_cover"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_ROAD_BOLLARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_road_bollard"), () -> new Block(new BritishRoadBollard()), CreativeTabInit.JTA_BLOCKS);
