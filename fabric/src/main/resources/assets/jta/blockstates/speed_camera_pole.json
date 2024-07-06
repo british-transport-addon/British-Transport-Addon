@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/speed_camera_pole"
+    },
+    "facing=south": {
+      "model": "jta:block/speed_camera_pole",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/speed_camera_pole",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/speed_camera_pole",
+      "y": -90
+    }
+  }
+}

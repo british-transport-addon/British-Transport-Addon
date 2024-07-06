@@ -12,6 +12,12 @@ import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
+    public static final BlockRegistryObject POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "postbox"), () -> new Block(new Postbox()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject GOLD_POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gold_postbox"), () -> new Block(new Postbox()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SPEED_CAMERA = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SPEED_CAMERA_LEFT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_left"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SPEED_CAMERA_RIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_right"), () -> new Block(new SpeedCamera()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SPEED_CAMERA_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "speed_camera_pole"), () -> new Block(new SpeedCameraPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject CIG_PILE_1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_1"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject CIG_PILE_2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "cig_pile_2"), () -> new Block(new FloorPropBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GAS_PIPLINE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gas_pipeline"), () -> new Block(new GasPipeline()), CreativeTabInit.JTA_BLOCKS);
@@ -32,9 +38,12 @@ public class BlockInit {
     public static final BlockRegistryObject GRAY_TINY_ELECTRICAL_BOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_tiny_electrical_box"), () -> new Block(new BritishTinyElectricalBox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject DARK_GRAY_TINY_ELECTRICAL_BOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "dark_gray_tiny_electrical_box"), () -> new Block(new BritishTinyElectricalBox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_BOLLARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bollard"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_MEDIUM_BOLLARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_medium_bollard"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_LARGE_BOLLARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_large_bollard"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_BASE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_base"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_pole"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_pole"), () -> new Block(new BelishaPole()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BELISHA_SIDE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_side"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_TOP_WITH_COVER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top_with_cover"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_ROAD_BOLLARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_road_bollard"), () -> new Block(new BritishRoadBollard()), CreativeTabInit.JTA_BLOCKS);
@@ -64,6 +73,8 @@ public class BlockInit {
     public static final BlockRegistryObject WALL_STOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_stop"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_TRAMWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_tramway"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_TRAMWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_tramway"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_CCTV = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_cctv"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_CCTV = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_cctv"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_TRAM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_tram"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_TRAM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_tram"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_ONLY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_only"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);

@@ -1,4 +1,6 @@
 {
+  "block.jta.speed_camera": "Speed Camera",
+  "block.jta.speed_camera_pole": "Speed Camera Pole",
   "block.jta.black_bollard": "Black Bollard",
   "block.jta.black_large_bollard": "Black Large Bollard",
   "block.jta.cig_pile_1": "Cig Pile 1",
@@ -35,6 +37,8 @@
   "block.jta.wall_stop": "Stop (Wall)",
   "block.jta.rusty_tramway": "Tramway (Rusty Pole)",
   "block.jta.wall_tramway": "Tramway (Wall)",
+  "block.jta.rusty_cctv": "CCTV (Rusty Pole)",
+  "block.jta.wall_cctv": "CCTV (Wall)",
   "block.jta.rusty_tram": "Tram (Rusty Pole)",
   "block.jta.wall_tram": "Tram (Wall)",
   "block.jta.rusty_only": "Only (Rusty Pole)",
