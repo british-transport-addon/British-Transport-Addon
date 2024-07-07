@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/roof_ball_camera"
+    },
+    "facing=south": {
+      "model": "jta:block/roof_ball_camera",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/roof_ball_camera",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/roof_ball_camera",
+      "y": -90
+    }
+  }
+}

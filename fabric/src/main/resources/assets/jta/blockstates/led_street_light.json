@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/led_street_light"
+    },
+    "facing=south": {
+      "model": "jta:block/led_street_light",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/led_street_light",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/led_street_light",
+      "y": -90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/inset_small_postbox"
+    },
+    "facing=south": {
+      "model": "jta:block/inset_small_postbox",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/inset_small_postbox",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/inset_small_postbox",
+      "y": -90
+    }
+  }
+}
