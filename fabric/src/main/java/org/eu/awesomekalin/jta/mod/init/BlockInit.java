@@ -12,6 +12,7 @@ import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
+    public static final BlockRegistryObject PHONE_BOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "phone_box"), () -> new Block(new Phonebox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SMALL_POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "small_postbox"), () -> new Block(new SmallPostbox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject INSET_SMALL_POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "inset_small_postbox"), () -> new Block(new SmallPostbox()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject POSTBOX = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "postbox"), () -> new Block(new Postbox()), CreativeTabInit.JTA_BLOCKS);
