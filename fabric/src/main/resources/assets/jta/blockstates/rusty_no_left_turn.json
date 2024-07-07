@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_no_left_turn"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_no_left_turn",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_no_left_turn",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_no_left_turn",
+      "y": -90
+    }
+  }
+}

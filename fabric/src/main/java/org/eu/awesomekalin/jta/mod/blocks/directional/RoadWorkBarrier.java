@@ -15,6 +15,6 @@ public class RoadWorkBarrier extends DirectionalBlockExtension {
     @Nonnull
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return BlockHelper.shapeUnion(Block.createCuboidShape(6, 0, 6, 10, 16, 10), Block.createCuboidShape(5, 0, 7, 11, 16, 9), Block.createCuboidShape(7, 0, 5, 9, 16, 11));
+        return BlockHelper.shapeUnion(Block.createCuboidShape(6, 0, -8, 10, 17, 24));
     }
 }
