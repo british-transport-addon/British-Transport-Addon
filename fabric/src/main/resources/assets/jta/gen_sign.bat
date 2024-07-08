@@ -438,13 +438,13 @@ echo }
 rem Item model JSON content
 (
 echo {
-echo.  "parent": "jta:block/%filename%"
+echo.  "parent": "jta:block/rusty_%filename%"
 echo }
 ) > "%models_item_dir%\rusty_%filename%.json"
 
 (
 echo {
-echo.  "parent": "jta:block/%filename%"
+echo.  "parent": "jta:block/wall_%filename%"
 echo }
 ) > "%models_item_dir%\wall_%filename%.json"
 

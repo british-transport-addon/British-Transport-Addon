@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_bikes_pedestrians_seperated"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_bikes_pedestrians_seperated",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_bikes_pedestrians_seperated",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_bikes_pedestrians_seperated",
+      "y": -90
+    }
+  }
+}

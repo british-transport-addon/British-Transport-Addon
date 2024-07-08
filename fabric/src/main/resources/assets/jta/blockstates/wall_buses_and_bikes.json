@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_buses_and_bikes"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_buses_and_bikes",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_buses_and_bikes",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_buses_and_bikes",
+      "y": -90
+    }
+  }
+}
