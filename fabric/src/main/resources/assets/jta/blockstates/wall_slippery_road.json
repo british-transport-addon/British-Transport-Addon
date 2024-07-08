@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_slippery_road"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_slippery_road",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_slippery_road",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_slippery_road",
+      "y": -90
+    }
+  }
+}

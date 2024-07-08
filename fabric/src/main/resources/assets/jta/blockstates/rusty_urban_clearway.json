@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_urban_clearway"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_urban_clearway",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_urban_clearway",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_urban_clearway",
+      "y": -90
+    }
+  }
+}

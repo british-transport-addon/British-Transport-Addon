@@ -4,7 +4,7 @@ license = "LGPL-3.0-only"
 
 [[mods]]
 modId = "jta"
-version = "1.0.0-alpha.4"
+version = "1.0.0-alpha.5"
 displayName = "Jesse's Transit Addon"
 authors = ["AwesomeKalin55", "Jesse"]
 description = "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod"

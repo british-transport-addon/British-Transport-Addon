@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_road_narrows_right"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_road_narrows_right",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_road_narrows_right",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_road_narrows_right",
+      "y": -90
+    }
+  }
+}

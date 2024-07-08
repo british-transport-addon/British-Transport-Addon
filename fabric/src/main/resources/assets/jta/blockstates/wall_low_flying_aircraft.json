@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_low_flying_aircraft"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_low_flying_aircraft",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_low_flying_aircraft",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_low_flying_aircraft",
+      "y": -90
+    }
+  }
+}

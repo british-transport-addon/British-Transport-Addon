@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/handheld_stop_children_sign"
+    },
+    "facing=south": {
+      "model": "jta:block/handheld_stop_children_sign",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/handheld_stop_children_sign",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/handheld_stop_children_sign",
+      "y": -90
+    }
+  }
+}
