@@ -12,6 +12,6 @@ public class BritishLargeElectricalBox extends DirectionalBlockExtension {
 
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return IBlock.getVoxelShapeByDirection(-12, 0, 0, 28, 26, 8, IBlock.getStatePropertySafe(state, FACING).rotateYClockwise());
+        return IBlock.getVoxelShapeByDirection(-12, 0, 0, 28, 26, 8, IBlock.getStatePropertySafe(state, FACING).getOpposite());
     }
 }
