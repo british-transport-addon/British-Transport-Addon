@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_site_saftey_alt"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_site_saftey_alt",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_site_saftey_alt",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_site_saftey_alt",
+      "y": -90
+    }
+  }
+}

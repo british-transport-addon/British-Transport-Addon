@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_oncoming_vehicles_in_middle_of_road"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_oncoming_vehicles_in_middle_of_road",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_oncoming_vehicles_in_middle_of_road",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_oncoming_vehicles_in_middle_of_road",
+      "y": -90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_residents_parking_only"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_residents_parking_only",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_residents_parking_only",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_residents_parking_only",
+      "y": -90
+    }
+  }
+}

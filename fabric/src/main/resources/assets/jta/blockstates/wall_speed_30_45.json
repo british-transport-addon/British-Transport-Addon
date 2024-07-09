@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_speed_30_45"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_speed_30_45",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_speed_30_45",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_speed_30_45",
+      "y": -90
+    }
+  }
+}

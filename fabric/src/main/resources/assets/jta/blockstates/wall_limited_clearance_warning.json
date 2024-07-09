@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_limited_clearance_warning"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_limited_clearance_warning",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_limited_clearance_warning",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_limited_clearance_warning",
+      "y": -90
+    }
+  }
+}

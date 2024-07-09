@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/wall_do_not_touch_live_rail"
+    },
+    "facing=south": {
+      "model": "jta:block/wall_do_not_touch_live_rail",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/wall_do_not_touch_live_rail",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/wall_do_not_touch_live_rail",
+      "y": -90
+    }
+  }
+}
