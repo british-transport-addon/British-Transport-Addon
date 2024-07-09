@@ -107,6 +107,9 @@ public class BlockInit {
     public static final BlockRegistryObject METROLINK_TICKET_MACHINE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_ticket_machine"), () -> new Block(new MetrolinkTicketMachine()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject METROLINK_CONTACTLESS_READER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_contactless_reader"), () -> new Block(new MetrolinkContactactlessReader()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject RUSTY_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_pole"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_ROUNDABOUT_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_roundabout_blue"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_ROUNDABOUT_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_roundabout_blue"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+
     public static final BlockRegistryObject RUSTY_POLE_NO_ENTRY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_no_entry"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_NO_ENTRY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_no_entry"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_NO_WAITING = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_no_waiting"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
@@ -158,6 +161,8 @@ public class BlockInit {
 
     public static final BlockRegistryObject RUSTY_POLE_ONLY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_only"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_ONLY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_only"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_END = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_end"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_END = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_end"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_REDUCE_SPEED_NOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_reduce_speed_now"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_REDUCE_SPEED_NOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_reduce_speed_now"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_GIVE_WAY_TO_ONCOMING = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_give_way_to_oncoming"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
