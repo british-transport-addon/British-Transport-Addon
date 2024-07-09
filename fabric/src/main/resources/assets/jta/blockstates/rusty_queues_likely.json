@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rusty_queues_likely"
+    },
+    "facing=south": {
+      "model": "jta:block/rusty_queues_likely",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rusty_queues_likely",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rusty_queues_likely",
+      "y": -90
+    }
+  }
+}
