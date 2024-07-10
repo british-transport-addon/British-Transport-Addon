@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/rat_trap"
+    },
+    "facing=south": {
+      "model": "jta:block/rat_trap",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/rat_trap",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/rat_trap",
+      "y": -90
+    }
+  }
+}

@@ -26,6 +26,33 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BEE_BUS_STOP,
+                dispatcher -> new BeeBusStopSignRender<>(
+                        dispatcher,
+                        8 / 16F,
+                        0.2F / 8,
+                        -.025f,
+                        -0.05f,
+                        .005F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BEE_STATION_SIGN_ENTITY,
+                dispatcher -> new BeeStationRender<>(
+                        dispatcher,
+                        8 / 16F,
+                        0.2F / 8,
+                        0,
+                        -.1f,
+                        .1F,
+                        0,
+                        0xFF0F0F0F,
+                        true,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
                 dispatcher -> new SimpleStationSignRender<>(
                         dispatcher,
@@ -81,6 +108,20 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
+                dispatcher -> new SimpleStationOperatorSignRenderBlue<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        0,
+                        1F,
+                        .05F,
+                        0,
+                        0x132E6A,
+                        true,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE,
                 dispatcher -> new SimpleStationOperatorSignRustyRender<>(
                         dispatcher,
@@ -105,6 +146,20 @@ public final class InitClient {
                         .05F,
                         0,
                         0xFFFFFFFF,
+                        true,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
+                dispatcher -> new SimpleStationOperatorSignRustyRenderBlue<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        0,
+                        0,
+                        .05F,
+                        0,
+                        0x132E6A,
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
@@ -134,6 +189,34 @@ public final class InitClient {
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
                 ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
+                dispatcher -> new SimpleStationOperatorSignWallRenderBlue<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        0,
+                        0,
+                        -.4F,
+                        0,
+                        0x132E6A,
+                        Style.getDefaultFontIdMapped()
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.NSE_CLOCK,
+                dispatcher -> new NSERoofClockRender<>(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 8,
+                        0,
+                        -.005f,
+                        .2F,
+                        0,
+                        0xBED058,
+                        true,
+                        Style.getDefaultFontIdMapped()
+                ));
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT_OFF);
@@ -141,6 +224,15 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT_OFF);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT_FLICKER);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_BUS_STOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_BUS_STATION_SIGN);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_INTERCHANGE_STATION_SIGN);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_LOOSE_CHIPPINGS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_LOOSE_CHIPPINGS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_ROAD_WORKS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_ROAD_WORKS);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_URBAN_CLEARWAY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_URBAN_CLEARWAY);
@@ -400,6 +492,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_AHEAD_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.GRAY_BOLLARD);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT_NO_ENTRY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT_BLACK);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TRASH_BIN);

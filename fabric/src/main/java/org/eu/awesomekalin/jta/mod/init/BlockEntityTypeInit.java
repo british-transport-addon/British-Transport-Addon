@@ -8,7 +8,8 @@ import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 public class BlockEntityTypeInit {
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Block Entities");
-    }    public static final BlockEntityTypeRegistryObject<ManchesterSignSquare.TileEntityManchesterStationSign> MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
+    }
+    public static final BlockEntityTypeRegistryObject<ManchesterSignSquare.TileEntityManchesterStationSign> MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
                     "manchester_sign_square"
@@ -16,6 +17,24 @@ public class BlockEntityTypeInit {
             ManchesterSignSquare.TileEntityManchesterStationSign::new,
             BlockInit.MANCHESTER_SIGN_SQUARE::get
     );
+    public static final BlockEntityTypeRegistryObject<BeeBusStopSign.TileEntityBeeBusSign> BEE_BUS_STOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "bee_bus_sign"
+            ),
+            BeeBusStopSign.TileEntityBeeBusSign::new,
+            BlockInit.BEE_BUS_STOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<BeeStationSign.TileEntityBeeStationSign> BEE_STATION_SIGN_ENTITY = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "bee_station_sign_entity"
+            ),
+            BeeStationSign.TileEntityBeeStationSign::new,
+            BlockInit.BEE_BUS_STATION_SIGN::get,
+            BlockInit.BEE_INTERCHANGE_STATION_SIGN::get
+    );
+
     public static final BlockEntityTypeRegistryObject<UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -52,6 +71,14 @@ public class BlockEntityTypeInit {
             BlockInit.AVANTI_WEST_COAST_STATION_SIGN::get,
             BlockInit.NORTHERN_STATION_SIGN::get
     );
+    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue> UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "uk_british_operator_station_sign_base_blue"
+            ),
+            UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue::new,
+            BlockInit.NSE_STATION_SIGN::get
+    );
 
     public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
@@ -73,6 +100,15 @@ public class BlockEntityTypeInit {
             BlockInit.RUSTY_POLE_NORTHERN_STATION_SIGN::get
     );
 
+    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "uk_british_operator_station_sign_base_blue_rusty"
+            ),
+            UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue::new,
+            BlockInit.RUSTY_POLE_NSE_STATION_SIGN::get
+    );
+
     public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSign> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -91,6 +127,27 @@ public class BlockEntityTypeInit {
             UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite::new,
             BlockInit.WALL_AVANTI_WEST_COAST_STATION_SIGN::get,
             BlockInit.WALL_NORTHERN_STATION_SIGN::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignBlue> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "uk_british_operator_station_sign_base_blue_wall"
+            ),
+            UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignBlue::new,
+            BlockInit.WALL_NSE_STATION_SIGN::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<NSERoofClock.TileEntityNSERoofClock> NSE_CLOCK = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "nse_clock"
+            ),
+            NSERoofClock.TileEntityNSERoofClock::new,
+            BlockInit.RED_NSE_ROOF_CLOCK::get,
+            BlockInit.BLUE_NSE_ROOF_CLOCK::get,
+            BlockInit.STEEL_NSE_ROOF_CLOCK::get,
+            BlockInit.YELLOW_NSE_ROOF_CLOCK::get
     );
 
 

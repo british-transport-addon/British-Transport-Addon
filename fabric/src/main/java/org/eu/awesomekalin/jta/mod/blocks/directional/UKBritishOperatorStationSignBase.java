@@ -1,6 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
+import org.eu.awesomekalin.jta.util.DyeColor;
 import org.mtr.mapping.holder.BlockPos;
 import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
@@ -8,17 +9,19 @@ import org.mtr.mapping.mapper.BlockHelper;
 
 public class UKBritishOperatorStationSignBase extends DirectionalBlockEntityBase {
 
-    private final Boolean isWhite;
+    private DyeColor color;
 
-    public UKBritishOperatorStationSignBase(boolean white) {
+    public UKBritishOperatorStationSignBase(DyeColor dyeColor) {
         super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
-        isWhite = white;
+        this.color = dyeColor;
     }
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        if (isWhite)
+        if (color == DyeColor.WHITE)
             return new UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        if (color == DyeColor.BLUE)
+            return new UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue(blockPos, blockState);
         else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
@@ -37,6 +40,17 @@ public class UKBritishOperatorStationSignBase extends DirectionalBlockEntityBase
 
         public TileEntityBritishRailOperatorSignWhite(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE.get(), pos, state);
+        }
+
+        public boolean shouldRender() {
+            return true;
+        }
+    }
+
+    public static class TileEntityBritishRailOperatorSignBlue extends BlockEntityExtension {
+
+        public TileEntityBritishRailOperatorSignBlue(BlockPos pos, BlockState state) {
+            super(BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE.get(), pos, state);
         }
 
         public boolean shouldRender() {

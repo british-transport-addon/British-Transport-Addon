@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/blue_nse_roof_clock"
+    },
+    "facing=south": {
+      "model": "jta:block/blue_nse_roof_clock",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/blue_nse_roof_clock",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/blue_nse_roof_clock",
+      "y": -90
+    }
+  }
+}

@@ -1,23 +1,26 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
+import org.eu.awesomekalin.jta.util.DyeColor;
 import org.mtr.mapping.holder.BlockPos;
 import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
+import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
 
 public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implements BlockWithEntity {
 
-    private final Boolean isWhite;
+    private DyeColor color;
 
-    public UKBritishOperatorStationSignPoleBase(boolean white) {
+    public UKBritishOperatorStationSignPoleBase(DyeColor dyeColor) {
         super();
-        isWhite = white;
+        this.color = dyeColor;
     }
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        if (isWhite) return new TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        if (color == DyeColor.WHITE) return new TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        if (color == DyeColor.BLUE) return new TileEntityBritishRailOperatorSignBlue(blockPos, blockState);
         else return new TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
@@ -36,6 +39,16 @@ public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implemen
 
         public TileEntityBritishRailOperatorSignWhite(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE.get(), pos, state);
+        }
+
+        public boolean shouldRender() {
+            return true;
+        }
+    }
+    public static class TileEntityBritishRailOperatorSignBlue extends BlockEntityExtension {
+
+        public TileEntityBritishRailOperatorSignBlue(BlockPos pos, BlockState state) {
+            super(BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE.get(), pos, state);
         }
 
         public boolean shouldRender() {
