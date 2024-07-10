@@ -87,7 +87,9 @@ public class BlockEntityTypeInit {
             ),
             UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign::new,
             BlockInit.RUSTY_POLE_MERSEYRAIL_STATION_SIGN::get,
-            BlockInit.RUSTY_POLE_EMR_STATION_SIGN::get
+            BlockInit.RUSTY_POLE_EMR_STATION_SIGN::get,
+            BlockInit.BLACK_POLE_MERSEYRAIL_STATION_SIGN::get,
+            BlockInit.BLACK_POLE_EMR_STATION_SIGN::get
     );
 
     public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE = Init.REGISTRY.registerBlockEntityType(
@@ -97,7 +99,9 @@ public class BlockEntityTypeInit {
             ),
             UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite::new,
             BlockInit.RUSTY_POLE_AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.RUSTY_POLE_NORTHERN_STATION_SIGN::get
+            BlockInit.RUSTY_POLE_NORTHERN_STATION_SIGN::get,
+            BlockInit.BLACK_POLE_AVANTI_WEST_COAST_STATION_SIGN::get,
+            BlockInit.BLACK_POLE_NORTHERN_STATION_SIGN::get
     );
 
     public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
@@ -106,7 +110,8 @@ public class BlockEntityTypeInit {
                     "uk_british_operator_station_sign_base_blue_rusty"
             ),
             UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue::new,
-            BlockInit.RUSTY_POLE_NSE_STATION_SIGN::get
+            BlockInit.RUSTY_POLE_NSE_STATION_SIGN::get,
+            BlockInit.BLACK_POLE_NSE_STATION_SIGN::get
     );
 
     public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSign> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(

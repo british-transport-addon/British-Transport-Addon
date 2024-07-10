@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_road_narrows_both"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_road_narrows_both",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_road_narrows_both",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_road_narrows_both",
+      "y": -90
+    }
+  }
+}

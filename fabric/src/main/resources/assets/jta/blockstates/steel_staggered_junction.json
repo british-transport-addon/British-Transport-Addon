@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_staggered_junction"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_staggered_junction",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_staggered_junction",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_staggered_junction",
+      "y": -90
+    }
+  }
+}

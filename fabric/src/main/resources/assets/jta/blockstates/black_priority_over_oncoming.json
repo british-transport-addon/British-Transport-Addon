@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_priority_over_oncoming"
+    },
+    "facing=south": {
+      "model": "jta:block/black_priority_over_oncoming",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_priority_over_oncoming",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_priority_over_oncoming",
+      "y": -90
+    }
+  }
+}

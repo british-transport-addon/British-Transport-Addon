@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_elderly"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_elderly",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_elderly",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_elderly",
+      "y": -90
+    }
+  }
+}

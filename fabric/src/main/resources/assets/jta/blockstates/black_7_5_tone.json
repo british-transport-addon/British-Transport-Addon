@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_7_5_tone"
+    },
+    "facing=south": {
+      "model": "jta:block/black_7_5_tone",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_7_5_tone",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_7_5_tone",
+      "y": -90
+    }
+  }
+}

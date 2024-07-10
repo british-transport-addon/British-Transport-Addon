@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_stop_look_listen"
+    },
+    "facing=south": {
+      "model": "jta:block/black_stop_look_listen",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_stop_look_listen",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_stop_look_listen",
+      "y": -90
+    }
+  }
+}

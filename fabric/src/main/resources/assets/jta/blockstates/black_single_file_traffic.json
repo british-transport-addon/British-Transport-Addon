@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_single_file_traffic"
+    },
+    "facing=south": {
+      "model": "jta:block/black_single_file_traffic",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_single_file_traffic",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_single_file_traffic",
+      "y": -90
+    }
+  }
+}

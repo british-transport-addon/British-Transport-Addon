@@ -1,0 +1,20 @@
+
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_speed_20_zone_end"
+    },
+    "facing=south": {
+      "model": "jta:block/black_speed_20_zone_end",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_speed_20_zone_end",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_speed_20_zone_end",
+      "y": -90
+    }
+  }
+}

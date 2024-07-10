@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_school_warning"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_school_warning",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_school_warning",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_school_warning",
+      "y": -90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_dual_carriageway"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_dual_carriageway",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_dual_carriageway",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_dual_carriageway",
+      "y": -90
+    }
+  }
+}

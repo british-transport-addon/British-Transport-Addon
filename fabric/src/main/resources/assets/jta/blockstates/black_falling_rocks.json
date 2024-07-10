@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_falling_rocks"
+    },
+    "facing=south": {
+      "model": "jta:block/black_falling_rocks",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_falling_rocks",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_falling_rocks",
+      "y": -90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/steel_crossroads"
+    },
+    "facing=south": {
+      "model": "jta:block/steel_crossroads",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/steel_crossroads",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/steel_crossroads",
+      "y": -90
+    }
+  }
+}

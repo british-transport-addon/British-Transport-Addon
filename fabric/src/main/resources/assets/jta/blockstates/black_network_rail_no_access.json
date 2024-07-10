@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_network_rail_no_access"
+    },
+    "facing=south": {
+      "model": "jta:block/black_network_rail_no_access",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_network_rail_no_access",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_network_rail_no_access",
+      "y": -90
+    }
+  }
+}

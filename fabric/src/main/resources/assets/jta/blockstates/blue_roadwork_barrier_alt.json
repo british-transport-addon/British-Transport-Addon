@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/blue_roadwork_barrier_alt"
+    },
+    "facing=south": {
+      "model": "jta:block/blue_roadwork_barrier_alt",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/blue_roadwork_barrier_alt",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/blue_roadwork_barrier_alt",
+      "y": -90
+    }
+  }
+}

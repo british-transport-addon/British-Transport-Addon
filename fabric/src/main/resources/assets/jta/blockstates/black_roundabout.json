@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_roundabout"
+    },
+    "facing=south": {
+      "model": "jta:block/black_roundabout",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_roundabout",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_roundabout",
+      "y": -90
+    }
+  }
+}
