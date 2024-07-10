@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.util.DyeColor;
+import org.eu.awesomekalin.jta.mod.util.DyeColor;
 import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;

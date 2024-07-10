@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.util;
+package org.eu.awesomekalin.jta.mod.util;
 
 public enum DyeColor {
     WHITE(0, "white", 16383998, 15790320, 16777215),

@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.util.DyeColor;
+import org.eu.awesomekalin.jta.mod.util.DyeColor;
 import org.mtr.mapping.holder.BlockPos;
 import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
