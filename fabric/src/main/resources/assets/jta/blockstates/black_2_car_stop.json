@@ -1,17 +1,17 @@
 {
   "variants": {
-    "facing=north": {
+    "facing=north,is_22_5=false,is_45=false": {
       "model": "jta:block/black_2_car_stop"
     },
-    "facing=south": {
+    "facing=south,is_22_5=false,is_45=false": {
       "model": "jta:block/black_2_car_stop",
       "y": 180
     },
-    "facing=east": {
+    "facing=east,is_22_5=false,is_45=false": {
       "model": "jta:block/black_2_car_stop",
       "y": 90
     },
-    "facing=west": {
+    "facing=west,is_22_5=false,is_45=false": {
       "model": "jta:block/black_2_car_stop",
       "y": -90
     }

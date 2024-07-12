@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/metrolink_pay_before_you_board"
+    },
+    "facing=south": {
+      "model": "jta:block/metrolink_pay_before_you_board",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/metrolink_pay_before_you_board",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/metrolink_pay_before_you_board",
+      "y": -90
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/black_nse_sign_alt"
+    },
+    "facing=south": {
+      "model": "jta:block/black_nse_sign_alt",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/black_nse_sign_alt",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/black_nse_sign_alt",
+      "y": -90
+    }
+  }
+}

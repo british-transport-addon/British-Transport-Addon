@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/british_planter"
+    },
+    "facing=south": {
+      "model": "jta:block/british_planter",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/british_planter",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/british_planter",
+      "y": -90
+    }
+  }
+}

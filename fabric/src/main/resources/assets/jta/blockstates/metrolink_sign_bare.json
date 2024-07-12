@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/metrolink_sign_bare"
+    },
+    "facing=south": {
+      "model": "jta:block/metrolink_sign_bare",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/metrolink_sign_bare",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/metrolink_sign_bare",
+      "y": -90
+    }
+  }
+}

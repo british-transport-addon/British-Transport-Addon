@@ -43,6 +43,50 @@ echo.    }
 echo.  }
 echo }
 ) > "%blockstates_dir%\rusty_%filename%.json"
+rem Blockstate JSON content
+(
+echo {
+echo.  "variants": {
+echo.    "facing=north": {
+echo.      "model": "jta:block/black_%filename%"
+echo.    },
+echo.    "facing=south": {
+echo.      "model": "jta:block/black_%filename%",
+echo.      "y": 180
+echo.    },
+echo.    "facing=east": {
+echo.      "model": "jta:block/black_%filename%",
+echo.      "y": 90
+echo.    },
+echo.    "facing=west": {
+echo.      "model": "jta:block/black_%filename%",
+echo.      "y": -90
+echo.    }
+echo.  }
+echo }
+) > "%blockstates_dir%\black_%filename%.json"
+rem Blockstate JSON content
+(
+echo {
+echo.  "variants": {
+echo.    "facing=north": {
+echo.      "model": "jta:block/steel_%filename%"
+echo.    },
+echo.    "facing=south": {
+echo.      "model": "jta:block/steel_%filename%",
+echo.      "y": 180
+echo.    },
+echo.    "facing=east": {
+echo.      "model": "jta:block/steel_%filename%",
+echo.      "y": 90
+echo.    },
+echo.    "facing=west": {
+echo.      "model": "jta:block/steel_%filename%",
+echo.      "y": -90
+echo.    }
+echo.  }
+echo }
+) > "%blockstates_dir%\steel_%filename%.json"
 
 rem Blockstate JSON content
 (
@@ -287,6 +331,446 @@ echo.  }
 echo }
 ) > "%models_block_dir%\rusty_%filename%.json"
 
+rem Black model JSON content
+(
+echo {
+echo.  "credit": "Made with Blockbench",
+echo.  "texture_size": [
+echo.    128,
+echo.    128
+echo.  ],
+echo.  "textures": {
+echo.    "1": "jta:block/black_pole",
+echo.    "3": "jta:block/%filename%"
+echo.  },
+echo.  "elements": [
+echo.    {
+echo.      "from": [
+echo.        7.5,
+echo.        0,
+echo.        7.5
+echo.      ],
+echo.      "to": [
+echo.        8.5,
+echo.        16,
+echo.        8.5
+echo.      ],
+echo.      "rotation": {
+echo.        "angle": 0,
+echo.        "axis": "y",
+echo.        "origin": [
+echo.          7,
+echo.          0,
+echo.          5
+echo.        ]
+echo.      },
+echo.      "faces": {
+echo.        "north": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.5,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "east": {
+echo.          "uv": [
+echo.            7.5,
+echo.            0,
+echo.            8,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "south": {
+echo.          "uv": [
+echo.            0.5,
+echo.            0,
+echo.            1,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "west": {
+echo.          "uv": [
+echo.            7,
+echo.            0,
+echo.            7.5,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "up": {
+echo.          "uv": [
+echo.            1.0625,
+echo.            0,
+echo.            1.5625,
+echo.            1
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "down": {
+echo.          "uv": [
+echo.            6.4375,
+echo.            0,
+echo.            6.9375,
+echo.            1
+echo.          ],
+echo.          "texture": "#1"
+echo.        }
+echo.      }
+echo.    },
+echo.    {
+echo.      "from": [
+echo.        0,
+echo.        0,
+echo.        7.4
+echo.      ],
+echo.      "to": [
+echo.        16,
+echo.        16,
+echo.        7.4
+echo.      ],
+echo.      "rotation": {
+echo.        "angle": 0,
+echo.        "axis": "y",
+echo.        "origin": [
+echo.          6.5,
+echo.          10,
+echo.          7.4
+echo.        ]
+echo.      },
+echo.      "faces": {
+echo.        "north": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            16,
+echo.            16
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "east": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0,
+echo.            0.75
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "south": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            16,
+echo.            15.9619
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "west": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0,
+echo.            0.75
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "up": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.875,
+echo.            0
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "down": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.875,
+echo.            0
+echo.          ],
+echo.          "texture": "#3"
+echo.        }
+echo.      }
+echo.    }
+echo.  ],
+echo.  "display": {
+echo.    "thirdperson_righthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "thirdperson_lefthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "firstperson_righthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ],
+echo.      "translation": [
+echo.        0,
+echo.        0,
+echo.        -2
+echo.      ]
+echo.    },
+echo.    "firstperson_lefthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "gui": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "head": {
+echo.      "translation": [
+echo.        0,
+echo.        10,
+echo.        0
+echo.      ]
+echo.    }
+echo.  }
+echo }
+) > "%models_block_dir%\black_%filename%.json"
+
+rem Steel model JSON content
+(
+echo {
+echo.  "credit": "Made with Blockbench",
+echo.  "texture_size": [
+echo.    128,
+echo.    128
+echo.  ],
+echo.  "textures": {
+echo.    "1": "jta:block/steel_pole",
+echo.    "3": "jta:block/%filename%"
+echo.  },
+echo.  "elements": [
+echo.    {
+echo.      "from": [
+echo.        7.5,
+echo.        0,
+echo.        7.5
+echo.      ],
+echo.      "to": [
+echo.        8.5,
+echo.        16,
+echo.        8.5
+echo.      ],
+echo.      "rotation": {
+echo.        "angle": 0,
+echo.        "axis": "y",
+echo.        "origin": [
+echo.          7,
+echo.          0,
+echo.          5
+echo.        ]
+echo.      },
+echo.      "faces": {
+echo.        "north": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.5,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "east": {
+echo.          "uv": [
+echo.            7.5,
+echo.            0,
+echo.            8,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "south": {
+echo.          "uv": [
+echo.            0.5,
+echo.            0,
+echo.            1,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "west": {
+echo.          "uv": [
+echo.            7,
+echo.            0,
+echo.            7.5,
+echo.            16
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "up": {
+echo.          "uv": [
+echo.            1.0625,
+echo.            0,
+echo.            1.5625,
+echo.            1
+echo.          ],
+echo.          "texture": "#1"
+echo.        },
+echo.        "down": {
+echo.          "uv": [
+echo.            6.4375,
+echo.            0,
+echo.            6.9375,
+echo.            1
+echo.          ],
+echo.          "texture": "#1"
+echo.        }
+echo.      }
+echo.    },
+echo.    {
+echo.      "from": [
+echo.        0,
+echo.        0,
+echo.        7.4
+echo.      ],
+echo.      "to": [
+echo.        16,
+echo.        16,
+echo.        7.4
+echo.      ],
+echo.      "rotation": {
+echo.        "angle": 0,
+echo.        "axis": "y",
+echo.        "origin": [
+echo.          6.5,
+echo.          10,
+echo.          7.4
+echo.        ]
+echo.      },
+echo.      "faces": {
+echo.        "north": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            16,
+echo.            16
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "east": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0,
+echo.            0.75
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "south": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            16,
+echo.            15.9619
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "west": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0,
+echo.            0.75
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "up": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.875,
+echo.            0
+echo.          ],
+echo.          "texture": "#3"
+echo.        },
+echo.        "down": {
+echo.          "uv": [
+echo.            0,
+echo.            0,
+echo.            0.875,
+echo.            0
+echo.          ],
+echo.          "texture": "#3"
+echo.        }
+echo.      }
+echo.    }
+echo.  ],
+echo.  "display": {
+echo.    "thirdperson_righthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "thirdperson_lefthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "firstperson_righthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ],
+echo.      "translation": [
+echo.        0,
+echo.        0,
+echo.        -2
+echo.      ]
+echo.    },
+echo.    "firstperson_lefthand": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "gui": {
+echo.      "rotation": [
+echo.        0,
+echo.        180,
+echo.        0
+echo.      ]
+echo.    },
+echo.    "head": {
+echo.      "translation": [
+echo.        0,
+echo.        10,
+echo.        0
+echo.      ]
+echo.    }
+echo.  }
+echo }
+) > "%models_block_dir%\steel_%filename%.json"
+
 rem Wall model JSON content
 (
 echo {
@@ -441,6 +925,20 @@ echo {
 echo.  "parent": "jta:block/rusty_%filename%"
 echo }
 ) > "%models_item_dir%\rusty_%filename%.json"
+
+rem Item model JSON content
+(
+echo {
+echo.  "parent": "jta:block/black_%filename%"
+echo }
+) > "%models_item_dir%\black_%filename%.json"
+
+rem Item model JSON content
+(
+echo {
+echo.  "parent": "jta:block/steel_%filename%"
+echo }
+) > "%models_item_dir%\steel_%filename%.json"
 
 (
 echo {

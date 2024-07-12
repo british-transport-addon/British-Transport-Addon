@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/yellow_skip_end_alt"
+    },
+    "facing=south": {
+      "model": "jta:block/yellow_skip_end_alt",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/yellow_skip_end_alt",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/yellow_skip_end_alt",
+      "y": -90
+    }
+  }
+}

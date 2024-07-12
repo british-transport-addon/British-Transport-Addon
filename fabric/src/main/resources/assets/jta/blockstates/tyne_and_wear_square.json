@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/tyne_and_wear_square"
+    },
+    "facing=south": {
+      "model": "jta:block/tyne_and_wear_square",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/tyne_and_wear_square",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/tyne_and_wear_square",
+      "y": -90
+    }
+  }
+}

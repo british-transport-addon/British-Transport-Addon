@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=north": {
-      "model": "jta:block/gray_pole"
+      "model": "jta:block/gray_street_pole"
     },
     "facing=south": {
-      "model": "jta:block/gray_pole",
+      "model": "jta:block/gray_street_pole",
       "y": 180
     },
     "facing=east": {
-      "model": "jta:block/gray_pole",
+      "model": "jta:block/gray_street_pole",
       "y": 90
     },
     "facing=west": {
-      "model": "jta:block/gray_pole",
+      "model": "jta:block/gray_street_pole",
       "y": -90
     }
   }
