@@ -6,7 +6,7 @@
   ],
   "textures": {
     "1": "jta:block/steel_pole",
-    "3": "jta:block/speed_30"
+    "3": "jta:block/speed_30_45"
   },
   "elements": [
     {

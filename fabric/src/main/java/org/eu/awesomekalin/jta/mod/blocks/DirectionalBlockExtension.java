@@ -24,7 +24,7 @@ public abstract class DirectionalBlockExtension extends BlockExtension implement
     @Override
     public BlockState getPlacementState2(ItemPlacementContext ctx) {
         final int quadrant = Angle.getQuadrant(ctx.getPlayerYaw(), true);
-        return getDefaultState2().with(new Property<>(FACING.data), Direction.fromHorizontal(quadrant / 4).data).with(new Property<>(IS_45.data), EnumBooleanInverted.fromBoolean(quadrant % 4 >= 2)).with(new Property<>(IS_22_5.data), EnumBooleanInverted.fromBoolean(quadrant % 2 == 1));
+        return getDefaultState2().with(new Property<>(FACING.data), Direction.fromHorizontal(quadrant / 4).data.getOpposite()).with(new Property<>(IS_45.data), EnumBooleanInverted.fromBoolean(quadrant % 4 >= 2)).with(new Property<>(IS_22_5.data), EnumBooleanInverted.fromBoolean(quadrant % 2 == 1));
     }
 
     @Override
