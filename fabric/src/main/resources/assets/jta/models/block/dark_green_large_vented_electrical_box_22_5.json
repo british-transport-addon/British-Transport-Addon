@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/large_vented_electrical_box",
+  "textures": {
+    "color": "jta:block/dark_green"
+  }
+}

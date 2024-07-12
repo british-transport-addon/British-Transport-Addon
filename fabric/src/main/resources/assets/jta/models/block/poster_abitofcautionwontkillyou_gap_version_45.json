@@ -1,0 +1,90 @@
+{
+  "credit": "Made with Blockbench",
+  "texture_size": [
+    168,
+    300
+  ],
+  "textures": {
+    "7": "jta:block/2001_being_careful_wont_hurt_you",
+    "particle": "jta:block/2001_being_careful_wont_hurt_you"
+  },
+  "elements": [
+    {
+      "from": [
+        5,
+        1,
+        0.1
+      ],
+      "to": [
+        11,
+        10,
+        0.1
+      ],
+      "rotation": {
+        "angle": -45.0,
+        "axis": "y",
+        "origin": [
+          4,
+          1,
+          1.1
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            11.64021,
+            0.97185,
+            12.21164,
+            1.45185
+          ],
+          "texture": "#7"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            0,
+            0.48
+          ],
+          "texture": "#7"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#7"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            0,
+            0.48
+          ],
+          "texture": "#7"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0.57143,
+            0
+          ],
+          "texture": "#7"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0.57143,
+            0
+          ],
+          "texture": "#7"
+        }
+      }
+    }
+  ]
+}

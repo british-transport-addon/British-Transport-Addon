@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/skip",
+  "textures": {
+    "0": "jta:block/orange"
+  }
+}

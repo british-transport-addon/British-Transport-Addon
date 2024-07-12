@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/tiny_electrical_box",
+  "textures": {
+    "color": "jta:block/dark_green"
+  }
+}

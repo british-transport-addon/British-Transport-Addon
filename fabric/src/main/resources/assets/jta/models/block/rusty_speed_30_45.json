@@ -6,7 +6,7 @@
   ],
   "textures": {
     "1": "jta:block/rusty_pole",
-    "3": "jta:block/speed_30_45"
+    "3": "jta:block/speed_30"
   },
   "elements": [
     {
@@ -21,7 +21,7 @@
         8.5
       ],
       "rotation": {
-        "angle": 0,
+        "angle": -45.0,
         "axis": "y",
         "origin": [
           7,
@@ -98,7 +98,7 @@
         7.4
       ],
       "rotation": {
-        "angle": 0,
+        "angle": -45.0,
         "axis": "y",
         "origin": [
           6.5,

@@ -1,19 +1,188 @@
 {
-  "variants": {
-    "facing=north": {
-      "model": "jta:block/rusty_speed_125"
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125"
+      }
     },
-    "facing=south": {
-      "model": "jta:block/rusty_speed_125",
-      "y": 180
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125",
+        "y": 90,
+        "uvlock": true
+      }
     },
-    "facing=east": {
-      "model": "jta:block/rusty_speed_125",
-      "y": 90
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125",
+        "y": 180,
+        "uvlock": true
+      }
     },
-    "facing=west": {
-      "model": "jta:block/rusty_speed_125",
-      "y": -90
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_22_5"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_22_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_22_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_22_5",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_45"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_45",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_45",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_45",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_67_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_67_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_67_5",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/rusty_speed_125_67_5"
+      }
     }
-  }
+  ]
 }

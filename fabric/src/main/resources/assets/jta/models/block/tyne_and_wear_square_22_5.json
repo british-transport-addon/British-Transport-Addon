@@ -1,0 +1,158 @@
+{
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "jta:block/tyne_and_wear_metro",
+    "2": "jta:block/rusty_pole",
+    "particle": "jta:block/tyne_and_wear_metro"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        1,
+        1
+      ],
+      "to": [
+        15,
+        15,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            1.56748,
+            0.62116
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            14.43252,
+            14.97863,
+            16,
+            15.59979
+          ],
+          "texture": "#0"
+        }
+      },
+      "rotation": {
+        "angle": -22.5
+      }
+    },
+    {
+      "from": [
+        7.5,
+        0,
+        7.5
+      ],
+      "to": [
+        8.5,
+        16,
+        8.5
+      ],
+      "rotation": {
+        "angle": -22.5,
+        "axis": "y",
+        "origin": [
+          7,
+          0,
+          5
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#2"
+        },
+        "up": {
+          "uv": [
+            17,
+            0,
+            25,
+            8
+          ],
+          "texture": "#2"
+        },
+        "down": {
+          "uv": [
+            40,
+            0,
+            48,
+            8
+          ],
+          "texture": "#2"
+        }
+      }
+    }
+  ]
+}

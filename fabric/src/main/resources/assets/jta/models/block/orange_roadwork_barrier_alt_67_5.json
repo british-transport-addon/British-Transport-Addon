@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roadwork_barrier_alt",
+  "textures": {
+    "color": "jta:block/orange"
+  }
+}
