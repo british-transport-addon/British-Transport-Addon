@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks;
 
-import org.jetbrains.annotations.NotNull;
 import org.mtr.core.tool.Angle;
+import org.mtr.libraries.org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.DirectionHelper;
