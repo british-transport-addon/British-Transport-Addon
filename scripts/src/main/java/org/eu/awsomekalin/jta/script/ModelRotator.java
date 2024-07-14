@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.script;
+package org.eu.awsomekalin.jta.script;
 
 import com.google.gson.*;
 

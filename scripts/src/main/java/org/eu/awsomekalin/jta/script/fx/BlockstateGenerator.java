@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.script.fx;
+package org.eu.awsomekalin.jta.script.fx;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;

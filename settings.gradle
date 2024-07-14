@@ -14,3 +14,5 @@ include("fabric")
 include("forge")
 
 rootProject.name = "Jesses-Transit-Addon"
+include 'scripts'
+

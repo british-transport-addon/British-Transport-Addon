@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.script;
+package org.eu.awsomekalin.jta.script;
 
 import com.google.gson.*;
 
@@ -19,7 +19,7 @@ public class BlockStateModelGenerator {
             for (File blockStateFile : blockStateFiles) {
                 try {
                     FileReader reader = new FileReader(blockStateFile);
-                    JsonObject blockStateJson = JsonParser.parseReader(reader).getAsJsonObject();
+                    JsonObject blockStateJson = new JsonParser().parse(reader).getAsJsonObject();
                     reader.close();
 
                     if (isMatchingBlockState(blockStateJson)) {
@@ -46,7 +46,7 @@ public class BlockStateModelGenerator {
 
     private static void updateBlockStateFile(File blockStateFile, String baseName) throws IOException {
         FileReader reader = new FileReader(new File(BLOCKSTATES_PATH, "aws.json"));
-        JsonObject awsBlockStateJson = JsonParser.parseReader(reader).getAsJsonObject();
+        JsonObject awsBlockStateJson = new JsonParser().parse(reader).getAsJsonObject();
         reader.close();
 
         String updatedBlockStateContent = GSON.toJson(awsBlockStateJson).replace("aws", baseName);
@@ -58,7 +58,7 @@ public class BlockStateModelGenerator {
     private static void createRotatedModelFiles(String baseName) throws IOException {
         File modelFile = new File(MODELS_PATH, baseName + ".json");
         FileReader reader = new FileReader(modelFile);
-        JsonObject modelJson = JsonParser.parseReader(reader).getAsJsonObject();
+        JsonObject modelJson = new JsonParser().parse(reader).getAsJsonObject();
         reader.close();
 
         createRotatedModelFile(modelJson, baseName + "_22_5", -22.5f);
@@ -67,7 +67,7 @@ public class BlockStateModelGenerator {
     }
 
     private static void createRotatedModelFile(JsonObject originalModelJson, String newFileName, float rotationAngle) throws IOException {
-        JsonObject newModelJson = originalModelJson.deepCopy();
+        JsonObject newModelJson = originalModelJson;
 
         if (newModelJson.has("elements")) {
             for (JsonElement element : newModelJson.getAsJsonArray("elements")) {

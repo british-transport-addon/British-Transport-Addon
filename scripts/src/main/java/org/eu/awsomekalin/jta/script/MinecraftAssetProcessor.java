@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.script;
+package org.eu.awsomekalin.jta.script;
 
 import java.io.*;
 import java.nio.file.*;
