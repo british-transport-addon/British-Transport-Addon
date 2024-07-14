@@ -1,9 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
 
-rem Define the color variable
-set "color=steel"
-
 rem Check if a file was dragged onto the script
 if "%~1"=="" (
     echo Drag a model file onto this script to generate blockstates and models.

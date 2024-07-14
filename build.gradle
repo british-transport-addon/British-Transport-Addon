@@ -7,7 +7,6 @@ version rootProject.properties.version
 
 subprojects {
 	apply plugin: "java"
-
 	dependencies {
 		compileOnly "com.google.code.findbugs:jsr305:+"
 	}

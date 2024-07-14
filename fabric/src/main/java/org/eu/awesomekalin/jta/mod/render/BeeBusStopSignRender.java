@@ -1,5 +1,6 @@
 package org.eu.awesomekalin.jta.mod.render;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishOperatorStationSignPoleBase;
@@ -56,7 +57,9 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
 
         final BlockPos pos = entity.getPos2();
         final BlockState state = world.getBlockState(pos);
-        final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
+        final Direction FACING = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
+        final DirectionalBlockExtension.EnumBooleanInverted IS_22_5 = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_22_5);
+        final DirectionalBlockExtension.EnumBooleanInverted IS_45 = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_45);
 
         final Station station = InitClient.findStation(pos);
         final MutableText streetText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled(IGui.formatStationName(station == null || !station.getName().contains("/") ? "" : station.getName().split("/")[0]))), style);
@@ -71,8 +74,10 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
 
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
-            graphicsHolderNew.rotateYDegrees(-facing.asRotation());
+            graphicsHolderNew.rotateYDegrees(-FACING.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
+            if (IS_22_5.booleanValue) graphicsHolderNew.rotateYDegrees(22.5F);
+            if (IS_45.booleanValue) graphicsHolderNew.rotateYDegrees(45F);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);

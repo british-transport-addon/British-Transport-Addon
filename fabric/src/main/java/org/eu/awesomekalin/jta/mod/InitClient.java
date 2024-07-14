@@ -410,6 +410,14 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_BIKES_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_BIKES_ONLY);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_BIKES_ONLY);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_BIKES_PEDESTRIANS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_BIKES_PEDESTRIANS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_BIKES_PEDESTRIANS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_BIKES_PEDESTRIANS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_BIKES_PEDESTRIANS_SMALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_BIKES_PEDESTRIANS_SMALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_BIKES_PEDESTRIANS_SMALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_BIKES_PEDESTRIANS_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_BIKES_PEDESTRIANS_SEPERATED);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_BIKES_PEDESTRIANS_SEPERATED);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_BIKES_PEDESTRIANS_SEPERATED);
