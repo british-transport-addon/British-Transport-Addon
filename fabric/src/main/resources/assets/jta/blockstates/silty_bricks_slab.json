@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jta:block/silty_bricks_slab"
+    },
+    "type=double": {
+      "model": "jta:block/silty_bricks"
+    },
+    "type=top": {
+      "model": "jta:block/silty_bricks_slab_top"
+    }
+  }
+}

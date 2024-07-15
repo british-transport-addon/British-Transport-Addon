@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jta:block/english_bricks_slab"
+    },
+    "type=double": {
+      "model": "jta:block/english_bricks"
+    },
+    "type=top": {
+      "model": "jta:block/english_bricks_slab_top"
+    }
+  }
+}

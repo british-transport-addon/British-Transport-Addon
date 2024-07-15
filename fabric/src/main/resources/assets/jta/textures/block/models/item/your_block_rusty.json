@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/your_block"
+}
+{
+  "parent": "jta:block/wall_speed_45"
+}

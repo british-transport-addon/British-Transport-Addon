@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jta:block/large_slate_bricks_slab"
+    },
+    "type=double": {
+      "model": "jta:block/large_slate_bricks"
+    },
+    "type=top": {
+      "model": "jta:block/large_slate_bricks_slab_top"
+    }
+  }
+}

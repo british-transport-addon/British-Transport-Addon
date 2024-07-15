@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/large_dark_gray_bricks"
+  },
+  "parent": "block/cube_all"
+}

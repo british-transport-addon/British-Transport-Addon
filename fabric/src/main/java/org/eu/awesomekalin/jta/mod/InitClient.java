@@ -2,6 +2,7 @@ package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.BlockInit;
+import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.render.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.RenderLayer;
@@ -455,9 +456,9 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_7_5_TONE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_7_5_TONE);
 
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.HANDHELD_GO_SIGN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.HANDHELD_STOP_SIGN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.HANDHELD_STOP_CHILDREN_SIGN);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), ItemInit.HANDHELD_GO_SIGN);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), ItemInit.HANDHELD_STOP_SIGN);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), ItemInit.HANDHELD_STOP_CHILDREN_SIGN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.GRIT_BOX);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.GRIT_BOX_ALT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_WARNING);

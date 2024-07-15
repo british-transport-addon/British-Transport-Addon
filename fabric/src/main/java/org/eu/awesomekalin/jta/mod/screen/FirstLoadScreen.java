@@ -11,7 +11,7 @@ import org.mtr.mod.data.IGui;
 public class FirstLoadScreen extends ScreenExtension implements IGui, Utilities {
 
     private static final int BUTTON_WIDTH = SQUARE_SIZE * 8;
-    private static final int FORCE_OPEN_DURATION = 10000;
+    private static final int FORCE_OPEN_DURATION = 5000;
     private static long openTime;
     private static long lastMillis;
     private final ButtonWidgetExtension buttonDiscord;

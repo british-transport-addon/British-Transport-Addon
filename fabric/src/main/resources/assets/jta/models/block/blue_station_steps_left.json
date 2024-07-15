@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/station_steps_left",
+  "textures": {
+    "color": "jta:block/blue"
+  }
+}
