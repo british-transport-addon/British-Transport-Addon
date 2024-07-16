@@ -14,5 +14,5 @@ You can use the blocks provided by JTA to create realistic British Street, Rail,
 # Credits 
 
 [Minecraft Transit Railway 4.0](github.com/minecraft-transit-railway/minecraft-transit-railway/tree/4.0.0)
-
 [London Underground Addon](https://github.com/cherbert/mtr-london-underground-addon/tree/4.0.0)
+[European Railways Addon](https://github.com/polserull/European-Railways-Addon/tree/master)

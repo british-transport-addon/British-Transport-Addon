@@ -88,7 +88,7 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
         final float scale = Math.min((maxWidth) / textWidth, maxScale);
         graphicsHolder.scale(scale, scale, scale);
         graphicsHolder.translate(0, -3.5, 0);
-        graphicsHolder.drawText(roundelText, -textWidth / 2, 0, textColor, false, light);
+        graphicsHolder.drawText(roundelText, -textWidth / 2, 0, textColor, false, GraphicsHolder.getDefaultLight());
 
         graphicsHolder.pop();
     }

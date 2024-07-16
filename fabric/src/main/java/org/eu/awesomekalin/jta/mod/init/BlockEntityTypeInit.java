@@ -44,6 +44,15 @@ public class BlockEntityTypeInit {
             BlockInit.BEE_INTERCHANGE_STATION_SIGN::get
     );
 
+    public static final BlockEntityTypeRegistryObject<DispatchSignal.TileEntityDispatchSignal> DISPATCH_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "dispatch_signal"
+            ),
+            DispatchSignal.TileEntityDispatchSignal::new,
+            BlockInit.DISPATCH_SIGNAL::get
+    );
+
     public static final BlockEntityTypeRegistryObject<UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

@@ -68,6 +68,19 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DISPATCH_SIGNAL,
+                dispatcher -> new DispatchSignalRender<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 6,
+                        0,
+                        .05F,
+                        -0.10F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
                 dispatcher -> new SimpleStationSignRender<>(
                         dispatcher,
