@@ -40,6 +40,19 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LONDON_BUS_STOP,
+                dispatcher -> new LondonBusStopSignRender<>(
+                        dispatcher,
+                        8 / 16F,
+                        0.2F / 8,
+                        -.025f,
+                        -0.05f,
+                        .005F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.METROLINK_SIGN_ENTITY,
                 dispatcher -> new MetrolinkSignRender<>(
                         dispatcher,
@@ -245,6 +258,33 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_FULL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_TOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_SEGMENTED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_SEGMENTED_TOP);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_LONG_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_LONG_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_LONG_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_LONG_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_RED);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_YELLOW);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT_OFF);
@@ -731,7 +771,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_SPEED_140_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_SPEED_140_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_SPEED_140_SMALL);
-        
+
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_SPEED_150);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_SPEED_150);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_SPEED_150);
@@ -749,7 +789,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_SPEED_160_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_SPEED_160_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.WALL_SPEED_160_SMALL);
-        
+
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.RUSTY_POLE_PERMISSIBLE_SPEED_30);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.STEEL_POLE_PERMISSIBLE_SPEED_30);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLACK_POLE_PERMISSIBLE_SPEED_30);

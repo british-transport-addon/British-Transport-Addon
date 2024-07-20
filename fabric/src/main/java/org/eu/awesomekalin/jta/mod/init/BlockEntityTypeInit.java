@@ -1,7 +1,10 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.directional.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
+import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
+import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -33,6 +36,14 @@ public class BlockEntityTypeInit {
             ),
             BeeBusStopSign.TileEntityBeeBusSign::new,
             BlockInit.BEE_BUS_STOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<LondonBusStopSign.TileEntityLondonBusSign> LONDON_BUS_STOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "london_bus_sign"
+            ),
+            LondonBusStopSign.TileEntityLondonBusSign::new,
+            BlockInit.LONDON_BUS_STOP::get
     );
     public static final BlockEntityTypeRegistryObject<BeeStationSign.TileEntityBeeStationSign> BEE_STATION_SIGN_ENTITY = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

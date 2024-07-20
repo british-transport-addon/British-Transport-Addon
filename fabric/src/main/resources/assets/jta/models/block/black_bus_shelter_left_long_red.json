@@ -1,0 +1,7 @@
+{
+  "parent": "jta:block/bus_stop_shelter_left_long",
+  "textures": {
+    "color": "jta:block/black",
+    "seat_color": "jta:block/red"
+  }
+}

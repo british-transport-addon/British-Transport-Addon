@@ -1,0 +1,39 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north"
+      },
+      "apply": {
+        "model": "jta:block/lime_bricks_window_wall",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "facing": "east"
+      },
+      "apply": {
+        "model": "jta:block/lime_bricks_window_wall",
+        "y": -90
+      }
+    },
+    {
+      "when": {
+        "facing": "south"
+      },
+      "apply": {
+        "model": "jta:block/lime_bricks_window_wall"
+      }
+    },
+    {
+      "when": {
+        "facing": "west"
+      },
+      "apply": {
+        "model": "jta:block/lime_bricks_window_wall",
+        "y": 90
+      }
+    }
+  ]
+}

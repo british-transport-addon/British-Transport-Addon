@@ -1,14 +1,11 @@
 package org.eu.awesomekalin.jta.mod.render;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.NSERoofClock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishRailStationSignSimple;
-import org.mtr.core.data.Station;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.NSERoofClock;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;
-import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;

@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.render;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UKBritishOperatorStationSignPoleBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignPoleBase;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;

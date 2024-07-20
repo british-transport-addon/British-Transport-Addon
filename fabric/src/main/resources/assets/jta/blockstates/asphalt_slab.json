@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jta:block/asphalt_slab"
+    },
+    "type=double": {
+      "model": "jta:block/asphalt"
+    },
+    "type=top": {
+      "model": "jta:block/asphalt_slab_top"
+    }
+  }
+}

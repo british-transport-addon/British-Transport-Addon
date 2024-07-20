@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/creamy_english_bricks"
+  },
+  "parent": "jta:block/parent/wall_cube_window"
+}
