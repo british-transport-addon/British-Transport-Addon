@@ -19,8 +19,10 @@ public class UKBritishOperatorStationSignWallBase extends DirectionalBlockEntity
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        if (color == DyeColor.WHITE) return new UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
-        if (color == DyeColor.BLUE) return new UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue(blockPos, blockState);
+        if (color == DyeColor.WHITE)
+            return new UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite(blockPos, blockState);
+        if (color == DyeColor.BLUE)
+            return new UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue(blockPos, blockState);
         else return new UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign(blockPos, blockState);
     }
 
@@ -45,6 +47,7 @@ public class UKBritishOperatorStationSignWallBase extends DirectionalBlockEntity
             return true;
         }
     }
+
     public static class TileEntityBritishRailOperatorSignBlue extends BlockEntityExtension {
 
         public TileEntityBritishRailOperatorSignBlue(BlockPos pos, BlockState state) {

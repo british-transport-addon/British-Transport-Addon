@@ -12,6 +12,7 @@ public class BlockEntityTypeInit {
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
+
     public static final BlockEntityTypeRegistryObject<ManchesterSignSquare.TileEntityManchesterStationSign> MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

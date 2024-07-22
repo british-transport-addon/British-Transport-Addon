@@ -1,22 +1,22 @@
 plugins {
-	id "java"
+    id "java"
 }
 
 group "org.eu.awesomekalin.jta"
 version rootProject.properties.version
 
 subprojects {
-	apply plugin: "java"
-	dependencies {
-		compileOnly "com.google.code.findbugs:jsr305:+"
-	}
+    apply plugin: "java"
+    dependencies {
+        compileOnly "com.google.code.findbugs:jsr305:+"
+    }
 
-	repositories {
-		mavenCentral()
-		flatDir { dirs "../libs" }
-	}
+    repositories {
+        mavenCentral()
+        flatDir { dirs "../libs" }
+    }
 
-	tasks.withType(Javadoc).tap {
-		configureEach { javadoc.options.addStringOption("Xdoclint:none", "-quiet") }
-	}
+    tasks.withType(Javadoc).tap {
+        configureEach { javadoc.options.addStringOption("Xdoclint:none", "-quiet") }
+    }
 }

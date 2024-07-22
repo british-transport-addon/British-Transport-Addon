@@ -7,7 +7,7 @@ public enum DyeColor {
     LIGHT_BLUE(3, "light_blue", 3847130, 6719955, 10141901),
     YELLOW(4, "yellow", 16701501, 14602026, 16776960),
     LIME(5, "lime", 8439583, 4312372, 12582656),
-    PINK(6, "pink", 15961002,14188952, 16738740),
+    PINK(6, "pink", 15961002, 14188952, 16738740),
     GRAY(7, "gray", 4673362, 4408131, 8421504),
     LIGHT_GRAY(8, "light_gray", 10329495, 11250603, 13882323),
     CYAN(9, "cyan", 1481884, 2651799, 65535),
@@ -18,7 +18,7 @@ public enum DyeColor {
     RED(14, "red", 11546150, 11743532, 16711680),
     BLACK(15, "black", 1908001, 1973019, 0);
 
-     private final int id;
+    private final int id;
     private final String name;
     private final float[] colorComponents;
     private final int fireworkColor;
@@ -31,7 +31,7 @@ public enum DyeColor {
         int j = (color & 16711680) >> 16;
         int k = (color & '\uff00') >> 8;
         int l = (color & 255) >> 0;
-        this.colorComponents = new float[]{(float)j / 255.0F, (float)k / 255.0F, (float)l / 255.0F};
+        this.colorComponents = new float[]{(float) j / 255.0F, (float) k / 255.0F, (float) l / 255.0F};
         this.fireworkColor = fireworkColor;
     }
 

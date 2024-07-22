@@ -13,7 +13,7 @@ public class MinecraftAssetProcessor {
     private static final String ITEM_MODELS_PATH = "C:\\Users\\emzyy\\Desktop\\Jesses-Transit-Addon\\fabric\\src\\main\\resources\\assets\\jta\\models\\item";
 
     public static void main(String[] args) {
-        String[] directories = { BLOCKSTATES_PATH, MODELS_PATH, ITEM_MODELS_PATH };
+        String[] directories = {BLOCKSTATES_PATH, MODELS_PATH, ITEM_MODELS_PATH};
 
         for (String directory : directories) {
             processDirectory(directory);

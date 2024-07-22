@@ -26,7 +26,7 @@ public class JSONModifier {
             for (Map.Entry<String, JsonElement> entry : jsonObject.entrySet()) {
                 String key = entry.getKey();
                 String value = entry.getValue().getAsString();
-                
+
                 if (key.startsWith("block.jta.rusty_")) {
                     // Replace "Rusty" in value with "Black" and add new key-value pair
                     String newValueBlack = value.replace("Rusty", "Black");

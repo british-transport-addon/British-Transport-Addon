@@ -33,6 +33,7 @@ public class BeeBusStopSign extends RustyPoleBase implements BlockWithEntity {
             }
         });
     }
+
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new TileEntityBeeBusSign(blockPos, blockState);
@@ -40,10 +41,10 @@ public class BeeBusStopSign extends RustyPoleBase implements BlockWithEntity {
 
     public static class TileEntityBeeBusSign extends BlockEntityExtension {
 
-        private String towardsText;
-        private String servicesTextOne;
         private static final String KEY_TOWARDS_TEXT = "towards_text";
         private static final String KEY_SERVICES_TEXT_ONE = "services_text_one";
+        private String towardsText;
+        private String servicesTextOne;
 
         public TileEntityBeeBusSign(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.BEE_BUS_STOP.get(), pos, state);

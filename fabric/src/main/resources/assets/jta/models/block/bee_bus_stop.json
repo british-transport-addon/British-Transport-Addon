@@ -1,23 +1,87 @@
 {
-	"credit": "Made with Blockbench",
-	"textures": {
-		"0": "jta:block/bee_bus_stop_away_traffic",
-		"1": "jta:block/bee_bus_stop_facing_traffic",
-		"particle": "jta:block/bee_bus_stop_away_traffic"
-	},
-	"elements": [
-		{
-			"from": [1.925, -4, 8],
-			"to": [12.575, 17.2, 8],
-			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 7]},
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},
-				"east": {"uv": [0, 0, 2, 8.2], "texture": "#missing"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
-				"west": {"uv": [0, 0, 2, 8.2], "texture": "#missing"},
-				"up": {"uv": [0, 0, 4.15, 2], "texture": "#missing"},
-				"down": {"uv": [0, 0, 4.15, 2], "texture": "#missing"}
-			}
-		}
-	]
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "jta:block/bee_bus_stop_away_traffic",
+    "1": "jta:block/bee_bus_stop_facing_traffic",
+    "particle": "jta:block/bee_bus_stop_away_traffic"
+  },
+  "elements": [
+    {
+      "from": [
+        1.925,
+        -4,
+        8
+      ],
+      "to": [
+        12.575,
+        17.2,
+        8
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          5,
+          0,
+          7
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            2,
+            8.2
+          ],
+          "texture": "#missing"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            2,
+            8.2
+          ],
+          "texture": "#missing"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            4.15,
+            2
+          ],
+          "texture": "#missing"
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            4.15,
+            2
+          ],
+          "texture": "#missing"
+        }
+      }
+    }
+  ]
 }

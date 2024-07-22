@@ -31,8 +31,8 @@ public class JavaFileModifier {
             newLines.forEach(System.out::println);
 
             // Uncomment below to write modified content back to the file
-             writeLines(filePath, newLines);
-             System.out.println("Lines starting with RUSTY_ duplicated with STEEL_ prefix in " + filePath + ".");
+            writeLines(filePath, newLines);
+            System.out.println("Lines starting with RUSTY_ duplicated with STEEL_ prefix in " + filePath + ".");
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -18,8 +18,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-            fetch-depth: 0
-            
+          fetch-depth: 0
+
       - name: Create bundle
         run: git bundle create jesses_transit_addon-${{ github.sha }}.bundle --all
 

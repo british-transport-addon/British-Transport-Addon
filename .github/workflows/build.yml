@@ -64,7 +64,7 @@ jobs:
 
       - name: Setup Fabric files
         run: ./gradlew fabric:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
-        
+
       - name: Setup Potato PC Textures
         run: ./gradlew fabric:setupPotato -PminecraftVersion="${{ matrix.minecraft }}"
 

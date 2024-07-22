@@ -29,6 +29,7 @@ public class LondonBusStopSign extends RustyPoleBase implements BlockWithEntity 
             }
         });
     }
+
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new TileEntityLondonBusSign(blockPos, blockState);
@@ -36,10 +37,10 @@ public class LondonBusStopSign extends RustyPoleBase implements BlockWithEntity 
 
     public static class TileEntityLondonBusSign extends BlockEntityExtension {
 
-        private String towardsText;
-        private String servicesTextOne;
         private static final String KEY_TOWARDS_TEXT = "towards_text";
         private static final String KEY_SERVICES_TEXT_ONE = "services_text_one";
+        private String towardsText;
+        private String servicesTextOne;
 
         public TileEntityLondonBusSign(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.LONDON_BUS_STOP.get(), pos, state);

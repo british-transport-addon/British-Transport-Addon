@@ -5,7 +5,8 @@ $sign_type = "steel_"
 # $sign_type = "blue_"
 
 # Function to update file content
-function Update-FileContent {
+function Update-FileContent
+{
     param (
         [string]$filename
     )
@@ -27,17 +28,19 @@ Set-Location $PSScriptRoot
 Pause
 
 # Iterate over all .json files in the current directory (parent/models/block)
-foreach ($file in Get-ChildItem *.json) {
+foreach ($file in Get-ChildItem *.json)
+{
     $filename = $file.BaseName
     $extension = $file.Extension
 
-    if ($filename.StartsWith("rusty_")) {
+    if ( $filename.StartsWith("rusty_"))
+    {
         # Extract the part of the filename after rusty_
         $new_name = $filename.Substring(6)
         $new_file = "$sign_type$new_name$extension"
 
         # Create new file with the new sign_type prefix
-        Write-Host "Copying $($file.Name) to $new_file"
+        Write-Host "Copying $( $file.Name ) to $new_file"
         Copy-Item -Path $file.FullName -Destination $new_file -Force
 
         # Update the file content
@@ -52,17 +55,19 @@ Write-Host "Moving to parent/models directory"
 Set-Location ..
 
 # Iterate over all .json files in the item directory (parent/models/item)
-foreach ($file in Get-ChildItem "item\*.json") {
+foreach ($file in Get-ChildItem "item\*.json")
+{
     $filename = $file.BaseName
     $extension = $file.Extension
 
-    if ($filename.StartsWith("rusty_")) {
+    if ( $filename.StartsWith("rusty_"))
+    {
         # Extract the part of the filename after rusty_
         $new_name = $filename.Substring(6)
         $new_file = "item\$sign_type$new_name$extension"
 
         # Create new item model file with the new sign_type prefix
-        Write-Host "Copying $($file.Name) to $new_file"
+        Write-Host "Copying $( $file.Name ) to $new_file"
         Copy-Item -Path $file.FullName -Destination $new_file -Force
 
         # Update the file content
@@ -82,17 +87,19 @@ Set-Location blockstates
 Pause
 
 # Iterate over all blockstate files (parent/blockstates)
-foreach ($file in Get-ChildItem *.json) {
+foreach ($file in Get-ChildItem *.json)
+{
     $filename = $file.BaseName
     $extension = $file.Extension
 
-    if ($filename.StartsWith("rusty_")) {
+    if ( $filename.StartsWith("rusty_"))
+    {
         # Extract the part of the filename after rusty_
         $new_name = $filename.Substring(6)
         $new_file = "$sign_type$new_name$extension"
 
         # Create new blockstate file with the new sign_type prefix
-        Write-Host "Copying $($file.Name) to $new_file"
+        Write-Host "Copying $( $file.Name ) to $new_file"
         Copy-Item -Path $file.FullName -Destination $new_file -Force
 
         # Update the file content

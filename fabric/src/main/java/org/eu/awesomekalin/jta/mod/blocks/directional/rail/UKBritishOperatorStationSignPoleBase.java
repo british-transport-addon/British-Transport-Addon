@@ -45,6 +45,7 @@ public class UKBritishOperatorStationSignPoleBase extends RustyPoleBase implemen
             return true;
         }
     }
+
     public static class TileEntityBritishRailOperatorSignBlue extends BlockEntityExtension {
 
         public TileEntityBritishRailOperatorSignBlue(BlockPos pos, BlockState state) {

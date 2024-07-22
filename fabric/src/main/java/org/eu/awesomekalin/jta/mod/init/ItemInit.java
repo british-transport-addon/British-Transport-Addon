@@ -24,6 +24,7 @@ public class ItemInit {
     public static final BlockRegistryObject HANDHELD_GO_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "handheld_go_sign"), () -> new Block(new HandheldSignBase()), CreativeTabInit.JTA_ITEMS);
     public static final BlockRegistryObject HANDHELD_STOP_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "handheld_stop_sign"), () -> new Block(new HandheldSignBase()), CreativeTabInit.JTA_ITEMS);
     public static final BlockRegistryObject HANDHELD_STOP_CHILDREN_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "handheld_stop_children_sign"), () -> new Block(new HandheldSignBase()), CreativeTabInit.JTA_ITEMS);
+
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Items");
     }

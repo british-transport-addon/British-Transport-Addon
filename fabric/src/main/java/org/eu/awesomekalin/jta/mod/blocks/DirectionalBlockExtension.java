@@ -20,6 +20,9 @@ public abstract class DirectionalBlockExtension extends BlockExtension implement
         super(blockSettings);
     }
 
+    public static float getAngle(BlockState state) {
+        return IBlock.getStatePropertySafe(state, DirectionHelper.FACING).asRotation() + (IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_22_5).booleanValue ? 22.5F : 0) + (IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_45).booleanValue ? 45 : 0);
+    }
 
     @Override
     public BlockState getPlacementState2(ItemPlacementContext ctx) {
@@ -32,10 +35,6 @@ public abstract class DirectionalBlockExtension extends BlockExtension implement
         properties.add(FACING);
         properties.add(IS_22_5);
         properties.add(IS_45);
-    }
-
-    public static float getAngle(BlockState state) {
-        return IBlock.getStatePropertySafe(state, DirectionHelper.FACING).asRotation() + (IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_22_5).booleanValue ? 22.5F : 0) + (IBlock.getStatePropertySafe(state, DirectionalBlockExtension.IS_45).booleanValue ? 45 : 0);
     }
 
     @NotNull
@@ -56,14 +55,14 @@ public abstract class DirectionalBlockExtension extends BlockExtension implement
             this.booleanValue = booleanValue;
         }
 
+        private static EnumBooleanInverted fromBoolean(boolean value) {
+            return value ? TRUE : FALSE;
+        }
+
         @Nonnull
         @Override
         public String asString2() {
             return String.valueOf(booleanValue);
-        }
-
-        private static EnumBooleanInverted fromBoolean(boolean value) {
-            return value ? TRUE : FALSE;
         }
     }
 }

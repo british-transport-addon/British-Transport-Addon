@@ -17,6 +17,7 @@ public class BeeStationSign extends RustyPoleBase implements BlockWithEntity {
 
         return ActionResult.CONSUME;
     }
+
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
         return new TileEntityBeeStationSign(blockPos, blockState);

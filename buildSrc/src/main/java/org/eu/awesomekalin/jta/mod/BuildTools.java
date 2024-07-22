@@ -20,15 +20,13 @@ import java.nio.file.StandardCopyOption;
 
 public class BuildTools {
 
+    private static final Logger LOGGER = LogManager.getLogger("Build");
     public final String minecraftVersion;
     public final String loader;
     public final int javaLanguageVersion;
-
     private final Path path;
     private final String version;
     private final int majorVersion;
-
-    private static final Logger LOGGER = LogManager.getLogger("Build");
 
     public BuildTools(String minecraftVersion, String loader, Project project) throws IOException {
         this.minecraftVersion = minecraftVersion;
@@ -37,6 +35,23 @@ public class BuildTools {
         version = project.getVersion().toString();
         majorVersion = Integer.parseInt(minecraftVersion.split("\\.")[1]);
         javaLanguageVersion = majorVersion <= 16 ? 8 : majorVersion == 17 ? 16 : 17;
+    }
+
+    private static JsonElement getJson(String url) {
+        for (int i = 0; i < 5; i++) {
+            try {
+                return JsonParser.parseString(IOUtils.toString(new URL(url), StandardCharsets.UTF_8));
+            } catch (Exception e) {
+                LOGGER.error("", e);
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                LOGGER.error("", e);
+            }
+        }
+
+        return new JsonObject();
     }
 
     public String getFabricVersion() {
@@ -65,22 +80,5 @@ public class BuildTools {
         final Path directory = path.getParent().resolve("build/release");
         Files.createDirectories(directory);
         Files.copy(path.resolve(String.format("build/libs/%s-%s.jar", loader, version)), directory.resolve(String.format("JTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
-    }
-
-    private static JsonElement getJson(String url) {
-        for (int i = 0; i < 5; i++) {
-            try {
-                return JsonParser.parseString(IOUtils.toString(new URL(url), StandardCharsets.UTF_8));
-            } catch (Exception e) {
-                LOGGER.error("", e);
-            }
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                LOGGER.error("", e);
-            }
-        }
-
-        return new JsonObject();
     }
 }

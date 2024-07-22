@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/garage_door",
+  "textures": {
+    "color": "jta:block/black"
+  }
+}
