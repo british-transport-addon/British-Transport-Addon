@@ -1,6 +1,6 @@
 {
   "textures": {
-    "all": "jta:block/silty_bricks"
+    "all": "jta:block/sandy_bricks"
   },
   "parent": "jta:block/parent/wall_cube_window"
 }

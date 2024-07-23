@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/rain_gutter_down_out",
+  "textures": {
+    "color": "jta:block/black"
+  }
+}
