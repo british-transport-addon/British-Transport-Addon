@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "jta:block/smooth_mixed_stone",
+    "side": "jta:block/smooth_mixed_stone",
+    "top": "jta:block/smooth_mixed_stone"
+  }
+}

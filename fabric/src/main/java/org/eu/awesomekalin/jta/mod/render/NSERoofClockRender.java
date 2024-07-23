@@ -58,8 +58,10 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
         final BlockState state = world.getBlockState(pos);
         final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
-        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(new SimpleDateFormat("HH:mm:ss").format(new Date(System.currentTimeMillis()))), style);
+        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(new SimpleDateFormat("HH:mm•   ").format(new Date(System.currentTimeMillis()))), style);
+        final MutableText roundelTextSec = TextHelper.setStyle(TextHelper.literal(new SimpleDateFormat("   ss").format(new Date(System.currentTimeMillis()))), style);
         final int textWidth = GraphicsHolder.getTextWidth(roundelText);
+        final int textWidth2 = textWidth + GraphicsHolder.getTextWidth(roundelTextSec);
 
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
@@ -69,9 +71,11 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
+            renderSeconds(graphicsHolderNew, roundelTextSec, textWidth2, light);
             if (isDoubleSided) {
                 graphicsHolderNew.rotateYDegrees(180);
                 render(graphicsHolderNew, roundelText, textWidth, light);
+                renderSeconds(graphicsHolderNew, roundelTextSec, textWidth2, light);
             }
             graphicsHolderNew.pop();
         });
@@ -86,6 +90,19 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
         graphicsHolder.scale(scale, scale, scale);
         graphicsHolder.translate(0, -3.5, 0);
         graphicsHolder.drawText(roundelText, -textWidth / 2, 0, textColor, false, GraphicsHolder.getDefaultLight());
+
+        graphicsHolder.pop();
+    }
+
+    private void renderSeconds(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {
+        graphicsHolder.push();
+        graphicsHolder.rotateXDegrees(xTilt);
+        graphicsHolder.translate(-xOffset, -yOffset, -zOffset - SMALL_OFFSET * 2);
+
+        final float scale = Math.min((maxWidth) / textWidth, maxScale);
+        graphicsHolder.scale(scale, scale, scale);
+        graphicsHolder.translate(3, -2.75, 0);
+        graphicsHolder.drawText(roundelText, -textWidth / 2 + 29, 0, 0xB33C2D, false, GraphicsHolder.getDefaultLight());
 
         graphicsHolder.pop();
     }

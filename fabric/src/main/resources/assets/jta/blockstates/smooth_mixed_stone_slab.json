@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "jta:block/smooth_mixed_stone_slab"
+    },
+    "type=double": {
+      "model": "jta:block/smooth_mixed_stone"
+    },
+    "type=top": {
+      "model": "jta:block/smooth_mixed_stone_slab_top"
+    }
+  }
+}

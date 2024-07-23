@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/stone_paver"
+  },
+  "parent": "block/cube_all"
+}
