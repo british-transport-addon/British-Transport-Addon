@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/adt_alarm"
+    },
+    "facing=south": {
+      "model": "jta:block/adt_alarm",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/adt_alarm",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/adt_alarm",
+      "y": -90
+    }
+  }
+}

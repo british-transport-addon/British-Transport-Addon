@@ -38,6 +38,11 @@ public class BlockInit {
     public static final BlockRegistryObject CROSSING_PELICAN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_pelican"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
     public static final BlockRegistryObject CROSSING_PUSH_BUTTON = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_push_button"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
     public static final BlockRegistryObject CROSSING_PUSH_BUTTON_SMALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_push_button_small"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
+    public static final BlockRegistryObject TWIN_AMBER_FLASHER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "twin_amber_flasher"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_STREETS);
+    public static final BlockRegistryObject TWIN_AMBER_FLASHER_OFF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "twin_amber_flasher_off"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_STREETS);
+    public static final BlockRegistryObject TRAFFIC_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "traffic_signal"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_STREETS);
+    public static final BlockRegistryObject PEDESTRIAN_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pedestrian_signal"), () -> new Block(new PedestrianSignal()), CreativeTabInit.JTA_STREETS);
+
     public static final BlockRegistryObject STEEL_GARAGE_DOOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_garage_door"), () -> new Block(new GarageDoor()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STEEL_GARAGE_DOOR_WINDOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_garage_door_window"), () -> new Block(new GarageDoorWindow()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_GARAGE_DOOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_garage_door"), () -> new Block(new GarageDoor()), CreativeTabInit.JTA_BLOCKS);
@@ -46,6 +51,7 @@ public class BlockInit {
     public static final BlockRegistryObject WHITE_GARAGE_DOOR_WINDOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_garage_door_window"), () -> new Block(new GarageDoorWindow()), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject WALL_DEFIBRILATOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_defibrilator"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
+    public static final BlockRegistryObject ADT_ALARM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "adt_alarm"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
 
     public static final BlockRegistryObject TV_SATALITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tv_satalite"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_STREETS);
     public static final BlockRegistryObject DRAIN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "drain"), () -> new Block(new Drain()), CreativeTabInit.JTA_ROADS);
@@ -251,8 +257,6 @@ public class BlockInit {
     public static final BlockRegistryObject BELISHA_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject WHITE_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_top"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BELISHA_TOP_WITH_COVER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "belisha_top_with_cover"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject TWIN_AMBER_FLASHER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "twin_amber_flasher"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject TWIN_AMBER_FLASHER_OFF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "twin_amber_flasher_off"), () -> new Block(new BelishaBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STREET_LIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "street_light"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STREET_LIGHT_OFF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "street_light_off"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STREET_LIGHT_FLICKER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "street_light_flicker"), () -> new Block(new BelishaTop()), CreativeTabInit.JTA_BLOCKS);
@@ -999,6 +1003,14 @@ public class BlockInit {
     public static final BlockRegistryObject STEEL_POLE_NETWORK_RAIL_NO_ACCESS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_network_rail_no_access"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BLACK_POLE_NETWORK_RAIL_NO_ACCESS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_network_rail_no_access"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject WALL_NETWORK_RAIL_NO_ACCESS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_network_rail_no_access"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_BRIDGE_RAIL_AUTHORITY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_bridge_rail_authority"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject STEEL_POLE_BRIDGE_RAIL_AUTHORITY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_bridge_rail_authority"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject BLACK_POLE_BRIDGE_RAIL_AUTHORITY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bridge_rail_authority"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_BRIDGE_RAIL_AUTHORITY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_bridge_rail_authority"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject RUSTY_POLE_CAUTION_LIVE_RAILWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_caution_live_railway"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject STEEL_POLE_CAUTION_LIVE_RAILWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_caution_live_railway"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject BLACK_POLE_CAUTION_LIVE_RAILWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_caution_live_railway"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject WALL_CAUTION_LIVE_RAILWAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_caution_live_railway"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject RUSTY_POLE_DANGER_OVERHEAD_WIRES = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_danger_overhead_wires"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject STEEL_POLE_DANGER_OVERHEAD_WIRES = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_danger_overhead_wires"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BLACK_POLE_DANGER_OVERHEAD_WIRES = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_danger_overhead_wires"), () -> new Block(new RustyPoleBase()), CreativeTabInit.JTA_SIGNS);

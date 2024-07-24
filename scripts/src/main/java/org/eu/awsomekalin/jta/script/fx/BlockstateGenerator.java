@@ -402,8 +402,9 @@ public class BlockstateGenerator {
 
 
     private void generatePoleModel(String modelName, String prefix, String suffix, float rotation) {
-        try {
-            FileWriter writer = new FileWriter(new File(MODELS_PATH, prefix + "_" + modelName + suffix + ".json"));
+        File file = new File(MODELS_PATH, prefix + "_" + modelName + suffix + ".json");
+
+        try (FileWriter writer = new FileWriter(file)) {
             writer.write("{\n");
             writer.write("  \"credit\": \"Made with Blockbench\",\n");
             writer.write("  \"texture_size\": [\n");
@@ -415,83 +416,37 @@ public class BlockstateGenerator {
             writer.write("    \"3\": \"jta:block/" + modelName + "\"\n");
             writer.write("  },\n");
             writer.write("  \"elements\": [\n");
-            writer.write("    {\n");
-            writer.write("      \"from\": [\n");
-            writer.write("        7.5,\n");
-            writer.write("        0,\n");
-            writer.write("        7.5\n");
-            writer.write("      ],\n");
-            writer.write("      \"to\": [\n");
-            writer.write("        8.5,\n");
-            writer.write("        16,\n");
-            writer.write("        8.5\n");
-            writer.write("      ],\n");
-            writer.write("      \"rotation\": {\n");
-            writer.write("        \"angle\": " + rotation + ",\n");
-            writer.write("        \"axis\": \"y\",\n");
-            writer.write("        \"origin\": [\n");
-            writer.write("          7,\n");
-            writer.write("          0,\n");
-            writer.write("          5\n");
-            writer.write("        ]\n");
-            writer.write("      },\n");
-            writer.write("      \"faces\": {\n");
-            writer.write("        \"north\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            0,\n");
-            writer.write("            0,\n");
-            writer.write("            0.5,\n");
-            writer.write("            16\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"east\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            7.5,\n");
-            writer.write("            0,\n");
-            writer.write("            8,\n");
-            writer.write("            16\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"south\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            0.5,\n");
-            writer.write("            0,\n");
-            writer.write("            1,\n");
-            writer.write("            16\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"west\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            7,\n");
-            writer.write("            0,\n");
-            writer.write("            7.5,\n");
-            writer.write("            16\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"up\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            1.0625,\n");
-            writer.write("            0,\n");
-            writer.write("            1.5625,\n");
-            writer.write("            1\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"down\": {\n");
-            writer.write("          \"uv\": [\n");
-            writer.write("            6.4375,\n");
-            writer.write("            0,\n");
-            writer.write("            6.9375,\n");
-            writer.write("            1\n");
-            writer.write("          ],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        }\n");
-            writer.write("      }\n");
-            writer.write("    },\n");
+
+            // Helper method to add an element
+            addElement(writer, new float[][]{{7.5f, 0, 7.5f}, {8.5f, 16, 8.25f}},
+                    0, new float[][]{{7, 0, 4.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7.5f, 0, 8.25f}, {8.5f, 16, 9.25f}},
+                    0, new float[][]{{7, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7.5f, 0, 9.25f}, {8.5f, 16, 10f}},
+                    0, new float[][]{{7, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 8.25f}, {9.25f, 16, 9.25f}},
+                    0, new float[][]{{8, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{6.75f, 0, 8.25f}, {7.5f, 16, 9.25f}},
+                    0, new float[][]{{6, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7f, 0, 9.25f}, {7.5f, 16, 9.75f}},
+                    0, new float[][]{{6, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7f, 0, 7.75f}, {7.5f, 16, 8.25f}},
+                    0, new float[][]{{6, 0, 5.25f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 7.75f}, {9f, 16, 8.25f}},
+                    0, new float[][]{{7.5f, 0, 5.25f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 9.25f}, {9f, 16, 9.75f}},
+                    0, new float[][]{{7.5f, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+
+            // Element 9
             writer.write("    {\n");
             writer.write("      \"from\": [\n");
             writer.write("        0,\n");
@@ -570,6 +525,8 @@ public class BlockstateGenerator {
             writer.write("      }\n");
             writer.write("    }\n");
             writer.write("  ],\n");
+
+            // Display settings
             writer.write("  \"display\": {\n");
             writer.write("    \"thirdperson_righthand\": {\n");
             writer.write("      \"rotation\": [\n");
@@ -590,11 +547,6 @@ public class BlockstateGenerator {
             writer.write("        0,\n");
             writer.write("        180,\n");
             writer.write("        0\n");
-            writer.write("      ],\n");
-            writer.write("      \"translation\": [\n");
-            writer.write("        0,\n");
-            writer.write("        0,\n");
-            writer.write("        -2\n");
             writer.write("      ]\n");
             writer.write("    },\n");
             writer.write("    \"firstperson_lefthand\": {\n");
@@ -612,20 +564,108 @@ public class BlockstateGenerator {
             writer.write("      ]\n");
             writer.write("    },\n");
             writer.write("    \"head\": {\n");
-            writer.write("      \"translation\": [\n");
+            writer.write("      \"rotation\": [\n");
             writer.write("        0,\n");
-            writer.write("        10,\n");
+            writer.write("        180,\n");
+            writer.write("        0\n");
+            writer.write("      ]\n");
+            writer.write("    },\n");
+            writer.write("    \"ground\": {\n");
+            writer.write("      \"rotation\": [\n");
+            writer.write("        0,\n");
+            writer.write("        180,\n");
             writer.write("        0\n");
             writer.write("      ]\n");
             writer.write("    }\n");
             writer.write("  }\n");
             writer.write("}\n");
 
-            writer.close();
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(null, "An error occurred while generating the pole model JSON file: " + e.getMessage());
+            e.printStackTrace();
         }
     }
+
+    private void addElement(FileWriter writer, float[][] fromTo, float angle, float[][] origin, String[] faces) throws IOException {
+        writer.write("    {\n");
+        writer.write("      \"from\": [\n");
+        writer.write("        " + fromTo[0][0] + ",\n");
+        writer.write("        " + fromTo[0][1] + ",\n");
+        writer.write("        " + fromTo[0][2] + "\n");
+        writer.write("      ],\n");
+        writer.write("      \"to\": [\n");
+        writer.write("        " + fromTo[1][0] + ",\n");
+        writer.write("        " + fromTo[1][1] + ",\n");
+        writer.write("        " + fromTo[1][2] + "\n");
+        writer.write("      ],\n");
+        writer.write("      \"rotation\": {\n");
+        writer.write("        \"angle\": " + angle + ",\n");
+        writer.write("        \"axis\": \"y\",\n");
+        writer.write("        \"origin\": [\n");
+        writer.write("          " + origin[0][0] + ",\n");
+        writer.write("          " + origin[0][1] + ",\n");
+        writer.write("          " + origin[0][2] + "\n");
+        writer.write("        ]\n");
+        writer.write("      },\n");
+        writer.write("      \"faces\": {\n");
+        writer.write("        \"north\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            16,\n");
+        writer.write("            16\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[0] + "\"\n");
+        writer.write("        },\n");
+        writer.write("        \"east\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0.75\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[1] + "\"\n");
+        writer.write("        },\n");
+        writer.write("        \"south\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            16,\n");
+        writer.write("            15.9619\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[2] + "\"\n");
+        writer.write("        },\n");
+        writer.write("        \"west\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0.75\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[3] + "\"\n");
+        writer.write("        },\n");
+        writer.write("        \"up\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0.875,\n");
+        writer.write("            0\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[4] + "\"\n");
+        writer.write("        },\n");
+        writer.write("        \"down\": {\n");
+        writer.write("          \"uv\": [\n");
+        writer.write("            0,\n");
+        writer.write("            0,\n");
+        writer.write("            0.875,\n");
+        writer.write("            0\n");
+        writer.write("          ],\n");
+        writer.write("          \"texture\": \"" + faces[5] + "\"\n");
+        writer.write("        }\n");
+        writer.write("      }\n");
+        writer.write("    },\n");
+    }
+
+
 
     private void generateSmallWallModel(String modelName, String prefix, String suffix, float rotation) {
         try {
@@ -716,41 +756,33 @@ public class BlockstateGenerator {
             writer.write("    \"3\": \"jta:block/" + contentModelName + "\"\n");
             writer.write("  },\n");
             writer.write("  \"elements\": [\n");
-            writer.write("    {\n");
-            writer.write("      \"from\": [7.5, 0, 7.5],\n");
-            writer.write("      \"to\": [8.5, 16, 8.5],\n");
-            writer.write("      \"rotation\": {\n");
-            writer.write("        \"angle\": " + rotation + ",\n");
-            writer.write("        \"axis\": \"y\",\n");
-            writer.write("        \"origin\": [7, 0, 5]\n");
-            writer.write("      },\n");
-            writer.write("      \"faces\": {\n");
-            writer.write("        \"north\": {\n");
-            writer.write("          \"uv\": [0, 0, 0.5, 16],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"east\": {\n");
-            writer.write("          \"uv\": [7.5, 0, 8, 16],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"south\": {\n");
-            writer.write("          \"uv\": [0.5, 0, 1, 16],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"west\": {\n");
-            writer.write("          \"uv\": [7, 0, 7.5, 16],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"up\": {\n");
-            writer.write("          \"uv\": [1.0625, 0, 1.5625, 1],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        },\n");
-            writer.write("        \"down\": {\n");
-            writer.write("          \"uv\": [6.4375, 0, 6.9375, 1],\n");
-            writer.write("          \"texture\": \"#1\"\n");
-            writer.write("        }\n");
-            writer.write("      }\n");
-            writer.write("    },\n");
+            addElement(writer, new float[][]{{7.5f, 0, 7.5f}, {8.5f, 16, 8.25f}},
+                    0, new float[][]{{7, 0, 4.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7.5f, 0, 8.25f}, {8.5f, 16, 9.25f}},
+                    0, new float[][]{{7, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7.5f, 0, 9.25f}, {8.5f, 16, 10f}},
+                    0, new float[][]{{7, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 8.25f}, {9.25f, 16, 9.25f}},
+                    0, new float[][]{{8, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{6.75f, 0, 8.25f}, {7.5f, 16, 9.25f}},
+                    0, new float[][]{{6, 0, 5.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7f, 0, 9.25f}, {7.5f, 16, 9.75f}},
+                    0, new float[][]{{6, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{7f, 0, 7.75f}, {7.5f, 16, 8.25f}},
+                    0, new float[][]{{6, 0, 5.25f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 7.75f}, {9f, 16, 8.25f}},
+                    0, new float[][]{{7.5f, 0, 5.25f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
+            addElement(writer, new float[][]{{8.5f, 0, 9.25f}, {9f, 16, 9.75f}},
+                    0, new float[][]{{7.5f, 0, 6.75f}},
+                    new String[]{"#1", "#1", "#1", "#1", "#1", "#1"});
             writer.write("    {\n");
             writer.write("      \"from\": [4, 4, 7.4],\n");
             writer.write("      \"to\": [12, 12, 7.4],\n");

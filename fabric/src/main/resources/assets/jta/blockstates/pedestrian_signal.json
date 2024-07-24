@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/pedestrian_signal"
+    },
+    "facing=south": {
+      "model": "jta:block/pedestrian_signal",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/pedestrian_signal",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/pedestrian_signal",
+      "y": -90
+    }
+  }
+}

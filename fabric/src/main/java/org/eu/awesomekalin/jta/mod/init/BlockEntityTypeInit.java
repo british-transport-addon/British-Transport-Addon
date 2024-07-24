@@ -5,6 +5,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.PedestrianSignal;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -54,6 +55,15 @@ public class BlockEntityTypeInit {
             BeeStationSign.TileEntityBeeStationSign::new,
             BlockInit.BEE_BUS_STATION_SIGN::get,
             BlockInit.BEE_INTERCHANGE_STATION_SIGN::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<PedestrianSignal.TileEntityPedestrianSignal> PEDESTRIAN_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "pedestrian_signal"
+            ),
+            PedestrianSignal.TileEntityPedestrianSignal::new,
+            BlockInit.PEDESTRIAN_SIGNAL::get
     );
 
     public static final BlockEntityTypeRegistryObject<DispatchSignal.TileEntityDispatchSignal> DISPATCH_SIGNAL = Init.REGISTRY.registerBlockEntityType(

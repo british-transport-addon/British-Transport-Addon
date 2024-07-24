@@ -94,6 +94,13 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PEDESTRIAN_SIGNAL,
+                dispatcher -> new PedestrianSignalRender<>(
+                        dispatcher,
+                        false,
+                        0x90EE90
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
                 dispatcher -> new SimpleStationSignRender<>(
                         dispatcher,
@@ -265,6 +272,7 @@ public final class InitClient {
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.AMAZON_PARCEL_COLLECTION_LOCKER);
 
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.ADT_ALARM);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WALL_DEFIBRILATOR);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_GARAGE_DOOR_WINDOW);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_GARAGE_DOOR);

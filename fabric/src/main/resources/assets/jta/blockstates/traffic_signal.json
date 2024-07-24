@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/traffic_signal"
+    },
+    "facing=south": {
+      "model": "jta:block/traffic_signal",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/traffic_signal",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/traffic_signal",
+      "y": -90
+    }
+  }
+}
