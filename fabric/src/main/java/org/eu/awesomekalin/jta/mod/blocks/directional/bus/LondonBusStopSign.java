@@ -2,7 +2,7 @@ package org.eu.awesomekalin.jta.mod.blocks.directional.bus;
 
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.RustyPoleBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.PoleBase;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
@@ -12,7 +12,7 @@ import org.mtr.mod.packet.PacketOpenBlockEntityScreen;
 
 import javax.annotation.Nonnull;
 
-public class LondonBusStopSign extends RustyPoleBase implements BlockWithEntity {
+public class LondonBusStopSign extends PoleBase implements BlockWithEntity {
 
     public LondonBusStopSign() {
         super();

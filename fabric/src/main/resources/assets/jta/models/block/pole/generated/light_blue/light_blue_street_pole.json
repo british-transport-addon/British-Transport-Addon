@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/pole/street_pole",
+  "textures": {
+    "color": "jta:block/pole/light_blue"
+  }
+}

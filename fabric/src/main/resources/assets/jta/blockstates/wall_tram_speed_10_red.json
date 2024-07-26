@@ -1,0 +1,188 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "false",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_22_5"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_22_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_22_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "true",
+        "is_45": "false"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_22_5",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_45"
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_45",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_45",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "false",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_45",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "north",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_67_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "east",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_67_5",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "south",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_67_5",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "facing": "west",
+        "is_22_5": "true",
+        "is_45": "true"
+      },
+      "apply": {
+        "model": "jta:block/wall_tram_speed_10_red_67_5"
+      }
+    }
+  ]
+}

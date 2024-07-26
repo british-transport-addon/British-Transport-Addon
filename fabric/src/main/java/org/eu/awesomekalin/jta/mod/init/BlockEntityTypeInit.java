@@ -22,6 +22,15 @@ public class BlockEntityTypeInit {
             ManchesterSignSquare.TileEntityManchesterStationSign::new,
             BlockInit.MANCHESTER_SIGN_SQUARE::get
     );
+
+    public static final BlockEntityTypeRegistryObject<MerseysideSignSquare.TileEntityMerseysideStationSign> MERSEYSIDE_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "merseyside_sign_square"
+            ),
+                MerseysideSignSquare.TileEntityMerseysideStationSign::new,
+            BlockInit.MERSEYSIDE_SIGN_SQUARE_RAIL::get
+    );
     public static final BlockEntityTypeRegistryObject<MetrolinkSign.MetrolinkSignEntity> METROLINK_SIGN_ENTITY = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

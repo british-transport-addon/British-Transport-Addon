@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/halfed/24hourcctv",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/sign_top"
+}

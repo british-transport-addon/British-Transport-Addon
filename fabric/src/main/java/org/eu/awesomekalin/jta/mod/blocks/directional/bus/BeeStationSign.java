@@ -1,12 +1,12 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.bus;
 
-import org.eu.awesomekalin.jta.mod.blocks.directional.RustyPoleBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.PoleBase;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockWithEntity;
 
-public class BeeStationSign extends RustyPoleBase implements BlockWithEntity {
+public class BeeStationSign extends PoleBase implements BlockWithEntity {
 
     public BeeStationSign() {
         super();

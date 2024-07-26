@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/pole/tiny_pole",
+  "textures": {
+    "color": "jta:block/pole/orange"
+  }
+}

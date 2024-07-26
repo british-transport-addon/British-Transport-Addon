@@ -2,21 +2,17 @@ package org.eu.awesomekalin.jta.mod.blocks.directional.bus;
 
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.RustyPoleBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.PoleBase;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.init.BlockInit;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockWithEntity;
-import org.mtr.mapping.mapper.PlayerHelper;
-import org.mtr.mapping.mapper.TextHelper;
-import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.packet.PacketOpenBlockEntityScreen;
 
 import javax.annotation.Nonnull;
 
-public class BeeBusStopSign extends RustyPoleBase implements BlockWithEntity {
+public class BeeBusStopSign extends PoleBase implements BlockWithEntity {
 
     public BeeBusStopSign() {
         super();

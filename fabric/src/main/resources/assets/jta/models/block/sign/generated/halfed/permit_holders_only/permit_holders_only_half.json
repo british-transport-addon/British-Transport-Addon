@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/halfed/permit_holders_only",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/sign_half"
+}

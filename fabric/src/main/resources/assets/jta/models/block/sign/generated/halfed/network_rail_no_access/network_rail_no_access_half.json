@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/halfed/network_rail_no_access",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/sign_half"
+}
