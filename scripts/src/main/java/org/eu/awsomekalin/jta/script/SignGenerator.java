@@ -124,6 +124,9 @@ public class SignGenerator {
         if (parentType.contains("large")) {
             modelPath = modelPath.replace("simple", "large");
         }
+        if (parentType.contains("small")) {
+            modelPath = modelPath.replace("simple", "small");
+        }
 
         String replaceFirst = modelPath.replaceFirst("/" + jsonFileName.replaceFirst(".json", ""), "");
         String replaced = modelPath.replaceFirst("/" + jsonFileName.replaceFirst(".json", ""), "");
