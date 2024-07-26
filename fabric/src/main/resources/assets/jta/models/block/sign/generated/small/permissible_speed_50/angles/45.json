@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/permissible_speed_50",
+    "sign": "jta:block/signs/simple/permissible_speed_50",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"

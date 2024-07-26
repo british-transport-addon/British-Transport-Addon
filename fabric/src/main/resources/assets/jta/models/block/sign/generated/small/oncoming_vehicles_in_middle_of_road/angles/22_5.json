@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/oncoming_vehicles_in_middle_of_road",
+    "sign": "jta:block/signs/simple/oncoming_vehicles_in_middle_of_road",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_22_5"

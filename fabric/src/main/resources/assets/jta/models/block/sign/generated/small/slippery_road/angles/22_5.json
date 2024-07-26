@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/slippery_road",
+    "sign": "jta:block/signs/simple/slippery_road",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_22_5"

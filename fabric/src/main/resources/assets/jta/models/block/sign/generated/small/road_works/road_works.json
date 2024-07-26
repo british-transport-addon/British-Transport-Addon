@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/road_works",
+    "sign": "jta:block/signs/simple/road_works",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/sign_small"

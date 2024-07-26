@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/loose_chippings",
+    "sign": "jta:block/signs/simple/loose_chippings",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_22_5"

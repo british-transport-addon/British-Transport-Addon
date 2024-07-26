@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/bend_to_right",
+    "sign": "jta:block/signs/simple/bend_to_right",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"

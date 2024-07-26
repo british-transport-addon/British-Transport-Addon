@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/stop_children",
+    "sign": "jta:block/signs/simple/stop_children",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_67_5"

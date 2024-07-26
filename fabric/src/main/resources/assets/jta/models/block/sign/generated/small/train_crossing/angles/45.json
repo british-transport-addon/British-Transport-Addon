@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/train_crossing",
+    "sign": "jta:block/signs/simple/train_crossing",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"

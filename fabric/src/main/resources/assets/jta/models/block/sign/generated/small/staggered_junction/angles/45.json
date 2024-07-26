@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/staggered_junction",
+    "sign": "jta:block/signs/simple/staggered_junction",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"

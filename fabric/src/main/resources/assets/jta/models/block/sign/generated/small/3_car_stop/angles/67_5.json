@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/3_car_stop",
+    "sign": "jta:block/signs/simple/3_car_stop",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_67_5"

@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/bridge_rail_authority",
+    "sign": "jta:block/signs/simple/bridge_rail_authority",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/sign_small"

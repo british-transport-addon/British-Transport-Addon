@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/elderly",
+    "sign": "jta:block/signs/simple/elderly",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/sign_small"

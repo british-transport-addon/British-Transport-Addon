@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/police_speed_check_area",
+    "sign": "jta:block/signs/simple/police_speed_check_area",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"

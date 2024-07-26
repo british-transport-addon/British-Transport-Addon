@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/cycle_lane_look_right",
+    "sign": "jta:block/signs/simple/cycle_lane_look_right",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_67_5"

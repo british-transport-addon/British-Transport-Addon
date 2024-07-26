@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/end_of_hwrgv_zone",
+    "sign": "jta:block/signs/simple/end_of_hwrgv_zone",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_67_5"

@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/cctv",
+    "sign": "jta:block/signs/simple/cctv",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/sign_small"

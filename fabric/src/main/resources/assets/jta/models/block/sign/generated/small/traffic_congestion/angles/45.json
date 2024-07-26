@@ -1,6 +1,6 @@
 {
   "textures": {
-    "sign": "jta:block/signs/small/traffic_congestion",
+    "sign": "jta:block/signs/simple/traffic_congestion",
     "sign_back": "jta:block/steel_rect"
   },
   "parent": "jta:block/sign/angles/sign_small_45"
