@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/small/passenger_do_not_cross_line",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/sign_small"
+}

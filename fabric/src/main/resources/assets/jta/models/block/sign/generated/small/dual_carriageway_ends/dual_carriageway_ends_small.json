@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/small/dual_carriageway_ends",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/sign_small"
+}

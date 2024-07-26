@@ -26,14 +26,14 @@ public class SignGenerator {
         keyReferences.put("sign_top", "halfed");
         keyReferences.put("sign_large", "large");
         keyReferences.put("sign_all", "simple");
-        keyReferences.put("sign_small", "simple");
+        keyReferences.put("sign_small", "small");
 
         processDirectory(new File(baseDir, "halfed"), new File(modelOutputBaseDir, "halfed"), new File(blockstateOutputBaseDir, "halfed"), new File(itemOutputBaseDir, "halfed"), "sign_half");
         processDirectory(new File(baseDir, "halfed"), new File(modelOutputBaseDir, "halfed"), new File(blockstateOutputBaseDir, "halfed"), new File(itemOutputBaseDir, "halfed"), "sign_center");
         processDirectory(new File(baseDir, "halfed"), new File(modelOutputBaseDir, "halfed"), new File(blockstateOutputBaseDir, "halfed"), new File(itemOutputBaseDir, "halfed"), "sign_top");
         processDirectory(new File(baseDir, "large"), new File(modelOutputBaseDir, "large"), new File(blockstateOutputBaseDir, "large"), new File(itemOutputBaseDir, "large"), "sign_large");
         processDirectory(new File(baseDir, "simple"), new File(modelOutputBaseDir, "simple"), new File(blockstateOutputBaseDir, "simple"), new File(itemOutputBaseDir, "simple"), "sign_all");
-        processDirectory(new File(baseDir, "simple"), new File(modelOutputBaseDir, "simple"), new File(blockstateOutputBaseDir, "simple"), new File(itemOutputBaseDir, "simple"), "sign_small");
+        processDirectory(new File(baseDir, "simple"), new File(modelOutputBaseDir, "small"), new File(blockstateOutputBaseDir, "small"), new File(itemOutputBaseDir, "small"), "sign_small");
 
         generateTextFiles(new File(base).getParentFile());
     }
@@ -70,12 +70,15 @@ public class SignGenerator {
                     if (parentType.contains("large")) {
                         inputName = "sign/large";
                     }
+                    if (parentType.contains("small")) {
+                        inputName = "sign/small";
+                    }
                     generateBlockstateFile(file, blockstateDir, parentType, baseName);
                 }
                 generateItemFile(file, itemDir, parentType, baseName);
 
                 inputName = inputName + "/" + baseName + '/' + baseName;
-                String capitalizedBaseName = baseName.toUpperCase();
+                String capitalizedBaseName = "SIGN_" +parentType.replace("sign", baseName.toUpperCase()).toUpperCase();
                 blockInitLines.add(String.format(
                         "public static final BlockRegistryObject SIGN_%s = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, \"%s\"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);",
                         capitalizedBaseName, inputName));
@@ -95,7 +98,7 @@ public class SignGenerator {
     }
 
     private static void generateModelFile(File pngFile, File outputDir, String parentType, String baseName) {
-        String jsonFileName = (parentType.replace("sign", baseName) + ".json").replace("_all.json", ".json").replace("_large.json", ".json");
+        String jsonFileName = (parentType.replace("sign", baseName) + ".json").replace("_all.json", ".json").replace("_large.json", ".json").replace("_small.json", ".json");
 
         String jsonContent = String.format(
                 "{\n" +
@@ -110,7 +113,7 @@ public class SignGenerator {
     }
 
     private static void generateBlockstateFile(File pngFile, File outputDir, String parentType, String baseName) {
-        String jsonFileName = parentType.replace("sign", baseName).replace("_all", "").replace("_large", "") + ".json";
+        String jsonFileName = parentType.replace("sign", baseName).replace("_all", "").replace("_large", "").replace("_small", "") + ".json";
         String modelPath = String.format("jta:block/sign/generated/simple/%s/%s", jsonFileName, jsonFileName).replace(".json", "");
         if (parentType.contains("large")) {
             modelPath = modelPath.replace("simple", "large");
