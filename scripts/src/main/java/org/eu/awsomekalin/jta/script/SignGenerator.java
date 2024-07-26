@@ -106,7 +106,7 @@ public class SignGenerator {
         String jsonContenta = String.format(
                 "{\n" +
                         "  \"textures\": {\n" +
-                        "    \"sign\": \"jta:block/signs/" + keyReferences.get(parentType).replace("small", "simple")FUC + "/%s\",\n" +
+                        "    \"sign\": \"jta:block/signs/" + keyReferences.get(parentType).replace("small", "simple") + "/%s\",\n" +
                         "    \"sign_back\": \"jta:block/steel_rect\"\n" +
                         "  },\n" +
                         "  \"parent\": \"jta:block/sign/angles/%s_^angle^\"\n" +
