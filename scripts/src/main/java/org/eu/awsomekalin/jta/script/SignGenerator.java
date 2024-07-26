@@ -78,7 +78,7 @@ public class SignGenerator {
                 generateItemFile(file, itemDir, parentType, baseName);
 
                 inputName = inputName + "/" + baseName + '/' + baseName;
-                String capitalizedBaseName = "SIGN_" +parentType.replace("sign", baseName.toUpperCase()).toUpperCase();
+                String capitalizedBaseName = parentType.replace("sign", baseName.toUpperCase()).toUpperCase();
                 blockInitLines.add(String.format(
                         "public static final BlockRegistryObject SIGN_%s = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, \"%s\"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);",
                         capitalizedBaseName, inputName));
@@ -89,14 +89,6 @@ public class SignGenerator {
             }
         }
     }
-
-    private static String capitalizeFirstLetter(String input) {
-        if (input == null || input.isEmpty()) {
-            return input;
-        }
-        return input.substring(0, 1).toUpperCase() + input.substring(1);
-    }
-
     private static void generateModelFile(File pngFile, File outputDir, String parentType, String baseName) {
         String jsonFileName = (parentType.replace("sign", baseName) + ".json").replace("_all.json", ".json").replace("_large.json", ".json").replace("_small.json", ".json");
 
@@ -110,6 +102,20 @@ public class SignGenerator {
                         "}", baseName, parentType);
 
         writeFile(new File(outputDir, jsonFileName), jsonContent);
+
+        String jsonContenta = String.format(
+                "{\n" +
+                        "  \"textures\": {\n" +
+                        "    \"sign\": \"jta:block/signs/" + keyReferences.get(parentType) + "/%s\",\n" +
+                        "    \"sign_back\": \"jta:block/steel_rect\"\n" +
+                        "  },\n" +
+                        "  \"parent\": \"jta:block/sign/angles/%s_^angle^\"\n" +
+                        "}", baseName, parentType);
+
+        new File(outputDir, "angles").mkdirs();
+        writeFile(new File(new File(outputDir, "angles"), "22_5.json"), jsonContenta.replace("^angle^", "22_5"));
+        writeFile(new File(new File(outputDir, "angles"), "45.json"), jsonContenta.replace("^angle^", "45"));
+        writeFile(new File(new File(outputDir, "angles"), "67_5.json"), jsonContenta.replace("^angle^", "67_5"));
     }
 
     private static void generateBlockstateFile(File pngFile, File outputDir, String parentType, String baseName) {
@@ -119,6 +125,8 @@ public class SignGenerator {
             modelPath = modelPath.replace("simple", "large");
         }
 
+        String replaceFirst = modelPath.replaceFirst("/" + jsonFileName.replaceFirst(".json", ""), "");
+        String replaced = modelPath.replaceFirst("/" + jsonFileName.replaceFirst(".json", ""), "");
         String blockstateContent = String.format(
                 "{\n" +
                         "  \"multipart\": [\n" +
@@ -141,9 +149,9 @@ public class SignGenerator {
                         "  ]\n" +
                         "}",
                 modelPath, modelPath, modelPath, modelPath,
-                modelPath, modelPath, modelPath, modelPath,
-                modelPath, modelPath, modelPath, modelPath,
-                modelPath, modelPath, modelPath, modelPath
+                replaceFirst, replaceFirst, replaced, replaced,
+                replaceFirst, replaceFirst, replaced, replaced,
+                replaceFirst, replaceFirst, replaced, replaced
         );
 
         writeFile(new File(outputDir, jsonFileName), blockstateContent);

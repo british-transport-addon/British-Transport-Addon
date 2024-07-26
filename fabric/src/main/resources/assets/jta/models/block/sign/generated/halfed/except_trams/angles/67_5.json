@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/halfed/except_trams",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_half_67_5"
+}

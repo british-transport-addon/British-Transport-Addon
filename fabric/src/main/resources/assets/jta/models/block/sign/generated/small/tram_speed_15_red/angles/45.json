@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/small/tram_speed_15_red",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_small_45"
+}

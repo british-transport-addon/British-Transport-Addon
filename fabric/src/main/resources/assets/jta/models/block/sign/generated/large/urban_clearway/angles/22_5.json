@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/large/urban_clearway",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_large_22_5"
+}

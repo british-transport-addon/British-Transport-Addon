@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/small/no_overtaking",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/sign_small"
-}

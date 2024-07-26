@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/large/average_speed_cameras",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_large_45"
+}

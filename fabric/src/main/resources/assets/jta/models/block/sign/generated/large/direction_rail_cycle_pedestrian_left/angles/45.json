@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/large/direction_rail_cycle_pedestrian_left",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_large_45"
+}

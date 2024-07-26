@@ -1,0 +1,7 @@
+{
+  "textures": {
+    "sign": "jta:block/signs/simple/t_junction_with_priority_left",
+    "sign_back": "jta:block/steel_rect"
+  },
+  "parent": "jta:block/sign/angles/sign_all_67_5"
+}
