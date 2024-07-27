@@ -48,7 +48,7 @@ public class FirstLoadScreen extends ScreenExtension implements IGui, Utilities 
         graphicsHolder.push();
         graphicsHolder.translate(width / 2F, SQUARE_SIZE, 0);
         graphicsHolder.scale(2, 2, 1);
-        graphicsHolder.drawCenteredText("Jexes Transit Addon alpha 6", 0, 0, ARGB_WHITE);
+        graphicsHolder.drawCenteredText("British Transport Addon alpha 7", 0, 0, ARGB_WHITE);
         graphicsHolder.pop();
 
         int i = SQUARE_SIZE * 2;

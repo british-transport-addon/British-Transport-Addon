@@ -351,6 +351,35 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MANCHESTER_TRASH_BIN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MANCHESTER_TRASH_BIN_ALT);
 
+        // Coloured blocks
+        // nvmn im slow
+        // right so we wardrobve later.
+        // for now we gotta like
+        // can we make itso. Instead of the regster ike registering reach block the way it is.
+        // can it just scan what models exist in the generated and make the items that way?
+        // then its less code in the idea. maybe
+        // or even just scan the blockstates..
+        // thats proababyl a better idea yeah
+        // then the script deosnt need to touich the java code.if it just rregisters them all as a list righjt.
+        // then it can do tihng?>
+        // yes in tuis ckas akk u tas ti do.,
+        // yes in this class all it has to do
+        // do loop thorugh erach block from
+        // brr like that yes? def
+        // then our init classes are not like 2k lines long by the time we have all the signs actually inb :(
+        // so we make new method and make blockinit registered signs just haev liek
+        // a list we do rn
+        BlockInit.REGISTERED_SIGNS.forEach(sign -> {
+            REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), sign);
+        });
+
+        REGISTRY_CLIENT.registerBlockColors((blockState, blockRenderView, blockPos, tintIndex) -> org.mtr.mod.InitClient.getStationColor(blockPos),
+                BlockInit.STREET_POLE_BASE_COLORED,
+                BlockInit.STREET_POLE_COLORED,
+                BlockInit.TINY_POLE_COLORED,
+                BlockInit.POLE_COLORED
+        );
+
         REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
 
         REGISTRY_CLIENT.init();

@@ -81,4 +81,14 @@ public class BuildTools {
         Files.createDirectories(directory);
         Files.copy(path.resolve(String.format("build/libs/%s-%s.jar", loader, version)), directory.resolve(String.format("JTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
     }
+
+    public String getCuriosVersion() {
+        final String modIdString = "curios";
+        return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-", "");
+    }
+
+    public String getTrinketsVersion() {
+        final String modIdString = "trinkets";
+        return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-", "");
+    }
 }

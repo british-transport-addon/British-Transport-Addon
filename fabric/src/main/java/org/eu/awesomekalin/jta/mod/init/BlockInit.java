@@ -24,6 +24,10 @@ import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
+import org.mtr.mod.item.ItemBlockEnchanted;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BlockInit {
 
