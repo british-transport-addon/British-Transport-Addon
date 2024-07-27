@@ -42,8 +42,24 @@ tasks.register("setupPotato") {
 
     copy {
         outputs.upToDateWhen { true }
-        from "../potatoTex"
+        from "../potatoTex/jta"
         into "src/main/resources/assets/jta/textures"
+    }
+	
+	delete fileTree("src/main/resources/assets/mtr")
+
+    copy {
+        outputs.upToDateWhen { true }
+        from "../potatoTex/mtr"
+        into "src/main/resources/assets/mtr"
+    }
+	
+	delete fileTree("src/main/resources/assets/mtrsteamloco")
+
+    copy {
+        outputs.upToDateWhen { true }
+        from "../potatoTex/mtrsteamloco"
+        into "src/main/resources/assets/mtrsteamloco"
     }
 }
 

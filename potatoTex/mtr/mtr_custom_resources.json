@@ -1,0 +1,18 @@
+{
+  "custom_trains": {
+    "class185_tpe": {
+      "name": "Class 185 (TPE)",
+      "color": "00A6E6",
+      "gangway_connection_id": "mtr:ktm8/ktm8",
+      "train_barrier_id": "",
+      "door_animation_type": "PLUG_FAST",
+      "render_door_overlay": false,
+      "rider_offset": 0,
+      "texture_id": "mtr:class395/minecraft_class395_bogie.png",
+      "model": "mtr:class185_tpe/class1851.obj|1;%1;|mtr:class185_tpe/class1852.obj|;1,-1;|mtr:class185_tpe/class1851.obj|-1;%1,1;reversed",
+      "model_properties": "mtr:class185_tpe/properties.json",
+      "speed_sound_base_id": "mpl85",
+      "door_sound_base_id": "class_802"
+    }
+  }
+}
