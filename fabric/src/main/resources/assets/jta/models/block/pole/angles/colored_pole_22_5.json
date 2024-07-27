@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/pole/angles/pole_22_5",
+  "textures": {
+    "color": "jta:block/steel"
+  }
+}

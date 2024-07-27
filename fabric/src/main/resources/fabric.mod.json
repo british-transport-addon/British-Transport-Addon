@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "jta",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "name": "Jesse's Transit Addon",
   "description": "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod",
   "authors": [

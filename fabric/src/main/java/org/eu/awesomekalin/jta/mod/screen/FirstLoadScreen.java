@@ -4,6 +4,7 @@ import org.eu.awesomekalin.jta.mod.Init;
 import org.mtr.core.tool.Utilities;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
+import org.mtr.mapping.registry.RegistryClient;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
