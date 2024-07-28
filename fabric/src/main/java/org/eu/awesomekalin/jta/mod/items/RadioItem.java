@@ -1,15 +1,11 @@
 package org.eu.awesomekalin.jta.mod.items;
 
-import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
-import net.minecraft.text.TextContent;
-import org.eu.awesomekalin.jta.mod.init.SoundInit;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.inventory.StackReference;
+import net.minecraft.screen.slot.Slot;
+import net.minecraft.util.ClickType;
+import org.eu.awesomekalin.jta.mod.Init;
 import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.InventoryHelper;
 import org.mtr.mapping.mapper.ItemExtension;
-import org.mtr.mapping.mapper.PlayerHelper;
-import org.mtr.mapping.mapper.TextHelper;
 
 public class RadioItem extends ItemExtension {
 
@@ -18,26 +14,9 @@ public class RadioItem extends ItemExtension {
     }
 
     @Override
-    public void useWithoutResult(World world, PlayerEntity player, Hand hand) {
-        ItemStack stack = player.getStackInHand(hand);
-        int channel = RadioUtil.getRadioChannel(stack);
-        if (!RadioUtil.isRadioTransmitting(stack)) {
-        }
-            world.playSound(null, player.getBlockPos(), SoundInit.MET_POLICE_RADIO_IN.get(), SoundCategory.VOICE, 1f, 1f);
-        player.sendMessage(Text.of("Transmitting.."), true);
-        RadioUtil.setRadioTransmitting(stack, true);
-
-    }
-
-
-    @NotNull
-    @Override
-    public ItemStack finishUsing2(ItemStack stack, World world, LivingEntity user) {RadioUtil.setRadioTransmitting(stack, false);
-        int channel = RadioUtil.getRadioChannel(stack);
-        PlayerEntity.cast(user).sendMessage(Text.of("Transmission Ended."), true);
-
-        world.playSound(null, user.getBlockPos(), SoundInit.MET_POLICE_RADIO_OUT.get(), SoundCategory.VOICE, 1, 1);
-
-        return super.finishUsing2(stack, world, user);
+    public boolean onClicked(net.minecraft.item.ItemStack stack, net.minecraft.item.ItemStack otherStack, Slot slot, ClickType clickType, net.minecraft.entity.player.PlayerEntity player, StackReference cursorStackReference) {
+        player.sendMessage(Text.of(slot.getIndex() + "").data, false);
+        player.sendMessage(Text.of(Init.ACCESORY_API.hasEquippedAttachment(new PlayerEntity(player), new ItemStack(stack)) + "").data, false);
+        return super.onClicked(stack, otherStack, slot, clickType, player, cursorStackReference);
     }
 }

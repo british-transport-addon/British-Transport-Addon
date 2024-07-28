@@ -14,5 +14,13 @@
         "pitch": 1.0
       }
     ]
+  },
+  "axon_body_3": {
+    "sounds": [
+      {
+        "name": "jta:axon_body_3",
+        "pitch": 1.0
+      }
+    ]
   }
 }

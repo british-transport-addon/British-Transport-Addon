@@ -5,6 +5,7 @@ import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.eu.awesomekalin.jta.mod.items.RadioItem;
+import org.eu.awesomekalin.jta.mod.items.ShieldItem;
 import org.eu.awesomekalin.jta.mod.util.DyeColor;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
@@ -18,6 +19,8 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 import org.mtr.mapping.registry.ItemRegistryObject;
 
 public class ItemInit {
+    public static final ItemRegistryObject RIOT_SHIELD = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "riot_shield"), (a) -> new Item(new ShieldItem()), CreativeTabInit.JTA_ITEMS);
+    public static final ItemRegistryObject AXON_BODY_3 = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "axon_body_3"), (a) -> new Item(new ItemSettings()), CreativeTabInit.JTA_ITEMS);
     public static final ItemRegistryObject MET_POLICE_RADIO = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "met_police_radio"), (a) -> new Item(new RadioItem()), CreativeTabInit.JTA_ITEMS);
     public static final ItemRegistryObject FIVE_POUND_NOTE = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "5_pound_note"), (a) -> new Item(new ItemSettings().maxCount(64)), CreativeTabInit.JTA_ITEMS);
     public static final ItemRegistryObject TEN_POUND_NOTE = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "10_pound_note"), (a) -> new Item(new ItemSettings().maxCount(64)), CreativeTabInit.JTA_ITEMS);

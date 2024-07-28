@@ -11,6 +11,7 @@ public class Init {
     public static final String MOD_ID = "jta";
     public static final Logger LOGGER = LogManager.getLogger("Jesses-Transit-Addon");
     public static final Registry REGISTRY = new Registry();
+    public static NativeAPI ACCESORY_API;
 
     public static void init() {
         BlockInit.INIT();
@@ -21,5 +22,8 @@ public class Init {
 
         DummyClass.enableLogging();
         REGISTRY.init();
+    }
+    public static void injectAccessoryAPI(NativeAPI nativeAPI) {
+        ACCESORY_API = nativeAPI;
     }
 }

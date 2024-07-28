@@ -7,11 +7,11 @@ import de.maxhenkel.voicechat.api.audiochannel.LocationalAudioChannel;
 import de.maxhenkel.voicechat.api.opus.OpusDecoder;
 import de.maxhenkel.voicechat.api.opus.OpusEncoder;
 import de.maxhenkel.voicechat.api.packets.MicrophonePacket;
+import net.minecraft.client.render.entity.model.ShieldEntityModel;
+import net.minecraft.item.ShieldItem;
 import net.minecraft.nbt.NbtCompound;
 import org.eu.awesomekalin.jta.mod.InitVoiceChatPlugin;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
-import org.eu.awesomekalin.jta.mod.world.GlobalRadioState;
-import org.mtr.libraries.com.logisticscraft.occlusionculling.util.Vec3d;
 import org.mtr.mapping.holder.*;
 
 import java.util.ArrayList;
@@ -168,9 +168,5 @@ public class RadioUtil {
 			}
 		}
 		return radios;
-	}
-
-	public static GlobalRadioState getGlobalRadioState(ServerWorld world) {
-		return world.data.getPersistentStateManager().getOrCreate(GlobalRadioState::fromNbt, GlobalRadioState::new, "globalRadios");
 	}
 }
