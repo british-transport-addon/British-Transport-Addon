@@ -5,6 +5,11 @@ plugins {
     id "fabric-loom" version "+"
 }
 
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.maxhenkel.de/repository/public' }
+}
+
 final BuildTools buildTools = new BuildTools(minecraftVersion, "fabric", project)
 
 loom {

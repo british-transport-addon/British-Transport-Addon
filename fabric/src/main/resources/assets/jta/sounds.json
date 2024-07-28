@@ -1,0 +1,18 @@
+{
+  "met_police_radio_in": {
+    "sounds": [
+      {
+        "name": "jta:met_police_radio_in",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "met_police_radio_out": {
+    "sounds": [
+      {
+        "name": "jta:met_police_radio_out",
+        "pitch": 1.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "icon": "bta:gui/slots/bodycam",
+  "order": -1024,
+  "validator_predicates": ["trinkets:tag"]
+}

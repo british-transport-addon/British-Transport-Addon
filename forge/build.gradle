@@ -6,6 +6,10 @@ plugins {
     id "org.spongepowered.mixin" version "+"
 }
 
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.maxhenkel.de/repository/public' }
+}
 
 final BuildTools buildTools = new BuildTools(minecraftVersion, "forge", project)
 
