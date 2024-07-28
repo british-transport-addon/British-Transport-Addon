@@ -17,6 +17,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 
 public class BuildTools {
 
@@ -87,8 +88,7 @@ public class BuildTools {
         return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-", "");
     }
 
-    public String getTrinketsVersion() {
-        final String modIdString = "trinkets";
-        return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-", "");
+    public String getVoiceChatVersion() {
+        return "2.5.0";
     }
 }

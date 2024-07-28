@@ -26,7 +26,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${buildTools.getFabricVersion()}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${buildTools.getFabricApiVersion()}"
     modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
-    modApi include("maven.modrinth:trinkets:${buildTools.getTrinketsVersion()}")
+    modApi "de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}"
+    modApi files('libs/trinkets-3.7.2.jar')
+    modApi files('libs/cardinal-components-base-5.2.0.jar')
+    modApi files('libs/cardinal-components-entity-5.2.0.jar')
 }
 
 java {

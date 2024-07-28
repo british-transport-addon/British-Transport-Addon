@@ -32,7 +32,8 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
     implementation fg.deobf("org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server")
     annotationProcessor "org.spongepowered:mixin:+:processor"
-    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${buildTools.getCuriosVersion()}"))
+    implementation fg.deobf("de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}")
+    implementation files('libs/curios-forge-5.9.0+1.20.1.jar')
 }
 
 mixin {
