@@ -23,15 +23,19 @@ public class ServerPlayNetworkHandler {
 
 	@Inject(method = "onPlayerAction", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;getStackInHand(Lnet/minecraft/util/Hand;)Lnet/minecraft/item/ItemStack;"), cancellable = true)
 	public void onPlayerAction(PlayerActionC2SPacket packet, CallbackInfo ci) {
+		System.out.println("test");
 		if (packet.getAction() != PlayerActionC2SPacket.Action.SWAP_ITEM_WITH_OFFHAND)
 			return;
+		System.out.println("test2");
 		ItemStack stack = player.getStackInHand(Hand.MAIN_HAND);
 		if (!stack.getTranslationKey().equals(ItemInit.MET_POLICE_RADIO.get().getTranslationKey()))
 			return;
+		System.out.println("test3");
 		boolean isTransmitting = RadioUtil.isRadioTransmitting(new org.mtr.mapping.holder.ItemStack(stack));
 		RadioUtil.setRadioTransmitting(new org.mtr.mapping.holder.ItemStack(stack), !isTransmitting);
 		int channel = RadioUtil.getRadioChannel(new org.mtr.mapping.holder.ItemStack(stack));
-		player.sendMessage(Text.of(!isTransmitting ? "Transmitting." : "Transmission Stopped"), true);
+		player.sendMessage(Text.of(!isTransmitting ? "Transmitting on " + channel + "mhz." : "Transmission Stopped"), true);
+		System.out.println("test4");
 
 		if (!isTransmitting) {
 			player.getWorld().playSound(null, player.getBlockPos(), SoundInit.MET_POLICE_RADIO_IN.get().data, SoundCategory.VOICE.data, 1f, 1f);

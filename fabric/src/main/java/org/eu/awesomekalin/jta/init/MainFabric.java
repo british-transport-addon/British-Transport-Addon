@@ -24,7 +24,7 @@ public class MainFabric implements ModInitializer {
                 server.getPlayerManager().getPlayerList().forEach(player -> {
                     if (player instanceof ServerPlayerEntity) {
                         // Your condition here
-                        if (Init.ACCESORY_API.hasEquippedAttachment(new PlayerEntity((net.minecraft.entity.player.PlayerEntity) player), ItemInit.AXON_BODY_3.get().getDefaultStack())) {
+                        if (Init.NATIVE_API.hasEquippedAttachment(new PlayerEntity((net.minecraft.entity.player.PlayerEntity) player), ItemInit.AXON_BODY_3.get().getDefaultStack())) {
                             playSound(player);
                         }
                     }
@@ -33,7 +33,7 @@ public class MainFabric implements ModInitializer {
             }
         });
 
-        Init.injectAccessoryAPI(new TrinketsNativeAPI());
+        Init.injectNativeAPI(new FabricNativeAPI());
         Init.init();
     }
 

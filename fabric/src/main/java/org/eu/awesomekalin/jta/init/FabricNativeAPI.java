@@ -8,7 +8,7 @@ import org.mtr.mapping.holder.PlayerEntity;
 
 import java.util.Optional;
 
-public class TrinketsNativeAPI implements NativeAPI {
+public class FabricNativeAPI implements NativeAPI {
 
     @Override
     public boolean hasEquippedAttachment(PlayerEntity player, ItemStack item) {

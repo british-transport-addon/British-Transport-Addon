@@ -9,7 +9,7 @@ import org.eu.awesomekalin.jta.mod.InitClient;
 @Mod(Init.MOD_ID)
 public class MainForge {
     public MainForge() {
-        Init.injectAccessoryAPI(new CuriosAccessoryAPI());
+        Init.injectNativeAPI(new ForgeNativeAPI());
         Init.init();
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> InitClient::init);
     }

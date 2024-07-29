@@ -1,7 +1,10 @@
 package org.eu.awesomekalin.jta.mod.items;
 
 import net.minecraft.block.DispenserBlock;
+import net.minecraft.client.render.entity.model.ShieldEntityModel;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
+import net.minecraft.network.packet.s2c.play.PlayerActionResponseS2CPacket;
 import net.minecraft.util.UseAction;
 import org.mtr.mapping.holder.ItemSettings;
 import org.mtr.mapping.holder.ItemStack;
@@ -20,12 +23,14 @@ public class ShieldItem extends ItemExtension {
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
     }
 
-    public UseAction getUseAction(ItemStack stack) {
-        return UseAction.BLOCK;
+    @Override
+    public int getMaxUseTime(net.minecraft.item.ItemStack stack) {
+        return 72000;
     }
 
-    public int getMaxUseTime(ItemStack stack) {
-        return 72000;
+    @Override
+    public UseAction getUseAction(net.minecraft.item.ItemStack stack) {
+        return UseAction.BLOCK;
     }
 
     @Override
