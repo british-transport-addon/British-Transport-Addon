@@ -2,11 +2,14 @@ package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.BlockInit;
+import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.render.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
+import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
 import org.mtr.mapping.holder.Style;
 import org.mtr.mapping.registry.RegistryClient;
+import org.mtr.mod.item.ItemBlockClickingBase;
 
 public final class InitClient {
     public static final RegistryClient REGISTRY_CLIENT = new RegistryClient(Init.REGISTRY);
@@ -382,6 +385,13 @@ public final class InitClient {
 
         REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
 
+        REGISTRY_CLIENT.registerItemModelPredicate(ItemInit.RIOT_SHIELD, new Identifier(Init.MOD_ID, "blocking"), checkItemPredicateTag());
+
+
         REGISTRY_CLIENT.init();
+    }
+
+    private static RegistryClient.ModelPredicateProvider checkItemPredicateTag() {
+        return (itemStack, clientWorld, entity) -> entity != null && entity.isUsingItem() && entity.getStackInHand(entity.getActiveHand()).equals(itemStack) ? 1.0F : 0.0F;
     }
 }

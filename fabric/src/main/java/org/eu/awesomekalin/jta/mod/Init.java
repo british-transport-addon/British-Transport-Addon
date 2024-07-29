@@ -1,8 +1,11 @@
 package org.eu.awesomekalin.jta.mod;
 
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.eu.awesomekalin.jta.mod.init.*;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenRadioScreen;
+import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.Registry;
 import org.mtr.mapping.tool.DummyClass;
 
@@ -21,6 +24,10 @@ public class Init {
         SoundInit.INIT();
 
         DummyClass.enableLogging();
+        System.out.println("Setting up packet handlers");
+        REGISTRY.setupPackets(new Identifier(MOD_ID, "packet"));
+        REGISTRY.registerPacket(PacketOpenRadioScreen.class, PacketOpenRadioScreen::new);
+
         REGISTRY.init();
     }
     public static void injectNativeAPI(NativeAPI nativeAPI) {

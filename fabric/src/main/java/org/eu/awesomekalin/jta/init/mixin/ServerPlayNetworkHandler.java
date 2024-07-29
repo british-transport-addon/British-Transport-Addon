@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.mixin;
+package org.eu.awesomekalin.jta.init.mixin;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

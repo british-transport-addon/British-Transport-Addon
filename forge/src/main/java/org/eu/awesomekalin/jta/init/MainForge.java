@@ -9,6 +9,8 @@ import org.eu.awesomekalin.jta.mod.InitClient;
 @Mod(Init.MOD_ID)
 public class MainForge {
     public MainForge() {
+        ServerTickHandler.register();
+
         Init.injectNativeAPI(new ForgeNativeAPI());
         Init.init();
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> InitClient::init);

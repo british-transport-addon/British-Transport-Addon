@@ -6,4 +6,6 @@ import org.mtr.mapping.holder.PlayerEntity;
 public interface NativeAPI {
 
     public boolean hasEquippedAttachment(PlayerEntity player, ItemStack item);
+
+    public void registerShieldItemProperties();
 }

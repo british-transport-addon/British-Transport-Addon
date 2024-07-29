@@ -4,10 +4,15 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.init.CreativeTabInit;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
+import org.eu.awesomekalin.jta.platform.ShieldItem;
+import org.mtr.mapping.holder.Identifier;
+import org.mtr.mapping.holder.Item;
 import org.mtr.mapping.holder.PlayerEntity;
 import org.mtr.mapping.holder.SoundCategory;
+import org.mtr.mapping.registry.ItemRegistryObject;
 
 public class MainFabric implements ModInitializer {
     private int tickCounter = 0;
@@ -35,6 +40,7 @@ public class MainFabric implements ModInitializer {
 
         Init.injectNativeAPI(new FabricNativeAPI());
         Init.init();
+
     }
 
     private void playSound(ServerPlayerEntity player) {

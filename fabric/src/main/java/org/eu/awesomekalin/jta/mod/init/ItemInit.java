@@ -1,20 +1,13 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
-import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.eu.awesomekalin.jta.mod.items.RadioItem;
-import org.eu.awesomekalin.jta.mod.items.ShieldItem;
-import org.eu.awesomekalin.jta.mod.util.DyeColor;
+import org.eu.awesomekalin.jta.platform.ShieldItem;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.Item;
 import org.mtr.mapping.holder.ItemSettings;
-import org.mtr.mapping.mapper.BlockExtension;
-import org.mtr.mapping.mapper.BlockHelper;
-import org.mtr.mapping.mapper.ItemExtension;
-import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 import org.mtr.mapping.registry.ItemRegistryObject;
 
