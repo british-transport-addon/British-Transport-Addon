@@ -1,7 +1,7 @@
-# Jet's Transit Addon
+# British Transport Addon
 
-Jet's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod.
-You can use the blocks provided by JTA to create realistic British Street, Rail, Road and all sorts of other British
+British Transport Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod and other supported mods.
+You can use the blocks provided by BTA to create realistic British Street, Rail, Road and all sorts of other British
 infrastructure. We aim to provide major updates every week.
 
 [Modrinth](https://modrinth.com/mod/jta)
@@ -16,6 +16,7 @@ infrastructure. We aim to provide major updates every week.
 
 # Credits
 
-[Minecraft Transit Railway 4.0](github.com/minecraft-transit-railway/minecraft-transit-railway/tree/4.0.0)
+[Minecraft Transit Railway 4.0](https://github.com/minecraft-transit-railway/minecraft-transit-railway/tree/4.0.0)
 [London Underground Addon](https://github.com/cherbert/mtr-london-underground-addon/tree/4.0.0)
 [European Railways Addon](https://github.com/polserull/European-Railways-Addon/tree/master)
+[Simple Voice Chat](https://github.com/henkelmax/simple-voice-chat)
