@@ -1,6 +1,7 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
 import org.eu.awesomekalin.jta.mod.screen.radio.RadioMainScreen;
+import org.jetbrains.annotations.NotNull;
 import org.mtr.core.integration.Response;
 import org.mtr.libraries.com.google.gson.JsonObject;
 import org.mtr.mapping.holder.*;
@@ -12,28 +13,47 @@ import org.mtr.mod.packet.PacketRequestResponseBase;
 
 import javax.annotation.Nonnull;
 
-public final class PacketOpenRadioScreen extends PacketHandler {
+public final class PacketOpenRadioScreen extends PacketRequestResponseBase  {
+
+	public PacketOpenRadioScreen(String test) {
+		super(test);
+	}
 
 	public PacketOpenRadioScreen(PacketBufferReceiver receiver) {
-		super();
+		super(receiver);
 	}
 
 	@Override
 	public void write(PacketBufferSender packetBufferSender) {
+    }
 
+	@Override
+	protected void runClientInbound(Response response) {
+		System.out.println("new packet in");
+		MinecraftClient minecraftClient = MinecraftClient.getInstance();
+		ClientPlayerEntity player = minecraftClient.getPlayerMapped();
+		RadioMainScreen.handle(player.getStackInHand(Hand.MAIN_HAND));
 	}
 
 	@Override
-	public void runClient() {
-		System.out.println("new packet in");
-		MinecraftClient minecraftClient = MinecraftClient.getInstance();
-        ClientPlayerEntity player = minecraftClient.getPlayerMapped();
-		RadioMainScreen.handle(player.getStackInHand(Hand.MAIN_HAND));
+	protected PacketRequestResponseBase getInstance(String s) {
+		return new PacketOpenRadioScreen(s);
+	}
+
+	@NotNull
+	@Override
+	protected String getEndpoint() {
+		return "operation/radio";
+	}
+
+	@Override
+	protected ResponseType responseType() {
+		return ResponseType.NONE;
 	}
 
 	public static void sendDirectlyToServer(ServerWorld serverWorld, ServerPlayerEntity serverPlayerEntity) {
 		System.out.println("new packet out");
-		Init.REGISTRY.sendPacketToClient(serverPlayerEntity, new PacketOpenRadioScreen(null));
+		Init.REGISTRY.sendPacketToClient(serverPlayerEntity, new PacketOpenRadioScreen(""));
 
 	}
 }

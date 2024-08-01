@@ -19,6 +19,8 @@ public class Init {
     public static void init() {
         BlockInit.INIT();
         ItemInit.INIT();
+        PoleInit.INIT();
+        SignInit.INIT();
         BlockEntityTypeInit.INIT();
         CreativeTabInit.INIT();
         SoundInit.INIT();

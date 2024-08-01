@@ -31,8 +31,6 @@ import java.util.List;
 
 public class BlockInit {
 
-    public static final List<BlockRegistryObject> REGISTERED_SIGNS = new ArrayList<>();
-
     public static final BlockRegistryObject STREET_POLE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/bee_yellow/bee_yellow_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject STREET_POLE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/black/black_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject STREET_POLE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/blue/blue_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_SIGNS);
@@ -399,6 +397,8 @@ public class BlockInit {
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_TRI = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_tri"), () -> new Block(new UKBritishRailStationSignTri()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_square"), () -> new Block(new UKBritishRailStationSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SQUARE_MERSEYTRAVEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_square_merseytravel"), () -> new Block(new UKBritishRailStationSignSquare()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject UNDERGROUND_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_sign_square"), () -> new Block(new MetrolinkSignSquare()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject OVERGROUND_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "overground_sign_square"), () -> new Block(new MetrolinkSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject METROLINK_SIGN_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_sign_square"), () -> new Block(new MetrolinkSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject TYNE_AND_WEAR_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tyne_and_wear_square"), () -> new Block(new MetrolinkSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "manchester_sign_square"), () -> new Block(new ManchesterSignSquare()), CreativeTabInit.JTA_SIGNS);
@@ -443,8 +443,5 @@ public class BlockInit {
 
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
-        // do logic find the blocks for tinhy brr
-        
-        // FUCK I STILL DNT KNOW HOW TO FIND THE FUCKING EXISTING CONTENT...
     }
 }
