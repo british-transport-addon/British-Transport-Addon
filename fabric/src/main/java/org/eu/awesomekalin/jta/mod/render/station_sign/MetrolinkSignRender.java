@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render;
+package org.eu.awesomekalin.jta.mod.render.station_sign;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishRailStationSignSimpleWall;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.MetrolinkSign;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -17,7 +17,8 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
-public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpleWall.TileEntityBritishRailStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+
+public class MetrolinkSignRender<T extends MetrolinkSign.MetrolinkSignEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -25,9 +26,10 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
     private final float zOffset;
     private final float xTilt;
     private final int textColor;
+    private final boolean isDoubleSided;
     private final Identifier font;
 
-    public SimpleStationSignRenderWall(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public MetrolinkSignRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -36,6 +38,7 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
         this.zOffset = zOffset;
         this.xTilt = xTilt;
         this.textColor = textColor;
+        this.isDoubleSided = isDoubleSided;
         this.font = font;
     }
 
@@ -58,17 +61,29 @@ public class SimpleStationSignRenderWall<T extends UKBritishRailStationSignSimpl
 
         final Station station = InitClient.findStation(pos);
         final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled(IGui.formatStationName(station == null ? "" : station.getName()))), style);
+        final MutableText tramsToCityCenterText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("Trams to City Center")), style);
+        final MutableText tramsToOtherText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("Trams to Bury")), style);
         final int textWidth = GraphicsHolder.getTextWidth(roundelText);
+        final int textWidthtramsToCityCenterText = GraphicsHolder.getTextWidth(tramsToCityCenterText) + 18;
+        final int textWidthtramsToOtherText = GraphicsHolder.getTextWidth(tramsToOtherText) + 18;
 
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
-            graphicsHolderNew.rotateYDegrees(180);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
+            graphicsHolderNew.translate(0, .25, 0);
+            render(graphicsHolderNew, tramsToCityCenterText, textWidthtramsToCityCenterText, light);
+            graphicsHolderNew.translate(0, -.25, 0);
+            if (isDoubleSided) {
+                graphicsHolderNew.rotateYDegrees(180);
+                render(graphicsHolderNew, roundelText, textWidth, light);
+                graphicsHolderNew.translate(0, .25, 0);
+                render(graphicsHolderNew, tramsToOtherText, textWidthtramsToOtherText, light);
+            }
             graphicsHolderNew.pop();
         });
     }

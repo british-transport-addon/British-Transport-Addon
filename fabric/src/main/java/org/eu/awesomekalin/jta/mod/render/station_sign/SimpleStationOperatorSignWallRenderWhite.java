@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render;
+package org.eu.awesomekalin.jta.mod.render.station_sign;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignWallBase;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -18,7 +18,7 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 import javax.annotation.Nonnull;
 
 
-public class SimpleStationOperatorSignRenderWhite<T extends UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class SimpleStationOperatorSignWallRenderWhite<T extends UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -26,10 +26,9 @@ public class SimpleStationOperatorSignRenderWhite<T extends UKBritishOperatorSta
     private final float zOffset;
     private final float xTilt;
     private final int textColor;
-    private final boolean isDoubleSided;
     private final Identifier font;
 
-    public SimpleStationOperatorSignRenderWhite(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
+    public SimpleStationOperatorSignWallRenderWhite(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -38,7 +37,6 @@ public class SimpleStationOperatorSignRenderWhite<T extends UKBritishOperatorSta
         this.zOffset = zOffset;
         this.xTilt = xTilt;
         this.textColor = textColor;
-        this.isDoubleSided = isDoubleSided;
         this.font = font;
     }
 
@@ -67,14 +65,11 @@ public class SimpleStationOperatorSignRenderWhite<T extends UKBritishOperatorSta
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
+            graphicsHolderNew.rotateYDegrees(180);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
-            if (isDoubleSided) {
-                graphicsHolderNew.rotateYDegrees(180);
-                render(graphicsHolderNew, roundelText, textWidth, light);
-            }
             graphicsHolderNew.pop();
         });
     }

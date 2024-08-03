@@ -370,7 +370,8 @@ public class BlockInit {
     public static final BlockRegistryObject POSTER_ABITOFCAUTIONWONTKILLYOU_GAP_VERSION = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_abitofcautionwontkillyou_gap_version"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
     public static final BlockRegistryObject POSTER_LEFT_BAG_UNATTENDED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_left_bag_unattended"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
     public static final BlockRegistryObject POSTER_SOMEWHERE_SHOULDNT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_somewhere_shouldnt"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
-
+    public static final BlockRegistryObject UNDERGROUND_WHITEBOARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_whiteboard"), () -> new Block(new UndergroundWhiteboard()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject METRO_NEWS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metro_news"), () -> new Block(new MetroNews()), CreativeTabInit.JTA_BLOCKS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }

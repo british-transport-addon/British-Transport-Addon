@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render;
+package org.eu.awesomekalin.jta.mod.render.station_sign;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignBase;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -18,7 +18,7 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 import javax.annotation.Nonnull;
 
 
-public class BeeStationRender<T extends BeeStationSign.TileEntityBeeStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class SimpleStationOperatorSignRenderBlue<T extends UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -29,7 +29,7 @@ public class BeeStationRender<T extends BeeStationSign.TileEntityBeeStationSign>
     private final boolean isDoubleSided;
     private final Identifier font;
 
-    public BeeStationRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
+    public SimpleStationOperatorSignRenderBlue(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;

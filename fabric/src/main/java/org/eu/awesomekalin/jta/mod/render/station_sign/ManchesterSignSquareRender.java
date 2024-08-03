@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render;
+package org.eu.awesomekalin.jta.mod.render.station_sign;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignWallBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.ManchesterSignSquare;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -17,8 +17,7 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
-
-public class SimpleStationOperatorSignWallRenderWhite<T extends UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntityManchesterStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -28,7 +27,7 @@ public class SimpleStationOperatorSignWallRenderWhite<T extends UKBritishOperato
     private final int textColor;
     private final Identifier font;
 
-    public SimpleStationOperatorSignWallRenderWhite(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public ManchesterSignSquareRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -65,11 +64,16 @@ public class SimpleStationOperatorSignWallRenderWhite<T extends UKBritishOperato
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
-            graphicsHolderNew.rotateYDegrees(180);
         });
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
+
+            for (int i = 0; i < 3; i++) {
+                graphicsHolderNew.rotateYDegrees(90);
+                render(graphicsHolderNew, roundelText, textWidth, light);
+            }
+
             graphicsHolderNew.pop();
         });
     }

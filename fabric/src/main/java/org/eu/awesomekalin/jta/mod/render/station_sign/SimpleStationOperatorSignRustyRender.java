@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render;
+package org.eu.awesomekalin.jta.mod.render.station_sign;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.ManchesterSignSquare;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.UKBritishOperatorStationSignPoleBase;
 import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
@@ -17,7 +17,8 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
-public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntityManchesterStationSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+
+public class SimpleStationOperatorSignRustyRender<T extends UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -25,9 +26,10 @@ public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntit
     private final float zOffset;
     private final float xTilt;
     private final int textColor;
+    private final boolean isDoubleSided;
     private final Identifier font;
 
-    public ManchesterSignSquareRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public SimpleStationOperatorSignRustyRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -36,6 +38,7 @@ public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntit
         this.zOffset = zOffset;
         this.xTilt = xTilt;
         this.textColor = textColor;
+        this.isDoubleSided = isDoubleSided;
         this.font = font;
     }
 
@@ -68,12 +71,10 @@ public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntit
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
-
-            for (int i = 0; i < 3; i++) {
-                graphicsHolderNew.rotateYDegrees(90);
+            if (isDoubleSided) {
+                graphicsHolderNew.rotateYDegrees(180);
                 render(graphicsHolderNew, roundelText, textWidth, light);
             }
-
             graphicsHolderNew.pop();
         });
     }

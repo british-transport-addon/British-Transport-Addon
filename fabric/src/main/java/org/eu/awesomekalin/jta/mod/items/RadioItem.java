@@ -1,5 +1,7 @@
 package org.eu.awesomekalin.jta.mod.items;
 
+import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.init.SoundInit;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenRadioScreen;
 import org.eu.awesomekalin.jta.mod.screen.radio.RadioMainScreen;
 import org.eu.awesomekalin.jta.mod.util.RadioUtil;
@@ -24,7 +26,9 @@ public class RadioItem extends ItemExtension {
     @Override
     public void useWithoutResult(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient()) {
-            PacketOpenRadioScreen.sendDirectlyToServer(ServerWorld.cast(world), ServerPlayerEntity.cast(user));
+            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(user), new PacketOpenRadioScreen(null));
+            //PacketOpenRadioScreen.sendDirectlyToServer(ServerWorld.cast(world), ServerPlayerEntity.cast(user));
+            world.playSound(null, user.getBlockPos(), SoundInit.MET_POLICE_RADIO_INTERACT.get(), SoundCategory.VOICE, 1f, 1f);
         }
 
     }

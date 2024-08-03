@@ -10,6 +10,6 @@ public final class KeyBindingsInit {
 	public static final KeyBinding TALK_RADIO = InitClient.REGISTRY_CLIENT.registerKeyBinding("jta.key.talk_radio", GLFW.GLFW_KEY_B, "jta.category");;
 
 	public static void init() {
-		Init.LOGGER.info("Registering Minecraft Transit Railway key bindings");
+		Init.LOGGER.info("Registering British Transit Addon key bindings");
 	}
 }
