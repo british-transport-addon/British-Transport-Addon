@@ -1,5 +1,6 @@
 package org.eu.awesomekalin.jta.init;
 
+import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
 import net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit;
@@ -8,9 +9,11 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.predicate.item.ItemPredicate;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Pair;
 import net.minecraft.world.World;
 import org.eu.awesomekalin.jta.mod.NativeAPI;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
+import org.mtr.mapping.holder.Item;
 import org.mtr.mapping.holder.ItemStack;
 import org.mtr.mapping.holder.PlayerEntity;
 
@@ -22,6 +25,17 @@ public class FabricNativeAPI implements NativeAPI {
     public boolean hasEquippedAttachment(PlayerEntity player, ItemStack item) {
         Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player.data);
         return component.map(trinketComponent -> trinketComponent.isEquipped(item.data.getItem())).orElse(false);
+    }
+
+    @Override
+    public Pair<SlotReference, ItemStack> getEquippedAttachment(PlayerEntity player, Item item) {
+        Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player.data);
+        if (component.isPresent()) {
+            Pair<SlotReference, net.minecraft.item.ItemStack> referenceItemPair = component.get().getEquipped(item.data).stream().findFirst().get();
+            return new Pair<>(referenceItemPair.getLeft(), new ItemStack(referenceItemPair.getRight()));
+        }
+
+        return null;
     }
 
     @Override

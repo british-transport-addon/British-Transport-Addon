@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/metro_news"
+    },
+    "facing=south": {
+      "model": "jta:block/metro_news",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/metro_news",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/metro_news",
+      "y": -90
+    }
+  }
+}

@@ -3,6 +3,7 @@ package org.eu.awesomekalin.jta.mod.init;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.HandheldSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.PlatformNumberSign;
 import org.eu.awesomekalin.jta.mod.items.RadioItem;
 import org.eu.awesomekalin.jta.platform.ShieldItem;
 import org.mtr.mapping.holder.Block;
@@ -14,6 +15,25 @@ import org.mtr.mapping.registry.ItemRegistryObject;
 
 public class SignInit {
 
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/bee_yellow/bee_yellow_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/black/black_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/blue/blue_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_DARK_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/dark_blue/dark_blue_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_DARK_GRAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/dark_gray/dark_gray_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_DARK_GREEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/dark_green/dark_green_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_GRAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/gray/gray_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_GREEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/green/green_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_LIGHT_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/light_blue/light_blue_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_ORANGE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/orange/orange_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_PINK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/pink/pink_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_PURPLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/purple/purple_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/red/red_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_ROYAL_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/royal_red/royal_red_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/rusty/rusty_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/steel/steel_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject PLATFORM_NUMBER_SIDE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_number_side/yellow/yellow_platform_number_side"), () -> new Block(new PlatformNumberSign()), CreativeTabInit.JTA_SIGNS);
+    
+    
     public static final BlockRegistryObject SIGN_NETWORK_RAIL_NO_ACCESS_HALF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/halfed/network_rail_no_access/network_rail_no_access"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject SIGN_NO_LEFT_TURN_SMALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/small/no_left_turn/no_left_turn"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject SIGN_6_8_CAR_STOP_SMALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/small/6_8_car_stop/6_8_car_stop"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_SIGNS);

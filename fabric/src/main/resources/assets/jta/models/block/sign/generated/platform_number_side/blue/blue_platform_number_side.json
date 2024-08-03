@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/sign/platform_number_side",
+  "textures": {
+    "color": "jta:block/pole/blue"
+  }
+}

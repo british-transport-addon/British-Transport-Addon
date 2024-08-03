@@ -1,6 +1,9 @@
 package org.eu.awesomekalin.jta.mod.screen.radio;
 
+import net.minecraft.client.gui.DrawContext;
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.InitClient;
+import org.eu.awesomekalin.jta.mod.packet.PacketUpdateRadioFrequency;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.eu.awesomekalin.jta.mod.util.RadioUtil;
 import org.mtr.core.tool.Utilities;
@@ -21,7 +24,7 @@ public class RadioMainScreen extends ScreenExtension implements IGui {
     public RadioMainScreen(ItemStack stack) {
         super();
         this.stack = stack;
-        frequencyField = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 2, TextCase.DEFAULT, "\\D", "1");
+        frequencyField = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 4, TextCase.DEFAULT, "\\D", "1");
     }
 
     public static RadioMainScreen handle(ItemStack stack) {
@@ -33,18 +36,25 @@ public class RadioMainScreen extends ScreenExtension implements IGui {
 
     @Override
     protected void init2() {
-        frequencyField.setText2(RadioUtil.getRadioChannel(stack) + "");
         super.init2();
-        IDrawing.setPositionAndWidth(frequencyField, TEXT_FIELD_PADDING / 2 + width / 4, 300, width / 4 - TEXT_FIELD_PADDING);
+        frequencyField.setText2(RadioUtil.getRadioChannel(stack) + "");
+        IDrawing.setPositionAndWidth(frequencyField, (getWidthMapped() - PANEL_WIDTH) + 8, 100 - SQUARE_SIZE - TEXT_FIELD_PADDING / 2, PANEL_WIDTH - (TEXT_FIELD_PADDING * 4));
 
         addChild(new ClickableWidget(frequencyField));
     }
 
     @Override
     public void render(GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
-
-        graphicsHolder.drawCenteredText(frequencyFieldText, width / 8 * 7, TEXT_PADDING, ARGB_WHITE);
+        graphicsHolder.push();
+        graphicsHolder.translate(0, 0, 500);
+        final GuiDrawing guiDrawing = new GuiDrawing(graphicsHolder);
+        guiDrawing.beginDrawingRectangle();
+        guiDrawing.drawRectangle(getWidthMapped() - PANEL_WIDTH, 48, getWidthMapped(), height - 24, ARGB_BLACK_TRANSLUCENT);
+        guiDrawing.finishDrawingRectangle();
+        graphicsHolder.drawCenteredText(frequencyFieldText, width / 8 * 7, 54, ARGB_WHITE);
+        frequencyField.render(graphicsHolder, mouseX, mouseY, delta);
         super.render(graphicsHolder, mouseX, mouseY, delta);
+        graphicsHolder.pop();
     }
 
 
@@ -56,7 +66,15 @@ public class RadioMainScreen extends ScreenExtension implements IGui {
 
     @Override
     public void onClose2() {
-        RadioUtil.setRadioChannel(stack, Integer.parseInt(frequencyField.getMessage2().getString()));
+        try {
+            int channel = Integer.parseInt(frequencyField.getText2());
+            RadioUtil.setRadioChannel(stack, channel);
+
+            InitClient.REGISTRY_CLIENT.sendPacketToServer(new PacketUpdateRadioFrequency(channel));
+        } catch (Exception e) {
+
+        }
+        System.out.println(frequencyField.getText2());
         super.onClose2();
     }
 

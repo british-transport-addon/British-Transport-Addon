@@ -1,0 +1,72 @@
+{
+  "variants": {
+    "facing=north": [
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open"
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open1"
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open2"
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open3"
+      }
+    ],
+    "facing=south": [
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open",
+        "y": 180
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open1",
+        "y": 180
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open2",
+        "y": 180
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open3",
+        "y": 180
+      }
+    ],
+    "facing=east": [
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open",
+        "y": 90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open1",
+        "y": 90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open2",
+        "y": 90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open3",
+        "y": 90
+      }
+    ],
+    "facing=west": [
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open",
+        "y": -90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open1",
+        "y": -90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open2",
+        "y": -90
+      },
+      {
+        "model": "jta:block/gray_bus_shelter_right_with_advert_open3",
+        "y": -90
+      }
+    ]
+  }
+}

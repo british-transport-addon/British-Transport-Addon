@@ -13,14 +13,10 @@ import org.mtr.mod.packet.PacketRequestResponseBase;
 
 import javax.annotation.Nonnull;
 
-public final class PacketOpenRadioScreen extends PacketRequestResponseBase  {
-
-	public PacketOpenRadioScreen(String test) {
-		super(test);
-	}
+public final class PacketOpenRadioScreen extends PacketHandler  {
 
 	public PacketOpenRadioScreen(PacketBufferReceiver receiver) {
-		super(receiver);
+		super();
 	}
 
 	@Override
@@ -28,32 +24,11 @@ public final class PacketOpenRadioScreen extends PacketRequestResponseBase  {
     }
 
 	@Override
-	protected void runClientInbound(Response response) {
-		System.out.println("new packet in");
+	public void runClient() {
+		System.out.println("new packet in"); // is is  never ran ong
 		MinecraftClient minecraftClient = MinecraftClient.getInstance();
 		ClientPlayerEntity player = minecraftClient.getPlayerMapped();
-		RadioMainScreen.handle(player.getStackInHand(Hand.MAIN_HAND));
-	}
-
-	@Override
-	protected PacketRequestResponseBase getInstance(String s) {
-		return new PacketOpenRadioScreen(s);
-	}
-
-	@NotNull
-	@Override
-	protected String getEndpoint() {
-		return "operation/radio";
-	}
-
-	@Override
-	protected ResponseType responseType() {
-		return ResponseType.NONE;
-	}
-
-	public static void sendDirectlyToServer(ServerWorld serverWorld, ServerPlayerEntity serverPlayerEntity) {
-		System.out.println("new packet out");
-		Init.REGISTRY.sendPacketToClient(serverPlayerEntity, new PacketOpenRadioScreen(""));
-
+        assert player != null;
+        RadioMainScreen.handle(player.getStackInHand(Hand.MAIN_HAND));
 	}
 }

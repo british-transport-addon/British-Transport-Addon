@@ -1,0 +1,8 @@
+{
+  "parent": "jta:block/bus_stop_shelter_right_with_advert_open",
+  "textures": {
+    "color": "jta:block/black",
+    "advert1": "jta:block/adverts/costalight",
+    "advert2": "jta:block/adverts/smartwater"
+  }
+}

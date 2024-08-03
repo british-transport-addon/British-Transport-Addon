@@ -7,10 +7,26 @@
       }
     ]
   },
+  "met_police_radio_incoming": {
+    "sounds": [
+      {
+        "name": "jta:met_police_radio_incoming",
+        "pitch": 1.0
+      }
+    ]
+  },
   "met_police_radio_out": {
     "sounds": [
       {
         "name": "jta:met_police_radio_out",
+        "pitch": 1.0
+      }
+    ]
+  },
+  "met_police_radio_interact": {
+    "sounds": [
+      {
+        "name": "jta:met_police_radio_interact",
         "pitch": 1.0
       }
     ]

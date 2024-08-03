@@ -15,7 +15,45 @@ public final class InitClient {
 
     public static void init() {
         KeyBindingsInit.init();
+
+        REGISTRY_CLIENT.eventRegistryClient.registerStartWorldTick((x) -> {
+            if (KeyBindingsInit.TALK_RADIO.wasPressed()) {
+                REGISTRY_CLIENT.sendPacketToServer(new PacketToggleRadioTransmit());
+            }
+        });
+
+
         REGISTRY_CLIENT.setupPackets(new Identifier(Init.MOD_ID, "packet"));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.UNDERGROUND_WHITEBOARD,
+                dispatcher -> new UndergroundWhiteboardRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        0.2F / 8,
+                        -.1F,
+                        1.1F,
+                        .0275F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PLATFORM_NUMBER_SIGN,
+                dispatcher -> new PlatformNumberSignRender<>(
+                        dispatcher,
+                        8 / 16F,
+                        0.2F / 8,
+                        -.4F,
+                        .2F,
+                        .0275F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.MANCHESTER_SIGN_SQUARE,
@@ -318,11 +356,9 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_YELLOW);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_LONG_YELLOW);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_YELLOW);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_YELLOW);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_RED);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_LONG_RED);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_YELLOW);
