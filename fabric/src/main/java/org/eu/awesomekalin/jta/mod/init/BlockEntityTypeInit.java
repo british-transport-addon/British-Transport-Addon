@@ -136,102 +136,29 @@ public class BlockEntityTypeInit {
             BlockInit.BRITISH_RAIL_STATION_SIGN_SIMPLE_WALL::get
     );
 
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSign> UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(
+    public static final BlockEntityTypeRegistryObject<PlatformSign.PlatformSignEntity> PLATFORM_SIGN = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
-                    "uk_british_operator_station_sign_base"
+                    "platform_sign"
             ),
-            UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSign::new,
-            BlockInit.MERSEYRAIL_STATION_SIGN::get,
-            BlockInit.EMR_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite> UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_white"
-            ),
-            UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignWhite::new,
-            BlockInit.AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.NORTHERN_STATION_SIGN::get
-    );
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue> UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_blue"
-            ),
-            UKBritishOperatorStationSignBase.TileEntityBritishRailOperatorSignBlue::new,
-            BlockInit.NSE_STATION_SIGN::get,
-            BlockInit.NSE_STATION_SIGN_ALT::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_rusty"
-            ),
-            UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSign::new,
-            BlockInit.RUSTY_POLE_EMR_STATION_SIGN::get,
-            BlockInit.STEEL_POLE_EMR_STATION_SIGN::get,
-            BlockInit.BLACK_POLE_EMR_STATION_SIGN::get,
-            BlockInit.RUSTY_POLE_MERSEYRAIL_STATION_SIGN::get,
-            BlockInit.BLACK_POLE_MERSEYRAIL_STATION_SIGN::get,
-            BlockInit.STEEL_POLE_MERSEYRAIL_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_white_rusty"
-            ),
-            UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignWhite::new,
-            BlockInit.RUSTY_POLE_AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.BLACK_POLE_AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.STEEL_POLE_AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.RUSTY_POLE_NORTHERN_STATION_SIGN::get,
-            BlockInit.STEEL_POLE_NORTHERN_STATION_SIGN::get,
-            BlockInit.BLACK_POLE_NORTHERN_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue> RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_blue_rusty"
-            ),
-            UKBritishOperatorStationSignPoleBase.TileEntityBritishRailOperatorSignBlue::new,
-            BlockInit.RUSTY_POLE_NSE_STATION_SIGN::get,
-            BlockInit.STEEL_POLE_NSE_STATION_SIGN::get,
-            BlockInit.BLACK_POLE_NSE_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSign> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_wall"
-            ),
-            UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSign::new,
-            BlockInit.WALL_MERSEYRAIL_STATION_SIGN::get,
-            BlockInit.WALL_EMR_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_white_wall"
-            ),
-            UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignWhite::new,
-            BlockInit.WALL_AVANTI_WEST_COAST_STATION_SIGN::get,
-            BlockInit.WALL_NORTHERN_STATION_SIGN::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignBlue> WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "uk_british_operator_station_sign_base_blue_wall"
-            ),
-            UKBritishOperatorStationSignWallBase.TileEntityBritishRailOperatorSignBlue::new,
-            BlockInit.WALL_NSE_STATION_SIGN::get,
-            BlockInit.WALL_NSE_STATION_SIGN_ALT::get
+            PlatformSign.PlatformSignEntity::new,
+            SignInit.PLATFORM_SIGN_BEE_YELLOW::get,
+            SignInit.PLATFORM_SIGN_BLACK::get,
+            SignInit.PLATFORM_SIGN_BLUE::get,
+            SignInit.PLATFORM_SIGN_DARK_BLUE::get,
+            SignInit.PLATFORM_SIGN_DARK_GRAY::get,
+            SignInit.PLATFORM_SIGN_YELLOW::get,
+            SignInit.PLATFORM_SIGN_DARK_GREEN::get,
+            SignInit.PLATFORM_SIGN_LIGHT_BLUE::get,
+            SignInit.PLATFORM_SIGN_PINK::get,
+            SignInit.PLATFORM_SIGN_GRAY::get,
+            SignInit.PLATFORM_SIGN_ORANGE::get,
+            SignInit.PLATFORM_SIGN_RUSTY::get,
+            SignInit.PLATFORM_SIGN_STEEL::get,
+            SignInit.PLATFORM_SIGN_RED::get,
+            SignInit.PLATFORM_SIGN_ROYAL_RED::get,
+            SignInit.PLATFORM_SIGN_GREEN::get,
+            SignInit.PLATFORM_SIGN_PURPLE::get
     );
 
     public static final BlockEntityTypeRegistryObject<NSERoofClock.TileEntityNSERoofClock> NSE_CLOCK = Init.REGISTRY.registerBlockEntityType(

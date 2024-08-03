@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/underground_entrance_roof_thick"
+    },
+    "facing=south": {
+      "model": "jta:block/underground_entrance_roof_thick",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/underground_entrance_roof_thick",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/underground_entrance_roof_thick",
+      "y": -90
+    }
+  }
+}

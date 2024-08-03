@@ -19,15 +19,11 @@ import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
-import org.mtr.mapping.holder.Resource;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
 import org.mtr.mod.item.ItemBlockEnchanted;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class BlockInit {
 
@@ -294,36 +290,7 @@ public class BlockInit {
     public static final BlockRegistryObject STEEL_NSE_ROOF_CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_nse_roof_clock"), () -> new Block(new NSERoofClock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject METROLINK_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_sign"), () -> new Block(new MetrolinkSign()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject METROLINK_SIGN_BARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_sign_bare"), () -> new Block(new MetrolinkSign()), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject AVANTI_WEST_COAST_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "avanti_west_coast_sign"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject NORTHERN_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "northern_sign"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject MERSEYRAIL_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "merseyrail_sign"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject EMR_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "emr_sign"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject NSE_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "nse_sign"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject NSE_STATION_SIGN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "nse_sign_alt"), () -> new Block(new UKBritishOperatorStationSignBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_AVANTI_WEST_COAST_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_avanti_west_coast_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_AVANTI_WEST_COAST_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_avanti_west_coast_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_AVANTI_WEST_COAST_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_avanti_west_coast_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_NORTHERN_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_northern_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_NORTHERN_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_northern_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_NORTHERN_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_northern_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_MERSEYRAIL_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_merseyrail_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_MERSEYRAIL_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_merseyrail_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_MERSEYRAIL_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_merseyrail_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_EMR_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_emr_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_EMR_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_emr_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_EMR_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_emr_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_NSE_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_nse_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_NSE_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_nse_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_NSE_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_nse_sign"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject RUSTY_POLE_NSE_STATION_SIGN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "rusty_nse_sign_alt"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject STEEL_POLE_NSE_STATION_SIGN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_nse_sign_alt"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_POLE_NSE_STATION_SIGN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_nse_sign_alt"), () -> new Block(new UKBritishOperatorStationSignPoleBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_AVANTI_WEST_COAST_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_avanti_west_coast_sign"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_NORTHERN_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_northern_sign"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.WHITE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_MERSEYRAIL_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_merseyrail_sign"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_EMR_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_emr_sign"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.BLACK)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_NSE_STATION_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_nse_sign"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject WALL_NSE_STATION_SIGN_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "wall_nse_sign_alt"), () -> new Block(new UKBritishOperatorStationSignWallBase(DyeColor.BLUE)), CreativeTabInit.JTA_SIGNS);
+
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_simple"), () -> new Block(new UKBritishRailStationSignSimple()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_SIMPLE_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_simple_wall"), () -> new Block(new UKBritishRailStationSignSimpleWall()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_RAIL_STATION_SIGN_TRI = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "uk_british_rail_sign_tri"), () -> new Block(new UKBritishRailStationSignTri()), CreativeTabInit.JTA_SIGNS);
@@ -372,6 +339,11 @@ public class BlockInit {
     public static final BlockRegistryObject POSTER_SOMEWHERE_SHOULDNT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "poster_somewhere_shouldnt"), () -> new Block(new WallSignBase()), CreativeTabInit.JTA_POSTERS);
     public static final BlockRegistryObject UNDERGROUND_WHITEBOARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_whiteboard"), () -> new Block(new UndergroundWhiteboard()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject METRO_NEWS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metro_news"), () -> new Block(new MetroNews()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK_CONNECTOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick_connector"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK_CONNECTOR_SHARP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick_connector_sharp"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_corner"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }

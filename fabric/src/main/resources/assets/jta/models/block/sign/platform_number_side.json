@@ -3,7 +3,7 @@
 	"textures": {
 		"1": "jta:block/white",
 		"2": "jta:block/steel",
-		"particle": "#color"
+		"particle": "jta:block/white"
 	},
 	"elements": [
 		{

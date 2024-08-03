@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/underground_entrance_roof_corner"
+    },
+    "facing=south": {
+      "model": "jta:block/underground_entrance_roof_corner",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/underground_entrance_roof_corner",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/underground_entrance_roof_corner",
+      "y": -90
+    }
+  }
+}

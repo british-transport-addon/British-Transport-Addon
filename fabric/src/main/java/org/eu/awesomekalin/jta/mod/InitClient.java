@@ -2,8 +2,11 @@ package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.*;
 import org.eu.awesomekalin.jta.mod.packet.PacketToggleRadioTransmit;
-import org.eu.awesomekalin.jta.mod.render.*;
-import org.eu.awesomekalin.jta.mod.render.station_sign.*;
+import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
+import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
+import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
+import org.eu.awesomekalin.jta.mod.render.rail.*;
+import org.eu.awesomekalin.jta.mod.render.street.PedestrianSignalRender;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -45,10 +48,10 @@ public final class InitClient {
                 dispatcher -> new PlatformNumberSignRender<>(
                         dispatcher,
                         8 / 16F,
-                        0.2F / 8,
-                        -.4F,
-                        .2F,
-                        .0275F,
+                        0.2F / 2,
+                        -.3F,
+                        .05F,
+                        .075F,
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
@@ -183,126 +186,16 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE,
-                dispatcher -> new SimpleStationOperatorSignRender<>(
+                BlockEntityTypeInit.PLATFORM_SIGN,
+                dispatcher -> new PlatformSignRender<>(
                         dispatcher,
                         32 / 16F,
                         0.2F / 8,
                         0,
-                        1F,
-                        .05F,
+                        0,
+                        -.85F,
                         0,
                         0xFF0F0F0F,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE,
-                dispatcher -> new SimpleStationOperatorSignRenderWhite<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        1F,
-                        .05F,
-                        0,
-                        0xFFFFFFFF,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
-                dispatcher -> new SimpleStationOperatorSignRenderBlue<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        1F,
-                        .05F,
-                        0,
-                        0x132E6A,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE,
-                dispatcher -> new SimpleStationOperatorSignRustyRender<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        .05F,
-                        0,
-                        0,
-                        0xFF0F0F0F,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE,
-                dispatcher -> new SimpleStationOperatorSignRustyRenderWhite<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        .05F,
-                        0,
-                        0,
-                        0xFFFFFFFF,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.RUSTY_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
-                dispatcher -> new SimpleStationOperatorSignRustyRenderBlue<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        .05F,
-                        0,
-                        0,
-                        0x132E6A,
-                        true,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE,
-                dispatcher -> new SimpleStationOperatorSignWallRender<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        -.4F,
-                        0,
-                        0,
-                        0xFF0F0F0F,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_WHITE,
-                dispatcher -> new SimpleStationOperatorSignWallRenderWhite<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        -.4F,
-                        0,
-                        0,
-                        0xFFFFFFFF,
-                        Style.getDefaultFontIdMapped()
-                ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.WALL_UK_BRITISH_OPERATOR_STATION_SIGN_BASE_BLUE,
-                dispatcher -> new SimpleStationOperatorSignWallRenderBlue<>(
-                        dispatcher,
-                        32 / 16F,
-                        0.2F / 8,
-                        0,
-                        -.4F,
-                        0,
-                        0,
-                        0x132E6A,
                         Style.getDefaultFontIdMapped()
                 ));
 

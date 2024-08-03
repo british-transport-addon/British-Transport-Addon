@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/white_bricks"
+  },
+  "parent": "jta:block/parent/wall_cube"
+}

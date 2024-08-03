@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "0": "jta:block/white_bricks"
+  },
+  "parent": "jta:block/white_window_4_point_extru_interior"
+}
