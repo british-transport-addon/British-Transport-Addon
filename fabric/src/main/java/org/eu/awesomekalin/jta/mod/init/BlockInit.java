@@ -23,6 +23,7 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject STEEL_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_3x1"), () -> new Block(new BritishStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x1"), () -> new Block(new BritishStreetSign2x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x2"), () -> new Block(new BritishStreetSign2x2()), CreativeTabInit.JTA_SIGNS);

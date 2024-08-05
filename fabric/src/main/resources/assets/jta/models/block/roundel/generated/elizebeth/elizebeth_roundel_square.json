@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roundel/roundel_square",
+  "textures": {
+    "sign": "jta:block/roundel/elizebeth"
+  }
+}

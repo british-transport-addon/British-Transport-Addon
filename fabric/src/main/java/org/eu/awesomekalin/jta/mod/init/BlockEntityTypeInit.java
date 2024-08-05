@@ -6,10 +6,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelBase;
-import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelPoleBase;
-import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelSignBase;
-import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelSmallSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
@@ -72,6 +69,64 @@ public class BlockEntityTypeInit {
             RoundelInit.ROUNDEL_SIMPLE_ELIZEBETH::get,
             RoundelInit.ROUNDEL_SIMPLE_TFL::get,
             RoundelInit.ROUNDEL_SIMPLE_NLE::get
+    );
+    public static final BlockEntityTypeRegistryObject<RoundelPlatformBase.RoundelBaseBlockEntity> ROUNDEL_PLATFORM = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_platform"
+            ),
+            RoundelPlatformBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_PLATFORM_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_OVERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_BUSES::get,
+            RoundelInit.ROUNDEL_PLATFORM_RIVER::get,
+            RoundelInit.ROUNDEL_PLATFORM_DLR::get,
+            RoundelInit.ROUNDEL_PLATFORM_COACHES::get,
+            RoundelInit.ROUNDEL_PLATFORM_TRAMS::get,
+            RoundelInit.ROUNDEL_PLATFORM_PRIDE::get,
+            RoundelInit.ROUNDEL_PLATFORM_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_PLATFORM_TFL::get,
+            RoundelInit.ROUNDEL_PLATFORM_NLE::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_OVERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_BUSES::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_RIVER::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_DLR::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_COACHES::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_TRAMS::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_PRIDE::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_TFL::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_LEFT_NLE::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_OVERGROUND::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_BUSES::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_RIVER::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_DLR::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_COACHES::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_TRAMS::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_PRIDE::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_TFL::get,
+            RoundelInit.ROUNDEL_PLATFORM_WAY_OUT_RIGHT_NLE::get
+    );
+    public static final BlockEntityTypeRegistryObject<RoundelSquareBase.RoundelBaseBlockEntity> ROUNDEL_SQUARE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_square"
+            ),
+            RoundelSquareBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_SQUARE_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_SQUARE_OVERGROUND::get,
+            RoundelInit.ROUNDEL_SQUARE_BUSES::get,
+            RoundelInit.ROUNDEL_SQUARE_RIVER::get,
+            RoundelInit.ROUNDEL_SQUARE_DLR::get,
+            RoundelInit.ROUNDEL_SQUARE_COACHES::get,
+            RoundelInit.ROUNDEL_SQUARE_TRAMS::get,
+            RoundelInit.ROUNDEL_SQUARE_PRIDE::get,
+            RoundelInit.ROUNDEL_SQUARE_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_SQUARE_TFL::get,
+            RoundelInit.ROUNDEL_SQUARE_NLE::get
     );
     public static final BlockEntityTypeRegistryObject<RoundelSmallSignBase.RoundelBaseBlockEntity> ROUNDEL_SMALL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

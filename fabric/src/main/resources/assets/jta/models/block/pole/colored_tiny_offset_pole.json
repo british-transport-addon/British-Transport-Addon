@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/pole/colored_pole",
+  "textures": {
+    "color": "jta:block/steel"
+  }
+}

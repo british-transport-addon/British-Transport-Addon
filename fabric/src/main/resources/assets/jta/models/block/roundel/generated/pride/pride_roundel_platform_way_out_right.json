@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roundel/roundel_platform_way_out_right",
+  "textures": {
+    "texture": "jta:block/roundel/pride"
+  }
+}
