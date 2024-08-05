@@ -28,11 +28,11 @@ jobs:
       - name: Setup Fabric files
         run: ./gradlew fabric:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
 
-      - name: Setup Forge files
-        run: ./gradlew forge:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
+      #- name: Setup Forge files
+        #run: ./gradlew forge:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
 
       - name: Build ${{ matrix.minecraft }}
-        run: ./gradlew build -PminecraftVersion="${{ matrix.minecraft }}"
+        run: ./gradlew fabric:build -PminecraftVersion="${{ matrix.minecraft }}"
 
       - name: Capture release artifacts
         uses: actions/upload-artifact@main
@@ -68,11 +68,11 @@ jobs:
       - name: Setup Potato PC Textures
         run: ./gradlew fabric:setupPotato -PminecraftVersion="${{ matrix.minecraft }}"
 
-      - name: Setup Forge files
-        run: ./gradlew forge:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
+      #- name: Setup Forge files
+        #run: ./gradlew forge:setupFiles -PminecraftVersion="${{ matrix.minecraft }}"
 
       - name: Build ${{ matrix.minecraft }}
-        run: ./gradlew build -PminecraftVersion="${{ matrix.minecraft }}"
+        run: ./gradlew fabric:build -PminecraftVersion="${{ matrix.minecraft }}"
 
       - name: Capture release artifacts
         uses: actions/upload-artifact@main
