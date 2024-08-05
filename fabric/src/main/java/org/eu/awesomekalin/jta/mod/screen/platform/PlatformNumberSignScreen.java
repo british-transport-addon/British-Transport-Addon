@@ -1,10 +1,8 @@
 package org.eu.awesomekalin.jta.mod.screen.platform;
 
 import org.eu.awesomekalin.jta.mod.InitClient;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.PlatformNumberSign;
 import org.eu.awesomekalin.jta.mod.packet.PacketUpdatePlatformNumber;
-import org.eu.awesomekalin.jta.mod.packet.PacketUpdateUndergroundWhiteboard;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.GuiDrawing;

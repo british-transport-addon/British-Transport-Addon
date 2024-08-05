@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roundel/roundel_pole",
+  "textures": {
+    "texture": "jta:block/roundel/dlr"
+  }
+}

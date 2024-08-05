@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roundel/roundel_simple",
+  "textures": {
+    "sign": "jta:block/roundel/dlr"
+  }
+}

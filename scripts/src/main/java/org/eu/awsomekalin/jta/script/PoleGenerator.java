@@ -19,6 +19,7 @@ public class PoleGenerator {
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "street_pole");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "street_pole_base");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "tiny_pole");
+        processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "tiny_offset_pole");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "pole");
 
         generateTextFiles(new File(base));

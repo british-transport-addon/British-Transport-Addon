@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/sign/british_street_sign_2x2"
+    },
+    "facing=south": {
+      "model": "jta:block/sign/british_street_sign_2x2",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/sign/british_street_sign_2x2",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/sign/british_street_sign_2x2",
+      "y": -90
+    }
+  }
+}

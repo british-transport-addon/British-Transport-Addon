@@ -13,7 +13,6 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.road.BritishRoadBollardAlt
 import org.eu.awesomekalin.jta.mod.blocks.directional.road.Drain;
 import org.eu.awesomekalin.jta.mod.blocks.directional.road.RoadWorkBarrier;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
-import org.eu.awesomekalin.jta.mod.util.DyeColor;
 import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
@@ -26,6 +25,13 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
+
+    public static final BlockRegistryObject BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_3x1"), () -> new Block(new BritishStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x1"), () -> new Block(new BritishStreetSign2x1()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x2"), () -> new Block(new BritishStreetSign2x2()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject LONDON_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_3x1"), () -> new Block(new LondonStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject LONDON_STREET_SIGN_3X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_3x2"), () -> new Block(new LondonStreetSign3x2()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject LONDON_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_2x2"), () -> new Block(new LondonStreetSign2x2()), CreativeTabInit.JTA_SIGNS);
 
     public static final BlockRegistryObject STREET_POLE_COLORED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/colored_street_pole"), () -> new Block(new PoleBase()), ItemBlockEnchanted::new, CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject STREET_POLE_BASE_COLORED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/colored_street_pole_base"), () -> new Block(new PoleBase()), ItemBlockEnchanted::new, CreativeTabInit.JTA_SIGNS);
@@ -78,6 +84,24 @@ public class BlockInit {
     public static final BlockRegistryObject LIME_BRICKS_WHITE_WINDOW_4_POINT_EXTRU_INTERIOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks_white_window_4_point_extru_interior"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
     public static final BlockRegistryObject LIME_BRICKS_WINDOW_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks_window_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject LIME_BRICKS_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks_slab"), () -> new Block(new SlabBlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject GREEN_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject GREEN_BRICKS_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject GREEN_BRICKS_WHITE_WINDOW_4_POINT_EXTRU = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks_white_window_4_point_extru"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject GREEN_BRICKS_WHITE_WINDOW_4_POINT_EXTRU_INTERIOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks_white_window_4_point_extru_interior"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject GREEN_BRICKS_WINDOW_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks_window_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject GREEN_BRICKS_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks_slab"), () -> new Block(new SlabBlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_BRICKS_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_BRICKS_WHITE_WINDOW_4_POINT_EXTRU = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks_white_window_4_point_extru"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject BLACK_BRICKS_WHITE_WINDOW_4_POINT_EXTRU_INTERIOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks_white_window_4_point_extru_interior"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject BLACK_BRICKS_WINDOW_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks_window_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_BRICKS_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bricks_slab"), () -> new Block(new SlabBlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject WHITE_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject WHITE_BRICKS_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject WHITE_BRICKS_WHITE_WINDOW_4_POINT_EXTRU = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks_white_window_4_point_extru"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject WHITE_BRICKS_WHITE_WINDOW_4_POINT_EXTRU_INTERIOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks_white_window_4_point_extru_interior"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
+    public static final BlockRegistryObject WHITE_BRICKS_WINDOW_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks_window_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject WHITE_BRICKS_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks_slab"), () -> new Block(new SlabBlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STONE_PAVER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "stone_paver"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STONE_PAVER_WALL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "stone_paver_wall"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STONE_PAVER_WHITE_WINDOW_4_POINT_EXTRU = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "stone_paver_white_window_4_point_extru"), () -> new Block(new BlockWallBase()), CreativeTabInit.JTA_WINDOWS);
@@ -344,6 +368,7 @@ public class BlockInit {
     public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK_CONNECTOR = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick_connector"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK_CONNECTOR_SHARP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick_connector_sharp"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_corner"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject PROJECTION_NAME = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "projection_name"), () -> new Block(new ProjectionName()), CreativeTabInit.JTA_BLOCKS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }

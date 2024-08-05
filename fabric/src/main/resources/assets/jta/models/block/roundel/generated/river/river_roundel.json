@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/roundel/roundel",
+  "textures": {
+    "texture": "jta:block/roundel/river"
+  }
+}

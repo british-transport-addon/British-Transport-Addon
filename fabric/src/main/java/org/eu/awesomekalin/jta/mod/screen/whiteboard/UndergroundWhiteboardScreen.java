@@ -2,9 +2,7 @@ package org.eu.awesomekalin.jta.mod.screen.whiteboard;
 
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
-import org.eu.awesomekalin.jta.mod.packet.PacketUpdateUndergroundWhiteboard;
-import org.eu.awesomekalin.jta.mod.screen.radio.RadioMainScreen;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
+import org.eu.awesomekalin.jta.mod.packet.entity.PacketUpdateNineLineBlockEntity;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.GuiDrawing;
@@ -121,7 +119,7 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
     @Override
     public void onClose2() {
         super.onClose2();
-        InitClient.REGISTRY_CLIENT.sendPacketToServer(new PacketUpdateUndergroundWhiteboard(
+        InitClient.REGISTRY_CLIENT.sendPacketToServer(new PacketUpdateNineLineBlockEntity(
                 pos,
                 line0.getText2(),
                 line1.getText2(),

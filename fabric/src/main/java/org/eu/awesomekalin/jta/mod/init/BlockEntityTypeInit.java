@@ -15,6 +15,96 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<RoundelBase.RoundelBaseBlockEntity> ROUNDEL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel"
+            ),
+            RoundelBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_OVERGROUND::get,
+            RoundelInit.ROUNDEL_BUSES::get,
+            RoundelInit.ROUNDEL_RIVER::get,
+            RoundelInit.ROUNDEL_DLR::get,
+            RoundelInit.ROUNDEL_COACHES::get,
+            RoundelInit.ROUNDEL_TRAMS::get,
+            RoundelInit.ROUNDEL_PRIDE::get,
+            RoundelInit.ROUNDEL_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_TFL::get,
+            RoundelInit.ROUNDEL_NLE::get
+    );    
+    public static final BlockEntityTypeRegistryObject<RoundelPoleBase.RoundelBaseBlockEntity> ROUNDEL_POLE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_pole"
+            ),
+            RoundelPoleBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_POLE_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_POLE_OVERGROUND::get,
+            RoundelInit.ROUNDEL_POLE_BUSES::get,
+            RoundelInit.ROUNDEL_POLE_RIVER::get,
+            RoundelInit.ROUNDEL_POLE_DLR::get,
+            RoundelInit.ROUNDEL_POLE_COACHES::get,
+            RoundelInit.ROUNDEL_POLE_TRAMS::get,
+            RoundelInit.ROUNDEL_POLE_PRIDE::get,
+            RoundelInit.ROUNDEL_POLE_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_POLE_TFL::get,
+            RoundelInit.ROUNDEL_POLE_NLE::get
+    );
+    public static final BlockEntityTypeRegistryObject<RoundelSignBase.RoundelBaseBlockEntity> ROUNDEL_SIGN = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_sign"
+            ),
+            RoundelSignBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_SIMPLE_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_SIMPLE_OVERGROUND::get,
+            RoundelInit.ROUNDEL_SIMPLE_BUSES::get,
+            RoundelInit.ROUNDEL_SIMPLE_RIVER::get,
+            RoundelInit.ROUNDEL_SIMPLE_DLR::get,
+            RoundelInit.ROUNDEL_SIMPLE_COACHES::get,
+            RoundelInit.ROUNDEL_SIMPLE_TRAMS::get,
+            RoundelInit.ROUNDEL_SIMPLE_PRIDE::get,
+            RoundelInit.ROUNDEL_SIMPLE_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_SIMPLE_TFL::get,
+            RoundelInit.ROUNDEL_SIMPLE_NLE::get
+    );
+    public static final BlockEntityTypeRegistryObject<RoundelSmallSignBase.RoundelBaseBlockEntity> ROUNDEL_SMALL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_small"
+            ),
+            RoundelSmallSignBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_SMALL_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_SMALL_OVERGROUND::get,
+            RoundelInit.ROUNDEL_SMALL_BUSES::get,
+            RoundelInit.ROUNDEL_SMALL_RIVER::get,
+            RoundelInit.ROUNDEL_SMALL_DLR::get,
+            RoundelInit.ROUNDEL_SMALL_COACHES::get,
+            RoundelInit.ROUNDEL_SMALL_TRAMS::get,
+            RoundelInit.ROUNDEL_SMALL_PRIDE::get,
+            RoundelInit.ROUNDEL_SMALL_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_SMALL_TFL::get,
+            RoundelInit.ROUNDEL_SMALL_NLE::get
+    );
+    public static final BlockEntityTypeRegistryObject<RoundelBase.RoundelBaseBlockEntity> WALL_ROUNDEL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "wall_roundel"
+            ),
+            RoundelBase.RoundelBaseBlockEntity::new,
+            RoundelInit.WALL_ROUNDEL_UNDERGROUND::get,
+            RoundelInit.WALL_ROUNDEL_OVERGROUND::get,
+            RoundelInit.WALL_ROUNDEL_BUSES::get,
+            RoundelInit.WALL_ROUNDEL_RIVER::get,
+            RoundelInit.WALL_ROUNDEL_DLR::get,
+            RoundelInit.WALL_ROUNDEL_COACHES::get,
+            RoundelInit.WALL_ROUNDEL_TRAMS::get,
+            RoundelInit.WALL_ROUNDEL_PRIDE::get,
+            RoundelInit.WALL_ROUNDEL_ELIZEBETH::get,
+            RoundelInit.WALL_ROUNDEL_TFL::get,
+            RoundelInit.WALL_ROUNDEL_NLE::get
+    );
     public static final BlockEntityTypeRegistryObject<UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> UNDERGROUND_WHITEBOARD = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -22,6 +112,68 @@ public class BlockEntityTypeInit {
             ),
             UndergroundWhiteboard.UndergroundWhiteboardBlockEntity::new,
             BlockInit.UNDERGROUND_WHITEBOARD::get
+    );
+    public static final BlockEntityTypeRegistryObject<BritishStreetSign3x1.BritishStreetSign3x1BlockEntity> BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "british_street_sign_3x1"
+            ),
+            BritishStreetSign3x1.BritishStreetSign3x1BlockEntity::new,
+            BlockInit.BRITISH_STREET_SIGN_3X1::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<BritishStreetSign2x1.BritishStreetSign2x1BlockEntity> BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "british_street_sign_2x1"
+            ),
+            BritishStreetSign2x1.BritishStreetSign2x1BlockEntity::new,
+            BlockInit.BRITISH_STREET_SIGN_2X1::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<BritishStreetSign2x2.BritishStreetSign2x2BlockEntity> BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "british_street_sign_2x2"
+            ),
+            BritishStreetSign2x2.BritishStreetSign2x2BlockEntity::new,
+            BlockInit.BRITISH_STREET_SIGN_2X2::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<LondonStreetSign2x2.LondonStreetSign2x2BlockEntity> LONDON_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "london_street_sign_2x2"
+            ),
+            LondonStreetSign2x2.LondonStreetSign2x2BlockEntity::new,
+            BlockInit.LONDON_STREET_SIGN_2X2::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<LondonStreetSign3x2.LondonStreetSign3x2BlockEntity> LONDON_STREET_SIGN_3X2 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "london_street_sign_3x2"
+            ),
+            LondonStreetSign3x2.LondonStreetSign3x2BlockEntity::new,
+            BlockInit.LONDON_STREET_SIGN_3X2::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<LondonStreetSign3x1.LondonStreetSign3x1BlockEntity> LONDON_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "london_street_sign_3x1"
+            ),
+            LondonStreetSign3x1.LondonStreetSign3x1BlockEntity::new,
+            BlockInit.LONDON_STREET_SIGN_3X1::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<ProjectionName.ProjectionNameBlockEntity> PROJECTION_NAME = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "projection_name"
+            ),
+            ProjectionName.ProjectionNameBlockEntity::new,
+            BlockInit.PROJECTION_NAME::get
     );
 
     public static final BlockEntityTypeRegistryObject<PlatformNumberSign.PlatfornNumberSignEntity> PLATFORM_NUMBER_SIGN = Init.REGISTRY.registerBlockEntityType(
