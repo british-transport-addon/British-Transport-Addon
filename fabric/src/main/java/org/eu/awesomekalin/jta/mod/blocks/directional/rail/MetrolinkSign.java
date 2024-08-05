@@ -28,5 +28,5 @@ public class MetrolinkSign extends DirectionalBlockEntityBase {
         public boolean shouldRender() {
             return true;
         }
-    }//Yes! Spam!
+    }
 }

@@ -1,10 +1,15 @@
 package org.eu.awesomekalin.jta.mod.render.rail;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.ProjectionName;
+import javax.annotation.Nonnull;
+
+import org.mtr.core.data.Station;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
+import org.mtr.mapping.mapper.TextHelper;
+import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
@@ -12,10 +17,7 @@ import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-import javax.annotation.Nonnull;
-
-
-public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -25,7 +27,7 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
     private final int textColor;
     private final Identifier font;
 
-    public UndergroundWhiteboardRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public ProjectionNameRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -36,9 +38,8 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
         this.textColor = textColor;
         this.font = font;
     }
-
     @Override
-    public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(@Nonnull T entity, float v, @Nonnull GraphicsHolder graphicsHolder, int light, int i1) {
         final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
         if (!entity.shouldRender()) {
@@ -54,42 +55,37 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
         final BlockState state = world.getBlockState(pos);
         final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
+        final Station station = InitClient.findStation(pos);
+        String stationText = IGui.textOrUntitled(IGui.formatStationName(station == null ? "" : station.getName()));
+
+        MutableText text = MutableText.cast(Text.of((entity.getPrefix().getString() + " " + stationText + " " + entity.getSuffix().getString())));
+        if (entity.isToggleUppercase()) {
+            text = MutableText.cast(Text.of((entity.getPrefix().getString() + " " + stationText + " " + entity.getSuffix().getString()).toUpperCase()));
+        }
+
+
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
-            graphicsHolderNew.rotateYDegrees(180);
         });
-        MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
+
+        MutableText finalText = text;
+        int width = GraphicsHolder.getTextWidth(finalText);
+        MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) ->{
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
-            render(graphicsHolderNew, entity.getLine0(), GraphicsHolder.getTextWidth(entity.getLine0()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine1(), GraphicsHolder.getTextWidth(entity.getLine1()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine2(), GraphicsHolder.getTextWidth(entity.getLine2()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine3(), GraphicsHolder.getTextWidth(entity.getLine3()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine4(), GraphicsHolder.getTextWidth(entity.getLine4()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine5(), GraphicsHolder.getTextWidth(entity.getLine5()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine6(), GraphicsHolder.getTextWidth(entity.getLine6()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine7(), GraphicsHolder.getTextWidth(entity.getLine7()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine8(), GraphicsHolder.getTextWidth(entity.getLine8()), light);
+            render(graphicsHolderNew, entity, finalText, width, light);
 
             graphicsHolderNew.pop();
         });
     }
 
-    private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {
+    private void render(GraphicsHolder graphicsHolder, T entity, MutableText roundelText, int textWidth, int light) {
         graphicsHolder.push();
         graphicsHolder.rotateXDegrees(xTilt);
         graphicsHolder.translate(-xOffset, -yOffset, -zOffset - SMALL_OFFSET * 2);
 
-        final float scale = Math.min((maxWidth) / textWidth, maxScale);
+        final float scale = Math.min((entity.getMaxWidth()) / textWidth, entity.getMaxScale());
         graphicsHolder.scale(scale, scale, scale);
         graphicsHolder.translate(0, -3.5, 0);
         graphicsHolder.drawText(roundelText, -textWidth / 2, 0, textColor, false, light);

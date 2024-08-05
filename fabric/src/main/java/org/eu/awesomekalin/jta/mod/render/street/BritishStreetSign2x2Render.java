@@ -1,7 +1,7 @@
-package org.eu.awesomekalin.jta.mod.render.rail;
+package org.eu.awesomekalin.jta.mod.render.street;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.BritishStreetSign2x2;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
@@ -14,8 +14,7 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
-
-public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class BritishStreetSign2x2Render<T extends BritishStreetSign2x2.BritishStreetSign2x2BlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -25,7 +24,7 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
     private final int textColor;
     private final Identifier font;
 
-    public UndergroundWhiteboardRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public BritishStreetSign2x2Render(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -63,22 +62,8 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, entity.getLine0(), GraphicsHolder.getTextWidth(entity.getLine0()), light);
-            graphicsHolderNew.translate(0, .09, 0);
+            graphicsHolderNew.translate(0, .2, 0);
             render(graphicsHolderNew, entity.getLine1(), GraphicsHolder.getTextWidth(entity.getLine1()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine2(), GraphicsHolder.getTextWidth(entity.getLine2()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine3(), GraphicsHolder.getTextWidth(entity.getLine3()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine4(), GraphicsHolder.getTextWidth(entity.getLine4()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine5(), GraphicsHolder.getTextWidth(entity.getLine5()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine6(), GraphicsHolder.getTextWidth(entity.getLine6()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine7(), GraphicsHolder.getTextWidth(entity.getLine7()), light);
-            graphicsHolderNew.translate(0, .09, 0);
-            render(graphicsHolderNew, entity.getLine8(), GraphicsHolder.getTextWidth(entity.getLine8()), light);
 
             graphicsHolderNew.pop();
         });

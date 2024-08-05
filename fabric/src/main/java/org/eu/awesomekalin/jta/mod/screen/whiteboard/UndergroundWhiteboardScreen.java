@@ -26,19 +26,12 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
     private BlockPos pos;
     private final UndergroundWhiteboard.UndergroundWhiteboardBlockEntity cast;
 
-    // pass the blockstate in?
     public UndergroundWhiteboardScreen(BlockPos pos) {
         this.pos = pos;
         ClientPlayerEntity player = MinecraftClient.getInstance().getPlayerMapped();
         World world = player.getEntityWorld();
         BlockEntity entity = world.getBlockEntity(pos);
         assert entity != null;
-        // thats mpt right tho,.. thats the mojan reference isnt it? or wait that miht b e fiht acc hold on. They do something like that directly in MTR
-        // okay cool lets try it..
-        // it miht work?
-        // can u make the client block renderere
-        // it needs to redner the text on the bloc kface tuyk
-        // it does not work
         cast = (UndergroundWhiteboard.UndergroundWhiteboardBlockEntity) entity.data;
         for (MutableText text : cast.getMessages()) {
             System.out.println(text.getString());
@@ -131,10 +124,6 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
                 line7.getText2(),
                 line8.getText2()
         ));
-
-        // yooyi  think its almoist donme yk :D
-        // what do you really wanna work on?
-        // like whats a cool think u think we should add
     }
 
     @Override

@@ -6,7 +6,11 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.PedestrianSignal;
+import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelPoleBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.RoundelSmallSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 

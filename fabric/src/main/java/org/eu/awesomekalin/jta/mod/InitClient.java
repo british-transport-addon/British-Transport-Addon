@@ -6,7 +6,11 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
-import org.eu.awesomekalin.jta.mod.render.street.PedestrianSignalRender;
+import org.eu.awesomekalin.jta.mod.render.roundel.RoundelBaseRender;
+import org.eu.awesomekalin.jta.mod.render.roundel.RoundelPoleBaseRender;
+import org.eu.awesomekalin.jta.mod.render.roundel.RoundelSignBaseRender;
+import org.eu.awesomekalin.jta.mod.render.roundel.RoundelSmallSignBaseRender;
+import org.eu.awesomekalin.jta.mod.render.street.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -52,6 +56,171 @@ public final class InitClient {
                         -.1F,
                         1.1F,
                         .0275F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ROUNDEL,
+                dispatcher -> new RoundelBaseRender<>(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 8,
+                        0,
+                        .125F,
+                        .325F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ROUNDEL_POLE,
+                dispatcher -> new RoundelPoleBaseRender<>(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 8,
+                        0,
+                        .125f,
+                        -.625F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ROUNDEL_SIGN,
+                dispatcher -> new RoundelSignBaseRender<>(
+                        dispatcher,
+                        16 / 16F,
+                        0.2F / 8,
+                        0,
+                        0,
+                        -.81F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ROUNDEL_SMALL,
+                dispatcher -> new RoundelSmallSignBaseRender<>(
+                        dispatcher,
+                        8 / 8F,
+                        0.2F / 16,
+                        0,
+                        0,
+                        -.81F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.WALL_ROUNDEL,
+                dispatcher -> new RoundelBaseRender<>(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 8,
+                        0,
+                        .125F,
+                        .325F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        ); // TODO Fix text position
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BRITISH_STREET_SIGN_2X2,
+                dispatcher -> new BritishStreetSign2x2Render<>(
+                        dispatcher,
+                        24 / 16F,
+                        0.2F / 8,
+                        0,
+                        .65f,
+                        -.9F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BRITISH_STREET_SIGN_3X1,
+                dispatcher -> new BritishStreetSign3x1Render<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        0,
+                        .65f,
+                        -.9F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BRITISH_STREET_SIGN_2X1,
+                dispatcher -> new BritishStreetSign2x1Render<>(
+                        dispatcher,
+                        24 / 16F,
+                        0.2F / 8,
+                        0,
+                        .65f,
+                        -.9f,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LONDON_STREET_SIGN_2X2,
+                dispatcher -> new LondonStreetSign2x2Render<>(
+                        dispatcher,
+                        24 / 16F,
+                        0.2F / 8,
+                        .2f,
+                        .65f,
+                        -.9F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LONDON_STREET_SIGN_3X2,
+                dispatcher -> new LondonStreetSign3x2Render<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        -.2f,
+                        .65f,
+                        -.9F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LONDON_STREET_SIGN_3X1,
+                dispatcher -> new LondonStreetSign3x1Render<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        -.1f,
+                        .65f,
+                        -.9F,
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
@@ -281,6 +450,8 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_ALT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_CIRCLE);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_STREET_SIGN_2X2);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.LONDON_STREET_SIGN_2X2);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.AMAZON_PARCEL_COLLECTION_LOCKER);
 

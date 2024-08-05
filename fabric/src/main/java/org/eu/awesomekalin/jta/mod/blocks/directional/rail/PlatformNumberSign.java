@@ -3,20 +3,20 @@ package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.screen.platform.PlatformNumberSignScreen;
-import org.eu.awesomekalin.jta.mod.screen.whiteboard.UndergroundWhiteboardScreen;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
 import org.mtr.mod.block.IBlock;
 
+import javax.annotation.Nonnull;
+
 public class PlatformNumberSign extends DirectionalBlockExtension implements BlockWithEntity {
     public PlatformNumberSign() {
         super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
-    @NotNull
+    @Nonnull
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);

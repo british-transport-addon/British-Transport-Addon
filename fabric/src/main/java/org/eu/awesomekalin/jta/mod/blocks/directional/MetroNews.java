@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.IBlock;
@@ -14,7 +13,7 @@ public class MetroNews extends DirectionalBlockExtension {
     }
 
 
-    @NotNull
+    @Nonnull
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
