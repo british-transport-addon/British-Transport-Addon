@@ -20,6 +20,7 @@ public class RoundelGenerator {
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_small");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_simple");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_pole");
+        processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_wall");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_platform");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_platform_way_out_left");
         processDirectory(new File(baseDir), new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "roundel_platform_way_out_right");
@@ -96,7 +97,7 @@ public class RoundelGenerator {
                 "{\n" +
                         "  \"parent\": \"jta:block/roundel/%s\",\n" +
                         "  \"textures\": {\n" +
-                        "    \"" + (parentType.length() > 7 && !parentType.contains("pole") && !parentType.contains("platform") ? "sign" : "texture") + "\": \"jta:block/roundel/%s\"\n" +
+                        "    \"" + (parentType.length() > 7 && !parentType.contains("wall") && !parentType.contains("pole") && !parentType.contains("platform") ? "sign" : "texture") + "\": \"jta:block/roundel/%s\"\n" +
                         "  }\n" +
                         "}", parentType, baseName);
 

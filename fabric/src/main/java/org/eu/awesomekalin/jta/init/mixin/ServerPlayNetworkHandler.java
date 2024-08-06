@@ -1,22 +1,14 @@
 package org.eu.awesomekalin.jta.init.mixin;
 
-import dev.emi.trinkets.api.SlotReference;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
-import net.minecraft.util.Pair;
-import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.client.RadioKeyHandler;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
-import org.eu.awesomekalin.jta.mod.items.RadioItem;
 import org.eu.awesomekalin.jta.mod.util.RadioUtil;
-import org.mtr.mapping.holder.Random;
 import org.mtr.mapping.holder.SoundCategory;
-import org.mtr.mapping.mapper.ItemExtension;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

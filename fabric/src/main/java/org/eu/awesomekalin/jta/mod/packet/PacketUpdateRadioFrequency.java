@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
-import org.eu.awesomekalin.jta.mod.screen.radio.RadioMainScreen;
 import org.eu.awesomekalin.jta.mod.util.RadioUtil;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.registry.PacketHandler;

@@ -7,8 +7,8 @@ import org.eu.awesomekalin.jta.mod.util.RadioUtil;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.ItemExtension;
 
-import java.util.List;
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class RadioItem extends ItemExtension {
 

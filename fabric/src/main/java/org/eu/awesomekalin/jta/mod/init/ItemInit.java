@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.directional.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.HandheldSignBase;
 import org.eu.awesomekalin.jta.mod.items.RadioItem;
 import org.eu.awesomekalin.jta.platform.ShieldItem;
 import org.mtr.mapping.holder.Block;

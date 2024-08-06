@@ -6,8 +6,6 @@ import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.IBlock;
 
 import javax.annotation.Nonnull;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class BusShelterRight extends DirectionalBlockExtension {
     public BusShelterRight() {

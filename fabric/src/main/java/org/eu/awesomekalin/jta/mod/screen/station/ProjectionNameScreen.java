@@ -3,7 +3,6 @@ package org.eu.awesomekalin.jta.mod.screen.station;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.ProjectionName;
 import org.eu.awesomekalin.jta.mod.packet.PacketUpdateProjectionName;
-import org.eu.awesomekalin.jta.mod.screen.whiteboard.UndergroundWhiteboardScreen;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
 import org.mtr.mapping.tool.TextCase;

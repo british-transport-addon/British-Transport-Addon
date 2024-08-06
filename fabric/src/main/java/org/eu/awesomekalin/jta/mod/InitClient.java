@@ -90,6 +90,21 @@ public final class InitClient {
         );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ROUNDEL_WALL,
+                dispatcher -> new RoundelWallBaseRender<>(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 8,
+                        0,
+                        .125f,
+                        -.35F,
+                        0,
+                        0xFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.ROUNDEL_PLATFORM,
                 dispatcher -> new RoundelPlatformBaseRender<>(
                         dispatcher,
@@ -148,21 +163,6 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 )
         );
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.WALL_ROUNDEL,
-                dispatcher -> new RoundelBaseRender<>(
-                        dispatcher,
-                        20 / 16F,
-                        0.2F / 8,
-                        0,
-                        .125F,
-                        .325F,
-                        0,
-                        0xFFFFFFF,
-                        Style.getDefaultFontIdMapped()
-                )
-        ); // TODO Fix text position
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_STREET_SIGN_2X2,
@@ -519,6 +519,18 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_POLE_DLR);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_POLE_RIVER);
 
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_BUSES);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_COACHES);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_TRAMS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_UNDERGROUND);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_OVERGROUND);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_TFL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_ELIZEBETH);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_NLE);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_PRIDE);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_DLR);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_RIVER);
+
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MERSEYSIDE_SIGN_SQUARE_RAIL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_ALT);
@@ -586,6 +598,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_BUS_STATION_SIGN);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_INTERCHANGE_STATION_SIGN);
 
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.UNDERGROUND_PLATFORM_END);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.GRAY_BOLLARD);

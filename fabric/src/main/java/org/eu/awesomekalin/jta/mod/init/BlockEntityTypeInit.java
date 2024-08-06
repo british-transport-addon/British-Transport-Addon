@@ -52,6 +52,24 @@ public class BlockEntityTypeInit {
             RoundelInit.ROUNDEL_POLE_TFL::get,
             RoundelInit.ROUNDEL_POLE_NLE::get
     );
+    public static final BlockEntityTypeRegistryObject<RoundelWallBase.RoundelBaseBlockEntity> ROUNDEL_WALL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "roundel_wall"
+            ),
+            RoundelWallBase.RoundelBaseBlockEntity::new,
+            RoundelInit.ROUNDEL_WALL_UNDERGROUND::get,
+            RoundelInit.ROUNDEL_WALL_OVERGROUND::get,
+            RoundelInit.ROUNDEL_WALL_BUSES::get,
+            RoundelInit.ROUNDEL_WALL_RIVER::get,
+            RoundelInit.ROUNDEL_WALL_DLR::get,
+            RoundelInit.ROUNDEL_WALL_COACHES::get,
+            RoundelInit.ROUNDEL_WALL_TRAMS::get,
+            RoundelInit.ROUNDEL_WALL_PRIDE::get,
+            RoundelInit.ROUNDEL_WALL_ELIZEBETH::get,
+            RoundelInit.ROUNDEL_WALL_TFL::get,
+            RoundelInit.ROUNDEL_WALL_NLE::get
+    );
     public static final BlockEntityTypeRegistryObject<RoundelSignBase.RoundelBaseBlockEntity> ROUNDEL_SIGN = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -145,24 +163,6 @@ public class BlockEntityTypeInit {
             RoundelInit.ROUNDEL_SMALL_ELIZEBETH::get,
             RoundelInit.ROUNDEL_SMALL_TFL::get,
             RoundelInit.ROUNDEL_SMALL_NLE::get
-    );
-    public static final BlockEntityTypeRegistryObject<RoundelBase.RoundelBaseBlockEntity> WALL_ROUNDEL = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "wall_roundel"
-            ),
-            RoundelBase.RoundelBaseBlockEntity::new,
-            RoundelInit.WALL_ROUNDEL_UNDERGROUND::get,
-            RoundelInit.WALL_ROUNDEL_OVERGROUND::get,
-            RoundelInit.WALL_ROUNDEL_BUSES::get,
-            RoundelInit.WALL_ROUNDEL_RIVER::get,
-            RoundelInit.WALL_ROUNDEL_DLR::get,
-            RoundelInit.WALL_ROUNDEL_COACHES::get,
-            RoundelInit.WALL_ROUNDEL_TRAMS::get,
-            RoundelInit.WALL_ROUNDEL_PRIDE::get,
-            RoundelInit.WALL_ROUNDEL_ELIZEBETH::get,
-            RoundelInit.WALL_ROUNDEL_TFL::get,
-            RoundelInit.WALL_ROUNDEL_NLE::get
     );
     public static final BlockEntityTypeRegistryObject<UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> UNDERGROUND_WHITEBOARD = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

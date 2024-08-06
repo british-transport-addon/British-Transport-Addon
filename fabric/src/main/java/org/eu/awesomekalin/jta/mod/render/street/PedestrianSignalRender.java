@@ -1,22 +1,15 @@
 package org.eu.awesomekalin.jta.mod.render.street;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.DispatchSignal;
-import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.BlockEntityRenderer;
+import org.mtr.mapping.holder.Direction;
+import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.GraphicsHolder;
-import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.BlockSignalBase;
-import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
-import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
-
-import javax.annotation.Nonnull;
 
 
 public class PedestrianSignalRender<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {

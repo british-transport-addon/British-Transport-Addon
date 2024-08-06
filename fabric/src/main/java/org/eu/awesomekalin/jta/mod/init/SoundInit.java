@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.mtr.mapping.holder.*;
+import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.SoundEventRegistryObject;
 
 public class SoundInit {

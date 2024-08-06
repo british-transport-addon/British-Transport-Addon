@@ -2,7 +2,6 @@ package org.eu.awesomekalin.jta.mod.blocks;
 
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
-import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mod.block.IBlock;
 
 public class HalfWallSignBase extends DirectionalSlabBlockExtension {

@@ -1,6 +1,5 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
-import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.ProjectionName;
 import org.mtr.mapping.holder.BlockEntity;
 import org.mtr.mapping.holder.BlockPos;

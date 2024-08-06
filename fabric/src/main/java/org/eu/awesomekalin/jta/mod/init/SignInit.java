@@ -2,17 +2,11 @@ package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
-import org.eu.awesomekalin.jta.mod.blocks.directional.HandheldSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.PlatformNumberSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.PlatformSign;
-import org.eu.awesomekalin.jta.mod.items.RadioItem;
-import org.eu.awesomekalin.jta.platform.ShieldItem;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
-import org.mtr.mapping.holder.Item;
-import org.mtr.mapping.holder.ItemSettings;
 import org.mtr.mapping.registry.BlockRegistryObject;
-import org.mtr.mapping.registry.ItemRegistryObject;
 
 public class SignInit {
 

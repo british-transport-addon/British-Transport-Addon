@@ -7,9 +7,6 @@ import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
-import org.mtr.mod.block.BlockStationNameWallWhite;
-
-import javax.annotation.Nonnull;
 
 public class ProjectionName extends DirectionalBlockExtension implements BlockWithEntity {
 

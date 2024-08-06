@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.entity;
 
 import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.BlockEntityExtension;
 
 public abstract class TwoLineBlockEntity extends OneLineBlockEntity {
 

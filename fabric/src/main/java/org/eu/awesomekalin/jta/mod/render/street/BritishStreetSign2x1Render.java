@@ -2,7 +2,6 @@ package org.eu.awesomekalin.jta.mod.render.street;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.BritishStreetSign2x1;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.BritishStreetSign2x2;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;

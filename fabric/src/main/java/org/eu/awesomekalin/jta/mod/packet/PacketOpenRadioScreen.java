@@ -1,7 +1,9 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
 import org.eu.awesomekalin.jta.mod.screen.radio.RadioMainScreen;
-import org.mtr.mapping.holder.*;
+import org.mtr.mapping.holder.ClientPlayerEntity;
+import org.mtr.mapping.holder.Hand;
+import org.mtr.mapping.holder.MinecraftClient;
 import org.mtr.mapping.registry.PacketHandler;
 import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;

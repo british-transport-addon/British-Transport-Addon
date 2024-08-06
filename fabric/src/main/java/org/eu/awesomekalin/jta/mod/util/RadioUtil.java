@@ -7,8 +7,6 @@ import de.maxhenkel.voicechat.api.audiochannel.LocationalAudioChannel;
 import de.maxhenkel.voicechat.api.opus.OpusDecoder;
 import de.maxhenkel.voicechat.api.opus.OpusEncoder;
 import de.maxhenkel.voicechat.api.packets.MicrophonePacket;
-import net.minecraft.client.render.entity.model.ShieldEntityModel;
-import net.minecraft.item.ShieldItem;
 import net.minecraft.nbt.NbtCompound;
 import org.eu.awesomekalin.jta.mod.InitVoiceChatPlugin;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
