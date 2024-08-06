@@ -1,17 +1,12 @@
 package org.eu.awesomekalin.jta.mod.screen.radio;
 
-import net.minecraft.client.gui.DrawContext;
-import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.packet.PacketUpdateRadioFrequency;
-import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.eu.awesomekalin.jta.mod.util.RadioUtil;
-import org.mtr.core.tool.Utilities;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
 import org.mtr.mapping.tool.TextCase;
 import org.mtr.mod.client.IDrawing;
-import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 
 public class RadioMainScreen extends ScreenExtension implements IGui {

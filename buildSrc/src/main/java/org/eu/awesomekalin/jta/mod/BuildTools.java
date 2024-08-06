@@ -80,7 +80,7 @@ public class BuildTools {
     public void copyBuildFile() throws IOException {
         final Path directory = path.getParent().resolve("build/release");
         Files.createDirectories(directory);
-        Files.copy(path.resolve(String.format("build/libs/%s-%s.jar", loader, version)), directory.resolve(String.format("JTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(path.resolve(String.format("build/libs/%s-%s.jar", loader, version)), directory.resolve(String.format("BTA-%s-%s+%s.jar", loader, version, minecraftVersion)), StandardCopyOption.REPLACE_EXISTING);
     }
 
     public String getCuriosVersion() {

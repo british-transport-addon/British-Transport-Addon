@@ -9,7 +9,7 @@ import org.mtr.mapping.holder.PlayerEntity;
 public interface NativeAPI {
 
     public boolean hasEquippedAttachment(PlayerEntity player, ItemStack item);
-    public Pair<SlotReference, ItemStack> getEquippedAttachment(PlayerEntity player, Item item);
+    public Pair<Integer, ItemStack> getEquippedAttachment(PlayerEntity player, Item item);
 
     public void registerShieldItemProperties();
 }

@@ -1,6 +1,5 @@
 package org.eu.awesomekalin.jta.mod.client;
 
-import dev.emi.trinkets.api.SlotReference;
 import net.minecraft.util.Pair;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
@@ -11,8 +10,6 @@ import org.mtr.mapping.holder.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RadioKeyHandler {
-	// okay so when teh button is clicked down can u toggle this function for me?
-	// like make a function that can t oggle the toggleRadio(player)
 	public static void toggleRadio(ServerPlayerEntity player) {
 		Pair<Integer, org.mtr.mapping.holder.ItemStack> referenceItemStackPair = Init.NATIVE_API.getEquippedAttachment(PlayerEntity.cast(player), ItemInit.MET_POLICE_RADIO.get());
 
