@@ -1,6 +1,9 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.blocks.UndergroundPlatformEnd;
+import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
+import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.BlockWallBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.door.GarageDoor;
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.door.GarageDoorWindow;
@@ -8,11 +11,11 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindo
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindowSegmentedTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.road.BritishRoadBollard;
+import org.eu.awesomekalin.jta.mod.blocks.directional.road.BritishRoadBollardAlt;
+import org.eu.awesomekalin.jta.mod.blocks.directional.road.Drain;
+import org.eu.awesomekalin.jta.mod.blocks.directional.road.RoadWorkBarrier;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
-import org.eu.awesomekalin.jta.mod.blocks.GreekPlatformEnd;
-import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
-import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
@@ -23,7 +26,9 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject BLACK_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_fence"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject STEEL_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject STEEL_FENCE_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence_alt"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_3x1"), () -> new Block(new BritishStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x1"), () -> new Block(new BritishStreetSign2x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x2"), () -> new Block(new BritishStreetSign2x2()), CreativeTabInit.JTA_SIGNS);
