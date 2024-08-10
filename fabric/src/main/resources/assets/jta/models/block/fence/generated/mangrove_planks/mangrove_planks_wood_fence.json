@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/fence/wood_fence",
+  "textures": {
+    "texture": "block/mangrove_planks"
+  }
+}

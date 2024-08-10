@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.roundel;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.entity.OneLineBlockEntity;
+import org.eu.awesomekalin.jta.mod.entity.block.OneLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;

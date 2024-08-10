@@ -210,12 +210,27 @@ public final class InitClient {
         );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.LONDON_STREET_SIGN_2X2,
-                dispatcher -> new LondonStreetSign2x2Render<>(
+                BlockEntityTypeInit.LONDON_STREET_SIGN_2X2_5,
+                dispatcher -> new LondonStreetSign2x2_5Render<>(
                         dispatcher,
                         24 / 16F,
                         0.2F / 8,
                         .2f,
+                        .65f,
+                        -.9F,
+                        0,
+                        0xFF0F0F0F,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LONDON_STREET_SIGN_3X2_5,
+                dispatcher -> new LondonStreetSign3x2_5Render<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 8,
+                        .5f,
                         .65f,
                         -.9F,
                         0,
@@ -536,7 +551,8 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_ALT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_CIRCLE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_STREET_SIGN_2X2);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.LONDON_STREET_SIGN_2X2);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.LONDON_STREET_SIGN_2X2_5);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.LONDON_STREET_SIGN_3X2_5);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.AMAZON_PARCEL_COLLECTION_LOCKER);
 

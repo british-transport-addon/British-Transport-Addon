@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/sign/london_street_sign_3x2_5"
+    },
+    "facing=south": {
+      "model": "jta:block/sign/london_street_sign_3x2_5",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/sign/london_street_sign_3x2_5",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/sign/london_street_sign_3x2_5",
+      "y": -90
+    }
+  }
+}

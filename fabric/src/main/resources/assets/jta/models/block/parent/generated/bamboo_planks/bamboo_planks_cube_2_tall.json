@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/cube_2_tall",
+  "textures": {
+    "texture": "block/bamboo_planks"
+  }
+}

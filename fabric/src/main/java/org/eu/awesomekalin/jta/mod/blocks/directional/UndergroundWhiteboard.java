@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.entity.NineLineBlockEntity;
+import org.eu.awesomekalin.jta.mod.entity.block.NineLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.screen.whiteboard.UndergroundWhiteboardScreen;
 import org.mtr.mapping.holder.*;

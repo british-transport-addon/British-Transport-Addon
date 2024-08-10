@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/cube_8",
+  "textures": {
+    "texture": "block/acacia_planks"
+  }
+}

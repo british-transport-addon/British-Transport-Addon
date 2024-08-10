@@ -1,6 +1,8 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.blocks.BarrierLayerBlock;
+import org.eu.awesomekalin.jta.mod.blocks.BarrierPlatformBlock;
 import org.eu.awesomekalin.jta.mod.blocks.UndergroundPlatformEnd;
 import org.eu.awesomekalin.jta.mod.blocks.WallSignBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
@@ -26,15 +28,18 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
-    public static final BlockRegistryObject BLACK_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_fence"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject STEEL_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject STEEL_FENCE_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence_alt"), () -> new Block(new SteelFence()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BARRIER_LAYER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_layer"), () -> new Block(new BarrierLayerBlock()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BLACK_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_fence"), () -> new Block(new FenceBase()), CreativeTabInit.JTA_FENCES);
+    public static final BlockRegistryObject STEEL_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence"), () -> new Block(new FenceBase()), CreativeTabInit.JTA_FENCES);
+    public static final BlockRegistryObject STEEL_FENCE_ALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "steel_fence_alt"), () -> new Block(new FenceBase()), CreativeTabInit.JTA_FENCES);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_3x1"), () -> new Block(new BritishStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x1"), () -> new Block(new BritishStreetSign2x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/british_street_sign_2x2"), () -> new Block(new BritishStreetSign2x2()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject LONDON_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_3x1"), () -> new Block(new LondonStreetSign3x1()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject LONDON_STREET_SIGN_3X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_3x2"), () -> new Block(new LondonStreetSign3x2()), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject LONDON_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_2x2"), () -> new Block(new LondonStreetSign2x2()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject LONDON_STREET_SIGN_2X2_5 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_2x2_5"), () -> new Block(new LondonStreetSign2x2_5()), CreativeTabInit.JTA_SIGNS);
+    public static final BlockRegistryObject LONDON_STREET_SIGN_3X2_5 = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/london_street_sign_3x2_5"), () -> new Block(new LondonStreetSign3x2_5()), CreativeTabInit.JTA_SIGNS);
 
     public static final BlockRegistryObject STREET_POLE_COLORED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/colored_street_pole"), () -> new Block(new PoleBase()), ItemBlockEnchanted::new, CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject STREET_POLE_BASE_COLORED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/colored_street_pole_base"), () -> new Block(new PoleBase()), ItemBlockEnchanted::new, CreativeTabInit.JTA_SIGNS);

@@ -8,6 +8,8 @@ import org.mtr.mapping.registry.CreativeModeTabHolder;
 
 public class CreativeTabInit {
     public static final CreativeModeTabHolder JTA_BLOCKS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_blocks"), () -> new ItemStack(new ItemConvertible(BlockInit.BRITISH_RAIL_PLATFORM.get().data)));
+    public static final CreativeModeTabHolder JTA_PARENTS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_parents"), () -> new ItemStack(new ItemConvertible(BlockInit.LIME_BRICKS.get().data)));
+    public static final CreativeModeTabHolder JTA_FENCES = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_fences"), () -> new ItemStack(new ItemConvertible(BlockInit.BLACK_FENCE.get().data)));
     public static final CreativeModeTabHolder JTA_WINDOWS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_windows"), () -> new ItemStack(new ItemConvertible(BlockInit.WHITE_WINDOW_SEGMENTED.get().data)));
     public static final CreativeModeTabHolder JTA_POLES = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_poles"), () -> new ItemStack(new ItemConvertible(PoleInit.POLE_BLACK.get().data)));
     public static final CreativeModeTabHolder JTA_ROUNDELS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_roundels"), () -> new ItemStack(new ItemConvertible(RoundelInit.ROUNDEL_TFL.get().data)));

@@ -1,7 +1,7 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.street;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.entity.TwoLineBlockEntity;
+import org.eu.awesomekalin.jta.mod.entity.block.TwoLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.screen.road.PlaceSign2LineScreen;
 import org.mtr.mapping.holder.*;

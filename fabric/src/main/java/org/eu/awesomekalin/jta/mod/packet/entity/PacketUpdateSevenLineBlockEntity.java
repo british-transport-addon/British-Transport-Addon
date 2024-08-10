@@ -1,6 +1,6 @@
 package org.eu.awesomekalin.jta.mod.packet.entity;
 
-import org.eu.awesomekalin.jta.mod.entity.SevenLineBlockEntity;
+import org.eu.awesomekalin.jta.mod.entity.block.SevenLineBlockEntity;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;

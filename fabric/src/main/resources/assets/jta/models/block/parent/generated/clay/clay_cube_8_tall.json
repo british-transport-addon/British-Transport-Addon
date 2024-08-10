@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/cube_8_tall",
+  "textures": {
+    "texture": "block/clay"
+  }
+}
