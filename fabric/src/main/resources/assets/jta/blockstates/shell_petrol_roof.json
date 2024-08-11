@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/shell_petrol_roof"
+    },
+    "facing=south": {
+      "model": "jta:block/shell_petrol_roof",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/shell_petrol_roof",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/shell_petrol_roof",
+      "y": -90
+    }
+  }
+}

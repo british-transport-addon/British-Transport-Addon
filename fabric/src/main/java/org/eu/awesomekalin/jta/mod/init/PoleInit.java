@@ -7,7 +7,6 @@ import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class PoleInit {
-
     public static final BlockRegistryObject STREET_POLE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/bee_yellow/bee_yellow_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject STREET_POLE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/black/black_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject STREET_POLE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/blue/blue_street_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
@@ -42,6 +41,23 @@ public class PoleInit {
     public static final BlockRegistryObject STREET_POLE_BASE_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/rusty/rusty_street_pole_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject STREET_POLE_BASE_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/steel/steel_street_pole_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject STREET_POLE_BASE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/yellow/yellow_street_pole_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/bee_yellow/bee_yellow_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/black/black_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/blue/blue_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_DARK_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/dark_blue/dark_blue_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_DARK_GRAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/dark_gray/dark_gray_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_DARK_GREEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/dark_green/dark_green_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_GRAY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/gray/gray_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_GREEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/green/green_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_LIGHT_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/light_blue/light_blue_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_ORANGE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/orange/orange_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_PINK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/pink/pink_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_PURPLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/purple/purple_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/red/red_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_ROYAL_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/royal_red/royal_red_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/rusty/rusty_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/steel/steel_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
+    public static final BlockRegistryObject STREET_POLE_SQUARE_BASE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/yellow/yellow_street_pole_square_base"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject TINY_POLE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/bee_yellow/bee_yellow_tiny_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject TINY_POLE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/black/black_tiny_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject TINY_POLE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/blue/blue_tiny_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
@@ -76,7 +92,6 @@ public class PoleInit {
     public static final BlockRegistryObject TINY_OFFSET_POLE_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/rusty/rusty_tiny_offset_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject TINY_OFFSET_POLE_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/steel/steel_tiny_offset_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject TINY_OFFSET_POLE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/yellow/yellow_tiny_offset_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
-
     public static final BlockRegistryObject POLE_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/bee_yellow/bee_yellow_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject POLE_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/black/black_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject POLE_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/blue/blue_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
@@ -94,7 +109,6 @@ public class PoleInit {
     public static final BlockRegistryObject POLE_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/rusty/rusty_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject POLE_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/steel/steel_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
     public static final BlockRegistryObject POLE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "pole/generated/yellow/yellow_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_POLES);
-    
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Poles");
     }

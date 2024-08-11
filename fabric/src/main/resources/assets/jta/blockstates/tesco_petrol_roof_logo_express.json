@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/tesco_petrol_roof_logo_express"
+    },
+    "facing=south": {
+      "model": "jta:block/tesco_petrol_roof_logo_express",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/tesco_petrol_roof_logo_express",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/tesco_petrol_roof_logo_express",
+      "y": -90
+    }
+  }
+}

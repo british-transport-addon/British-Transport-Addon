@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/sainsburys_petrol_roof_logo"
+    },
+    "facing=south": {
+      "model": "jta:block/sainsburys_petrol_roof_logo",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/sainsburys_petrol_roof_logo",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/sainsburys_petrol_roof_logo",
+      "y": -90
+    }
+  }
+}

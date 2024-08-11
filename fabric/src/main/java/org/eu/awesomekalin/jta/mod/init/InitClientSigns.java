@@ -5,8 +5,7 @@ import org.mtr.mapping.registry.RegistryClient;
 
 public class InitClientSigns {
     
-    public static void init(RegistryClient REGISTRY_CLIENT) {
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_110_SMALL);
+    public static void init(RegistryClient REGISTRY_CLIENT) {REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_110_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_NO_SITTING_HALF);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_JUNCTION_ON_BEND_AHEAD_RIGHT_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MINIMUM_SPEED_40_SMALL);
@@ -55,6 +54,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_JUNCTION_ON_BEND_AHEAD_LEFT_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_15_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_TRAM_SPEED_20_ALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ASDA_PETROL_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_BRIDGE_RAIL_AUTHORITY_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_24_HOUR_CCTV_IN_OPERATION_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_STOP_ALL);
@@ -63,6 +63,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_DUAL_CARRIAGEWAY_ENDS_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_PARKING_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_CYCLE_ROUTE_AHEAD_SMALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MORRISONS_ENTRY_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_20_ZONE_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_6_7_CAR_STOP_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ROAD_NARROWS_LEFT_ALL);
@@ -114,6 +115,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_BEND_TO_RIGHT_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_IN_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_NO_LITTERING_HALF);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MORRISONS_EXIT_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_IN_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MINIMUM_SPEED_30_ENDS_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_TRAM_SPEED_50_RED_ALL);
@@ -170,6 +172,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_OPENING_BRIDGE_AHEAD_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_BIKES_ONLY_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ONLY_HALF);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SAINSBURYS_PETROL_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ICE_HALF);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_6_8_CAR_STOP_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_FALLING_ROCKS_ALL);
@@ -219,6 +222,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_CATTLE_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_AHEAD_HALF);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_120_ALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SAINSBURYS_PETROL_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SLEEPER_CAR_STOP_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_7_5_TONE_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ONE_WAY_ARROW_SMALL);
@@ -323,6 +327,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_UNEVEN_ROAD_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_NO_BIKES_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_120_SMALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MORRISONS_ENTRY_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_60_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_LIMITED_CLEARANCE_SQUARE_RUSTY_ALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_LIMITED_CLEARANCE_WARNING_SMALL);
@@ -350,6 +355,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MOTORWAY_END_3_LARGE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_NO_ENTRY_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_TRAM_SPEED_30_ALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_MORRISONS_EXIT_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_TRAMWAY_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_PARK_AND_RIDE_RAIL_RIGHT_LARGE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_CCTV_SMALL);
@@ -386,6 +392,7 @@ public class InitClientSigns {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_WARNING_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_PARKING_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_BIKES_PEDESTRIANS_ALL);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_ASDA_PETROL_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_SPEED_20_ZONE_END_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_CAUTION_LIVE_RAILWAY_SMALL);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), SignInit.SIGN_NSE_4_CAR_STOP_ALL);

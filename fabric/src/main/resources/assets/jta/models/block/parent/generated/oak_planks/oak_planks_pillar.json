@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/pillar",
+  "textures": {
+    "texture": "block/oak_planks"
+  }
+}

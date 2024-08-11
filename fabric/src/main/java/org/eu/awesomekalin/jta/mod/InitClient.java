@@ -8,6 +8,9 @@ import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
 import org.eu.awesomekalin.jta.mod.render.street.*;
+import org.eu.awesomekalin.jta.mod.render.street.fuel.AsdaFuelStationPriceBoardTopRender;
+import org.eu.awesomekalin.jta.mod.render.street.fuel.MorrisonsFuelStationPriceBoardTopRender;
+import org.eu.awesomekalin.jta.mod.render.street.fuel.SainsburysFuelStationPriceBoardTopRender;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -439,6 +442,71 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.ASDA_FUEL_SIGN_TOP,
+                dispatcher -> new AsdaFuelStationPriceBoardTopRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        (0.2F / 8) * 1.4F,
+                        -.4F,
+                        -.65f,
+                        .16F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SAINSBURYS_FUEL_SIGN_TOP,
+                dispatcher -> new SainsburysFuelStationPriceBoardTopRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        (0.2F / 8) * 1.4F,
+                        -.4F,
+                        -.65f,
+                        .16F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                ));
+
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.MORRISONS_FUEL_SIGN_TOP,
+                dispatcher -> new MorrisonsFuelStationPriceBoardTopRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        (0.2F / 8) * 1.4F,
+                        -.4F,
+                        -.65f,
+                        .16F,
+                        0,
+                        0xFF008000,
+                        Style.getDefaultFontIdMapped()
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF, BPPetrolRoofRender::new);
+        //REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF_CORNER, BPPetrolRoofCornerRender::new);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_FUEL_SIGN_TOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_FUEL_SIGN_BOTTOM);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_TOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_BOTTOM);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_FUEL_SIGN_TOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_FUEL_SIGN_BOTTOM);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_PETROL_ROOF_CORNER);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_PETROL_ROOF_LOGO);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ESSO_PETROL_ROOF_CORNER);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_PETROL_ROOF_CORNER_LOGO);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_PETROL_ROOF_CORNER_INFO);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO_EXTRA);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO_EXPRESS);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BP_PETROL_ROOF_LOGO);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_PETROL_ROOF_LOGO);
+
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_BUSES);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_COACHES);

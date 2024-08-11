@@ -1,6 +1,8 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.blocks.directional.BPPetrolRoof;
+import org.eu.awesomekalin.jta.mod.blocks.directional.BPPetrolRoofCorner;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
@@ -8,6 +10,9 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.AsdaFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.MorrisonsFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.SainsburysFuelStationPriceBoardTop;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -16,6 +21,46 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity> ASDA_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "asda_fuel_sign_top"
+            ),
+            AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity::new,
+            BlockInit.ASDA_FUEL_SIGN_TOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<SainsburysFuelStationPriceBoardTop.SainsburysFuelStationPriceBoardTopBlockEntity> SAINSBURYS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "sainsburys_fuel_sign_top"
+            ),
+            SainsburysFuelStationPriceBoardTop.SainsburysFuelStationPriceBoardTopBlockEntity::new,
+            BlockInit.SAINSBURYS_FUEL_SIGN_TOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<MorrisonsFuelStationPriceBoardTop.MorrisonsFuelStationPriceBoardTopBlockEntity> MORRISONS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "morrisons_fuel_sign_top"
+            ),
+            MorrisonsFuelStationPriceBoardTop.MorrisonsFuelStationPriceBoardTopBlockEntity::new,
+            BlockInit.MORRISONS_FUEL_SIGN_TOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<BPPetrolRoof.BPPetrolRoofTileEntity> BP_PETROL_ROOF = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "bp_petrol_roof"
+            ),
+            BPPetrolRoof.BPPetrolRoofTileEntity::new,
+            BlockInit.BP_PETROL_ROOF::get
+    );
+    public static final BlockEntityTypeRegistryObject<BPPetrolRoofCorner.BPPetrolRoofTileEntity> BP_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "bp_petrol_roof_corner"
+            ),
+            BPPetrolRoofCorner.BPPetrolRoofTileEntity::new,
+            BlockInit.BP_PETROL_ROOF_CORNER::get
+    );
     public static final BlockEntityTypeRegistryObject<RoundelBase.RoundelBaseBlockEntity> ROUNDEL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -33,7 +78,7 @@ public class BlockEntityTypeInit {
             RoundelInit.ROUNDEL_ELIZEBETH::get,
             RoundelInit.ROUNDEL_TFL::get,
             RoundelInit.ROUNDEL_NLE::get
-    );    
+    );
     public static final BlockEntityTypeRegistryObject<RoundelPoleBase.RoundelBaseBlockEntity> ROUNDEL_POLE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

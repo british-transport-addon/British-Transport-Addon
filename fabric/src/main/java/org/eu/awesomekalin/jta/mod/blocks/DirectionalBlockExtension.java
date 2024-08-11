@@ -11,7 +11,7 @@ import org.mtr.mod.block.IBlock;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public abstract class DirectionalBlockExtension extends BlockExtension implements DirectionHelper {
+public class DirectionalBlockExtension extends BlockExtension implements DirectionHelper {
 
     public static final EnumProperty<EnumBooleanInverted> IS_22_5 = EnumProperty.of("is_22_5", EnumBooleanInverted.class);
     public static final EnumProperty<EnumBooleanInverted> IS_45 = EnumProperty.of("is_45", EnumBooleanInverted.class);
