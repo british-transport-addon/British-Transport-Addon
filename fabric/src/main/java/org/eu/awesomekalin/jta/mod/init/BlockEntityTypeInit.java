@@ -13,6 +13,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.AsdaFuelStationPriceBoardTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.MorrisonsFuelStationPriceBoardTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.SainsburysFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.TescoFuelStationPriceBoardTop;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -28,6 +29,14 @@ public class BlockEntityTypeInit {
             ),
             AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity::new,
             BlockInit.ASDA_FUEL_SIGN_TOP::get
+    );    
+    public static final BlockEntityTypeRegistryObject<TescoFuelStationPriceBoardTop.TescoFuelStationPriceBoardTopBlockEntity> TESCO_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "tesco_fuel_sign_top"
+            ),
+            TescoFuelStationPriceBoardTop.TescoFuelStationPriceBoardTopBlockEntity::new,
+            BlockInit.TESCO_FUEL_SIGN_TOP::get
     );
     public static final BlockEntityTypeRegistryObject<SainsburysFuelStationPriceBoardTop.SainsburysFuelStationPriceBoardTopBlockEntity> SAINSBURYS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

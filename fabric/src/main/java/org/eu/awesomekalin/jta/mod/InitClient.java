@@ -11,6 +11,7 @@ import org.eu.awesomekalin.jta.mod.render.street.*;
 import org.eu.awesomekalin.jta.mod.render.street.fuel.AsdaFuelStationPriceBoardTopRender;
 import org.eu.awesomekalin.jta.mod.render.street.fuel.MorrisonsFuelStationPriceBoardTopRender;
 import org.eu.awesomekalin.jta.mod.render.street.fuel.SainsburysFuelStationPriceBoardTopRender;
+import org.eu.awesomekalin.jta.mod.render.street.fuel.TescoFuelStationPriceBoardTopRender;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -483,6 +484,20 @@ public final class InitClient {
                         .16F,
                         0,
                         0xFF008000,
+                        Style.getDefaultFontIdMapped()
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.TESCO_FUEL_SIGN_TOP,
+                dispatcher -> new TescoFuelStationPriceBoardTopRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        (0.2F / 8) * 1.4F,
+                        .4F,
+                        -.65f,
+                        .16F,
+                        0,
+                        0xB33C2D,
                         Style.getDefaultFontIdMapped()
                 ));
 

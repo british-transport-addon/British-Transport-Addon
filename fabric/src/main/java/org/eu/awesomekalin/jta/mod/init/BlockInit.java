@@ -18,10 +18,11 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaPole;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.electrical.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.electrical.impl.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.AsdaFuelStationPriceBoardTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.MorrisonsFuelStationPriceBoardTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.SainsburysFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.TescoFuelStationPriceBoardTop;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
@@ -32,53 +33,81 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
-    public static final BlockRegistryObject MORRISONS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject MORRISONS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject MORRISONS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_top"), () -> new Block(new MorrisonsFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject ASDA_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject ASDA_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject ASDA_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_fuel_sign_top"), () -> new Block(new AsdaFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SAINSBURYS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject TESCO_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject TESCO_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_fuel_sign_top"), () -> new Block(new TescoFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SAINSBURYS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SAINSBURYS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_fuel_sign_top"), () -> new Block(new SainsburysFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject ESSO_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "esso_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject ESSO_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "esso_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject ESSO_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "esso_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject MORRISONS_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject MORRISONS_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject MORRISONS_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SAINSBURYS_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SAINSBURYS_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject SAINSBURYS_PETROL_ROOF_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_petrol_roof_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SAINSBURYS_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject ASDA_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SAINSBURYS_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sainsburys_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject ASDA_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject ASDA_PETROL_ROOF_CORNER_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_petrol_roof_corner_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject ASDA_PETROL_ROOF_CORNER_INFO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_petrol_roof_corner_info"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject TESCO_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject TESCO_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject TESCO_PETROL_ROOF_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject TESCO_PETROL_ROOF_LOGO_EXTRA = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof_logo_extra"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject TESCO_PETROL_ROOF_LOGO_EXPRESS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof_logo_express"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject TESCO_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject TESCO_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BP_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "bp_petrol_roof"), () -> new Block(new BPPetrolRoof()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BP_PETROL_ROOF_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "bp_petrol_roof_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BP_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "bp_petrol_roof_corner"), () -> new Block(new BPPetrolRoofCorner()), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SHELL_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SHELL_PETROL_ROOF_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
-        return 5;
+    public static final BlockRegistryObject SHELL_PETROL_ROOF = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
-    public static final BlockRegistryObject SHELL_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SHELL_PETROL_ROOF_LOGO = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof_logo"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SHELL_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_petrol_roof_corner"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BARRIER_LAYER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_layer"), () -> new Block(new BarrierLayerBlock()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BLACK_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_fence"), () -> new Block(new FenceBase()), CreativeTabInit.JTA_FENCES);

@@ -12,7 +12,7 @@ import org.mtr.mapping.mapper.BlockWithEntity;
 public abstract class FuelStationPriceBoardTop extends DirectionalBlockExtension implements BlockWithEntity {
     public FuelStationPriceBoardTop() {
         super(BlockHelper.createBlockSettings(false, (blockState) -> {
-            return 5;
+            return 11;
         }).strength(4.0f).nonOpaque().dynamicBounds());
     }
 

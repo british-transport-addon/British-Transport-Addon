@@ -12,7 +12,7 @@ import org.mtr.mapping.mapper.BlockWithEntity;
 public class BPPetrolRoof extends DirectionalBlockExtension implements BlockWithEntity {
     public BPPetrolRoof() {
         super(BlockHelper.createBlockSettings(false, (blockState) -> {
-            return 5;
+            return 11;
         }));
     }
 

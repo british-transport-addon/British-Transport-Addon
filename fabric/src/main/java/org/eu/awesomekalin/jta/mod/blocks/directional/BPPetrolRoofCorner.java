@@ -15,7 +15,7 @@ import org.mtr.mod.block.BlockTicketBarrier;
 public class BPPetrolRoofCorner extends DirectionalBlockExtension implements BlockWithEntity {
     public BPPetrolRoofCorner() {
         super(BlockHelper.createBlockSettings(false, (blockState) -> {
-            return 5;
+            return 11;
         }));
     }
 

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/tesco_fuel_sign_bottom"
+    },
+    "facing=south": {
+      "model": "jta:block/tesco_fuel_sign_bottom",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/tesco_fuel_sign_bottom",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/tesco_fuel_sign_bottom",
+      "y": -90
+    }
+  }
+}

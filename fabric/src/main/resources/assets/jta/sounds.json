@@ -1,4 +1,12 @@
 {
+  "electrical_hum_1": {
+    "sounds": [
+      {
+        "name": "jta:electrical_hum_1",
+        "pitch": 1.0
+      }
+    ]
+  },
   "met_police_radio_in": {
     "sounds": [
       {

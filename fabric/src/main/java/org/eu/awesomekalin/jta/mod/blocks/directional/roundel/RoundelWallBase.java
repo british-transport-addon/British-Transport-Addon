@@ -16,7 +16,9 @@ public class RoundelWallBase extends DirectionalBlockExtension implements BlockW
     private String defaultText;
 
     public RoundelWallBase(String defaultText) {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, (blockState) -> {
+            return 11;
+        }).strength(4.0f).nonOpaque().dynamicBounds());
         this.defaultText = defaultText;
     }
 
