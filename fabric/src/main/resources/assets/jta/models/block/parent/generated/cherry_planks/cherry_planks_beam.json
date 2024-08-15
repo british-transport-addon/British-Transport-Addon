@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/beam",
+  "textures": {
+    "texture": "block/cherry_planks"
+  }
+}

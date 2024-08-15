@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/parent/beam",
+  "textures": {
+    "texture": "jta:block/creamy_english_bricks"
+  }
+}
