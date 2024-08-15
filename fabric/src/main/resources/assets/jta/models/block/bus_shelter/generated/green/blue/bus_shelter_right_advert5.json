@@ -1,0 +1,9 @@
+{
+  "parent": "jta:block/bus_shelter/bus_shelter_right_advert",
+  "textures": {
+    "color": "jta:block/bus_shelter/base/green",
+    "seatColor": "jta:block/bus_shelter/seat/blue",
+    "advert1": "jta:block/adverts/btp_see_it_say_it",
+    "advert2": "jta:block/adverts/btp_somewhere_they_shouldnt"
+  }
+}

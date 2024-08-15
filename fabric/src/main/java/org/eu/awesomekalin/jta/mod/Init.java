@@ -25,6 +25,7 @@ public class Init {
         PoleInit.INIT();
         SignInit.INIT();
         FenceInit.INIT();
+        BusShelterInit.INIT();
         BlockEntityTypeInit.INIT();
         EntityTypeInit.INIT();
         CreativeTabInit.INIT();

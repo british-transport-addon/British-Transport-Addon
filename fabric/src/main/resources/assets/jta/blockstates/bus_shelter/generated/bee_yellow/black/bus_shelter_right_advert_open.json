@@ -1,0 +1,60 @@
+{
+  "variants": {
+    "facing=north": [
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open0" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open1" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open2" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open3" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open4" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open5" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open6" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open7" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open8" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open9" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open10" },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open11" }
+    ],
+    "facing=east": [
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open0", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open1", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open2", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open3", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open4", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open5", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open6", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open7", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open8", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open9", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open10", "y": 90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open11", "y": 90 }
+    ],
+    "facing=south": [
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open0", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open1", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open2", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open3", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open4", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open5", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open6", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open7", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open8", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open9", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open10", "y": 180 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open11", "y": 180 }
+    ],
+    "facing=west": [
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open0", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open1", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open2", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open3", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open4", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open5", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open6", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open7", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open8", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open9", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open10", "y": -90 },
+      { "model": "jta:block/bus_shelter/generated/bee_yellow/black/bus_shelter_right_advert_open11", "y": -90 }
+    ]
+  }
+}

@@ -31,6 +31,7 @@ public class JTAParentGenerator {
         processDirectory(new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "cube_2");
         processDirectory(new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "cube_2_tall");
         processDirectory(new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "pillar");
+        processDirectory(new File(modelOutputDir), new File(blockstateOutputDir), new File(itemOutputDir), "beam");
 
         generateTextFiles(new File(base));
     }

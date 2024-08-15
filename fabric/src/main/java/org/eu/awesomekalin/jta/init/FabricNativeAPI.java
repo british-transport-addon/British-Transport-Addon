@@ -3,6 +3,9 @@ package org.eu.awesomekalin.jta.init;
 import dev.emi.trinkets.api.SlotReference;
 import dev.emi.trinkets.api.TrinketComponent;
 import dev.emi.trinkets.api.TrinketsApi;
+import net.fabricmc.fabric.impl.client.registry.sync.FabricRegistryClientInit;
+import net.fabricmc.fabric.impl.client.rendering.BlockEntityRendererRegistryImpl;
+import net.fabricmc.fabric.impl.registry.sync.FabricRegistryInit;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.LivingEntity;
@@ -10,9 +13,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Pair;
 import org.eu.awesomekalin.jta.mod.NativeAPI;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
-import org.mtr.mapping.holder.Item;
-import org.mtr.mapping.holder.ItemStack;
-import org.mtr.mapping.holder.PlayerEntity;
+import org.mtr.mapping.holder.*;
+import org.mtr.mapping.mapper.BlockEntityExtension;
+import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
+import software.bernie.geckolib.renderer.GeoBlockRenderer;
 
 import java.util.Optional;
 

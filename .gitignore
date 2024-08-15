@@ -40,3 +40,4 @@ fabric.mod.json
 forge/src/main/java/org/mtr/mixin/ClientWorldRenderingMixin.java
 fabric/src/main/resources/jta.accesswidener
 fabric/src/main/java/org/mtr/mixin/ClientWorldRenderingMixin.java
+fabric/src/main/resources/assets/jta/sounds/Female1/

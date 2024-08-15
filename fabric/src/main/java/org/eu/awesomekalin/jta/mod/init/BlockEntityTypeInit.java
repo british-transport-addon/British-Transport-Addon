@@ -10,10 +10,8 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.AsdaFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.MorrisonsFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.SainsburysFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.TescoFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
+import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -22,6 +20,22 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "vertical_road_barrier"
+            ),
+            VerticalRoadBarrierBlockEntity::new,
+            BlockInit.VERTICAL_ROAD_BARRIER::get//update
+    );
+    public static final BlockEntityTypeRegistryObject<AbstractStationHandset.StationHandsetBlockEntity> STATION_HANDSET = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "station_handset"
+            ),
+            AbstractStationHandset.StationHandsetBlockEntity::new,
+            BlockInit.STATION_RAMP::get//update
+    );
     public static final BlockEntityTypeRegistryObject<AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity> ASDA_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -29,6 +43,14 @@ public class BlockEntityTypeInit {
             ),
             AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity::new,
             BlockInit.ASDA_FUEL_SIGN_TOP::get
+    );
+    public static final BlockEntityTypeRegistryObject<ShellFuelStationPriceBoardTop.ShellFuelStationPriceBoardTopBlockEntity> SHELL_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "shell_fuel_sign_top"
+            ),
+            ShellFuelStationPriceBoardTop.ShellFuelStationPriceBoardTopBlockEntity::new,
+            BlockInit.SHELL_FUEL_SIGN_TOP::get
     );    
     public static final BlockEntityTypeRegistryObject<TescoFuelStationPriceBoardTop.TescoFuelStationPriceBoardTopBlockEntity> TESCO_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

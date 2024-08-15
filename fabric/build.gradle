@@ -10,6 +10,17 @@ repositories {
         name = 'Ladysnake Mods'
         url = 'https://maven.ladysnake.org/releases'
     }
+
+    maven {
+        name = 'GeckoLib maven'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+    maven {
+        name = 'ParchmentMC'
+        url = 'https://maven.parchmentmc.org'
+    }
+
+    //WHHATTT
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
 
 }
@@ -26,7 +37,10 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${buildTools.getFabricVersion()}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${buildTools.getFabricApiVersion()}"
     modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
+    modImplementation("software.bernie.geckolib:geckolib-fabric-1.20:${geckolibVersion}")
     modApi "de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}"
+
+
     modApi files('libs/trinkets-3.7.2.jar')
     modApi files('libs/cardinal-components-base-5.2.0.jar')
     modApi files('libs/cardinal-components-entity-5.2.0.jar')

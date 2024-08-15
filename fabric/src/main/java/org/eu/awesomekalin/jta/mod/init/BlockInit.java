@@ -10,19 +10,13 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindo
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindowSegmentedTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.BritishRoadBollard;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.BritishRoadBollardAlt;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.Drain;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.RoadWorkBarrier;
+import org.eu.awesomekalin.jta.mod.blocks.directional.road.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaBase;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaPole;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.electrical.impl.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.AsdaFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.MorrisonsFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.SainsburysFuelStationPriceBoardTop;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.TescoFuelStationPriceBoardTop;
+import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
@@ -33,6 +27,7 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "vertical_road_barrier"), () -> new Block(new VerticalRoadBarrier()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject MORRISONS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
         return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
@@ -41,6 +36,10 @@ public class BlockInit {
         return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject ASDA_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asda_fuel_sign_top"), () -> new Block(new AsdaFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SHELL_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
+        return 11;
+    }))), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject SHELL_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "shell_fuel_sign_top"), () -> new Block(new ShellFuelStationPriceBoardTop()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject TESCO_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tesco_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
         return 11;
     }))), CreativeTabInit.JTA_BLOCKS);
@@ -414,26 +413,6 @@ public class BlockInit {
     public static final BlockRegistryObject TYNE_AND_WEAR_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tyne_and_wear_square"), () -> new Block(new MetrolinkSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "manchester_sign_square"), () -> new Block(new ManchesterSignSquare()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject MERSEYSIDE_SIGN_SQUARE_RAIL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "merseyside_sign_square_rail"), () -> new Block(new MerseysideSignSquare()), CreativeTabInit.JTA_SIGNS);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_LEFT_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_left_red"), () -> new Block(new BusShelterLeft()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_LEFT_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_left_yellow"), () -> new Block(new BusShelterLeft()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_LEFT_LONG_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_left_long_red"), () -> new Block(new BusShelterLeftLong()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_LEFT_LONG_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_left_long_yellow"), () -> new Block(new BusShelterLeftLong()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_RIGHT_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_right_red"), () -> new Block(new BusShelterRight()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_RIGHT_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_right_yellow"), () -> new Block(new BusShelterRight()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_right_with_advert"), () -> new Block(new BusShelterRightWithAdvert()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "black_bus_shelter_right_with_advert_open"), () -> new Block(new BusShelterRightWithAdvertOpen()), CreativeTabInit.JTA_BUSES);
-
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_LEFT_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_left_red"), () -> new Block(new BusShelterLeft()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_LEFT_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_left_yellow"), () -> new Block(new BusShelterLeft()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_LEFT_LONG_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_left_long_red"), () -> new Block(new BusShelterLeftLong()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_LEFT_LONG_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_left_long_yellow"), () -> new Block(new BusShelterLeftLong()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_red"), () -> new Block(new BusShelterRight()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_yellow"), () -> new Block(new BusShelterRight()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_with_advert_red"), () -> new Block(new BusShelterRightWithAdvert()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_with_advert_yellow"), () -> new Block(new BusShelterRightWithAdvert()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_RED = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_with_advert_open_red"), () -> new Block(new BusShelterRightWithAdvertOpen()), CreativeTabInit.JTA_BUSES);
-    public static final BlockRegistryObject GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "gray_bus_shelter_right_with_advert_open_yellow"), () -> new Block(new BusShelterRightWithAdvertOpen()), CreativeTabInit.JTA_BUSES);
-
     public static final BlockRegistryObject BUS_STOP_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "bus_stop_pole"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_BUSES);
     public static final BlockRegistryObject BEE_BUS_STOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "bee_bus_stop"), () -> new Block(new BeeBusStopSign()), CreativeTabInit.JTA_BUSES);
     public static final BlockRegistryObject LONDON_BUS_STOP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "london_bus_stop"), () -> new Block(new LondonBusStopSign()), CreativeTabInit.JTA_BUSES);

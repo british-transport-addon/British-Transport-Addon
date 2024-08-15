@@ -1,17 +1,16 @@
 package org.eu.awesomekalin.jta.mod;
 
+import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import org.eu.awesomekalin.jta.mod.init.*;
 import org.eu.awesomekalin.jta.mod.packet.PacketToggleRadioTransmit;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
+import org.eu.awesomekalin.jta.mod.render.road.VerticalRoadBarrierRender;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
 import org.eu.awesomekalin.jta.mod.render.street.*;
-import org.eu.awesomekalin.jta.mod.render.street.fuel.AsdaFuelStationPriceBoardTopRender;
-import org.eu.awesomekalin.jta.mod.render.street.fuel.MorrisonsFuelStationPriceBoardTopRender;
-import org.eu.awesomekalin.jta.mod.render.street.fuel.SainsburysFuelStationPriceBoardTopRender;
-import org.eu.awesomekalin.jta.mod.render.street.fuel.TescoFuelStationPriceBoardTopRender;
+import org.eu.awesomekalin.jta.mod.render.street.fuel.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -479,7 +478,7 @@ public final class InitClient {
                         dispatcher,
                         12 / 16F,
                         (0.2F / 8) * 1.4F,
-                        -.4F,
+                        .4F,
                         -.65f,
                         .16F,
                         0,
@@ -501,6 +500,20 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
 
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SHELL_FUEL_SIGN_TOP,
+                dispatcher -> new ShellFuelStationPriceBoardTopRender<>(
+                        dispatcher,
+                        12 / 16F,
+                        (0.2F / 8) * 1.4F,
+                        -.4F,
+                        -.65f,
+                        .16F,
+                        0,
+                        0xB33C2D,
+                        Style.getDefaultFontIdMapped()
+                ));
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF, BPPetrolRoofRender::new);
         //REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF_CORNER, BPPetrolRoofCornerRender::new);
 
@@ -508,6 +521,8 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_FUEL_SIGN_BOTTOM);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_TOP);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_BOTTOM);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_FUEL_SIGN_TOP);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_FUEL_SIGN_BOTTOM);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_FUEL_SIGN_TOP);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_FUEL_SIGN_BOTTOM);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_FUEL_SIGN_TOP);
@@ -666,24 +681,7 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.SMOOTH_MIXED_STONE_WHITE_WINDOW_4_POINT_EXTRU);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STONE_PAVER_WHITE_WINDOW_4_POINT_EXTRU);
 
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_LONG_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_LEFT_LONG_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_LONG_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_LEFT_LONG_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_YELLOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_RED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.GRAY_BUS_SHELTER_RIGHT_WITH_ADVERT_OPEN_YELLOW);
+
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT_OFF);

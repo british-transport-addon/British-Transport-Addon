@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "jta:block/tesco_blue",
+		"1": "jta:block/blue",
 		"2": "jta:block/white",
-		"3": "jta:block/light_blue",
-		"particle": "jta:block/light_blue"
+		"3": "jta:block/tesco_blue",
+		"particle": "jta:block/tesco_blue"
 	},
 	"elements": [
 		{
