@@ -12,6 +12,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
 import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
+import org.eu.awesomekalin.jta.mod.entity.block.street.ManchesterTrashBinAltLidEntity;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -20,6 +21,14 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<ManchesterTrashBinAltLidEntity> MANCHESTER_TRASH_BIN_ALT_LID = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "manchester_trash_bin_alt_lid"
+            ),
+            ManchesterTrashBinAltLidEntity::new,
+            BlockInit.MANCHESTER_TRASH_BIN_ALT_LID::get//update
+    );
     public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

@@ -3,7 +3,7 @@
   "textures": {
     "color": "jta:block/bus_shelter/base/dark_green",
     "seatColor": "jta:block/bus_shelter/seat/orange",
-    "advert1": "jta:block/adverts/tfl_going_to_heathrow",
-    "advert2": "jta:block/adverts/tfl_night_tube"
+    "advert1": "jta:block/adverts/costalight",
+    "advert2": "jta:block/adverts/ikea"
   }
 }

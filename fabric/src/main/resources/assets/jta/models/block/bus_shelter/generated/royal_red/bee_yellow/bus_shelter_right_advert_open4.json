@@ -3,7 +3,7 @@
   "textures": {
     "color": "jta:block/bus_shelter/base/royal_red",
     "seatColor": "jta:block/bus_shelter/seat/bee_yellow",
-    "advert1": "jta:block/adverts/fly_the_tube",
-    "advert2": "jta:block/adverts/ikea"
+    "advert1": "jta:block/adverts/lush",
+    "advert2": "jta:block/adverts/mcdonalds"
   }
 }

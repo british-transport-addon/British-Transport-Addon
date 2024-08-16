@@ -16,7 +16,7 @@ public class BusShelterRight extends DirectionalBlockExtension {
     @Nonnull
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        final Direction facing = IBlock.getStatePropertySafe(state, FACING).getOpposite();
+        final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
                 IBlock.getVoxelShapeByDirection(-8, 25, -2, 32, 27, 16, facing),
                 IBlock.getVoxelShapeByDirection(11, -11.5, 14, 32, -9.5, 16, facing),

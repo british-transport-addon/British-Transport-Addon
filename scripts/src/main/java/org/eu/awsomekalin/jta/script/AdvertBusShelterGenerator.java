@@ -74,7 +74,7 @@ public class AdvertBusShelterGenerator {
                     String inputName = "bus_shelter/generated/" + baseName + "/" + seatName + "/" + parentType;
                     String capitalizedFullReference = (parentType + "_" + baseName + "_" + seatName).toUpperCase().replace("/", "_");
                     blockInitLines.add(String.format(
-                            "public static final BlockRegistryObject %s = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, \"%s\"), () -> new Block(new PoleBase()), CreativeTabInit.JTA_SIGNS);",
+                            "public static final BlockRegistryObject %s = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, \"%s\"), () -> new Block(xx" + parentType + "xx), CreativeTabInit.JTA_SIGNS);",
                             capitalizedFullReference, inputName));
                 }
             }

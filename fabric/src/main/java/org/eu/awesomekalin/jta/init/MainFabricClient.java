@@ -7,6 +7,7 @@ import net.minecraft.entity.EntityType;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.render.road.VerticalRoadBarrierRender;
+import org.eu.awesomekalin.jta.mod.render.street.ManchesterTrashBinAltLidRender;
 
 public class MainFabricClient implements ClientModInitializer {
     @Override

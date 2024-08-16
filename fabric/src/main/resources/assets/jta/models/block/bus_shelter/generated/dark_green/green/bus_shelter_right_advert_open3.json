@@ -3,7 +3,7 @@
   "textures": {
     "color": "jta:block/bus_shelter/base/dark_green",
     "seatColor": "jta:block/bus_shelter/seat/green",
-    "advert1": "jta:block/adverts/northern_play_fare",
-    "advert2": "jta:block/adverts/northern_wrap_up"
+    "advert1": "jta:block/adverts/jet2holidays",
+    "advert2": "jta:block/adverts/kfc"
   }
 }

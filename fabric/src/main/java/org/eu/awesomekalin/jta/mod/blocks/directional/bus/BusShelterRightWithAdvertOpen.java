@@ -16,7 +16,7 @@ public class BusShelterRightWithAdvertOpen extends DirectionalBlockExtension {
     @Nonnull
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        final Direction facing = IBlock.getStatePropertySafe(state, FACING).getOpposite();
+        final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
 
                 IBlock.getVoxelShapeByDirection(-8, 25, -8, 32, 27, 16, facing),
