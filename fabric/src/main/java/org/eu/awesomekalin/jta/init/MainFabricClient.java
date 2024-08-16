@@ -13,7 +13,10 @@ public class MainFabricClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockEntityRendererRegistry.register(BlockEntityTypeInit.VERTICAL_ROAD_BARRIER.get().data, VerticalRoadBarrierRender::new);
-
+        BlockEntityRendererRegistry.register(BlockEntityTypeInit.MANCHESTER_TRASH_BIN_ALT_LID.get().data, ManchesterTrashBinAltLidRender::new);
+//Why is this not in the InitClient class?
+        // it uses the fabric api directly coz its uses the geckolib shi so its kinda gae and iddnt work prooperly in initclient so
+        // should be two methods for forge and fabric i think
 
         InitClient.init();
     }
