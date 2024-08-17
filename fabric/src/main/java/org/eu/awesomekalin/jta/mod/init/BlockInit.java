@@ -27,6 +27,7 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject FUEL_PUMP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "fuel_pump"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "vertical_road_barrier"), () -> new Block(new VerticalRoadBarrier()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject MORRISONS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {
         return 11;

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "jta:block/fuel_pump"
+    },
+    "facing=south": {
+      "model": "jta:block/fuel_pump",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "jta:block/fuel_pump",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "jta:block/fuel_pump",
+      "y": -90
+    }
+  }
+}
