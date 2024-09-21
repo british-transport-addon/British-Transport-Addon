@@ -1,13 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[36,)"
-license = "LGPL-3.0-only"
+license = "MIT"
 
 [[mods]]
 modId = "jta"
 version = "@version@"
-displayName = "Jesse's Transit Addon"
-authors = ["AwesomeKalin55", "Jesse"]
-description = "Jesse's Transit Addon (JTA) is a collection of decorative and functional blocks for use with the MTR mod"
+displayName = "British Transit Addon"
+authors = ["AwesomeKalin55", "dash :D"]
+description = "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles"
 logoFile = "icon.png"
 
 [[dependencies.jta]]

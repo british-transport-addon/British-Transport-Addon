@@ -3,7 +3,6 @@ package org.eu.awesomekalin.jta.mod.entity.vehicle;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-// what are the mappings fopr thewse?
 import org.mtr.mapping.holder.EntityType;
 import org.mtr.mapping.holder.World;
 import org.mtr.mapping.mapper.EntityExtension;

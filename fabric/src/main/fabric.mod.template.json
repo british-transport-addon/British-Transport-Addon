@@ -3,12 +3,12 @@
   "id": "jta",
   "version": "@version@",
   "name": "British Transit Addon",
-  "description": "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod",
+  "description": "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles",
   "authors": [
     "AwesomeKalin55",
     "dash :D"
   ],
-  "license": "LGPL-3.0-only",
+  "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {

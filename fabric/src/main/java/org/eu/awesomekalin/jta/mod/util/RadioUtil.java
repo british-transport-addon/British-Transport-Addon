@@ -106,7 +106,7 @@ public class RadioUtil {
 				continue;
 			// Play voice to nearby players
 			int listeningDistance = 20 * 2;
-			List<PlayerEntity> playersInRange = world.data.getEntitiesByClass(net.minecraft.entity.player.PlayerEntity.class, BoxUtil.of(player.getPos(), listeningDistance, listeningDistance, listeningDistance), (entity) -> true).stream().map(PlayerEntity::new).toList();
+			List<PlayerEntity> playersInRange = world.data.getEntitiesByClass(org.mtr.mapping.holder.PlayerEntity.class, BoxUtil.of(player.getPos(), listeningDistance, listeningDistance, listeningDistance), (entity) -> true).stream().map(PlayerEntity::new).toList();
 			for (PlayerEntity entity : playersInRange) {
 				// Prioritize player's handheld radio over another player's radio
 				if (!entity.equals(player) && !entity.equals(sender) && isReceivingChannel(entity, senderChannel))
