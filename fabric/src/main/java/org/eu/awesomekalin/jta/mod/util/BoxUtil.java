@@ -1,6 +1,6 @@
 package org.eu.awesomekalin.jta.mod.util;
 
-import net.minecraft.util.math.Box;
+import org.mtr.mapping.holder.Box;
 import org.mtr.mapping.holder.Vector3d;
 
 public class BoxUtil {

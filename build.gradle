@@ -30,6 +30,10 @@ subprojects {
 
     repositories {
         mavenCentral()
+        maven {
+            name = 'GeckoLib maven'
+            url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        }
         flatDir { dirs "../libs" }
     }
 

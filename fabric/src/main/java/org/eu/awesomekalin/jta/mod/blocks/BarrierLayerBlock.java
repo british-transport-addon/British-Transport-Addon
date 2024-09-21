@@ -1,7 +1,5 @@
 package org.eu.awesomekalin.jta.mod.blocks;
 
-import net.minecraft.block.SnowBlock;
-import net.minecraft.block.SnowyBlock;
 import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockExtension;

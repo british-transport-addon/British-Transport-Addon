@@ -1,6 +1,6 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
-import org.eu.awesomekalin.jta.mod.client.RadioKeyHandler;
+import org.eu.awesomekalin.jta.platform.client.RadioKeyHandler;
 import org.mtr.mapping.holder.MinecraftServer;
 import org.mtr.mapping.holder.ServerPlayerEntity;
 import org.mtr.mapping.registry.PacketHandler;

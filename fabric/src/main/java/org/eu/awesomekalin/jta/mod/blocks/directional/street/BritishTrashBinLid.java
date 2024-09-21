@@ -1,16 +1,10 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.street;
 
-import net.minecraft.server.command.DataCommand;
-import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.entity.block.street.ManchesterTrashBinAltLidEntity;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
-import org.mtr.mod.block.BlockTicketBarrier;
-import org.mtr.mod.block.IBlock;
-import org.mtr.mod.data.TicketSystem;
 
-import java.util.concurrent.Delayed;
+import javax.annotation.Nonnull;
 
 public class BritishTrashBinLid extends BritishTrashBin implements BlockWithEntity {
 
@@ -21,7 +15,7 @@ public class BritishTrashBinLid extends BritishTrashBin implements BlockWithEnti
         return new ManchesterTrashBinAltLidEntity(blockPos, blockState);
     }
 
-    @NotNull
+    @Nonnull
     @Override
     public BlockRenderType getRenderType2(BlockState state) {
         return BlockRenderType.INVISIBLE;

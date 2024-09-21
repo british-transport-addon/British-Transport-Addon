@@ -7,6 +7,7 @@ import org.eu.awesomekalin.jta.mod.packet.PacketOpenRadioScreen;
 import org.eu.awesomekalin.jta.mod.packet.PacketToggleRadioTransmit;
 import org.eu.awesomekalin.jta.mod.packet.PacketUpdateRadioFrequency;
 import org.eu.awesomekalin.jta.mod.packet.entity.*;
+import org.eu.awesomekalin.jta.platform.NativeAPI;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.Registry;
 import org.mtr.mapping.tool.DummyClass;

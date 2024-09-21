@@ -24,6 +24,7 @@ jobs:
         run: git bundle create jesses_transit_addon-${{ github.sha }}.bundle --all
 
       - name: Upload file to archive.org
+        if: github.ref == 'refs/heads/main'
         run: |
           ia configure -u ${{ secrets.IA_USER }} -p ${{ secrets.IA_PWD }}
           ia upload jesses_transit_addon-${{ github.sha }} jesses_transit_addon-${{ github.sha }}.bundle --metadata="mediatype:software" --metadata="creator:Octagon Development" --metadata="creator:Jesse" --metadata="title:jesses_transit_addon-${{ github.sha }}" --metadata="scanner:Jesse's Transit Addon Auto-Archive" --metadata="collection:open_source_software" --metadata="subject:pro;Minecraft;mod;forge;fabric;mappings;octagon development;jesse;mtr;transit;addon;minecraft transit railway" --metadata="originalurl:https://github.com/Jesses-Transit-Addon/Jesses-Transit-Addon" --retries 20

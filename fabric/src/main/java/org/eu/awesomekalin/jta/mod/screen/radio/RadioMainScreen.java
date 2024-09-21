@@ -2,7 +2,7 @@ package org.eu.awesomekalin.jta.mod.screen.radio;
 
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.packet.PacketUpdateRadioFrequency;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
+import org.eu.awesomekalin.jta.platform.util.RadioUtil;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
 import org.mtr.mapping.tool.TextCase;
