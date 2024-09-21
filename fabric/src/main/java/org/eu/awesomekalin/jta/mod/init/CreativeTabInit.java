@@ -7,6 +7,7 @@ import org.mtr.mapping.holder.ItemStack;
 import org.mtr.mapping.registry.CreativeModeTabHolder;
 
 public class CreativeTabInit {
+    public static final CreativeModeTabHolder JTA_WAVEFRONT = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_wavefront"), () -> new ItemStack(new ItemConvertible(BlockInit.EMR_TICKET_MACHINE.get().data)));
     public static final CreativeModeTabHolder JTA_BLOCKS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_blocks"), () -> new ItemStack(new ItemConvertible(BlockInit.BRITISH_RAIL_PLATFORM.get().data)));
     public static final CreativeModeTabHolder JTA_PARENTS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_parents"), () -> new ItemStack(new ItemConvertible(BlockInit.LIME_BRICKS.get().data)));
     public static final CreativeModeTabHolder JTA_FENCES = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_fences"), () -> new ItemStack(new ItemConvertible(BlockInit.BLACK_FENCE.get().data)));

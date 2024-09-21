@@ -1,0 +1,7 @@
+{
+  "amg_test": {
+    "name": "AMG Test",
+    "model": "mtrsteamloco:eyecandies/amg_test",
+    "flipV": true
+  }
+}
