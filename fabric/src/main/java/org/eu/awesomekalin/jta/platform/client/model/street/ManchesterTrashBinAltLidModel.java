@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.client.model.street;
+package org.eu.awesomekalin.jta.platform.client.model.street;
 
 import net.minecraft.util.Identifier;
 import org.eu.awesomekalin.jta.mod.Init;

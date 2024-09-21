@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.platform.render.road;
+package org.eu.awesomekalin.jta.platform.client.model.road;
 
 import net.minecraft.resources.ResourceLocation;
 import org.eu.awesomekalin.jta.mod.Init;

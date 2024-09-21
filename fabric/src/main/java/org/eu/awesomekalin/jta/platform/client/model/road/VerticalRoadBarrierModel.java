@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.client.model.road;
+package org.eu.awesomekalin.jta.platform.client.model.road;
 
 import net.minecraft.util.Identifier;
 import org.eu.awesomekalin.jta.mod.Init;
