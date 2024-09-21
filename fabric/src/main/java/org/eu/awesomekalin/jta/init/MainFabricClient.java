@@ -2,12 +2,10 @@ package org.eu.awesomekalin.jta.init;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.entity.EntityType;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.render.road.VerticalRoadBarrierRender;
-import org.eu.awesomekalin.jta.mod.render.street.ManchesterTrashBinAltLidRender;
+import org.eu.awesomekalin.jta.platform.render.road.VerticalRoadBarrierRender;
+import org.eu.awesomekalin.jta.platform.render.street.ManchesterTrashBinAltLidRender;
 
 public class MainFabricClient implements ClientModInitializer {
     @Override
