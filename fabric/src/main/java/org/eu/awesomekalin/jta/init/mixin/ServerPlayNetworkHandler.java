@@ -7,7 +7,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Hand;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
+import org.eu.awesomekalin.jta.platform.util.RadioUtil;
 import org.mtr.mapping.holder.SoundCategory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

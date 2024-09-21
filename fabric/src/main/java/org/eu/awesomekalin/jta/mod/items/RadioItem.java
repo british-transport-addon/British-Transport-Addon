@@ -3,7 +3,7 @@ package org.eu.awesomekalin.jta.mod.items;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenRadioScreen;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
+import org.eu.awesomekalin.jta.platform.util.RadioUtil;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.ItemExtension;
 

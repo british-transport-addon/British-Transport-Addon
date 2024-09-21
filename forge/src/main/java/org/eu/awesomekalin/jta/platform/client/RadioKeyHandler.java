@@ -1,20 +1,20 @@
-package org.eu.awesomekalin.jta.mod.client;
+package org.eu.awesomekalin.jta.platform.client;
 
-import net.minecraft.util.Pair;
+import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
 import org.eu.awesomekalin.jta.mod.init.SoundInit;
-import org.eu.awesomekalin.jta.mod.util.RadioUtil;
+import org.eu.awesomekalin.jta.platform.util.RadioUtil;
 import org.mtr.mapping.holder.*;
 
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RadioKeyHandler {
 	public static void toggleRadio(ServerPlayerEntity player) {
-		Pair<Integer, org.mtr.mapping.holder.ItemStack> referenceItemStackPair = Init.NATIVE_API.getEquippedAttachment(PlayerEntity.cast(player), ItemInit.MET_POLICE_RADIO.get());
+		ImmutableTriple<String, Integer, net.minecraft.world.item.ItemStack> referenceItemStackPair = Init.NATIVE_API.getEquippedAttachment(PlayerEntity.cast(player), ItemInit.MET_POLICE_RADIO.get().data);
 
-		if (referenceItemStackPair.getLeft() == 0) {
-			ItemStack stack = referenceItemStackPair.getRight();
+		if (referenceItemStackPair.getLeft() == "0") {
+			ItemStack stack = new ItemStack(referenceItemStackPair.getRight());
 			if (!stack.getTranslationKey().equals(ItemInit.MET_POLICE_RADIO.get().getTranslationKey()))
 				return;
 			System.out.println("test3");

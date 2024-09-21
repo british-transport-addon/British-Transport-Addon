@@ -1,8 +1,10 @@
-package org.eu.awesomekalin.jta.mod.entity.vehicle;
+package org.eu.awesomekalin.jta.platform.entity.vehicle;
 
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import org.eu.awesomekalin.jta.mod.entity.vehicle.Door;
+import org.eu.awesomekalin.jta.mod.entity.vehicle.Seat;
 import org.mtr.mapping.holder.EntityType;
 import org.mtr.mapping.holder.World;
 import org.mtr.mapping.mapper.EntityExtension;

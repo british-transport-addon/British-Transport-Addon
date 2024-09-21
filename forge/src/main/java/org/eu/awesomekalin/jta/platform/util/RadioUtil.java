@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.util;
+package org.eu.awesomekalin.jta.platform.util;
 
 import com.google.common.collect.ImmutableList;
 import de.maxhenkel.voicechat.api.VoicechatServerApi;
@@ -7,9 +7,10 @@ import de.maxhenkel.voicechat.api.audiochannel.LocationalAudioChannel;
 import de.maxhenkel.voicechat.api.opus.OpusDecoder;
 import de.maxhenkel.voicechat.api.opus.OpusEncoder;
 import de.maxhenkel.voicechat.api.packets.MicrophonePacket;
-import net.minecraft.nbt.NbtCompound;
-import org.eu.awesomekalin.jta.mod.InitVoiceChatPlugin;
+import net.minecraft.nbt.CompoundTag;
 import org.eu.awesomekalin.jta.mod.init.ItemInit;
+import org.eu.awesomekalin.jta.mod.util.BoxUtil;
+import org.eu.awesomekalin.jta.platform.InitVoiceChatPlugin;
 import org.mtr.mapping.holder.*;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class RadioUtil {
 
 	// You could argue these would make more sense as static methods in RadioItem, and you'd probably be right.
 	public static int getRadioChannel(ItemStack stack) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		int channel = 0;
 		if (nbt.contains("channel"))
 			channel = nbt.getInt("channel");
@@ -33,7 +34,7 @@ public class RadioUtil {
 	}
 
 	public static boolean isRadioTransmitting(ItemStack stack) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		boolean transmitting = false;
 		if (nbt.contains("isTransmitting"))
 			transmitting = nbt.getBoolean("isTransmitting");
@@ -41,7 +42,7 @@ public class RadioUtil {
 	}
 
 	public static boolean isRadioReceiving(ItemStack stack) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		boolean receiving = true;
 		if (nbt.contains("isReceiving"))
 			receiving = nbt.getBoolean("isReceiving");
@@ -49,7 +50,7 @@ public class RadioUtil {
 	}
 
 	public static boolean isRadioEnabled(ItemStack stack) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		boolean receiving = false;
 		if (nbt.contains("isEnabled"))
 			receiving = nbt.getBoolean("isEnabled");
@@ -57,27 +58,27 @@ public class RadioUtil {
 	}
 
 	public static void setRadioChannel(ItemStack stack, int channel) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		nbt.putInt("channel", channel);
-		stack.data.setNbt(nbt);
+		stack.data.setTag(nbt);
 	}
 
 	public static void setRadioTransmitting(ItemStack stack, boolean transmitting) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		nbt.putBoolean("isTransmitting", transmitting);
-		stack.data.setNbt(nbt);
+		stack.data.setTag(nbt);
 	}
 
 	public static void setRadioReceiving(ItemStack stack, boolean receiving) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		nbt.putBoolean("isReceiving", receiving);
-		stack.data.setNbt(nbt);
+		stack.data.setTag(nbt);
 	}
 
 	public static void setRadioEnabled(ItemStack stack, boolean enabled) {
-		NbtCompound nbt = stack.data.getOrCreateNbt();
+		CompoundTag nbt = stack.data.getOrCreateTag();
 		nbt.putBoolean("isEnabled", enabled);
-		stack.data.setNbt(nbt);
+		stack.data.setTag(nbt);
 	}
 
 	public static void transmitOnChannel(VoicechatServerApi serverApi, MicrophonePacket packet, ServerPlayerEntity sender, int senderChannel) {
@@ -99,14 +100,15 @@ public class RadioUtil {
 			encoder.resetState();
 		final byte[] voiceData = encoder.encode(decodedData);
 		// Player radios
-		for (ServerPlayerEntity player :  server.getPlayerManager().data.getPlayerList().stream().map(ServerPlayerEntity::new).collect(Collectors.toSet())) {
+        assert server != null;
+        for (ServerPlayerEntity player :  server.getPlayerManager().data.getPlayers().stream().map(ServerPlayerEntity::new).collect(Collectors.toSet())) {
 			if (player == sender)
 				continue;
 			if (!isReceivingChannel(PlayerEntity.cast(player), senderChannel))
 				continue;
 			// Play voice to nearby players
 			int listeningDistance = 20 * 2;
-			List<PlayerEntity> playersInRange = world.data.getEntitiesByClass(org.mtr.mapping.holder.PlayerEntity.class, BoxUtil.of(player.getPos(), listeningDistance, listeningDistance, listeningDistance), (entity) -> true).stream().map(PlayerEntity::new).toList();
+			List<PlayerEntity> playersInRange = world.data.getEntitiesOfClass(net.minecraft.world.entity.player.Player.class, BoxUtil.of(player.getPos(), listeningDistance, listeningDistance, listeningDistance).data, (entity) -> true).stream().map(PlayerEntity::new).toList();
 			for (PlayerEntity entity : playersInRange) {
 				// Prioritize player's handheld radio over another player's radio
 				if (!entity.equals(player) && !entity.equals(sender) && isReceivingChannel(entity, senderChannel))
@@ -123,7 +125,7 @@ public class RadioUtil {
 	public static void transmitDataOnChannel(VoicechatServerApi serverApi, ServerWorld world, short[] audioData, int senderChannel, Runnable onAudioStopped) {
 		MinecraftServer server = world.getServer();
 		AtomicBoolean hasSetRunnable = new AtomicBoolean(false);
-		for (ServerPlayerEntity player : server.getPlayerManager().data.getPlayerList().stream().map(ServerPlayerEntity::new).collect(Collectors.toSet())) {
+		for (ServerPlayerEntity player : server.getPlayerManager().data.getPlayers().stream().map(ServerPlayerEntity::new).collect(Collectors.toSet())) {
 			if (!isReceivingChannel(PlayerEntity.cast(player), senderChannel))
 				continue;
 			// Play voice to nearby players
@@ -156,7 +158,7 @@ public class RadioUtil {
 	}
 
 	public static List<ItemStack> getRadios(PlayerEntity player) {
-		List<List<ItemStack>> inventories = ImmutableList.of(player.data.getInventory().main.stream().map(ItemStack::new).toList(), player.data.getInventory().offHand.stream().map(ItemStack::new).toList());
+		List<List<ItemStack>> inventories = ImmutableList.of(player.data.getInventory().items.stream().map(ItemStack::new).toList(), player.data.getInventory().offhand.stream().map(ItemStack::new).toList());
 		List<ItemStack> radios = new ArrayList<>();
 		for (List<ItemStack> inventory : inventories) {
 			for (ItemStack stack : inventory) {

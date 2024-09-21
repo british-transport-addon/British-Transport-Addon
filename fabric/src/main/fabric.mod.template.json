@@ -17,6 +17,9 @@
     ],
     "client": [
       "org.eu.awesomekalin.jta.init.MainFabricClient"
+    ],
+    "voicechat": [
+      "org.eu.awesomekalin.jta.platform.InitVoiceChatPlugin"
     ]
   },
   "mixins": [
