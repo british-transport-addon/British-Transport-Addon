@@ -91,12 +91,15 @@ public class BuildTools {
     public String getVoiceChatVersion() {
         return "2.5.0";
     }
+
     public String getGeckolibVersion() {
         final String modIdString = "geckolib";
         if (Objects.equals(loader, "fabric")) {
-            return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-fabric-" + minecraftVersion.toString() + "-", "");
+            final String[] fileName =  new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-fabric-", "").split("-");
+            return fileName[0] + ':' + fileName[1];
         } else {
-            return new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-" + minecraftVersion.toString() + "-", "");
+            final String[] fileName = new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-", "").split("-");
+            return fileName[0] + ':' + fileName[1];
         }
     }
 }

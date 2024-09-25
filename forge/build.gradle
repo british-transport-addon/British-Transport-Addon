@@ -34,7 +34,7 @@ dependencies {
     annotationProcessor "org.spongepowered:mixin:+:processor"
     implementation fg.deobf("de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}")
     implementation files('libs/curios-forge-5.9.0+1.20.1.jar')
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraftVersion}:${buildTools.getGeckolibVersion()}")
+    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${buildTools.getGeckolibVersion()}")
 }
 
 mixin {

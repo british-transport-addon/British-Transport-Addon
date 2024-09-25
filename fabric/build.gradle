@@ -32,7 +32,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${buildTools.getFabricVersion()}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${buildTools.getFabricApiVersion()}"
     modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
-    modImplementation("software.bernie.geckolib:geckolib-fabric-${minecraftVersion}:${buildTools.getGeckolibVersion()}")
+    modImplementation("software.bernie.geckolib:geckolib-fabric-${buildTools.getGeckolibVersion()}")
     modApi "de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}"
 
 
