@@ -10,12 +10,12 @@ forgix {
 
     fabric {
         projectName = "fabric"
-        jarLocation = "build/libs/BTA-fabric-${project.version}+${project.minecraftVersion}.jar"
+        jarLocation = "build/release/BTA-fabric-${project.version}+${project.minecraftVersion}.jar"
     }
 
     forge {
         projectName = "forge"
-        jarLocation = "build/libs/BTA-forge-${project.version}+${project.minecraftVersion}.jar"
+        jarLocation = "build/release/BTA-forge-${project.version}+${project.minecraftVersion}.jar"
     }
 }
 
