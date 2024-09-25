@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: Fabric and Forge ${{ matrix.minecraft }}
-          path: build/release/
+          path: build/
   potato:
     strategy:
       fail-fast: false
@@ -78,4 +78,4 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: Fabric and Forge ${{ matrix.minecraft }} Potato PC Version
-          path: build/release/
+          path: build/
