@@ -6,7 +6,7 @@ plugins {
 forgix {
     group = "org.eu.awesomekalin.jta"
     mergedJarName = "BTA-${project.version}+${project.minecraftVersion}.jar"
-    outputDir = "build/"
+    outputDir = "build/libs"
 
     fabric {
         projectName = "fabric"
