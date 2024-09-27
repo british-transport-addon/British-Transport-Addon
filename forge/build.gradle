@@ -89,6 +89,15 @@ tasks.register("setupFiles") {
         from "../fabric/src/main/resources/data"
         into "src/main/resources/data"
     }
+
+    if (this.minecraftVersion !== '1.20.4' || this.minecraftVersion !== '1.20.1') {
+        delete("src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java")
+        copy {
+            outputs.upToDateWhen { false }
+            from "../forge-version-dependant/PlayerActionHandler.java"
+            into "src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java"
+        }
+    }
 }
 
 build {
