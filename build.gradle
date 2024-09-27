@@ -1,21 +1,5 @@
 plugins {
     id "java"
-    id "io.github.pacifistmc.forgix" version "1.+"
-}
-
-forgix {
-    group = "org.eu.awesomekalin.jta"
-    mergedJarName = "BTA-${project.version}+${project.minecraftVersion}.jar"
-
-    fabric {
-        projectName = "fabric"
-        jarLocation = "build/release/BTA-fabric-${project.version}+${project.minecraftVersion}.jar"
-    }
-
-    forge {
-        projectName = "forge"
-        jarLocation = "build/release/BTA-forge-${project.version}+${project.minecraftVersion}.jar"
-    }
 }
 
 group "org.eu.awesomekalin.jta"
