@@ -6,6 +6,7 @@ group "org.eu.awesomekalin.jta"
 version rootProject.properties.version
 
 subprojects {
+    tasks.withType(Javadoc).configureEach { enabled = false }
     apply plugin: "java"
     dependencies {
         compileOnly "com.google.code.findbugs:jsr305:+"
