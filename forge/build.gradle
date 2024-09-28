@@ -90,13 +90,22 @@ tasks.register("setupFiles") {
         into "src/main/resources/data"
     }
 
-    if (!minecraftVersion.trim().equalsIgnoreCase('1.20.4') &&
-            !minecraftVersion.trim().equalsIgnoreCase('1.20.1')) {
+    if (!minecraftVersion.trim().equalsIgnoreCase('1.20.4') && !minecraftVersion.trim().equalsIgnoreCase('1.20.1')) {
         delete("src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java")
         copy {
             outputs.upToDateWhen { false }
             from "../forge-version-dependant/PlayerActionHandler.java"
             into "src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java"
+        }
+
+        if (!minecraftVersion.trim().equalsIgnoreCase('1.19.4')) {
+            delete fileTree("src/main/java/org/eu/awesomekalin/jta/client/model")
+
+            copy {
+                outputs.upToDateWhen { false }
+                from "../geckolib3/org/eu/awesomekalin/jta/platform-forge/client/model"
+                into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
+            }
         }
     }
 }

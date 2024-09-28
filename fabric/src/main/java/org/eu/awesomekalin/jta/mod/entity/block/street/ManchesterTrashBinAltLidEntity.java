@@ -62,4 +62,3 @@ public class ManchesterTrashBinAltLidEntity extends BlockEntityExtension impleme
         return RenderUtils.getCurrentTick();
     }
 }
-

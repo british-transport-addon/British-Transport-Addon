@@ -57,6 +57,37 @@ tasks.register("setupFiles") {
         filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
         rename "(.+).template.json", "\$1.json"
     }
+
+    if (!minecraftVersion.trim().equalsIgnoreCase('1.20.4') && !minecraftVersion.trim().equalsIgnoreCase('1.20.1') && !minecraftVersion.trim().equalsIgnoreCase('1.19.4')) {
+        delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod/entity/block/road")
+        delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod/entity/block/street")
+        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
+        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/render")
+
+        copy {
+            outputs.upToDateWhen { false }
+            from "../geckolib3/org/eu/awesomekalin/jta/mod/entity/block/road"
+            into "src/main/java/org/eu/awesomekalin/jta/mod/entity/block/road"
+        }
+
+        copy {
+            outputs.upToDateWhen { false }
+            from "../geckolib3/org/eu/awesomekalin/jta/mod/entity/block/street"
+            into "src/main/java/org/eu/awesomekalin/jta/mod/entity/block/street"
+        }
+
+        copy {
+            outputs.upToDateWhen { false }
+            from "../geckolib3/org/eu/awesomekalin/jta/platform-fabric/client/model"
+            into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
+        }
+
+        copy {
+            outputs.upToDateWhen { false }
+            from "../geckolib3/org/eu/awesomekalin/jta/platform-fabric/render"
+            into "src/main/java/org/eu/awesomekalin/jta/platform/render"
+        }
+    }
 }
 
 tasks.register("setupPotato") {
