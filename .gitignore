@@ -28,16 +28,16 @@ bin/
 
 *.DS_Store
 
-# fabric
-
 run/
 forge/src/main/java/org/eu/awesomekalin/jta/mod
 forge/src/main/resources/assets
 forge/src/main/resources/data
 forge/src/main/resources/META-INF
-fabric.mod.json
+fabric/src/main/resources/fabric.mod.json
 **/font/*.json
 forge/src/main/java/org/mtr/mixin/ClientWorldRenderingMixin.java
 fabric/src/main/resources/jta.accesswidener
 fabric/src/main/java/org/mtr/mixin/ClientWorldRenderingMixin.java
 fabric/src/main/resources/assets/jta/sounds/Female1/
+fabric/src/main/resources/assets/mtrsteamloco/eyecandies/registry.json
+fabric/src/main/resources/assets/mtrsteamloco/eyecandies/amg_test.obj
