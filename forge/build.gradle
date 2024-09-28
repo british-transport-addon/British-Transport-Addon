@@ -108,6 +108,16 @@ tasks.register("setupFiles") {
             }
         }
     }
+
+    if (minecraftVersion.trim().equalsIgnoreCase("1.18.2") || minecraftVersion.trim().equalsIgnoreCase("1.17.1")) {
+        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
+
+        copy {
+            outputs.upToDateWhen { false }
+            from "../pre-1.19/forge/client/model"
+            into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
+        }
+    }
 }
 
 build {

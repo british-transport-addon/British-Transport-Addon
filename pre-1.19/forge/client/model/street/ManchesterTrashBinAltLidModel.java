@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class ManchesterTrashBinAltLidModel extends AnimatedGeoModel<ManchesterTrashBinAltLidEntity> {
 
     @Override
-    public ResourceLocation getModelResource(ManchesterTrashBinAltLidEntity animatable) {
+    public ResourceLocation getModelLocation(ManchesterTrashBinAltLidEntity animatable) {
         return new ResourceLocation(Init.MOD_ID, "geo/manchester_trash_bin_alt_lid.geo.json");
     }
 
     @Override
-    public ResourceLocation getTextureResource(ManchesterTrashBinAltLidEntity animatable) {
+    public ResourceLocation getTextureLocation(ManchesterTrashBinAltLidEntity animatable) {
         return new ResourceLocation(Init.MOD_ID, "textures/manchester_trash_bin_alt_lid.png");
     }
 
     @Override
-    public ResourceLocation getAnimationResource(ManchesterTrashBinAltLidEntity animatable) {
+    public ResourceLocation getAnimationFileLocation(ManchesterTrashBinAltLidEntity animatable) {
         return new ResourceLocation(Init.MOD_ID, "animations/manchester_trash_bin_alt_lid.animation.json");
     }
 }

@@ -8,17 +8,17 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class VerticalRoadBarrierModel extends AnimatedGeoModel<VerticalRoadBarrierBlockEntity> {
 
     @Override
-    public Identifier getModelResource(VerticalRoadBarrierBlockEntity animatable) {
+    public Identifier getModelLocation(VerticalRoadBarrierBlockEntity animatable) {
         return new Identifier(Init.MOD_ID, "geo/vertical_road_barrier.geo.json");
     }
 
     @Override
-    public Identifier getTextureResource(VerticalRoadBarrierBlockEntity animatable) {
+    public Identifier getTextureLocation(VerticalRoadBarrierBlockEntity animatable) {
         return new Identifier(Init.MOD_ID, "textures/vertical_road_barrier.png");
     }
 
     @Override
-    public Identifier getAnimationResource(VerticalRoadBarrierBlockEntity animatable) {
+    public Identifier getAnimationFileLocation(VerticalRoadBarrierBlockEntity animatable) {
         return new Identifier(Init.MOD_ID, "animations/vertical_road_barrier.animation.json");
     }
 }
