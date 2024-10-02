@@ -31,7 +31,8 @@
     "mtr": ">=4.0.0-beta-8 <4.1",
     "geckolib": ">=3.0 <4.7",
     "trinkets": ">=3.0",
-    "voicechat": ">=2.5"
+    "voicechat": ">=2.5",
+    "mtrsteamloco": ">=0.4"
   },
   "custom": {
     "modmenu": {
