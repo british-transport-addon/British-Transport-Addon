@@ -51,10 +51,3 @@ mandatory=true
 versionRange="[1.18.2-2.5,)"
 ordering="AFTER"
 side="BOTH"
-
-[[dependencies.jta]]
-modId="mtrsteamloco"
-mandatory=true
-versionRange="[0.4,)"
-ordering="NONE"
-side="CLIENT"
