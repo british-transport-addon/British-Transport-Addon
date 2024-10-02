@@ -110,10 +110,17 @@ tasks.register("setupFiles") {
             if (!minecraftVersion.trim().equalsIgnoreCase('1.19.2')) {
                 delete ("src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java")
                 delete ("src/main/java/org/eu/awesomekalin/jta/init/ServerTickHandler.java")
+                delete ("src/main/java/org/eu/awesomekalin/jta/init/MainForge.java")
 
                 copy {
                     outputs.upToDateWhen { false }
                     from "../pre-1.19/forge/PlayerActionHandler.java"
+                    into "src/main/java/org/eu/awesomekalin/jta/init"
+                }
+
+                copy {
+                    outputs.upToDateWhen { false }
+                    from "../pre-1.19/forge/MainForge.java"
                     into "src/main/java/org/eu/awesomekalin/jta/init"
                 }
             }
