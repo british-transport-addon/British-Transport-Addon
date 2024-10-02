@@ -30,3 +30,24 @@ mandatory = true
 versionRange = "[4.0.0-beta-8,4.1)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.jta]]
+modId = "geckolib"
+mandatory = true
+versionRange = "[3.0,4.7)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId = "curios"
+mandatory = true
+versionRange = "[5.0,8.1)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId="voicechat"
+mandatory=true
+versionRange="[1.18.2-2.5,)"
+ordering="AFTER"
+side="BOTH"
