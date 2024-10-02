@@ -95,7 +95,7 @@ tasks.register("setupFiles") {
         copy {
             outputs.upToDateWhen { false }
             from "../forge-version-dependant/PlayerActionHandler.java"
-            into "src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler.java"
+            into "src/main/java/org/eu/awesomekalin/jta/init"
         }
 
         if (!minecraftVersion.trim().equalsIgnoreCase('1.19.4')) {
@@ -105,6 +105,16 @@ tasks.register("setupFiles") {
                 outputs.upToDateWhen { false }
                 from "../geckolib3/org/eu/awesomekalin/jta/platform-forge/client/model"
                 into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
+            }
+
+            if (!minecraftVersion.trim().equalsIgnoreCase('1.19.2')) {
+                delete ("src/main/java/org/eu/awesomekalin/jta/init/PlayerActionHandler")
+
+                copy {
+                    outputs.upToDateWhen { false }
+                    from "../pre-1.19/forge/PlayerActionHandler.java"
+                    into "src/main/java/org/eu/awesomekalin/jta/init"
+                }
             }
         }
     }

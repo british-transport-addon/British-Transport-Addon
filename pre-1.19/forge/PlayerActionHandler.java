@@ -27,22 +27,22 @@ public class PlayerActionHandler {
         // This is a workaround, as Forge does not have a specific swap hands event
         ServerPlayer player = (ServerPlayer) event.getEntity();
         InteractionHand hand = event.getHand();
-        
+
         if (hand != InteractionHand.OFF_HAND) return;
 
         ItemStack stack = player.getMainHandItem();
-        
+
         if (!stack.getItem().getDescriptionId().equals(ItemInit.MET_POLICE_RADIO.get().getTranslationKey())) return;
 
         boolean isTransmitting = RadioUtil.isRadioTransmitting(new org.mtr.mapping.holder.ItemStack(stack));
         RadioUtil.setRadioTransmitting(new org.mtr.mapping.holder.ItemStack(stack), !isTransmitting);
         int channel = RadioUtil.getRadioChannel(new org.mtr.mapping.holder.ItemStack(stack));
-        player.sendSystemMessage(Component.literal(!isTransmitting ? "Transmitting on " + channel + "mhz." : "Transmission Stopped"), true);
+        player.sendMessage(Component.nullToEmpty(!isTransmitting ? "Transmitting on " + channel + "mhz." : "Transmission Stopped"), player.getUUID());
 
         if (!isTransmitting) {
-            player.level().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_IN.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
+            player.getLevel().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_IN.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
         } else {
-            player.level().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_OUT.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
+            player.getLevel().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_OUT.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
         }
 
         event.setCanceled(true);
