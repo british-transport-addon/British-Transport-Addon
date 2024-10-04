@@ -28,7 +28,7 @@
   "depends": {
     "fabric": "*",
     "minecraft": "@minecraft@",
-    "mtr": ">=4.0.0-beta-8 <4.1",
+    "mtr": ">=4.0.0-beta-10 <4.1",
     "geckolib": ">=3.0 <4.7",
     "trinkets": ">=3.0",
     "voicechat": ">=2.5"
