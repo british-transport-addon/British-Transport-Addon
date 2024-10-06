@@ -10,8 +10,6 @@ infrastructure. We aim to provide major updates every week.
 
 <a href="https://modrinth.com/mod/bta" rel="nofollow"><img src="https://raw.githubusercontent.com/Prospector/badges/master/modrinth-badge-72h-padded.png" alt="Download on Modrinth"></a>
 
-[CurseForge](https://legacy.curseforge.com/minecraft/mc-mods/jesses-transit-addon)
-
 <a href="https://discord.gg/dHbppMjwRF" rel="nofollow"><img style="width:140px;height:47px" src="https://raw.githubusercontent.com/jonafanho/Minecraft-Transit-Railway/master/images/footer/join-us-on-discord.png" alt="Join us on Discord"></a>
 <a href="https://www.patreon.com/minecraft_transit_railway" rel="nofollow"><img style="width:140px;height:47px" src="https://raw.githubusercontent.com/jonafanho/Minecraft-Transit-Railway/master/images/footer/become-a-patron-on-patreon.png" alt="Become a Patron on Patreon"></a>
 <a href="https://crowdin.com/project/jta" rel="nofollow"><img style="width:150px;height:47px" src="https://badges.crowdin.net/badge/light/crowdin-on-dark.png" srcset="https://badges.crowdin.net/badge/light/crowdin-on-dark.png 1x,https://badges.crowdin.net/badge/light/crowdin-on-dark@2x.png 2x" alt="Crowdin | Agile localization for tech companies" /></a>

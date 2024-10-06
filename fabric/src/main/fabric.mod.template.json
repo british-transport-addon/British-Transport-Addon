@@ -30,16 +30,17 @@
     "minecraft": "@minecraft@",
     "mtr": ">=4.0.0-beta-10 <4.1",
     "geckolib": ">=3.0 <4.7",
-    "trinkets": ">=3.0",
-    "voicechat": ">=2.5"
+    "trinkets": ">=3.0"
   },
+  "recommends": {
+    "voicechat": ">=@minecraft@-2.5"
+  }
   "custom": {
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/dHbppMjwRF",
-        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/jesses-transit-addon",
         "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
-        "modmenu.modrinth": "https://modrinth.com/mod/jta"
+        "modmenu.modrinth": "https://modrinth.com/mod/bta"
       }
     }
   }
