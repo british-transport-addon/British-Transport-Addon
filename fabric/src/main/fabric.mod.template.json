@@ -34,7 +34,7 @@
   },
   "recommends": {
     "voicechat": ">=@minecraft@-2.5"
-  }
+  },
   "custom": {
     "modmenu": {
       "links": {
