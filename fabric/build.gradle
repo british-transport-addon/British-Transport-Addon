@@ -36,7 +36,7 @@ dependencies {
     modApi "de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}"
 
 
-    modApi files('libs/trinkets-3.7.2.jar')
+    modApi files("libs/trinkets-${buildTools.getTrinketsVersion()}.jar")
     modApi files('libs/cardinal-components-base-5.2.0.jar')
     modApi files('libs/cardinal-components-entity-5.2.0.jar')
 }

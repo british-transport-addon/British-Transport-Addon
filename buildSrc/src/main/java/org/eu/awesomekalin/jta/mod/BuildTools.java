@@ -92,6 +92,10 @@ public class BuildTools {
         return "2.5.0";
     }
 
+    public String getTrinketsVersion() {
+        return Objects.equals(minecraftVersion, "1.19.2") ? "3.4.2" : "3.7.2";
+    }
+
     public String getGeckolibVersion() {
         final String modIdString = "geckolib";
         if (Objects.equals(loader, "fabric")) {
