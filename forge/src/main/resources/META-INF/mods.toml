@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "jta"
-version = "1.0.0-alpha.7"
+version = "1.0.0-alpha.7-h1"
 displayName = "British Transit Addon"
 authors = ["AwesomeKalin55", "dash :D"]
 description = "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles"
@@ -27,6 +27,27 @@ side = "BOTH"
 [[dependencies.jta]]
 modId = "mtr"
 mandatory = true
-versionRange = "[4.0.0-beta-8,4.1)"
+versionRange = "[4.0.0-beta-10,4.1)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.jta]]
+modId = "geckolib"
+mandatory = true
+versionRange = "[3.0,4.7)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId = "curios"
+mandatory = true
+versionRange = "[5.0,8.1)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId="voicechat"
+mandatory=false
+versionRange="[1.18.2-2.5,)"
+ordering="AFTER"
+side="BOTH"
