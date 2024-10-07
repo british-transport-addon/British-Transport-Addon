@@ -8,7 +8,7 @@
 		{
 			"name": "Main",
 			"from": [6, -3, 0],
-			"to": [10, 9, 16],
+			"to": [10, 9, 19],
 			"faces": {
 				"east": {"uv": [0, 4, 16, 16], "texture": "#particle"},
 				"south": {"uv": [6, 4, 10, 16], "texture": "#particle", "cullface": "south"},
@@ -32,10 +32,10 @@
 		{
 			"name": "Background",
 			"from": [5.95, -2, 0],
-			"to": [10.05, 8, 15],
+			"to": [10.05, 8, 18],
 			"faces": {
-				"east": {"uv": [1, 6, 16, 16], "texture": "#back"},
-				"west": {"uv": [0, 6, 15, 16], "texture": "#back"}
+				"east": {"uv": [0, 6, 16, 16], "texture": "#back"},
+				"west": {"uv": [0, 6, 16, 16], "texture": "#back"}
 			}
 		}
 	]

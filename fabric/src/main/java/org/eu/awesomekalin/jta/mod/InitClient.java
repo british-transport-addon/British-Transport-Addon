@@ -38,7 +38,7 @@ public final class InitClient {
                         0.2F / 10,
                         .5f,
                         -.5f,
-                        .175F,
+                        .155F,
                         0,
                         0xFF9900
                 )

@@ -14,7 +14,7 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class RenderNationalRail3Clock extends RenderPIDS<NationalRail3Clock.TileEntityNationalRail3Clock> {
+public class RenderNationalRail3Clock extends RenderBritishPIDS<NationalRail3Clock.TileEntityNationalRail3Clock> {
 
     private final float maxWidth;
     private final float maxScale;
@@ -25,7 +25,7 @@ public class RenderNationalRail3Clock extends RenderPIDS<NationalRail3Clock.Tile
     private final int textColor;
 
     public RenderNationalRail3Clock(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor) {
-        super(dispatcher, 1.5F, 7.5F, 6, 6.5F, 29, true, 1);
+        super(dispatcher, -1.75F, 7.5F, 6, 6.5F, 35, true, 1);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
         this.xOffset = xOffset;
