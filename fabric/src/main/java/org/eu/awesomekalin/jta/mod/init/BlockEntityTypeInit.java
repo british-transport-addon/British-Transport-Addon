@@ -8,6 +8,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
@@ -21,6 +22,14 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<NationalRail3Clock.TileEntityNationalRail3Clock> PIDS_NATIONALRAIL3CLOCK = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_3_clock"
+            ),
+            NationalRail3Clock.TileEntityNationalRail3Clock::new,
+            BlockInit.PIDS_NATIONALRAIL3CLOCK::get//update
+    );
     public static final BlockEntityTypeRegistryObject<ManchesterTrashBinAltLidEntity> MANCHESTER_TRASH_BIN_ALT_LID = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

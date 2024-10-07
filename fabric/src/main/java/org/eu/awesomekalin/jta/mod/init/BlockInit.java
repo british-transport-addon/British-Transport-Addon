@@ -10,6 +10,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindo
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindowSegmentedTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
 import org.eu.awesomekalin.jta.mod.blocks.directional.road.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaBase;
@@ -27,6 +28,7 @@ import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject PIDS_NATIONALRAIL3CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_3_clock"), () -> new Block(new NationalRail3Clock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject FUEL_PUMP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "fuel_pump"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "vertical_road_barrier"), () -> new Block(new VerticalRoadBarrier()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject MORRISONS_FUEL_SIGN_BOTTOM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "morrisons_fuel_sign_bottom"), () -> new Block(new DirectionalBlockExtension(BlockHelper.createBlockSettings(false, (blockState) -> {

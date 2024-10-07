@@ -1,0 +1,42 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"back": "londonunderground:block/black",
+		"particle": "londonunderground:block/tube_platforms/platform"
+	},
+	"elements": [
+		{
+			"name": "Main",
+			"from": [6, -3, 0],
+			"to": [10, 9, 16],
+			"faces": {
+				"east": {"uv": [0, 4, 16, 16], "texture": "#particle"},
+				"south": {"uv": [6, 4, 10, 16], "texture": "#particle", "cullface": "south"},
+				"west": {"uv": [0, 4, 16, 16], "texture": "#particle"},
+				"up": {"uv": [6, 0, 10, 16], "texture": "#particle"},
+				"down": {"uv": [6, 0, 10, 16], "texture": "#particle", "cullface": "down"}
+			}
+		},
+		{
+			"name": "Pole",
+			"from": [7.5, 9, 12.5],
+			"to": [8.5, 16, 13.5],
+			"faces": {
+				"north": {"uv": [7.5, 0, 8.5, 7], "texture": "#particle"},
+				"east": {"uv": [2.5, 0, 3.5, 7], "texture": "#particle"},
+				"south": {"uv": [7.5, 0, 8.5, 7], "texture": "#particle"},
+				"west": {"uv": [12.5, 0, 13.5, 7], "texture": "#particle"},
+				"up": {"uv": [7.5, 12.5, 8.5, 13.5], "texture": "#particle", "cullface": "up"}
+			}
+		},
+		{
+			"name": "Background",
+			"from": [5.95, -2, 0],
+			"to": [10.05, 8, 15],
+			"faces": {
+				"east": {"uv": [1, 6, 16, 16], "texture": "#back"},
+				"west": {"uv": [0, 6, 15, 16], "texture": "#back"}
+			}
+		}
+	]
+}

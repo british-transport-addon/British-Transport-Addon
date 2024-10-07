@@ -6,6 +6,7 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
+import org.eu.awesomekalin.jta.mod.render.rail.pids.RenderNationalRail3Clock;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
 import org.eu.awesomekalin.jta.mod.render.street.*;
 import org.eu.awesomekalin.jta.mod.render.street.fuel.*;
@@ -29,6 +30,20 @@ public final class InitClient {
 
 
         REGISTRY_CLIENT.setupPackets(new Identifier(Init.MOD_ID, "packet"));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCK,
+                dispatcher -> new RenderNationalRail3Clock(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 10,
+                        .5f,
+                        -.5f,
+                        .175F,
+                        0,
+                        0xFF9900
+                )
+        );
+
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PROJECTION_NAME,
