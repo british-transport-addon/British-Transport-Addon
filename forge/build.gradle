@@ -56,16 +56,16 @@ tasks.register("setupFiles") {
     if (!minecraftVersion.trim().equalsIgnoreCase('1.17.1') && !minecraftVersion.trim().equalsIgnoreCase('1.18.2') && !minecraftVersion.trim().equalsIgnoreCase('1.19.2')) {
         copy {
             outputs.upToDateWhen { false }
-            from "src/main/fabric.mod.template.json"
-            into "src/main/resources"
+            from "src/main/mods.template.toml"
+            into "src/main/resources/META-INF"
             filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": ""])
             rename "(.+).template.json", "\$1.json"
         }
     } else {
         copy {
             outputs.upToDateWhen { false }
-            from "src/main/fabric.mod.template.json"
-            into "src/main/resources"
+            from "src/main/mods.template.toml"
+            into "src/main/resources/META-INF"
             filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3"])
             rename "(.+).template.json", "\$1.json"
         }
