@@ -2,9 +2,7 @@
   "multipart": [
     {
       "when": {
-        "facing": "north",
-        "is_22_5": "false",
-        "is_45": "false"
+        "facing": "north"
       },
       "apply": {
         "model": "jta:block/british_rail_platform"
@@ -12,9 +10,7 @@
     },
     {
       "when": {
-        "facing": "east",
-        "is_22_5": "false",
-        "is_45": "false"
+        "facing": "east"
       },
       "apply": {
         "model": "jta:block/british_rail_platform",
@@ -24,9 +20,7 @@
     },
     {
       "when": {
-        "facing": "south",
-        "is_22_5": "false",
-        "is_45": "false"
+        "facing": "south"
       },
       "apply": {
         "model": "jta:block/british_rail_platform",
@@ -36,152 +30,12 @@
     },
     {
       "when": {
-        "facing": "west",
-        "is_22_5": "false",
-        "is_45": "false"
+        "facing": "west"
       },
       "apply": {
         "model": "jta:block/british_rail_platform",
         "y": 270,
         "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "north",
-        "is_22_5": "true",
-        "is_45": "false"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_22_5"
-      }
-    },
-    {
-      "when": {
-        "facing": "east",
-        "is_22_5": "true",
-        "is_45": "false"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_22_5",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "south",
-        "is_22_5": "true",
-        "is_45": "false"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_22_5",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "west",
-        "is_22_5": "true",
-        "is_45": "false"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_22_5",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "north",
-        "is_22_5": "false",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_45"
-      }
-    },
-    {
-      "when": {
-        "facing": "east",
-        "is_22_5": "false",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_45",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "south",
-        "is_22_5": "false",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_45",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "west",
-        "is_22_5": "false",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_45",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "north",
-        "is_22_5": "true",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_67_5",
-        "y": 90,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "east",
-        "is_22_5": "true",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_67_5",
-        "y": 180,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "south",
-        "is_22_5": "true",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_67_5",
-        "y": 270,
-        "uvlock": true
-      }
-    },
-    {
-      "when": {
-        "facing": "west",
-        "is_22_5": "true",
-        "is_45": "true"
-      },
-      "apply": {
-        "model": "jta:block/british_rail_platform_67_5"
       }
     }
   ]
