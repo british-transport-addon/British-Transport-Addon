@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/parent/cube_10",
-  "textures": {
-    "texture": "jta:block/large_dark_gray_bricks"
-  }
-}

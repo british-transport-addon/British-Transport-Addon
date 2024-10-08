@@ -293,68 +293,6 @@ public class BlockEntityTypeInit {
             UndergroundWhiteboard.UndergroundWhiteboardBlockEntity::new,
             BlockInit.UNDERGROUND_WHITEBOARD::get
     );
-    public static final BlockEntityTypeRegistryObject<BritishStreetSign3x1.BritishStreetSign3x1BlockEntity> BRITISH_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "british_street_sign_3x1"
-            ),
-            BritishStreetSign3x1.BritishStreetSign3x1BlockEntity::new,
-            BlockInit.BRITISH_STREET_SIGN_3X1::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<BritishStreetSign2x1.BritishStreetSign2x1BlockEntity> BRITISH_STREET_SIGN_2X1 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "british_street_sign_2x1"
-            ),
-            BritishStreetSign2x1.BritishStreetSign2x1BlockEntity::new,
-            BlockInit.BRITISH_STREET_SIGN_2X1::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<BritishStreetSign2x2.BritishStreetSign2x2BlockEntity> BRITISH_STREET_SIGN_2X2 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "british_street_sign_2x2"
-            ),
-            BritishStreetSign2x2.BritishStreetSign2x2BlockEntity::new,
-            BlockInit.BRITISH_STREET_SIGN_2X2::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<LondonStreetSign2x2_5.LondonStreetSign2x2BlockEntity> LONDON_STREET_SIGN_2X2_5 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "london_street_sign_2x2_5"
-            ),
-            LondonStreetSign2x2_5.LondonStreetSign2x2BlockEntity::new,
-            BlockInit.LONDON_STREET_SIGN_2X2_5::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<LondonStreetSign3x2_5.LondonStreetSign2x2BlockEntity> LONDON_STREET_SIGN_3X2_5 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "london_street_sign_3x2_5"
-            ),
-            LondonStreetSign3x2_5.LondonStreetSign2x2BlockEntity::new,
-            BlockInit.LONDON_STREET_SIGN_3X2_5::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<LondonStreetSign3x2.LondonStreetSign3x2BlockEntity> LONDON_STREET_SIGN_3X2 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "london_street_sign_3x2"
-            ),
-            LondonStreetSign3x2.LondonStreetSign3x2BlockEntity::new,
-            BlockInit.LONDON_STREET_SIGN_3X2::get
-    );
-
-    public static final BlockEntityTypeRegistryObject<LondonStreetSign3x1.LondonStreetSign3x1BlockEntity> LONDON_STREET_SIGN_3X1 = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "london_street_sign_3x1"
-            ),
-            LondonStreetSign3x1.LondonStreetSign3x1BlockEntity::new,
-            BlockInit.LONDON_STREET_SIGN_3X1::get
-    );
 
     public static final BlockEntityTypeRegistryObject<ProjectionName.ProjectionNameBlockEntity> PROJECTION_NAME = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

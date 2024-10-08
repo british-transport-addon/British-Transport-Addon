@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/simple/turn_left",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/angles/sign_small_22_5"
-}

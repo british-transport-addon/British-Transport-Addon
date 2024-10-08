@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "pack_format": 34,
+    "description": {
+      "type": "translatable",
+      "translate": "resourcepack.bta.test.description",
+      "color": "gray"
+    }
+  }
+}

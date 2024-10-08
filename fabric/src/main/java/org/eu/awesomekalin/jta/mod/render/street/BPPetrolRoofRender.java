@@ -2,17 +2,14 @@ package org.eu.awesomekalin.jta.mod.render.street;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.BPPetrolRoof;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.BritishStreetSign2x1;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
-import org.mtr.mod.block.BlockSignalLight2Aspect1;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
-import org.mtr.mod.render.RenderSignalLight4Aspect;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;

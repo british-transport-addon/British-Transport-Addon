@@ -21,9 +21,7 @@ public class Init {
 
     public static void init() {
         BlockInit.INIT();
-        ParentInit.INIT();
         ItemInit.INIT();
-        PoleInit.INIT();
         SignInit.INIT();
         FenceInit.INIT();
         BusShelterInit.INIT();

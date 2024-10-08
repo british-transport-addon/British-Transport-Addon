@@ -3,9 +3,9 @@ package org.eu.awesomekalin.jta.platform.client.model.street;
 import net.minecraft.resources.ResourceLocation;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.entity.block.street.ManchesterTrashBinAltLidEntity;
-import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class ManchesterTrashBinAltLidModel extends GeoModel<ManchesterTrashBinAltLidEntity> {
+public class ManchesterTrashBinAltLidModel extends AnimatedGeoModel<ManchesterTrashBinAltLidEntity> {
 
     @Override
     public ResourceLocation getModelResource(ManchesterTrashBinAltLidEntity animatable) {

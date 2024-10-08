@@ -1,4 +1,6 @@
 {
+  "resourcepack.bta.test": "Test",
+  "resourcepack.bta.test.description": "Test pack",
   "block.jta.lime_bricks": "Lime Bricks",
   "block.jta.lime_bricks_slab": "Lime Bricks Slab",
   "block.jta.lime_bricks_stairs": "Lime Bricks Stairs",

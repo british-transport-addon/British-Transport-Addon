@@ -101,11 +101,10 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
     private static final int SWITCH_INTERVAL = 30000; // Switch every 30 seconds
     private static final int SECOND_MESSAGE_DURATION = 10000; // Show second message for 10 seconds
 
-    public String getServiceInfo(ArrivalResponse response) {
+    public String getServiceInfo(ArrivalResponse response, Station currentStation) {
         if (response == null) return null;
 
-        // Get the current station object
-        Station currentStation = MinecraftClientData.getDashboardInstance().platformIdMap.get(response.getPlatformId()).area;
+        if (!MinecraftClientData.getDashboardInstance().routeIdMap.containsKey(response.getRouteId())) return null;
 
         // Get route information (list of all stations and platforms)
         List<RoutePlatformData> platformsList = MinecraftClientData.getDashboardInstance()
@@ -228,7 +227,10 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
             graphicsHolder.scale(1 / scale, 1 / scale, 1 / scale);
 
             if (renderCustomMessage) {
-                renderText(graphicsHolder, customMessageSplit[languageIndex].replace("%info%", getServiceInfo(arrivalResponseList.stream().findFirst().orElse(null))), entity.textColor(), maxWidth * scale / 16, false);
+                renderText(graphicsHolder, customMessageSplit[languageIndex].replace(
+                        "%info%",
+                        getServiceInfo(arrivalResponseList.stream().findFirst().orElse(null), InitClient.findStation(entity.getPos2()))
+                ), entity.textColor(), maxWidth * scale / 16, false);
             } else {
                 final long arrival = (arrivalResponse.getArrival() - ArrivalsCacheClient.INSTANCE.getMillisOffset() - System.currentTimeMillis()) / 1000;
                 final int color = arrival <= 0 ? entity.textColorArrived() : entity.textColor();

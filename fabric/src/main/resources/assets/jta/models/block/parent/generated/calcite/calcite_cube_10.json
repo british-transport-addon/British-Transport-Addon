@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/parent/cube_10",
-  "textures": {
-    "texture": "block/calcite"
-  }
-}

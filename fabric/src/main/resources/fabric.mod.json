@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "jta",
-  "version": "1.0.0-alpha.7-h1",
+  "version": "1.0.0-alpha.8",
   "name": "British Transit Addon",
   "description": "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles",
   "authors": [
@@ -30,7 +30,8 @@
     "minecraft": "1.19.2",
     "mtr": ">=4.0.0-beta-10 <4.1",
     "geckolib3": ">=3.0 <4.7",
-    "trinkets": ">=3.0"
+    "trinkets": ">=3.0",
+    "londonunderground": ">=2.2.1"
   },
   "recommends": {
     "voicechat": ">=1.19.2-2.5"

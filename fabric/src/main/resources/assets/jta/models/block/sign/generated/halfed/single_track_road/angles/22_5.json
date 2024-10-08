@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/halfed/single_track_road",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/angles/sign_half_22_5"
-}

@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/simple/accompanied_horses",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/angles/sign_small_45"
-}

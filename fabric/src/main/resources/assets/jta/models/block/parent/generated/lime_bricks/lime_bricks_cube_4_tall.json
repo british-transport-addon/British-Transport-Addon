@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/parent/cube_4_tall",
-  "textures": {
-    "texture": "jta:block/lime_bricks"
-  }
-}

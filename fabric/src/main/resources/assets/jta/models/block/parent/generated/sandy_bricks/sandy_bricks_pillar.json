@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/parent/pillar",
-  "textures": {
-    "texture": "jta:block/sandy_bricks"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/simple/no_vehicles_except_pushed_pedal_bikes",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/angles/sign_small_22_5"
-}

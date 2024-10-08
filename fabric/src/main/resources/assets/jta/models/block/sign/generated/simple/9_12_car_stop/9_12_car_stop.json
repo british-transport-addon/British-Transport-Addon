@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/simple/9_12_car_stop",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/sign_all"
-}

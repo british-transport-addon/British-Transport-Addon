@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/halfed/no_sitting",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/angles/sign_half_45"
-}

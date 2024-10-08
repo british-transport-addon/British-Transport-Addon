@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/simple/traffic_merging_left_ahead",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/sign_all"
-}

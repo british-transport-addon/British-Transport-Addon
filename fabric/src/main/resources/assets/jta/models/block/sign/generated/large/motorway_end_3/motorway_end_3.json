@@ -1,7 +1,0 @@
-{
-  "textures": {
-    "sign": "jta:block/signs/large/motorway_end_3",
-    "sign_back": "jta:block/steel_rect"
-  },
-  "parent": "jta:block/sign/sign_large"
-}
