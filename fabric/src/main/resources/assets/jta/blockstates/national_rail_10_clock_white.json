@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "jta:block/national_rail_10_clock" },
+    "facing=east": { "model": "jta:block/national_rail_10_clock", "y": 90 },
+    "facing=south": { "model": "jta:block/national_rail_10_clock", "y": 180 },
+    "facing=west": { "model": "jta:block/national_rail_10_clock", "y": 270 }
+  }
+}

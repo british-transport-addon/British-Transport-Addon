@@ -8,7 +8,10 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10Clock;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10ClockWhite;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
+import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3ClockWhite;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
@@ -29,6 +32,30 @@ public class BlockEntityTypeInit {
             ),
             NationalRail3Clock.TileEntityNationalRail3Clock::new,
             BlockInit.PIDS_NATIONALRAIL3CLOCK::get//update
+    );
+    public static final BlockEntityTypeRegistryObject<NationalRail3ClockWhite.TileEntityNationalRail3ClockWhite> PIDS_NATIONALRAIL3CLOCKWHITE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_3_clock_white"
+            ),
+            NationalRail3ClockWhite.TileEntityNationalRail3ClockWhite::new,
+            BlockInit.PIDS_NATIONALRAIL3CLOCKWHITE::get//update
+    );
+    public static final BlockEntityTypeRegistryObject<NationalRail10Clock.TileEntityNationalRail10Clock> PIDS_NATIONALRAIL10CLOCK = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_10_clock"
+            ),
+            NationalRail10Clock.TileEntityNationalRail10Clock::new,
+            BlockInit.PIDS_NATIONALRAIL10CLOCK::get//update
+    );
+    public static final BlockEntityTypeRegistryObject<NationalRail10ClockWhite.TileEntityNationalRail10ClockWhite> PIDS_NATIONALRAIL10CLOCKWHITE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_10_clock_white"
+            ),
+            NationalRail10ClockWhite.TileEntityNationalRail10ClockWhite::new,
+            BlockInit.PIDS_NATIONALRAIL10CLOCKWHITE::get//update
     );
     public static final BlockEntityTypeRegistryObject<ManchesterTrashBinAltLidEntity> MANCHESTER_TRASH_BIN_ALT_LID = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
