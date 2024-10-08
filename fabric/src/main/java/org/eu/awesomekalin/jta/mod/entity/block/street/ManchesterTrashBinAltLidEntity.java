@@ -5,18 +5,17 @@ import org.mtr.mapping.holder.BlockPos;
 import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.holder.CompoundTag;
 import org.mtr.mapping.mapper.BlockEntityExtension;
-import software.bernie.geckolib3.core.IAnimatable;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.manager.SingletonAnimationFactory;
+import software.bernie.geckolib.animatable.GeoBlockEntity;
+import software.bernie.geckolib.core.animatable.GeoAnimatable;
+import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.*;
+import software.bernie.geckolib.core.object.PlayState;
+import software.bernie.geckolib.util.RenderUtils;
 
-public class ManchesterTrashBinAltLidEntity extends BlockEntityExtension implements IAnimatable {
+public class ManchesterTrashBinAltLidEntity extends BlockEntityExtension implements GeoBlockEntity {
     private long open = -1;
-    private AnimationFactory cache = new SingletonAnimationFactory(this);
+    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
     public void setOpen(boolean open) {
         this.open = open ? System.currentTimeMillis() + 2000 : -1;
@@ -31,12 +30,12 @@ public class ManchesterTrashBinAltLidEntity extends BlockEntityExtension impleme
     }
 
     @Override
-    public void registerControllers(final AnimationData data) {
-        data.addAnimationController(new AnimationController<>(this, "controller", 0, this::pedicate));
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+        controllerRegistrar.add(new AnimationController<>(this, "controller", 0, this::pedicate));
     }
 
-    private <E extends ManchesterTrashBinAltLidEntity> PlayState pedicate(final AnimationEvent<E> state) {
-        state.getController().setAnimation(new AnimationBuilder().playAndHold("animation.model." + (isOpen() ? "open" : "close")));
+    private PlayState pedicate(AnimationState<GeoAnimatable> state) {
+        state.getController().setAnimation(RawAnimation.begin().then("animation.model." + (isOpen() ? "open" : "close"), Animation.LoopType.HOLD_ON_LAST_FRAME));
 
         return PlayState.CONTINUE;
     }
@@ -54,8 +53,12 @@ public class ManchesterTrashBinAltLidEntity extends BlockEntityExtension impleme
     }
 
     @Override
-    public AnimationFactory getFactory() {
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
     }
-}
 
+    @Override
+    public double getTick(Object blockEntity) {
+        return RenderUtils.getCurrentTick();
+    }
+}
