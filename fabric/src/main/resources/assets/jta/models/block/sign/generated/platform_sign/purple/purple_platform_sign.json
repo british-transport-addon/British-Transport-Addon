@@ -1,0 +1,6 @@
+{
+  "parent": "jta:block/sign/platform_sign",
+  "textures": {
+    "color": "jta:block/colors/purple"
+  }
+}
