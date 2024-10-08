@@ -21,13 +21,10 @@ public class PlatformNumberSign extends DirectionalBlockExtension implements Blo
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
-                IBlock.getVoxelShapeByDirection(-1.25, 0, 7, 0, 31.25, 9, facing),
-                IBlock.getVoxelShapeByDirection(16, 0, 7, 17.25, 31.25, 9, facing),
-                IBlock.getVoxelShapeByDirection(0, 31.25, 7.25, 16, 32, 8.75, facing),
-                IBlock.getVoxelShapeByDirection(16, 31.25, 7, 17.25, 32, 9, facing),
-                IBlock.getVoxelShapeByDirection(-1.25, 31.25, 7, 0, 32, 9, facing),
-                IBlock.getVoxelShapeByDirection(0, 8.25, 7.5, 16, 31.25, 8.5, facing),
-                IBlock.getVoxelShapeByDirection(0, 7.75, 7.25, 16, 8.75, 8.75, facing)
+                IBlock.getVoxelShapeByDirection(-3, 1, 7, 11, 2, 9, facing),
+                IBlock.getVoxelShapeByDirection(-3, 2, 7, 11, 15, 9, facing),
+                IBlock.getVoxelShapeByDirection(-7.75, 2.25, 7.5, -3, 3.75, 8.5, facing),
+                IBlock.getVoxelShapeByDirection(-7.75, 12.25, 7.5, -3, 13.75, 8.5, facing)
         );
     }
 

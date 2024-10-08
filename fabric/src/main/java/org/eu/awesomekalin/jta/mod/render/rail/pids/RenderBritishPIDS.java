@@ -148,7 +148,7 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
         }
 
         // Full message without "Calling At:"
-        String fullMessage = platforms + ((!platforms.contains(",") && !platforms.contains("and")) ? "" : " only") + ".";
+        String fullMessage = platforms + (!(platforms.contains(",") || platforms.contains("and")) ? " only" : "") + ".";
 
         // Ensure the message length is longer than MAX_WIDTH to scroll
         if (fullMessage.length() <= MAX_WIDTH) {
