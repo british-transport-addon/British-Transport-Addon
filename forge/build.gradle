@@ -59,7 +59,7 @@ tasks.register("setupFiles") {
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
             filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": ""])
-            rename "(.+).template.json", "\$1.json"
+            rename "(.+).template.toml", "\$1.toml"
         }
     } else {
         copy {
@@ -67,7 +67,7 @@ tasks.register("setupFiles") {
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
             filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3"])
-            rename "(.+).template.json", "\$1.json"
+            rename "(.+).template.toml", "\$1.toml"
         }
     }
 
