@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Station Bord (EMR, Zwarte Pole)",
   "block.jta.steel_emr_sign": "Station Bord (EMR, Stalen Pole)",
   "block.jta.black_avanti_west_coast_sign": "Station Bord (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Station Bord (Avanti West Coast, Stalen Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Station Bord (Avanti West Coast, Stalen Pole)",
+  "block.jta.ballast": "Train Ballast"
 }

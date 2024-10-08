@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Panneau de Station (EMR, Pôle Noir)",
   "block.jta.steel_emr_sign": "Panneau de Station (EMR, Pôle Acier)",
   "block.jta.black_avanti_west_coast_sign": "Panneau de station (Avanti côte Ouest, Pôle Noir)",
-  "block.jta.steel_avanti_west_coast_sign": "Panneau de station (Avanti Côte Ouest, Pôle Acier)"
+  "block.jta.steel_avanti_west_coast_sign": "Panneau de station (Avanti Côte Ouest, Pôle Acier)",
+  "block.jta.ballast": "Train Ballast"
 }

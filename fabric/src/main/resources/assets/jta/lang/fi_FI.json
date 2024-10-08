@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Aseman Merkki (EMR, Musta Pultti)",
   "block.jta.steel_emr_sign": "Asemamerkki (Emr, Steel Pole)",
   "block.jta.black_avanti_west_coast_sign": "Asemamerkki (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Asemamerkki (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Asemamerkki (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Junan Painolasti"
 }

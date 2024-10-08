@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Stationsskylt (EMR, Black Pole)",
   "block.jta.steel_emr_sign": "Stationsskylt (EMR, Stålstolpen)",
   "block.jta.black_avanti_west_coast_sign": "Stationsskylt (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Stationsskylt (Avanti Västkusten, Stålstolpen)"
+  "block.jta.steel_avanti_west_coast_sign": "Stationsskylt (Avanti Västkusten, Stålstolpen)",
+  "block.jta.ballast": "Tåg Ballast"
 }

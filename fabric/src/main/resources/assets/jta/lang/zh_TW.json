@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Station Sign (EMR, Black Pole)",
   "block.jta.steel_emr_sign": "Station Sign (EMR, Steel Pole)",
   "block.jta.black_avanti_west_coast_sign": "Station Sign (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Station Sign (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Station Sign (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Train Ballast"
 }

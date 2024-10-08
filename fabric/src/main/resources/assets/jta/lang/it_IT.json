@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Cartello Stazione (EMR, Polo Nero)",
   "block.jta.steel_emr_sign": "Cartello Della Stazione (Erm, Palo D'Acciaio)",
   "block.jta.black_avanti_west_coast_sign": "Cartello Stazione (Avanti West Coast, Polo Nero)",
-  "block.jta.steel_avanti_west_coast_sign": "Cartello Stazione (Avanti West Coast, Polo D'Acciaio)"
+  "block.jta.steel_avanti_west_coast_sign": "Cartello Stazione (Avanti West Coast, Polo D'Acciaio)",
+  "block.jta.ballast": "Addestra Ballast"
 }

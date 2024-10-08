@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Značka stanice (EMR, černý pól)",
   "block.jta.steel_emr_sign": "Značka stanice (EMR, ocelový sloup)",
   "block.jta.black_avanti_west_coast_sign": "Známka stanice (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Staniční značka (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Staniční značka (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Vlakový štěrk"
 }
