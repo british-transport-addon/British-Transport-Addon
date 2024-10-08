@@ -446,6 +446,7 @@ public class BlockInit {
     public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_THICK_CONNECTOR_SHARP = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_thick_connector_sharp"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject UNDERGROUND_ENTRANCE_ROOF_CORNER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_entrance_roof_corner"), () -> new Block(new UndergroundRoofPart()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject PROJECTION_NAME = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "projection_name"), () -> new Block(new ProjectionName()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject TRAIN_BALLAST = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "ballast"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(true).strength(4.0f).nonOpaque())), CreativeTabInit.JTA_BLOCKS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }
