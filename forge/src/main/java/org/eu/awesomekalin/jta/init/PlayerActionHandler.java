@@ -40,9 +40,9 @@ public class PlayerActionHandler {
         player.sendSystemMessage(Component.literal(!isTransmitting ? "Transmitting on " + channel + "mhz." : "Transmission Stopped"), true);
 
         if (!isTransmitting) {
-            player.getLevel().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_IN.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
+            player.level().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_IN.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
         } else {
-            player.getLevel().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_OUT.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
+            player.level().playSound(null, player.blockPosition(), SoundInit.MET_POLICE_RADIO_OUT.get().data, net.minecraft.sounds.SoundSource.VOICE, 1f, 1f);
         }
 
         event.setCanceled(true);
