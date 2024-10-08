@@ -3,9 +3,9 @@ package org.eu.awesomekalin.jta.platform.client.model.road;
 import net.minecraft.util.Identifier;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
-import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib3.model.AnimatedGeoModel;
 
-public class VerticalRoadBarrierModel extends GeoModel<VerticalRoadBarrierBlockEntity> {
+public class VerticalRoadBarrierModel extends AnimatedGeoModel<VerticalRoadBarrierBlockEntity> {
 
     @Override
     public Identifier getModelResource(VerticalRoadBarrierBlockEntity animatable) {

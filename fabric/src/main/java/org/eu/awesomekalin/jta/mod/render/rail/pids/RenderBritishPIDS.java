@@ -102,10 +102,23 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
     private static final int SECOND_MESSAGE_DURATION = 10000; // Show second message for 10 seconds
 
     public String getServiceInfo(ArrivalResponse response, Station currentStation) {
-        if (response == null) return null;
+        // Show welcoemt o station if info collection is fUCKED
+        if (response == null || MinecraftClientData.getDashboardInstance() == null ||
+                MinecraftClientData.getDashboardInstance().routeIdMap == null ||
+                !MinecraftClientData.getDashboardInstance().routeIdMap.containsKey(response.getRouteId())) {
 
-        if (!MinecraftClientData.getDashboardInstance().routeIdMap.containsKey(response.getRouteId())) return null;
+            String stationName = currentStation.getName();
+            String welcomeMessage = "Welcome to " + stationName + " station.";
 
+            // Calculate the padding required to center the message
+            int totalPadding = MAX_WIDTH - welcomeMessage.length() + 5;
+            int paddingOnEachSide = totalPadding / 2;
+
+            // Add spaces on both sides to center the message
+            String centeredMessage = " ".repeat(Math.max(0, paddingOnEachSide)) + welcomeMessage;
+
+            return centeredMessage;
+        }
         // Get route information (list of all stations and platforms)
         List<RoutePlatformData> platformsList = MinecraftClientData.getDashboardInstance()
                 .routeIdMap.get(response.getRouteId()).getRoutePlatforms();
