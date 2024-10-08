@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Stationstegn (EMR, Black Pole)",
   "block.jta.steel_emr_sign": "Stationstegn (EMR, Steel Pole)",
   "block.jta.black_avanti_west_coast_sign": "Stationstegn (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Stationstegn (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Stationstegn (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Tog Ballast"
 }

@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Знак станции (EMR, чёрный поле)",
   "block.jta.steel_emr_sign": "Знак станции (EMR, стальной стол)",
   "block.jta.black_avanti_west_coast_sign": "Знак Станции (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Знак Станции (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Знак Станции (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Тренировать Балласт"
 }

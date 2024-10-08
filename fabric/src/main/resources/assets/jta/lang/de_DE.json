@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Stationsschild (EMR, Schwarzer Pole)",
   "block.jta.steel_emr_sign": "Stationsschild (EMR, Stahle Pole)",
   "block.jta.black_avanti_west_coast_sign": "Stationsschild (Avanti West Coast, Black Pole)",
-  "block.jta.steel_avanti_west_coast_sign": "Stationsschild (Avanti Westküste, Stahlpol)"
+  "block.jta.steel_avanti_west_coast_sign": "Stationsschild (Avanti Westküste, Stahlpol)",
+  "block.jta.ballast": "Ballast trainieren"
 }

@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Sinal de Estação (EMR, Pole Negro)",
   "block.jta.steel_emr_sign": "Sinal de Estação (EMR, Poço de Aço)",
   "block.jta.black_avanti_west_coast_sign": "Sinal de Estação (Vantagem Oeste, Polo Negro)",
-  "block.jta.steel_avanti_west_coast_sign": "Sinal de Estação (Vantagem Costa Oeste, Polo de Aço)"
+  "block.jta.steel_avanti_west_coast_sign": "Sinal de Estação (Vantagem Costa Oeste, Polo de Aço)",
+  "block.jta.ballast": "Treinar Ballast"
 }

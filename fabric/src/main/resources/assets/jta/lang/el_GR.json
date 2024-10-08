@@ -889,5 +889,6 @@
   "block.jta.black_emr_sign": "Σημάδι Σταθμού (EMR, Μαύρος Πολωνός)",
   "block.jta.steel_emr_sign": "Σημάδι Σταθμού (Ecr, Χάλυβας Πολωνός)",
   "block.jta.black_avanti_west_coast_sign": "Σημάδι Σταθμού (Avanti West Coast, Μαύρος Πολωνός)",
-  "block.jta.steel_avanti_west_coast_sign": "Σημάδι Σταθμού (Avanti West Coast, Steel Pole)"
+  "block.jta.steel_avanti_west_coast_sign": "Σημάδι Σταθμού (Avanti West Coast, Steel Pole)",
+  "block.jta.ballast": "Τρέξιμο Ballast"
 }
