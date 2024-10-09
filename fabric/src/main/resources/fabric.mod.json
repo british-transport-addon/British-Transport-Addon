@@ -27,14 +27,14 @@
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": "1.19.2",
+    "minecraft": "1.20.1",
     "mtr": ">=4.0.0-beta-10 <4.1",
-    "geckolib3": ">=3.0 <4.7",
+    "geckolib": ">=3.0 <4.7",
     "trinkets": ">=3.0",
     "londonunderground": ">=2.2.1"
   },
   "recommends": {
-    "voicechat": ">=1.19.2-2.5"
+    "voicechat": ">=1.20.1-2.5"
   },
   "custom": {
     "modmenu": {
