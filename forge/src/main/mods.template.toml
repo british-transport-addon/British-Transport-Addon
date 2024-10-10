@@ -41,13 +41,13 @@ side = "BOTH"
 [[dependencies.jta]]
 modId = "curios"
 mandatory = true
-versionRange = "[@minecraft@-5.0,@minecraft@-8.1)"
+versionRange = "[@curios@,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.jta]]
 modId="voicechat"
-mandatory=false
+mandatory=true
 versionRange="[1.18.2-2.5,)"
 ordering="AFTER"
 side="BOTH"

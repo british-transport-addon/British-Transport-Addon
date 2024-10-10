@@ -9,6 +9,10 @@ plugins {
 repositories {
     mavenCentral()
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
+    maven {
+        name = "Illusive Soulworks maven"
+        url = "https://maven.theillusivec4.top/"
+    }
 }
 
 final BuildTools buildTools = new BuildTools(minecraftVersion, "forge", project)
@@ -21,7 +25,10 @@ minecraft {
             property "forge.logging.markers", "REGISTRIES"
             property "forge.logging.console.level", "debug"
         }
-        client {}
+        client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "./build/createSrgToMcp/output.srg"
+        }
         server { args "--nogui" }
     }
 }
@@ -33,7 +40,8 @@ dependencies {
     implementation fg.deobf("org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server")
     annotationProcessor "org.spongepowered:mixin:+:processor"
     implementation fg.deobf("de.maxhenkel.voicechat:voicechat-api:${buildTools.getVoiceChatVersion()}")
-    implementation files('libs/curios-forge-5.9.0+1.20.1.jar')
+    compileOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${buildTools.getCuriosVersion()}:api"))
+    runtimeOnly(fg.deobf("top.theillusivec4.curios:curios-forge:${buildTools.getCuriosVersion()}"))
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${buildTools.getGeckolibVersion()}")
 }
 
@@ -58,7 +66,7 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": ""])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "", "curios": buildTools.getCuriosVersion()])
             rename "(.+).template.toml", "\$1.toml"
         }
     } else {
@@ -66,7 +74,7 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3"])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3", "curios": buildTools.getCuriosVersion()])
             rename "(.+).template.toml", "\$1.toml"
         }
     }
