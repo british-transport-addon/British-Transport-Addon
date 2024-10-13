@@ -9,6 +9,8 @@ import org.mtr.mod.block.*;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
 
 public class NationalRailSingleBoard extends BlockPIDSBase {
 
@@ -46,15 +48,19 @@ public class NationalRailSingleBoard extends BlockPIDSBase {
         return new TileEntityNationalRailSingleBoard(pos, state);
     }
 
-    private static boolean canStoreData(World world, BlockPos blockPos) {
+    public static boolean canStoreData(World world, BlockPos blockPos) {
         return true;
     }
 
-    private static BlockPos getBlockPosWithData(World world, BlockPos blockPos) {
+    public static BlockPos getBlockPosWithData(World world, BlockPos blockPos) {
         return blockPos;
     }
 
     public static class TileEntityNationalRailSingleBoard extends BlockPIDSBase.BlockEntityBase {
+
+        public TileEntityNationalRailSingleBoard(int maxArrivals, BiPredicate<World, BlockPos> canStoreData, BiFunction<World, BlockPos, BlockPos> getBlockPosWithData, BlockEntityType<?> type, BlockPos pos, BlockState state) {
+            super(maxArrivals, canStoreData, getBlockPosWithData, type, pos, state);
+        }
 
         public TileEntityNationalRailSingleBoard(BlockPos pos, BlockState state) {
             super(LINES, NationalRailSingleBoard::canStoreData, NationalRailSingleBoard::getBlockPosWithData, BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOARD.get(), pos, state);
