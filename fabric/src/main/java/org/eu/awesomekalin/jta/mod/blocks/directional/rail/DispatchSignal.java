@@ -23,7 +23,7 @@ public class DispatchSignal extends DirectionalBlockEntityBase {
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
         // Create the TileEntityDispatchSignal with the currently selected BlockSignalBase position
         System.out.println(blockState.getBlock().getTranslationKey());
-        if (System.currentTimeMillis() < LAST_UPDATE_TIME + 2000L || selectedSignalBasePosition == null) return new TileEntityDispatchSignal(blockPos, blockState);
+        if (System.currentTimeMillis() < LAST_UPDATE_TIME + 2000L || selectedSignalBasePosition == null) return null;
         System.out.println(selectedSignalBasePosition.toShortString());
 
         return new TileEntityDispatchSignal(
@@ -114,6 +114,30 @@ public class DispatchSignal extends DirectionalBlockEntityBase {
 
         public boolean shouldRender() {
             return true;
+        }
+
+        public int getSignalX() {
+            return signalX;
+        }
+
+        public int getSignalY() {
+            return signalY;
+        }
+
+        public int getSignalZ() {
+            return signalZ;
+        }
+
+        public void setSignalX(int signalX) {
+            this.signalX = signalX;
+        }
+
+        public void setSignalY(int signalY) {
+            this.signalY = signalY;
+        }
+
+        public void setSignalZ(int signalZ) {
+            this.signalZ = signalZ;
         }
     }
 }

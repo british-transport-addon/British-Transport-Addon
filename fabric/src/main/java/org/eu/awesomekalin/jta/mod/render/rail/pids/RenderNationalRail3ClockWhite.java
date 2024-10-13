@@ -1,8 +1,7 @@
 package org.eu.awesomekalin.jta.mod.render.rail.pids;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3ClockWhite;
+import org.eu.awesomekalin.jta.mod.blocks.pids.NationalRail3ClockWhite;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;

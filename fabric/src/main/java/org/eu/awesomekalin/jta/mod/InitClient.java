@@ -6,10 +6,7 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
-import org.eu.awesomekalin.jta.mod.render.rail.pids.RenderNationalRail10Clock;
-import org.eu.awesomekalin.jta.mod.render.rail.pids.RenderNationalRail10ClockWhite;
-import org.eu.awesomekalin.jta.mod.render.rail.pids.RenderNationalRail3Clock;
-import org.eu.awesomekalin.jta.mod.render.rail.pids.RenderNationalRail3ClockWhite;
+import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
 import org.eu.awesomekalin.jta.mod.render.street.*;
 import org.eu.awesomekalin.jta.mod.render.street.fuel.*;
@@ -47,6 +44,15 @@ public final class InitClient {
                         0,
                         0xFF9900
                 )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOARD,
+                RenderNationalRailSingleBoard::new
+        );
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOAR_DWHITE,
+                RenderNationalRailSingleBoardWhite::new
         );
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCKWHITE,

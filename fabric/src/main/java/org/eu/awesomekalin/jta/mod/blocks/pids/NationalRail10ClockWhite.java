@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids;
+package org.eu.awesomekalin.jta.mod.blocks.pids;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.mtr.mapping.holder.BlockPos;

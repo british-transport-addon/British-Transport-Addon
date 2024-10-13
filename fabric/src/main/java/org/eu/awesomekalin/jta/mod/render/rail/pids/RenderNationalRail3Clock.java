@@ -1,14 +1,13 @@
 package org.eu.awesomekalin.jta.mod.render.rail.pids;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
+import org.eu.awesomekalin.jta.mod.blocks.pids.NationalRail3Clock;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
-import org.mtr.mod.render.RenderPIDS;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import java.text.SimpleDateFormat;

@@ -8,10 +8,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10Clock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10ClockWhite;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3ClockWhite;
+import org.eu.awesomekalin.jta.mod.blocks.pids.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
@@ -25,6 +22,22 @@ public class BlockEntityTypeInit {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
 
+    public static final BlockEntityTypeRegistryObject<NationalRailSingleBoard.TileEntityNationalRailSingleBoard> PIDS_NATIONALRAILSINGLEBOARD = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_single_board"
+            ),
+            NationalRailSingleBoard.TileEntityNationalRailSingleBoard::new,
+            BlockInit.PIDS_NATIONALRAILSINGLEBOARD::get//update
+    );
+    public static final BlockEntityTypeRegistryObject<NationalRailSingleBoardWhite.TileEntityNationalRailSingleBoardWhite> PIDS_NATIONALRAILSINGLEBOAR_DWHITE = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "national_rail_single_board_white"
+            ),
+            NationalRailSingleBoardWhite.TileEntityNationalRailSingleBoardWhite::new,
+            BlockInit.PIDS_NATIONALRAILSINGLEBOARD_WHITE::get//update
+    );
     public static final BlockEntityTypeRegistryObject<NationalRail3Clock.TileEntityNationalRail3Clock> PIDS_NATIONALRAIL3CLOCK = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

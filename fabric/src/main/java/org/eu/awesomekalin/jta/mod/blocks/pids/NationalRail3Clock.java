@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids;
+package org.eu.awesomekalin.jta.mod.blocks.pids;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.mtr.mapping.holder.*;
@@ -9,11 +9,11 @@ import org.mtr.mod.block.IBlock;
 
 import javax.annotation.Nonnull;
 
-public class NationalRail10Clock extends BlockPIDSHorizontalBase {
+public class NationalRail3Clock extends BlockPIDSHorizontalBase {
 
-    public static final int MAX_ARRIVALS = 10;
+    public static final int MAX_ARRIVALS = 3;
 
-    public NationalRail10Clock() {
+    public NationalRail3Clock() {
         super(MAX_ARRIVALS);
     }
 
@@ -29,17 +29,17 @@ public class NationalRail10Clock extends BlockPIDSHorizontalBase {
     @Nonnull
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos pos, BlockState state) {
-        return new TileEntityNationalRail10Clock(pos, state);
+        return new TileEntityNationalRail3Clock(pos, state);
     }
 
-    public static class TileEntityNationalRail10Clock extends BlockEntityHorizontalBase {
+    public static class TileEntityNationalRail3Clock extends BlockEntityHorizontalBase {
 
-        public TileEntityNationalRail10Clock(int maxArrivals, BlockEntityType<?> type, BlockPos pos, BlockState state) {
+        public TileEntityNationalRail3Clock(int maxArrivals, BlockEntityType<?> type, BlockPos pos, BlockState state) {
             super(maxArrivals, type, pos, state);
         }
 
-        public TileEntityNationalRail10Clock(BlockPos pos, BlockState state) {
-            super(MAX_ARRIVALS, BlockEntityTypeInit.PIDS_NATIONALRAIL10CLOCK.get(), pos, state);
+        public TileEntityNationalRail3Clock(BlockPos pos, BlockState state) {
+            super(MAX_ARRIVALS, BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCK.get(), pos, state);
         }
 
         @Override

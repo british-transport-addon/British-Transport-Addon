@@ -2,15 +2,20 @@ package org.eu.awesomekalin.jta.mod.render.rail;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.DispatchSignal;
+import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntAVLTreeSet;
+import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntArrayList;
+import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectObjectImmutablePair;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;
+import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
+import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
@@ -39,7 +44,7 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
     }
 
     @Override
-    public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(@Nonnull DispatchSignal.TileEntityDispatchSignal entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
         final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
         if (!entity.shouldRender()) {
@@ -51,24 +56,34 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
             return;
         }
 
-        final BlockPos pos = entity.getPos2();
-        final BlockState state = world.getBlockState(pos);
-        final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
-        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
-        final int textWidth = GraphicsHolder.getTextWidth(roundelText);
 
-        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-        storedMatrixTransformations.add(graphicsHolderNew -> {
-            graphicsHolderNew.rotateYDegrees(-facing.asRotation());
-            graphicsHolderNew.rotateZDegrees(180);
-            graphicsHolderNew.rotateYDegrees(180);
-        });
-        MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
-            storedMatrixTransformations.transform(graphicsHolderNew, offset);
-            render(graphicsHolderNew, roundelText, textWidth, light);
-            graphicsHolderNew.pop();
-        });
+        final BlockPos position = BlockPos.fromLong(BlockPos.asLong(entity.getSignalX(), entity.getSignalY(), entity.getSignalZ()));
+        final BlockSignalBase.BlockEntityBase signalEntity = (BlockSignalBase.BlockEntityBase) world.getBlockEntity(position).data;
+        final ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderSignalBase.getAspects(position, BlockSignalBase.getAngle(world.getBlockState(position)));
+        final IntAVLTreeSet filterColors = signalEntity.getSignalColors(false);
+
+        if ((aspects.right().intStream().anyMatch(color -> filterColors.isEmpty() || filterColors.contains(color)) ? 1 : 0) == 0) {
+
+            final BlockPos pos = entity.getPos2();
+            final BlockState state = world.getBlockState(pos);
+            final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
+
+            final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
+            final int textWidth = GraphicsHolder.getTextWidth(roundelText);
+
+            final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+            storedMatrixTransformations.add(graphicsHolderNew -> {
+                graphicsHolderNew.rotateYDegrees(-facing.asRotation());
+                graphicsHolderNew.rotateZDegrees(180);
+                graphicsHolderNew.rotateYDegrees(180);
+            });
+            MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
+                storedMatrixTransformations.transform(graphicsHolderNew, offset);
+                render(graphicsHolderNew, roundelText, textWidth, light);
+                graphicsHolderNew.pop();
+            });
+        }
     }
 
     private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {

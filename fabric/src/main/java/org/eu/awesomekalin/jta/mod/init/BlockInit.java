@@ -10,10 +10,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindo
 import org.eu.awesomekalin.jta.mod.blocks.directional.building.window.WhiteWindowSegmentedTop;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10Clock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail10ClockWhite;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3Clock;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.pids.NationalRail3ClockWhite;
+import org.eu.awesomekalin.jta.mod.blocks.pids.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.road.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.street.crossing.BelishaBase;
@@ -27,10 +24,11 @@ import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.SlabBlockExtension;
 import org.mtr.mapping.registry.BlockRegistryObject;
-import org.mtr.mod.item.ItemBlockEnchanted;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject PIDS_NATIONALRAILSINGLEBOARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_single_board"), () -> new Block(new NationalRailSingleBoard()), CreativeTabInit.JTA_RAILWAYS);
+    public static final BlockRegistryObject PIDS_NATIONALRAILSINGLEBOARD_WHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_single_board_white"), () -> new Block(new NationalRailSingleBoardWhite()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL3CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_3_clock"), () -> new Block(new NationalRail3Clock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL3CLOCKWHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_3_clock_white"), () -> new Block(new NationalRail3ClockWhite()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL10CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_10_clock"), () -> new Block(new NationalRail10Clock()), CreativeTabInit.JTA_RAILWAYS);
