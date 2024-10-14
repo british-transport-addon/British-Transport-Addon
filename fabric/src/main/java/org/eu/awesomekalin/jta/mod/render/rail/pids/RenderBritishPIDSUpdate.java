@@ -218,8 +218,6 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             } else {
                 if (renderSingleArrival && i == 0) {
                     arrivalIndex = Integer.parseInt(customMessage);
-                    renderCustomMessage = false;
-                    customMessage = null;
                 }
                 arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
 
@@ -339,8 +337,6 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
                     // Get upcoming platforms from the current station
                     List<RoutePlatformData> upcomingPlatforms = platformsList.subList(currentIndex + 1, platformsList.size());
 
-
-                    System.out.println("Rendered line " + i + " for board at " + (station.getName() == null ? "Unknown" : station.getName()));
                     // Render different lines based on the value of i
                     if (i == 0) {
                         renderText(graphicsHolder, new SimpleDateFormat("HH:mm").format(new Date(arrivalResponse.getArrival() - arrivalResponse.getDeviation())), entity.textColor(), maxWidth * scale / 2, false);
