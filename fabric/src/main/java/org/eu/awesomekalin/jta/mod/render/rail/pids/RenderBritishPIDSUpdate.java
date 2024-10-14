@@ -200,10 +200,10 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         for (int i = 0; i < entity.maxArrivals; i++) {
             final int languageTicks = (int) Math.floor(InitClient.getGameTick()) / SWITCH_LANGUAGE_TICKS;
             final ArrivalResponse arrivalResponse;
-            final String customMessage = entity.getMessage(i);
+            String customMessage = entity.getMessage(i);
             final String[] destinationSplit;
             final String[] customMessageSplit = customMessage.split("\\|");
-            final boolean renderCustomMessage;
+            boolean renderCustomMessage;
             final boolean renderSingleArrival = entity instanceof NationalRailSingleBoard.TileEntityNationalRailSingleBoard;
             final int languageIndex;
 
@@ -216,8 +216,14 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
                 renderCustomMessage = true;
                 languageIndex = languageTicks % customMessageSplit.length;
             } else {
+                if (renderSingleArrival && i == 0) {
+                    arrivalIndex = Integer.parseInt(customMessage);
+                    renderCustomMessage = false;
+                    customMessage = null;
+                }
                 arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
-                if (arrivalResponse == null) {
+
+                if (arrivalResponse == null && !renderSingleArrival) {
                     if (customMessage.isEmpty() || customMessageSplit.length == 0) {
                         continue;
                     }
@@ -242,7 +248,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             graphicsHolder.translate((startX - 8) / 16, -startY / 16 + i * maxHeight / entity.maxArrivals / 16, (startZ - 8) / 16 - SMALL_OFFSET * 2);
             graphicsHolder.scale(1 / scale, 1 / scale, 1 / scale);
 
-            if (renderCustomMessage) {
+            if (renderCustomMessage && !renderSingleArrival) {
                 renderText(graphicsHolder, customMessageSplit[languageIndex].replace(
                         "%info%",
                         getServiceInfo(arrivalResponseList.stream().findFirst().orElse(null), InitClient.findStation(entity.getPos2()))
