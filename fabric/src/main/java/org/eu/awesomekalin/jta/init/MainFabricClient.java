@@ -15,6 +15,7 @@ public class MainFabricClient implements ClientModInitializer {
 //Why is this not in the InitClient class?
         // it uses the fabric api directly coz its uses the geckolib shi so its kinda gae and iddnt work prooperly in initclient so
         // should be two methods for forge and fabric i think
+        // TODO: come back and fix this shit up.
 
         InitClient.init();
     }

@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.*;
-import org.eu.awesomekalin.jta.mod.packet.PacketToggleRadioTransmit;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
@@ -20,17 +19,7 @@ public final class InitClient {
     public static final RegistryClient REGISTRY_CLIENT = new RegistryClient(Init.REGISTRY);
 
     public static void init() {
-        KeyBindingsInit.init();
-
-        REGISTRY_CLIENT.eventRegistryClient.registerStartWorldTick((x) -> {
-            if (KeyBindingsInit.TALK_RADIO.wasPressed()) {
-                REGISTRY_CLIENT.sendPacketToServer(new PacketToggleRadioTransmit());
-            }
-        });
-
-
         REGISTRY_CLIENT.setupPackets(new Identifier(Init.MOD_ID, "packet"));
-
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCK,
@@ -664,9 +653,6 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MANCHESTER_TRASH_BIN_ALT);
 
         REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
-
-        REGISTRY_CLIENT.registerItemModelPredicate(ItemInit.RIOT_SHIELD, new Identifier(Init.MOD_ID, "blocking"), checkItemPredicateTag());
-
 
         REGISTRY_CLIENT.init();
     }

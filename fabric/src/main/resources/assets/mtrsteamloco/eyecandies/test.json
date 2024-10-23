@@ -1,0 +1,12 @@
+{
+  "steel_pole": {
+    "name": "British Steel Pole",
+    "model": "mtrsteamloco:eyecandies/steel_pole.obj",
+    "flipV": true
+  },
+  "gantry_10": {
+    "name": "Gantry(10)",
+    "model": "mtrsteamloco:eyecandies/gantry_10.obj",
+    "flipV": true
+  }
+}

@@ -217,7 +217,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
                 languageIndex = languageTicks % customMessageSplit.length;
             } else {
                 if (renderSingleArrival && i == 0) {
-                    arrivalIndex = Integer.parseInt(customMessage);
+                    arrivalIndex = Integer.parseInt(customMessage.trim());
                 }
                 arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
 

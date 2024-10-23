@@ -5,7 +5,6 @@ import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.InitClient;
-import org.eu.awesomekalin.jta.platform.NativeAPI;
 
 @Mod(Init.MOD_ID)
 public class MainForge {
