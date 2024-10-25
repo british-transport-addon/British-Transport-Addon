@@ -199,7 +199,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
 
         for (int i = 0; i < entity.maxArrivals; i++) {
             final int languageTicks = (int) Math.floor(InitClient.getGameTick()) / SWITCH_LANGUAGE_TICKS;
-            final ArrivalResponse arrivalResponse;
+            ArrivalResponse arrivalResponse = null;
             String customMessage = entity.getMessage(i);
             final String[] destinationSplit;
             final String[] customMessageSplit = customMessage.split("\\|");
@@ -218,8 +218,8 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             } else {
                 if (renderSingleArrival && i == 0) {
                     arrivalIndex = Integer.parseInt(customMessage.trim());
+                    arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
                 }
-                arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
 
                 if (arrivalResponse == null && !renderSingleArrival) {
                     if (customMessage.isEmpty() || customMessageSplit.length == 0) {
