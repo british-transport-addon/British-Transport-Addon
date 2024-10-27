@@ -202,7 +202,12 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             arrivalIndex = 0;
         }
 
-        ArrivalResponse arrivalResponse = arrivalResponseList.get(arrivalIndex);
+        ArrivalResponse arrivalResponse = null;
+        try {
+            arrivalResponse = arrivalResponseList.get(arrivalIndex);
+        } catch (Exception exception) {
+            return;
+        }
         int color = entity.textColor();
 
         final String destinationFormatted = arrivalResponse.getDestination();
@@ -295,7 +300,12 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             } else if (!upcomingPlatforms.isEmpty() && (i - 3) < upcomingPlatforms.size()) {
                 // Get the platform name using the index (i - 3)
                 Platform platform = upcomingPlatforms.get(i - 3).platform;
-                String platformName = platform.area.getName().split("\\|")[languageIndex];
+                String platformName;
+                try {
+                    platformName = platform.area.getName().split("\\|")[languageIndex];
+                } catch (Exception exception) {
+                    platformName = platform.area.getName();
+                }
 
 
                 // Check if the platformName should be formatted based on language (CJK or not)
