@@ -39,20 +39,6 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.jta]]
-modId = "curios"
-mandatory = true
-versionRange = "[@minecraft@-5.0,@minecraft@-8.1)"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.jta]]
-modId="voicechat"
-mandatory=false
-versionRange="[1.18.2-2.5,)"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.jta]]
 modId="londonunderground"
 mandatory=true
 versionRange="[2.2.1,)"
