@@ -56,6 +56,12 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         this.textPadding = textPadding;
     }
 
+    private static final int PLATFORMS_PER_PAGE = 9; // 9 lines for platforms to fill up to 12 lines total
+    private static final int PAGE_SWITCH_INTERVAL = 20 * 1000; // 20 seconds in milliseconds
+    private int currentPage = 0; // Start on the first page
+    private long lastPageSwitchTime = System.currentTimeMillis(); // Track last page switch time
+
+
     @Override
     public void render(T entity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
         final World world = entity.getWorld2();
@@ -94,102 +100,6 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
                 render(entity, blockPos.offset(facing), facing.getOpposite(), arrivalResponseList, graphicsHolder, offset);
             }
         });
-    }
-
-    private int scrollPosition = 0; // Track scroll position
-    private static final int MAX_WIDTH = 30; // Maximum width for scrolling text
-    private static final int SCROLL_DELAY = 20; // Scroll every 20 calls (slows down scrolling)
-    private int scrollCounter = 0; // Counter to control scroll speed
-    private static final int SWITCH_INTERVAL = 30000; // Switch every 30 seconds
-    private static final int SECOND_MESSAGE_DURATION = 10000; // Show second message for 10 seconds
-
-    public String getServiceInfo(ArrivalResponse response, Station currentStation) {
-        // Show welcoemt o station if info collection is fUCKED
-        if (response == null || MinecraftClientData.getDashboardInstance() == null ||
-                MinecraftClientData.getDashboardInstance().routeIdMap == null ||
-                !MinecraftClientData.getDashboardInstance().routeIdMap.containsKey(response.getRouteId())) {
-
-            String stationName = currentStation.getName();
-            String welcomeMessage = "Welcome to " + stationName + " station.";
-
-            // Calculate the padding required to center the message
-            int totalPadding = MAX_WIDTH - welcomeMessage.length() + 5;
-            int paddingOnEachSide = totalPadding / 2;
-
-            // Add spaces on both sides to center the message
-            String centeredMessage = " ".repeat(Math.max(0, paddingOnEachSide)) + welcomeMessage;
-
-            return centeredMessage;
-        }
-        // Get route information (list of all stations and platforms)
-        List<RoutePlatformData> platformsList = MinecraftClientData.getDashboardInstance()
-                .routeIdMap.get(response.getRouteId()).getRoutePlatforms();
-
-        // Find the index of the current station in the platforms list
-        int currentIndex = -1;
-        for (int i = 0; i < platformsList.size(); i++) {
-            if (platformsList.get(i).platform.area.getName().equals(currentStation.getName())) {
-                currentIndex = i;
-                break;
-            }
-        }
-
-        // If current station is not found, or it's the last station, display termination message
-        if (currentIndex == -1 || currentIndex == platformsList.size() - 1) {
-            return "This service terminates here.";
-        }
-
-        // Get the platforms ahead of the current station
-        List<RoutePlatformData> upcomingPlatforms = platformsList.subList(currentIndex + 1, platformsList.size());
-
-        // Show "This train is formed of X coaches" for 10 seconds every 30 seconds
-        long currentTime = System.currentTimeMillis();
-        long timeInCurrentCycle = currentTime % (SWITCH_INTERVAL + SECOND_MESSAGE_DURATION);
-
-        if (timeInCurrentCycle >= SWITCH_INTERVAL) {
-            int carCount = response.getCarCount(); // Assuming you can get car count from ArrivalResponse
-            return "This train is formed of " + carCount + " coach" +  (carCount == 1 ? "" : "es") + ".";
-        }
-
-        // Generate platforms info with departure times for upcoming stations
-        String platforms = upcomingPlatforms.stream()
-                .map(it -> it.platform.area.getName()) // Adding departure time would be nice but for now ig its deprecated. (not all departure boards even had this feature anyway so g it can be d
-                .collect(Collectors.joining(", "));
-
-        // Replace last comma with "and"
-        int lastCommaIndex = platforms.lastIndexOf(", ");
-        if (lastCommaIndex != -1) {
-            platforms = platforms.substring(0, lastCommaIndex) + " and" + platforms.substring(lastCommaIndex + 1);
-        }
-
-        // Full message without "Calling At:"
-        String fullMessage = platforms + (!(platforms.contains(",") || platforms.contains("and")) ? " only" : "") + ".";
-
-        // Ensure the message length is longer than MAX_WIDTH to scroll
-        if (fullMessage.length() <= MAX_WIDTH) {
-            return "Calling at: " + fullMessage; // No scrolling needed
-        }
-
-        // Increment the scroll counter and only update scrollPosition every SCROLL_DELAY calls
-        scrollCounter++;
-        if (scrollCounter >= SCROLL_DELAY) {
-            scrollPosition = (scrollPosition + 1) % fullMessage.length(); // Update scroll position
-            scrollCounter = 0; // Reset the counter
-        }
-
-        // Calculate substring for scrolling part (platforms)
-        String displayedMessage;
-        if (scrollPosition + MAX_WIDTH > fullMessage.length()) {
-            // If near the end, wrap around to the start
-            displayedMessage = fullMessage.substring(scrollPosition) + " " +
-                    fullMessage.substring(0, (scrollPosition + MAX_WIDTH) - fullMessage.length());
-        } else {
-            // Regular substring slicing
-            displayedMessage = fullMessage.substring(scrollPosition, scrollPosition + MAX_WIDTH);
-        }
-
-        // Combine static "Calling At:" with the scrolling platforms message
-        return "Calling at: " + displayedMessage;
     }
 
     private void render(T entity, BlockPos blockPos, Direction facing, ObjectArrayList<ArrivalResponse> arrivalResponseList, GraphicsHolder graphicsHolder, Vector3d offset) {
@@ -285,6 +195,12 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             // Get upcoming platforms from the current station
             List<RoutePlatformData> upcomingPlatforms = platformsList.subList(currentIndex + 1, platformsList.size());
 
+            int totalPlatforms = upcomingPlatforms.size();
+            int totalPages = (int) Math.ceil((double) totalPlatforms / PLATFORMS_PER_PAGE);
+
+            int startIndex = currentPage * PLATFORMS_PER_PAGE;
+            int endIndex = Math.min(startIndex + PLATFORMS_PER_PAGE, totalPlatforms);
+
             // Render different lines based on the value of i
             if (i == 0) {
                 renderText(graphicsHolder, new SimpleDateFormat("HH:mm").format(new Date(arrivalResponse.getArrival() - arrivalResponse.getDeviation())), entity.textColor(), maxWidth * scale / 2, false);
@@ -292,40 +208,19 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             } else if (i == 1) {
                 renderText(graphicsHolder, destinationFormatted, color, ((maxWidth * scale) / 8) - 15, false);
             } else if (i == 2) {
-                renderText(graphicsHolder, "Calling At:          ", color, ((maxWidth * scale) / 8) - 54, false);
+                renderText(graphicsHolder, "Calling At:  (Page " + (currentPage + 1) + " of " + totalPages + ")", color, ((maxWidth * scale) / 8) - 54, false);
             } else if (i == 15) {
                 renderText(graphicsHolder, "ScotRail", color, ((maxWidth * scale) / 8) - 15, false);
             } else if (i == 16) {
                 renderText(graphicsHolder, "This train is formed of " + arrivalResponse.getCarCount() + " coaches.", color, ((maxWidth * scale) / 8) - 15, false);
-            } else if (!upcomingPlatforms.isEmpty() && (i - 3) < upcomingPlatforms.size()) {
-                // Get the platform name using the index (i - 3)
-                Platform platform = upcomingPlatforms.get(i - 3).platform;
-                String platformName;
-                try {
-                    platformName = platform.area.getName().split("\\|")[languageIndex];
-                } catch (Exception exception) {
-                    platformName = platform.area.getName();
+            } else {
+                int platformIndex = i - 3 + startIndex;
+                if (platformIndex >= startIndex && platformIndex < endIndex) {
+                    Platform platform = upcomingPlatforms.get(platformIndex).platform;
+                    String platformName = platform.area.getName();
+
+                    renderText(graphicsHolder, "| " + platformName, color, ((maxWidth * scale) / 8) - 40, false);
                 }
-
-
-                // Check if the platformName should be formatted based on language (CJK or not)
-                boolean isCjk2 = IGui.isCjk(platformName);
-                String platformFormatted;
-
-                switch (arrivalResponse.getCircularState()) {
-                    case CLOCKWISE:
-                        platformFormatted = (isCjk2 ? TranslationProvider.GUI_MTR_CLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_CLOCKWISE_VIA).getString(platformName);
-                        break;
-                    case ANTICLOCKWISE:
-                        platformFormatted = (isCjk2 ? TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA).getString(platformName);
-                        break;
-                    default:
-                        platformFormatted = platformName; // No special formatting
-                        break;
-                }
-
-                // Render the formatted platform name
-                renderText(graphicsHolder, "| " + platformFormatted, color, ((maxWidth * scale) / 8) - 40, false);
             }
 
             //renderText(graphicsHolder, "-".repeat((int) maxWidth), color,maxWidth * scale, false);
