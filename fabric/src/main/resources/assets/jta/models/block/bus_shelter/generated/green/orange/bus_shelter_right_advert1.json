@@ -1,9 +1,0 @@
-{
-  "parent": "jta:block/bus_shelter/bus_shelter_right_advert",
-  "textures": {
-    "color": "jta:block/bus_shelter/base/green",
-    "seatColor": "jta:block/bus_shelter/seat/orange",
-    "advert1": "jta:block/adverts/tfl_going_to_heathrow",
-    "advert2": "jta:block/adverts/tfl_night_tube"
-  }
-}

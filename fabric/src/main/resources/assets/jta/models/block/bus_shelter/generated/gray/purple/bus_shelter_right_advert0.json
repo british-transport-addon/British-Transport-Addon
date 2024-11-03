@@ -1,9 +1,0 @@
-{
-  "parent": "jta:block/bus_shelter/bus_shelter_right_advert",
-  "textures": {
-    "color": "jta:block/bus_shelter/base/gray",
-    "seatColor": "jta:block/bus_shelter/seat/purple",
-    "advert1": "jta:block/adverts/next",
-    "advert2": "jta:block/adverts/nike"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "jta:block/bus_shelter/bus_shelter_left_long",
-  "textures": {
-    "color": "jta:block/bus_shelter/base/white",
-    "seatColor": "jta:block/bus_shelter/seat/off_white"
-  }
-}
