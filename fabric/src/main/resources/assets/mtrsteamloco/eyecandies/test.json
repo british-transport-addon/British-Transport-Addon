@@ -24,6 +24,11 @@
     "model": "mtrsteamloco:eyecandies/single_signal_pole.obj",
     "flipV": true
   },
+  "british_signal_pole": {
+    "name": "British Signal Pole Arched",
+    "model": "mtrsteamloco:eyecandies/british_signal_pole.obj",
+    "flipV": true
+  },
   "british_signal_piece": {
     "name": "British Signal Piece",
     "model": "mtrsteamloco:eyecandies/british_signal_piece.obj",
