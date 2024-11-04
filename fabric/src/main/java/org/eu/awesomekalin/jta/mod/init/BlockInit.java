@@ -7,6 +7,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.road.VerticalRoadBarrier;
 import org.eu.awesomekalin.jta.mod.blocks.pids.*;
+import org.eu.awesomekalin.jta.mod.blocks.signal.BannerRepeaterSignal;
 import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal1Aspect;
 import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal2Aspect;
 import org.mtr.mapping.holder.Block;
@@ -17,6 +18,7 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "banner_repeater_signal"), () -> new Block(new BannerRepeaterSignal(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_1_aspect"), () -> new Block(new DigitalBritishSignal1Aspect(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_2_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_2_aspect"), () -> new Block(new DigitalBritishSignal2Aspect(BlockHelper.createBlockSettings(false))), CreativeTabInit.JTA_RAILWAYS);
 

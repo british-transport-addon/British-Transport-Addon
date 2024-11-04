@@ -8,6 +8,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.pids.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
+import org.eu.awesomekalin.jta.mod.blocks.signal.BannerRepeaterSignal;
 import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal1Aspect;
 import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal2Aspect;
 import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
@@ -28,6 +29,15 @@ public class BlockEntityTypeInit {
             BlockInit.VERTICAL_ROAD_BARRIER::get//update
     );
 
+
+    public static final BlockEntityTypeRegistryObject<BannerRepeaterSignal.BlockEntity> BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "banner_repeater_signal"
+            ),
+            BannerRepeaterSignal.BlockEntity::new,
+            BlockInit.BANNER_REPEATER_SIGNAL::get
+    );
 
     public static final BlockEntityTypeRegistryObject<DigitalBritishSignal1Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
