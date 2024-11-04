@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "jta",
-  "version": "1.0.0-alpha.8",
+  "version": "1.0.0-alpha.9",
   "name": "British Transit Addon",
   "description": "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles",
   "authors": [
@@ -31,7 +31,7 @@
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.gg/dHbppMjwRF",
+        "modmenu.discord": "https://discord.gg/qygDBRUMh4",
         "modmenu.donate": "https://github.com/AwesomeKalin/DONATION",
         "modmenu.modrinth": "https://modrinth.com/mod/bta"
       }
