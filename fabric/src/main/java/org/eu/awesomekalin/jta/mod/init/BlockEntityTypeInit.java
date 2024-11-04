@@ -1,8 +1,6 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.directional.BPPetrolRoof;
-import org.eu.awesomekalin.jta.mod.blocks.directional.BPPetrolRoofCorner;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
@@ -10,10 +8,9 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.pids.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.street.fuel.impl.*;
+import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal1Aspect;
+import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal2Aspect;
 import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
-import org.eu.awesomekalin.jta.mod.entity.block.street.ManchesterTrashBinAltLidEntity;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -21,6 +18,34 @@ public class BlockEntityTypeInit {
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
+
+    public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "vertical_road_barrier"
+            ),
+            VerticalRoadBarrierBlockEntity::new,
+            BlockInit.VERTICAL_ROAD_BARRIER::get//update
+    );
+
+
+    public static final BlockEntityTypeRegistryObject<DigitalBritishSignal1Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "digital_signal_light_1_aspect"
+            ),
+            DigitalBritishSignal1Aspect.BlockEntity::new,
+            BlockInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<DigitalBritishSignal2Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_2_ASPECT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "digital_signal_light_2_aspect"
+            ),
+            DigitalBritishSignal2Aspect.BlockEntity::new,
+            BlockInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT::get
+    );
 
     public static final BlockEntityTypeRegistryObject<NationalRailSingleBoard.TileEntityNationalRailSingleBoard> PIDS_NATIONALRAILSINGLEBOARD = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
@@ -70,86 +95,7 @@ public class BlockEntityTypeInit {
             NationalRail10ClockWhite.TileEntityNationalRail10ClockWhite::new,
             BlockInit.PIDS_NATIONALRAIL10CLOCKWHITE::get//update
     );
-    public static final BlockEntityTypeRegistryObject<ManchesterTrashBinAltLidEntity> MANCHESTER_TRASH_BIN_ALT_LID = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "manchester_trash_bin_alt_lid"
-            ),
-            ManchesterTrashBinAltLidEntity::new,
-            BlockInit.MANCHESTER_TRASH_BIN_ALT_LID::get//update
-    );
-    public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "vertical_road_barrier"
-            ),
-            VerticalRoadBarrierBlockEntity::new,
-            BlockInit.VERTICAL_ROAD_BARRIER::get//update
-    );
-    public static final BlockEntityTypeRegistryObject<AbstractStationHandset.StationHandsetBlockEntity> STATION_HANDSET = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "station_handset"
-            ),
-            AbstractStationHandset.StationHandsetBlockEntity::new,
-            BlockInit.STATION_RAMP::get//update
-    );
-    public static final BlockEntityTypeRegistryObject<AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity> ASDA_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "asda_fuel_sign_top"
-            ),
-            AsdaFuelStationPriceBoardTop.AsdaFuelStationPriceBoardTopBlockEntity::new,
-            BlockInit.ASDA_FUEL_SIGN_TOP::get
-    );
-    public static final BlockEntityTypeRegistryObject<ShellFuelStationPriceBoardTop.ShellFuelStationPriceBoardTopBlockEntity> SHELL_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "shell_fuel_sign_top"
-            ),
-            ShellFuelStationPriceBoardTop.ShellFuelStationPriceBoardTopBlockEntity::new,
-            BlockInit.SHELL_FUEL_SIGN_TOP::get
-    );    
-    public static final BlockEntityTypeRegistryObject<TescoFuelStationPriceBoardTop.TescoFuelStationPriceBoardTopBlockEntity> TESCO_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "tesco_fuel_sign_top"
-            ),
-            TescoFuelStationPriceBoardTop.TescoFuelStationPriceBoardTopBlockEntity::new,
-            BlockInit.TESCO_FUEL_SIGN_TOP::get
-    );
-    public static final BlockEntityTypeRegistryObject<SainsburysFuelStationPriceBoardTop.SainsburysFuelStationPriceBoardTopBlockEntity> SAINSBURYS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "sainsburys_fuel_sign_top"
-            ),
-            SainsburysFuelStationPriceBoardTop.SainsburysFuelStationPriceBoardTopBlockEntity::new,
-            BlockInit.SAINSBURYS_FUEL_SIGN_TOP::get
-    );
-    public static final BlockEntityTypeRegistryObject<MorrisonsFuelStationPriceBoardTop.MorrisonsFuelStationPriceBoardTopBlockEntity> MORRISONS_FUEL_SIGN_TOP = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "morrisons_fuel_sign_top"
-            ),
-            MorrisonsFuelStationPriceBoardTop.MorrisonsFuelStationPriceBoardTopBlockEntity::new,
-            BlockInit.MORRISONS_FUEL_SIGN_TOP::get
-    );
-    public static final BlockEntityTypeRegistryObject<BPPetrolRoof.BPPetrolRoofTileEntity> BP_PETROL_ROOF = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "bp_petrol_roof"
-            ),
-            BPPetrolRoof.BPPetrolRoofTileEntity::new,
-            BlockInit.BP_PETROL_ROOF::get
-    );
-    public static final BlockEntityTypeRegistryObject<BPPetrolRoofCorner.BPPetrolRoofTileEntity> BP_PETROL_ROOF_CORNER = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "bp_petrol_roof_corner"
-            ),
-            BPPetrolRoofCorner.BPPetrolRoofTileEntity::new,
-            BlockInit.BP_PETROL_ROOF_CORNER::get
-    );
+
     public static final BlockEntityTypeRegistryObject<RoundelBase.RoundelBaseBlockEntity> ROUNDEL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -393,15 +339,6 @@ public class BlockEntityTypeInit {
             BlockInit.BEE_INTERCHANGE_STATION_SIGN::get
     );
 
-    public static final BlockEntityTypeRegistryObject<PedestrianSignal.TileEntityPedestrianSignal> PEDESTRIAN_SIGNAL = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "pedestrian_signal"
-            ),
-            PedestrianSignal.TileEntityPedestrianSignal::new,
-            BlockInit.PEDESTRIAN_SIGNAL::get
-    );
-
     public static final BlockEntityTypeRegistryObject<DispatchSignal.TileEntityDispatchSignal> DISPATCH_SIGNAL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -464,6 +401,4 @@ public class BlockEntityTypeInit {
             BlockInit.STEEL_NSE_ROOF_CLOCK::get,
             BlockInit.YELLOW_NSE_ROOF_CLOCK::get
     );
-
-
 }

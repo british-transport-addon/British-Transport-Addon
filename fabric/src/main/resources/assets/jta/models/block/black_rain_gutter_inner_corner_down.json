@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/rain_gutter_inner_corner_down",
-  "textures": {
-    "color": "jta:block/black"
-  }
-}

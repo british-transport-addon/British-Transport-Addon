@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/station_handrail",
-  "textures": {
-    "color": "jta:block/blue"
-  }
-}

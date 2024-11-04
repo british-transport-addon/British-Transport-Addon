@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "jta:block/silty_bricks",
-    "side": "jta:block/silty_bricks",
-    "top": "jta:block/silty_bricks"
-  }
-}

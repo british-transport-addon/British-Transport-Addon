@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/roadwork_barrier",
-  "textures": {
-    "color": "jta:block/dark_blue"
-  }
-}

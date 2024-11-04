@@ -1,0 +1,10 @@
+# Made in Blockbench 4.10.4
+newmtl m_0ec5c71f-e96b-9522-3e88-b26feeb053e8
+map_Kd red.png
+newmtl m_534c7ce0-801f-a47e-dd0c-d7d794c1f46e
+map_Kd off_white.png
+newmtl m_6fb171a3-b7be-6f45-bb3c-8062f9391e01
+map_Kd black.png
+newmtl m_9747993d-5e20-a23c-478d-144173183083
+map_Kd steel.png
+newmtl none

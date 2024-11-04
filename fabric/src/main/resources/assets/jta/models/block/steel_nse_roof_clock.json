@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/nse_roof_clock",
-  "textures": {
-    "color": "jta:block/steel"
-  }
-}

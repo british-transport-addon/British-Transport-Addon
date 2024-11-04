@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/black_medium_bollard",
-  "textures": {
-    "color": "jta:block/red"
-  }
-}

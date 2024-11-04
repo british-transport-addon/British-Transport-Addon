@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "jta:block/asphalt",
-    "side": "jta:block/asphalt",
-    "top": "jta:block/asphalt"
-  }
-}

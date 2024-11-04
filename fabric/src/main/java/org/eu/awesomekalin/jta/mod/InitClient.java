@@ -6,9 +6,9 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
+import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight1Aspect;
+import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight2Aspect;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
-import org.eu.awesomekalin.jta.mod.render.street.*;
-import org.eu.awesomekalin.jta.mod.render.street.fuel.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
@@ -20,6 +20,21 @@ public final class InitClient {
 
     public static void init() {
         REGISTRY_CLIENT.setupPackets(new Identifier(Init.MOD_ID, "packet"));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
+                dispatcher -> new RenderDigitalSignalLight1Aspect<>(
+                        dispatcher,
+                        0xFF00FF00
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT,
+                dispatcher -> new RenderDigitalSignalLight2Aspect<>(
+                        dispatcher,
+                        false,
+                        0xFF00FF00
+                ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCK,
@@ -327,13 +342,7 @@ public final class InitClient {
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
                 ));
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.PEDESTRIAN_SIGNAL,
-                dispatcher -> new PedestrianSignalRender<>(
-                        dispatcher,
-                        false,
-                        0x90EE90
-                ));
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
                 dispatcher -> new SimpleStationSignRender<>(
@@ -389,103 +398,6 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.ASDA_FUEL_SIGN_TOP,
-                dispatcher -> new AsdaFuelStationPriceBoardTopRender<>(
-                        dispatcher,
-                        12 / 16F,
-                        (0.2F / 8) * 1.4F,
-                        -.4F,
-                        -.65f,
-                        .16F,
-                        0,
-                        0xFFFFFFFF,
-                        Style.getDefaultFontIdMapped()
-                ));
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.SAINSBURYS_FUEL_SIGN_TOP,
-                dispatcher -> new SainsburysFuelStationPriceBoardTopRender<>(
-                        dispatcher,
-                        12 / 16F,
-                        (0.2F / 8) * 1.4F,
-                        -.4F,
-                        -.65f,
-                        .16F,
-                        0,
-                        0xFFFFFFFF,
-                        Style.getDefaultFontIdMapped()
-                ));
-
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.MORRISONS_FUEL_SIGN_TOP,
-                dispatcher -> new MorrisonsFuelStationPriceBoardTopRender<>(
-                        dispatcher,
-                        12 / 16F,
-                        (0.2F / 8) * 1.4F,
-                        .4F,
-                        -.65f,
-                        .16F,
-                        0,
-                        0xFF008000,
-                        Style.getDefaultFontIdMapped()
-                ));
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.TESCO_FUEL_SIGN_TOP,
-                dispatcher -> new TescoFuelStationPriceBoardTopRender<>(
-                        dispatcher,
-                        12 / 16F,
-                        (0.2F / 8) * 1.4F,
-                        .4F,
-                        -.65f,
-                        .16F,
-                        0,
-                        0xB33C2D,
-                        Style.getDefaultFontIdMapped()
-                ));
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.SHELL_FUEL_SIGN_TOP,
-                dispatcher -> new ShellFuelStationPriceBoardTopRender<>(
-                        dispatcher,
-                        12 / 16F,
-                        (0.2F / 8) * 1.4F,
-                        -.4F,
-                        -.65f,
-                        .16F,
-                        0,
-                        0xB33C2D,
-                        Style.getDefaultFontIdMapped()
-                ));
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF, BPPetrolRoofRender::new);
-        //REGISTRY_CLIENT.registerBlockEntityRenderer(BlockEntityTypeInit.BP_PETROL_ROOF_CORNER, BPPetrolRoofCornerRender::new);
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_FUEL_SIGN_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_FUEL_SIGN_BOTTOM);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_FUEL_SIGN_BOTTOM);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_FUEL_SIGN_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_FUEL_SIGN_BOTTOM);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_FUEL_SIGN_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_FUEL_SIGN_BOTTOM);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_FUEL_SIGN_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_FUEL_SIGN_BOTTOM);
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MORRISONS_PETROL_ROOF_CORNER);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SAINSBURYS_PETROL_ROOF_LOGO);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ESSO_PETROL_ROOF_CORNER);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_PETROL_ROOF_CORNER_LOGO);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.ASDA_PETROL_ROOF_CORNER_INFO);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO_EXTRA);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.TESCO_PETROL_ROOF_LOGO_EXPRESS);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BP_PETROL_ROOF_LOGO);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.SHELL_PETROL_ROOF_LOGO);
-
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_BUSES);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_COACHES);
@@ -594,46 +506,6 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_WALL_RIVER);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MERSEYSIDE_SIGN_SQUARE_RAIL);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_ALT);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DRAIN_CIRCLE);
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.AMAZON_PARCEL_COLLECTION_LOCKER);
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.ADT_ALARM);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WALL_DEFIBRILATOR);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_GARAGE_DOOR_WINDOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_GARAGE_DOOR);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STEEL_GARAGE_DOOR_WINDOW);
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_FULL);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_SQUARE);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_SEGMENTED);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_WINDOW_SEGMENTED_TOP);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.CREAMY_ENGLISH_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.DARK_ENGLISH_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.ENGLISH_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LARGE_DARK_GRAY_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LARGE_SLATE_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.SANDY_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.SILTY_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LIME_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BLACK_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.WHITE_BRICKS_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.SMOOTH_MIXED_STONE_WHITE_WINDOW_4_POINT_EXTRU);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STONE_PAVER_WHITE_WINDOW_4_POINT_EXTRU);
-
-
-
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT_OFF);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.STREET_LIGHT_FLICKER);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT_OFF);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.LED_STREET_LIGHT_FLICKER);
-
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.UNDERGROUND_SQUARE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.OVERGROUND_SQUARE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.METROLINK_SIGN);
@@ -642,15 +514,6 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BEE_INTERCHANGE_STATION_SIGN);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.UNDERGROUND_PLATFORM_END);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.GRAY_BOLLARD);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT_NO_ENTRY);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_ROAD_BOLLARD_ALT_BLACK);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BLUE_TRASH_BIN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TRASH_BIN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MANCHESTER_TRASH_BIN);
-        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.MANCHESTER_TRASH_BIN_ALT);
 
         REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
 

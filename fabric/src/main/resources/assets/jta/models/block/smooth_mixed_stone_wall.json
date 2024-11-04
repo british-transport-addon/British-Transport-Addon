@@ -1,6 +1,0 @@
-{
-  "textures": {
-    "all": "jta:block/smooth_mixed_stone"
-  },
-  "parent": "jta:block/parent/wall_cube"
-}

@@ -1,0 +1,247 @@
+{
+  "steel_pole": {
+    "name": "British Steel Pole",
+    "model": "mtrsteamloco:eyecandies/steel_pole.obj",
+    "flipV": true
+  },
+  "steel_light_pole": {
+    "name": "British Steel Light Pole",
+    "model": "mtrsteamloco:eyecandies/british_steel_light_pole.obj",
+    "flipV": true
+  },
+  "steel_column": {
+    "name": "British Steel Column",
+    "model": "mtrsteamloco:eyecandies/steel_column.obj",
+    "flipV": true
+  },
+  "british_rail_buffer": {
+    "name": "British Rail Buffer",
+    "model": "mtrsteamloco:eyecandies/british_rail_buffer.obj",
+    "flipV": true
+  },
+  "single_signal_pole": {
+    "name": "British Single Signal Pole",
+    "model": "mtrsteamloco:eyecandies/single_signal_pole.obj",
+    "flipV": true
+  },
+  "british_signal_piece": {
+    "name": "British Signal Piece",
+    "model": "mtrsteamloco:eyecandies/british_signal_piece.obj",
+    "flipV": true
+  },
+  "speed_direction_left_small": {
+    "name": "British Speed Direction Left (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_left_small.obj",
+    "flipV": true
+  },
+  "speed_direction_right_small": {
+    "name": "British Speed Direction Right (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_right_small.obj",
+    "flipV": true
+  },
+  "electric_shock_risk_small": {
+    "name": "Electric Shock Risk (Small)",
+    "model": "mtrsteamloco:eyecandies/electric_shock_risk_small.obj",
+    "flipV": true
+  },
+  "danger_overhead_wires_small": {
+    "name": "Danger Overhead Wires (Small)",
+    "model": "mtrsteamloco:eyecandies/danger_overhead_wires_small.obj",
+    "flipV": true
+  },
+  "speed_5_large": {
+    "name": "British Speed 5 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_5_large.obj",
+    "flipV": true
+  },
+  "speed_5_medium": {
+    "name": "British Speed 5 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_5_medium.obj",
+    "flipV": true
+  },
+  "speed_5_small": {
+    "name": "British Speed 5 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_5_small.obj",
+    "flipV": true
+  },
+  "speed_10_large": {
+    "name": "British Speed 10 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_10_large.obj",
+    "flipV": true
+  },
+  "speed_10_medium": {
+    "name": "British Speed 10 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_10_medium.obj",
+    "flipV": true
+  },
+  "speed_10_small": {
+    "name": "British Speed 10 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_10_small.obj",
+    "flipV": true
+  },
+  "speed_15_large": {
+    "name": "British Speed 15 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_15_large.obj",
+    "flipV": true
+  },
+  "speed_15_medium": {
+    "name": "British Speed 15 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_15_medium.obj",
+    "flipV": true
+  },
+  "speed_15_small": {
+    "name": "British Speed 15 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_15_small.obj",
+    "flipV": true
+  },
+  "speed_20_large": {
+    "name": "British Speed 20 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_20_large.obj",
+    "flipV": true
+  },
+  "speed_20_medium": {
+    "name": "British Speed 20 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_20_medium.obj",
+    "flipV": true
+  },
+  "speed_20_small": {
+    "name": "British Speed 20 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_20_small.obj",
+    "flipV": true
+  },
+  "speed_40_large": {
+    "name": "British Speed 40 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_40_large.obj",
+    "flipV": true
+  },
+  "speed_40_medium": {
+    "name": "British Speed 40 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_40_medium.obj",
+    "flipV": true
+  },
+  "speed_40_small": {
+    "name": "British Speed 40 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_40_small.obj",
+    "flipV": true
+  },
+  "speed_60_large": {
+    "name": "British Speed 60 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_60_large.obj",
+    "flipV": true
+  },
+  "speed_60_medium": {
+    "name": "British Speed 60 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_60_medium.obj",
+    "flipV": true
+  },
+  "limited_clearance_large": {
+    "name": "Limited Clearance (Large)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_large.obj",
+    "flipV": true
+  },
+  "limited_clearance_medium": {
+    "name": "Limited Clearance (Medium)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_medium.obj",
+    "flipV": true
+  },
+  "limited_clearance_small": {
+    "name": "Limited Clearance (Small)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_small.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_large": {
+    "name": "Limited Clearance Rusty (Large)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_large.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_medium": {
+    "name": "Limited Clearance Rusty (Medium)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_medium.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_small": {
+    "name": "Limited Clearance Rusty (Small)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_small.obj",
+    "flipV": true
+  },
+  "no_refuges_large": {
+    "name": "No Refuges (Large)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_large.obj",
+    "flipV": true
+  },
+  "no_refuges_medium": {
+    "name": "No Refuges (Medium)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_medium.obj",
+    "flipV": true
+  },
+  "no_refuges_small": {
+    "name": "No Refuges (Small)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_small.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_large": {
+    "name": "No Refuges Rusty (Large)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_large.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_medium": {
+    "name": "No Refuges Rusty (Medium)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_medium.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_small": {
+    "name": "No Refuges Rusty (Small)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_small.obj",
+    "flipV": true
+  },
+  "route_a": {
+    "name": "British Route A",
+    "model": "mtrsteamloco:eyecandies/route_a.obj",
+    "flipV": true
+  },
+  "route_b": {
+    "name": "British Route B",
+    "model": "mtrsteamloco:eyecandies/route_b.obj",
+    "flipV": true
+  },
+  "route_c": {
+    "name": "British Route C",
+    "model": "mtrsteamloco:eyecandies/route_c.obj",
+    "flipV": true
+  },
+  "route_d": {
+    "name": "British Route D",
+    "model": "mtrsteamloco:eyecandies/route_d.obj",
+    "flipV": true
+  },
+  "route_e": {
+    "name": "British Route E",
+    "model": "mtrsteamloco:eyecandies/route_e.obj",
+    "flipV": true
+  },
+  "route_f": {
+    "name": "British Route F",
+    "model": "mtrsteamloco:eyecandies/route_f.obj",
+    "flipV": true
+  },
+  "route_g": {
+    "name": "British Route G",
+    "model": "mtrsteamloco:eyecandies/route_g.obj",
+    "flipV": true
+  },
+  "route_h": {
+    "name": "British Route H",
+    "model": "mtrsteamloco:eyecandies/route_h.obj",
+    "flipV": true
+  },
+  "route_x": {
+    "name": "British Route X",
+    "model": "mtrsteamloco:eyecandies/route_x.obj",
+    "flipV": true
+  },
+  "gantry_10": {
+    "name": "Gantry(10)",
+    "model": "mtrsteamloco:eyecandies/gantry_10.obj",
+    "flipV": true
+  }
+}

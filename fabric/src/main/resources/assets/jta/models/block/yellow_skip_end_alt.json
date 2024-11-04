@@ -1,6 +1,0 @@
-{
-  "parent": "jta:block/skip_end_alt",
-  "textures": {
-    "0": "jta:block/yellow"
-  }
-}

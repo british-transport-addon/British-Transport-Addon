@@ -18,7 +18,6 @@ public class Init {
         BlockInit.INIT();
         ItemInit.INIT();
         SignInit.INIT();
-        FenceInit.INIT();
         BlockEntityTypeInit.INIT();
         EntityTypeInit.INIT();
         CreativeTabInit.INIT();

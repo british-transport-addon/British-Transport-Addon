@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "jta:block/large_dark_gray_bricks",
-    "side": "jta:block/large_dark_gray_bricks",
-    "top": "jta:block/large_dark_gray_bricks"
-  }
-}
