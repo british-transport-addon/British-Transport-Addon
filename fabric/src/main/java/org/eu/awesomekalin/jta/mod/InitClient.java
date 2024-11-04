@@ -6,6 +6,7 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
+import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderBannerRepeaterSignal;
 import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight1Aspect;
 import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight2Aspect;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
@@ -20,6 +21,13 @@ public final class InitClient {
 
     public static void init() {
         REGISTRY_CLIENT.setupPackets(new Identifier(Init.MOD_ID, "packet"));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BANNER_REPEATER_SIGNAL,
+                dispatcher -> new RenderBannerRepeaterSignal<>(
+                        dispatcher,
+                        0xFF29D28F
+                ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
