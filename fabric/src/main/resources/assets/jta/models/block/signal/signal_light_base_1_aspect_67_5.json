@@ -2,20 +2,20 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"particle": "jta:block/black"
+		"particle": "block/coal_block"
 	},
 	"elements": [
 		{
-			"from": [4, 0, 5],
-			"to": [12, 8, 11],
+			"from": [5, 0, 4],
+			"to": [11, 8, 12],
 			"rotation": {"angle": 22.5, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
-				"north": {"uv": [4, 8, 12, 16], "texture": "#particle"},
-				"east": {"uv": [5, 8, 11, 16], "texture": "#particle"},
-				"south": {"uv": [4, 8, 12, 16], "texture": "#particle"},
-				"west": {"uv": [5, 8, 11, 16], "texture": "#particle"},
-				"up": {"uv": [4, 5, 12, 11], "texture": "#particle"},
-				"down": {"uv": [4, 5, 12, 11], "texture": "#particle", "cullface": "down"}
+				"north": {"uv": [5, 8, 11, 16], "texture": "#particle"},
+				"east": {"uv": [4, 8, 12, 16], "texture": "#particle"},
+				"south": {"uv": [5, 8, 11, 16], "texture": "#particle"},
+				"west": {"uv": [4, 8, 12, 16], "texture": "#particle"},
+				"up": {"uv": [5, 4, 11, 12], "texture": "#particle"},
+				"down": {"uv": [5, 4, 11, 12], "texture": "#particle", "cullface": "down"}
 			}
 		}
 	]
