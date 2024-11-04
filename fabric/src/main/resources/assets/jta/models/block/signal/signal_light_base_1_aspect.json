@@ -7,12 +7,12 @@
 	"elements": [
 		{
 			"from": [4, 0, 5],
-			"to": [12, 12, 11],
+			"to": [12, 8, 11],
 			"faces": {
-				"north": {"uv": [4, 4, 12, 16], "texture": "#particle"},
-				"east": {"uv": [5, 4, 11, 16], "texture": "#particle"},
-				"south": {"uv": [4, 4, 12, 16], "texture": "#particle"},
-				"west": {"uv": [5, 4, 11, 16], "texture": "#particle"},
+				"north": {"uv": [4, 8, 12, 16], "texture": "#particle"},
+				"east": {"uv": [5, 8, 11, 16], "texture": "#particle"},
+				"south": {"uv": [4, 8, 12, 16], "texture": "#particle"},
+				"west": {"uv": [5, 8, 11, 16], "texture": "#particle"},
 				"up": {"uv": [4, 5, 12, 11], "texture": "#particle"},
 				"down": {"uv": [4, 5, 12, 11], "texture": "#particle", "cullface": "down"}
 			}
