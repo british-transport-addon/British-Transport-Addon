@@ -19,6 +19,31 @@
     "model": "mtrsteamloco:eyecandies/british_rail_buffer.obj",
     "flipV": true
   },
+  "eletrical_box_graffiti_1": {
+    "name": "Electrical Box With Graffiti 1",
+    "model": "mtrsteamloco:eyecandies/eletrical_box_graffiti_1.obj",
+    "flipV": true
+  },
+  "eletrical_box_graffiti_2": {
+    "name": "Electrical Box With Graffiti 2",
+    "model": "mtrsteamloco:eyecandies/eletrical_box_graffiti_2.obj",
+    "flipV": true
+  },
+  "large_eletrical_box_graffiti_1": {
+    "name": "Large Electrical Box With Graffiti 1",
+    "model": "mtrsteamloco:eyecandies/large_eletrical_box_graffiti_1.obj",
+    "flipV": true
+  },
+  "tpws_signal": {
+    "name": "TPWS Signal Magnets",
+    "model": "mtrsteamloco:eyecandies/tpws_signal.obj",
+    "flipV": true
+  },
+  "oss_sensor": {
+    "name": "TPWS Overspeed Sensor",
+    "model": "mtrsteamloco:eyecandies/oss_sensor.obj",
+    "flipV": true
+  },
   "single_signal_pole": {
     "name": "British Single Signal Pole",
     "model": "mtrsteamloco:eyecandies/single_signal_pole.obj",
