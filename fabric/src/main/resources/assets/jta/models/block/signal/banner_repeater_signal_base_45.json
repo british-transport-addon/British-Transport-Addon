@@ -2,7 +2,6 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"1": "jta:block/steel",
 		"particle": "jta:block/black"
 	},
 	"elements": [
@@ -17,58 +16,6 @@
 				"west": {"uv": [5, 8, 11, 16], "texture": "#particle"},
 				"up": {"uv": [4, 5, 12, 11], "texture": "#particle"},
 				"down": {"uv": [4, 5, 12, 11], "texture": "#particle", "cullface": "down"}
-			}
-		},
-		{
-			"from": [8.9, 0, 7.25],
-			"to": [21.9, 12.5, 7.75],
-			"rotation": {"angle": -45, "axis": "y", "origin": [7.4, 0, -3.25]},
-			"faces": {
-				"north": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"east": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"south": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"west": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"up": {"uv": [4, 5, 12, 11], "texture": "#1"},
-				"down": {"uv": [4, 5, 12, 11], "texture": "#1", "cullface": "down"}
-			}
-		},
-		{
-			"from": [5.75, 12.25, 6.25],
-			"to": [17.75, 12.5, 16.75],
-			"rotation": {"angle": -45, "axis": "y", "origin": [16.25, 0, 5.75]},
-			"faces": {
-				"north": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"east": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"south": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"west": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"up": {"uv": [4, 5, 12, 11], "texture": "#1"},
-				"down": {"uv": [4, 5, 12, 11], "texture": "#1", "cullface": "down"}
-			}
-		},
-		{
-			"from": [17.75, 0, 6.25],
-			"to": [18.25, 12.5, 16.75],
-			"rotation": {"angle": -45, "axis": "y", "origin": [16.25, 0, 5.75]},
-			"faces": {
-				"north": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"east": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"south": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"west": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"up": {"uv": [4, 5, 12, 11], "texture": "#1"},
-				"down": {"uv": [4, 5, 12, 11], "texture": "#1", "cullface": "down"}
-			}
-		},
-		{
-			"from": [5.25, 0, 6.25],
-			"to": [5.75, 12.5, 16.75],
-			"rotation": {"angle": -45, "axis": "y", "origin": [16.25, 0, 5.75]},
-			"faces": {
-				"north": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"east": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"south": {"uv": [4, 8, 12, 16], "texture": "#1"},
-				"west": {"uv": [5, 8, 11, 16], "texture": "#1"},
-				"up": {"uv": [4, 5, 12, 11], "texture": "#1"},
-				"down": {"uv": [4, 5, 12, 11], "texture": "#1", "cullface": "down"}
 			}
 		}
 	]
