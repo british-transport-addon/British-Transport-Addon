@@ -74,6 +74,16 @@
     "model": "mtrsteamloco:eyecandies/electric_shock_risk_small.obj",
     "flipV": true
   },
+  "banner_repeater_plate": {
+    "name": "Banner Signal Repeater Plate",
+    "model": "mtrsteamloco:eyecandies/banner_repeater_plate.obj",
+    "flipV": true
+  },
+  "signal_plate": {
+    "name": "Signal Plate",
+    "model": "mtrsteamloco:eyecandies/signal_plate.obj",
+    "flipV": true
+  },
   "danger_overhead_wires_small": {
     "name": "Danger Overhead Wires (Small)",
     "model": "mtrsteamloco:eyecandies/danger_overhead_wires_small.obj",
@@ -162,6 +172,31 @@
   "speed_60_medium": {
     "name": "British Speed 60 (Medium)",
     "model": "mtrsteamloco:eyecandies/speed_60_medium.obj",
+    "flipV": true
+  },
+  "speed_70_large": {
+    "name": "British Speed 70 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_70_large.obj",
+    "flipV": true
+  },
+  "speed_75_large": {
+    "name": "British Speed 75 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_75_large.obj",
+    "flipV": true
+  },
+  "speed_80_large": {
+    "name": "British Speed 80 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_80_large.obj",
+    "flipV": true
+  },
+  "speed_100_large": {
+    "name": "British Speed 100 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_100_large.obj",
+    "flipV": true
+  },
+  "speed_110_large": {
+    "name": "British Speed 110 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_110_large.obj",
     "flipV": true
   },
   "limited_clearance_large": {
