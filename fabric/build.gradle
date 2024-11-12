@@ -47,7 +47,7 @@ java {
 }
 
 tasks.register("setupFiles") {
-    if (!minecraftVersion.trim().equalsIgnoreCase('1.17.1') && !minecraftVersion.trim().equalsIgnoreCase('1.18.2') && !minecraftVersion.trim().equalsIgnoreCase('1.19.2')) {
+    if (!minecraftVersion.trim().equalsIgnoreCase('1.16.5') && !minecraftVersion.trim().equalsIgnoreCase('1.17.1') && !minecraftVersion.trim().equalsIgnoreCase('1.18.2') && !minecraftVersion.trim().equalsIgnoreCase('1.19.2')) {
         copy {
             outputs.upToDateWhen { false }
             from "src/main/fabric.mod.template.json"
@@ -96,7 +96,7 @@ tasks.register("setupFiles") {
         }
     }
 
-    if (minecraftVersion.trim().equalsIgnoreCase("1.18.2") || minecraftVersion.trim().equalsIgnoreCase("1.17.1")) {
+    if (minecraftVersion.trim().equalsIgnoreCase("1.18.2") || minecraftVersion.trim().equalsIgnoreCase("1.17.1") || minecraftVersion.trim().equalsIgnoreCase("1.16.5")) {
         delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
 
         copy {
