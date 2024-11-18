@@ -1,4 +1,15 @@
 {
+  "rails": {
+    "name": "National Rail Pile",
+    "model": "mtrsteamloco:eyecandies/rails.obj",
+    "flipV": true
+  },
+  "tresspass_small": {
+    "name": "Trespass Small",
+    "model": "mtrsteamloco:eyecandies/tresspass_small.obj",
+    "flipV": true
+  },
+
   "s_car_stop": {
     "name": "British S Car Stop Marker",
     "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
