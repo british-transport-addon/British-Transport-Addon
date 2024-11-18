@@ -1,4 +1,50 @@
 {
+  "s_car_stop": {
+    "name": "British S Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
+    "flipV": true
+  },
+  "2_car_stop": {
+    "name": "British 2 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/2_car_stop.obj",
+    "flipV": true
+  },
+  "3_car_stop": {
+    "name": "British 3 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/3_car_stop.obj",
+    "flipV": true
+  },
+  "4_car_stop": {
+    "name": "British 4 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/4_car_stop.obj",
+    "flipV": true
+  },
+  "5_car_stop": {
+    "name": "British 5 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/5_car_stop.obj",
+    "flipV": true
+  },
+  "6_car_stop": {
+    "name": "British 6 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/6_car_stop.obj",
+    "flipV": true
+  },
+  "6_8_car_stop": {
+    "name": "British 6-8 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/6_8_car_stop.obj",
+    "flipV": true
+  },
+  "9_12_car_stop": {
+    "name": "British 9-12 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/9_12_car_stop.obj",
+    "flipV": true
+  },
+  "tram": {
+    "name": "British Tram Sign",
+    "model": "mtrsteamloco:eyecandies/tram.obj",
+    "flipV": true
+  },
+
   "steel_pole": {
     "name": "British Steel Pole",
     "model": "mtrsteamloco:eyecandies/steel_pole.obj",
