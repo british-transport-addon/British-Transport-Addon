@@ -1,4 +1,14 @@
 {
+  "bridge_authority_medium": {
+    "name": "Bridge Authority Medium",
+    "model": "mtrsteamloco:eyecandies/bridge_authority_medium.obj",
+    "flipV": true
+  },
+  "bridge_authority_large": {
+    "name": "Bridge Authority Large",
+    "model": "mtrsteamloco:eyecandies/bridge_authority_large.obj",
+    "flipV": true
+  },
   "rails": {
     "name": "National Rail Pile",
     "model": "mtrsteamloco:eyecandies/rails.obj",
@@ -53,6 +63,11 @@
   "tram": {
     "name": "British Tram Sign",
     "model": "mtrsteamloco:eyecandies/tram.obj",
+    "flipV": true
+  },
+  "tramway": {
+    "name": "British Tramway Sign",
+    "model": "mtrsteamloco:eyecandies/tramway.obj",
     "flipV": true
   },
 
