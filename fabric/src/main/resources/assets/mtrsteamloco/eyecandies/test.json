@@ -35,6 +35,11 @@
     "flipV": true
   },
 
+  "pids_pole": {
+    "name": "PIDS Pole",
+    "model": "mtrsteamloco:eyecandies/pids_pole.obj",
+    "flipV": true
+  },
   "s_car_stop": {
     "name": "British S Car Stop Marker",
     "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
