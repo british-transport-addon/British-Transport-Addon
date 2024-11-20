@@ -9,6 +9,16 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "do_not_cross": {
+    "name": "Do Not Cross Sign",
+    "model": "mtrsteamloco:eyecandies/do_not_cross.obj",
+    "flipV": true
+  },
+  "cctv_in_operation": {
+    "name": "CCTV In Operation Sign",
+    "model": "mtrsteamloco:eyecandies/cctv_in_operation.obj",
+    "flipV": true
+  },
   "aws": {
     "name": "AWS",
     "model": "mtrsteamloco:eyecandies/aws.obj",
@@ -184,6 +194,11 @@
   "danger_overhead_wires_small": {
     "name": "Danger Overhead Wires (Small)",
     "model": "mtrsteamloco:eyecandies/danger_overhead_wires_small.obj",
+    "flipV": true
+  },
+  "danger_overhead_wires_large": {
+    "name": "Danger Overhead Wires (Large)",
+    "model": "mtrsteamloco:eyecandies/danger_overhead_wires_large.obj",
     "flipV": true
   },
   "speed_5_large": {
