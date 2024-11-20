@@ -40,6 +40,11 @@
     "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
     "flipV": true
   },
+  "s_car_stop_380": {
+    "name": "British S Car Stop (Class 380) Marker",
+    "model": "mtrsteamloco:eyecandies/s_car_stop_380.obj",
+    "flipV": true
+  },
   "2_car_stop": {
     "name": "British 2 Car Stop Marker",
     "model": "mtrsteamloco:eyecandies/2_car_stop.obj",
