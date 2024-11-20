@@ -1,4 +1,14 @@
 {
+  "scotrail_station_light": {
+    "name": "ScotRail Station Light",
+    "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
+    "flipV": true
+  },
+  "newton": {
+    "name": "ScotRail Newton Station Sign",
+    "model": "mtrsteamloco:eyecandies/newton.obj",
+    "flipV": true
+  },
   "bridge_authority_medium": {
     "name": "Bridge Authority Medium",
     "model": "mtrsteamloco:eyecandies/bridge_authority_medium.obj",
