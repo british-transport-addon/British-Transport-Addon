@@ -9,6 +9,11 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "aws": {
+    "name": "AWS",
+    "model": "mtrsteamloco:eyecandies/aws.obj",
+    "flipV": true
+  },
   "bridge_authority_medium": {
     "name": "Bridge Authority Medium",
     "model": "mtrsteamloco:eyecandies/bridge_authority_medium.obj",
