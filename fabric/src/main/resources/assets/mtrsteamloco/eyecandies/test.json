@@ -19,6 +19,16 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "cathcart": {
+    "name": "ScotRail Cathcart Station Sign",
+    "model": "mtrsteamloco:eyecandies/cathcart.obj",
+    "flipV": true
+  },
+  "cathcart_info": {
+    "name": "ScotRail Cathcart Station Info Sign",
+    "model": "mtrsteamloco:eyecandies/cathcart_info.obj",
+    "flipV": true
+  },
   "do_not_cross": {
     "name": "Do Not Cross Sign",
     "model": "mtrsteamloco:eyecandies/do_not_cross.obj",
