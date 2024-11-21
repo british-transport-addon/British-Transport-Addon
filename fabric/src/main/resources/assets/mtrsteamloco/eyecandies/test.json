@@ -525,5 +525,10 @@
     "name": "Gantry(10)",
     "model": "mtrsteamloco:eyecandies/gantry_10.obj",
     "flipV": true
+  },
+  "track_switch": {
+    "name": "Track Switch",
+    "model": "mtrsteamloco:eyecandies/track_switch.obj",
+    "flipV": true
   }
 }
