@@ -4,6 +4,16 @@
     "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
     "flipV": true
   },
+  "scotrail_fence": {
+    "name": "ScotRail Fence",
+    "model": "mtrsteamloco:eyecandies/scotrail_fence.obj",
+    "flipV": true
+  },
+  "scotrail_fence_end": {
+    "name": "ScotRail Fence End",
+    "model": "mtrsteamloco:eyecandies/scotrail_fence_end.obj",
+    "flipV": true
+  },
   "newton": {
     "name": "ScotRail Newton Station Sign",
     "model": "mtrsteamloco:eyecandies/newton.obj",
