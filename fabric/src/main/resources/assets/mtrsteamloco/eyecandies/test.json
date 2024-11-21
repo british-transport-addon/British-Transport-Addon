@@ -9,6 +9,16 @@
     "model": "mtrsteamloco:eyecandies/scotrail_fence.obj",
     "flipV": true
   },
+  "scotrail_cctv_zone": {
+    "name": "ScotRail CCTV Zone Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_cctv_zone.obj",
+    "flipV": true
+  },
+  "scotrail_cctv_warning": {
+    "name": "ScotRail CCTV Warning Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_cctv_warning.obj",
+    "flipV": true
+  },
   "scotrail_fence_end": {
     "name": "ScotRail Fence End",
     "model": "mtrsteamloco:eyecandies/scotrail_fence_end.obj",
@@ -47,6 +57,11 @@
   "newton": {
     "name": "ScotRail Newton Station Sign",
     "model": "mtrsteamloco:eyecandies/newton.obj",
+    "flipV": true
+  },
+  "uddingston": {
+    "name": "ScotRail Uddingston Station Sign",
+    "model": "mtrsteamloco:eyecandies/uddingston.obj",
     "flipV": true
   },
   "cathcart": {
