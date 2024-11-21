@@ -55,6 +55,11 @@
     "model": "mtrsteamloco:eyecandies/pids_pole.obj",
     "flipV": true
   },
+  "sleeper_car_stop": {
+    "name": "British Sleeper Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/sleeper_car_stop.obj",
+    "flipV": true
+  },
   "s_car_stop": {
     "name": "British S Car Stop Marker",
     "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
@@ -204,6 +209,16 @@
   "danger_overhead_wires_large": {
     "name": "Danger Overhead Wires (Large)",
     "model": "mtrsteamloco:eyecandies/danger_overhead_wires_large.obj",
+    "flipV": true
+  },
+  "level_crossing": {
+    "name": "Level Crossing Sign",
+    "model": "mtrsteamloco:eyecandies/level_crossing.obj",
+    "flipV": true
+  },
+  "stop_look_listen": {
+    "name": "Stop Look Listen Sign",
+    "model": "mtrsteamloco:eyecandies/stop_look_listen.obj",
     "flipV": true
   },
   "speed_5_large": {
