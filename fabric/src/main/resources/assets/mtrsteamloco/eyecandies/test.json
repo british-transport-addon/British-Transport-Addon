@@ -59,6 +59,11 @@
     "model": "mtrsteamloco:eyecandies/scotrail_platform_6.obj",
     "flipV": true
   },
+  "scotrail_buy_before_you_board": {
+    "name": "ScotRail Buy Before You Board",
+    "model": "mtrsteamloco:eyecandies/scotrail_buy_before_you_board.obj",
+    "flipV": true
+  },
   "newton": {
     "name": "ScotRail Newton Station Sign",
     "model": "mtrsteamloco:eyecandies/newton.obj",
@@ -77,6 +82,16 @@
   "cathcart_info": {
     "name": "ScotRail Cathcart Station Info Sign",
     "model": "mtrsteamloco:eyecandies/cathcart_info.obj",
+    "flipV": true
+  },
+  "kirkhill": {
+    "name": "ScotRail Kirkhill Station Sign",
+    "model": "mtrsteamloco:eyecandies/kirkhill.obj",
+    "flipV": true
+  },
+  "kirkhill_info": {
+    "name": "ScotRail Kirkhill Station Info Sign",
+    "model": "mtrsteamloco:eyecandies/kirkhill_info.obj",
     "flipV": true
   },
   "do_not_cross": {
