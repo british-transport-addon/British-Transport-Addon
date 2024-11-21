@@ -44,6 +44,11 @@
     "model": "mtrsteamloco:eyecandies/tresspass_small.obj",
     "flipV": true
   },
+  "passenger_do_not_cross_line": {
+    "name": "Passenger Do Not Cross Line Medium",
+    "model": "mtrsteamloco:eyecandies/passenger_do_not_cross_line.obj",
+    "flipV": true
+  },
 
   "pids_pole": {
     "name": "PIDS Pole",
