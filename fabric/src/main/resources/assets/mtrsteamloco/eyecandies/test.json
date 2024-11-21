@@ -1,4 +1,9 @@
 {
+  "speaker": {
+    "name": "Station Speaker",
+    "model": "mtrsteamloco:eyecandies/speaker.obj",
+    "flipV": true
+  },
   "scotrail_station_light": {
     "name": "ScotRail Station Light",
     "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
