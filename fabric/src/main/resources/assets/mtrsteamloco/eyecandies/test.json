@@ -530,5 +530,15 @@
     "name": "Track Switch",
     "model": "mtrsteamloco:eyecandies/track_switch.obj",
     "flipV": true
+  },
+  "lineside_power_distributor": {
+    "name": "Lineside Power Distributor",
+    "model": "mtrsteamloco:eyecandies/lineside_power_distributor.obj",
+    "flipV": true
+  },
+  "anti_tresspass_rubber": {
+    "name": "Anti Trespass Rubber",
+    "model": "mtrsteamloco:eyecandies/anti_tresspass_rubber.obj",
+    "flipV": true
   }
 }
