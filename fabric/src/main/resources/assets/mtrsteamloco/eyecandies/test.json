@@ -14,6 +14,36 @@
     "model": "mtrsteamloco:eyecandies/scotrail_fence_end.obj",
     "flipV": true
   },
+  "scotrail_platform_1": {
+    "name": "ScotRail Platform 1",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_1.obj",
+    "flipV": true
+  },
+  "scotrail_platform_2": {
+    "name": "ScotRail Platform 2",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_2.obj",
+    "flipV": true
+  },
+  "scotrail_platform_3": {
+    "name": "ScotRail Platform 3",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_3.obj",
+    "flipV": true
+  },
+  "scotrail_platform_4": {
+    "name": "ScotRail Platform 4",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_4.obj",
+    "flipV": true
+  },
+  "scotrail_platform_5": {
+    "name": "ScotRail Platform 5",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_5.obj",
+    "flipV": true
+  },
+  "scotrail_platform_6": {
+    "name": "ScotRail Platform 6",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_6.obj",
+    "flipV": true
+  },
   "newton": {
     "name": "ScotRail Newton Station Sign",
     "model": "mtrsteamloco:eyecandies/newton.obj",
