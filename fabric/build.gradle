@@ -124,12 +124,12 @@ tasks.register("setupPotato") {
         into "src/main/resources/assets/mtr"
     }
 	
-	delete fileTree("src/main/resources/assets/mtrsteamloco")
+	delete fileTree("src/main/resources/assets/mtrsteamloco/rails")
 
     copy {
         outputs.upToDateWhen { true }
         from "../potatoTex/mtrsteamloco"
-        into "src/main/resources/assets/mtrsteamloco"
+        into "src/main/resources/assets/mtrsteamloco/rails"
     }
 }
 
