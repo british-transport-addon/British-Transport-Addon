@@ -74,6 +74,26 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "carmyle": {
+    "name": "ScotRail Carmyle Station Sign",
+    "model": "mtrsteamloco:eyecandies/carmyle.obj",
+    "flipV": true
+  },
+  "cambuslang": {
+    "name": "ScotRail Cambuslang Station Sign",
+    "model": "mtrsteamloco:eyecandies/cambuslang.obj",
+    "flipV": true
+  },
+  "mount_vernon": {
+    "name": "ScotRail Mount Vernon Station Sign",
+    "model": "mtrsteamloco:eyecandies/mount_vernon.obj",
+    "flipV": true
+  },
+  "mount_florida": {
+    "name": "ScotRail Mount Florida Station Sign",
+    "model": "mtrsteamloco:eyecandies/mount_florida.obj",
+    "flipV": true
+  },
   "rutherglen": {
     "name": "ScotRail Rutherglen Station Sign",
     "model": "mtrsteamloco:eyecandies/rutherglen.obj",
