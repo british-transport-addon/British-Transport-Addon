@@ -14,6 +14,11 @@
     "model": "mtrsteamloco:eyecandies/scotrail_fence.obj",
     "flipV": true
   },
+  "scotrail_station_car_park": {
+    "name": "ScotRail Station Car Park Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_station_car_park.obj",
+    "flipV": true
+  },
   "scotrail_cctv_zone": {
     "name": "ScotRail CCTV Zone Sign",
     "model": "mtrsteamloco:eyecandies/scotrail_cctv_zone.obj",

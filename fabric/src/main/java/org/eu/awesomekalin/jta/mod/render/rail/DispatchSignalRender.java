@@ -56,34 +56,24 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
             return;
         }
 
+        final BlockPos pos = entity.getPos2();
+        final BlockState state = world.getBlockState(pos);
+        final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
+        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
+        final int textWidth = GraphicsHolder.getTextWidth(roundelText);
 
-        final BlockPos position = BlockPos.fromLong(BlockPos.asLong(entity.getSignalX(), entity.getSignalY(), entity.getSignalZ()));
-        final BlockSignalBase.BlockEntityBase signalEntity = (BlockSignalBase.BlockEntityBase) world.getBlockEntity(position).data;
-        final ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderSignalBase.getAspects(position, BlockSignalBase.getAngle(world.getBlockState(position)));
-        final IntAVLTreeSet filterColors = signalEntity.getSignalColors(false);
-
-        if ((aspects.right().intStream().anyMatch(color -> filterColors.isEmpty() || filterColors.contains(color)) ? 1 : 0) == 0) {
-
-            final BlockPos pos = entity.getPos2();
-            final BlockState state = world.getBlockState(pos);
-            final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
-
-            final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
-            final int textWidth = GraphicsHolder.getTextWidth(roundelText);
-
-            final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-            storedMatrixTransformations.add(graphicsHolderNew -> {
-                graphicsHolderNew.rotateYDegrees(-facing.asRotation());
-                graphicsHolderNew.rotateZDegrees(180);
-                graphicsHolderNew.rotateYDegrees(180);
-            });
-            MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
-                storedMatrixTransformations.transform(graphicsHolderNew, offset);
-                render(graphicsHolderNew, roundelText, textWidth, light);
-                graphicsHolderNew.pop();
-            });
-        }
+        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+        storedMatrixTransformations.add(graphicsHolderNew -> {
+            graphicsHolderNew.rotateYDegrees(-facing.asRotation());
+            graphicsHolderNew.rotateZDegrees(180);
+            graphicsHolderNew.rotateYDegrees(180);
+        });
+        MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
+            storedMatrixTransformations.transform(graphicsHolderNew, offset);
+            render(graphicsHolderNew, roundelText, textWidth, light);
+            graphicsHolderNew.pop();
+        });
     }
 
     private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {
