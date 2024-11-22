@@ -243,21 +243,6 @@ public final class InitClient {
         );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
-                BlockEntityTypeInit.PLATFORM_NUMBER_SIGN,
-                dispatcher -> new PlatformNumberSignRender<>(
-                        dispatcher,
-                        8 / 16F,
-                        0.2F / 2,
-                        -.3F,
-                        .05F,
-                        .075F,
-                        0,
-                        0xFF0F0F0F,
-                        Style.getDefaultFontIdMapped()
-                )
-        );
-
-        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.MANCHESTER_SIGN_SQUARE,
                 dispatcher -> new ManchesterSignSquareRender<>(
                         dispatcher,
