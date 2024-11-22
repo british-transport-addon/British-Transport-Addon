@@ -2,5 +2,5 @@
   "textures": {
     "all": "jta:block/ballast"
   },
-  "parent": "block/cube_all"
+  "parent": "minecraft:block/cube_all"
 }
