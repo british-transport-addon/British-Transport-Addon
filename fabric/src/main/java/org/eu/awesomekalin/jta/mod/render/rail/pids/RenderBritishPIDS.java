@@ -102,6 +102,7 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
     private static final int SECOND_MESSAGE_DURATION = 10000; // Show second message for 10 seconds
 
     public String getServiceInfo(ArrivalResponse response, Station currentStation) {
+        if (currentStation == null) return "";
         // Show welcoemt o station if info collection is fUCKED
         if (response == null || MinecraftClientData.getDashboardInstance() == null ||
                 MinecraftClientData.getDashboardInstance().routeIdMap == null ||
