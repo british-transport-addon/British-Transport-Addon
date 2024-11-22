@@ -272,31 +272,6 @@ public class BlockEntityTypeInit {
             BlockInit.PROJECTION_NAME::get
     );
 
-    public static final BlockEntityTypeRegistryObject<PlatformNumberSign.PlatfornNumberSignEntity> PLATFORM_NUMBER_SIGN = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "platform_number_sign"
-            ),
-            PlatformNumberSign.PlatfornNumberSignEntity::new,
-            SignInit.PLATFORM_NUMBER_SIDE_BEE_YELLOW::get,
-            SignInit.PLATFORM_NUMBER_SIDE_BLACK::get,
-            SignInit.PLATFORM_NUMBER_SIDE_BLUE::get,
-            SignInit.PLATFORM_NUMBER_SIDE_DARK_BLUE::get,
-            SignInit.PLATFORM_NUMBER_SIDE_DARK_GRAY::get,
-            SignInit.PLATFORM_NUMBER_SIDE_YELLOW::get,
-            SignInit.PLATFORM_NUMBER_SIDE_DARK_GREEN::get,
-            SignInit.PLATFORM_NUMBER_SIDE_LIGHT_BLUE::get,
-            SignInit.PLATFORM_NUMBER_SIDE_PINK::get,
-            SignInit.PLATFORM_NUMBER_SIDE_GRAY::get,
-            SignInit.PLATFORM_NUMBER_SIDE_ORANGE::get,
-            SignInit.PLATFORM_NUMBER_SIDE_RUSTY::get,
-            SignInit.PLATFORM_NUMBER_SIDE_STEEL::get,
-            SignInit.PLATFORM_NUMBER_SIDE_RED::get,
-            SignInit.PLATFORM_NUMBER_SIDE_ROYAL_RED::get,
-            SignInit.PLATFORM_NUMBER_SIDE_GREEN::get,
-            SignInit.PLATFORM_NUMBER_SIDE_PURPLE::get
-    );
-
     public static final BlockEntityTypeRegistryObject<ManchesterSignSquare.TileEntityManchesterStationSign> MANCHESTER_SIGN_SQUARE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
