@@ -1,0 +1,12 @@
+# Made in Blockbench 4.10.4
+newmtl m_dda2d640-ad15-89ea-37ae-c9eac155774c
+map_Kd platform_edge.png
+newmtl m_26cbd04a-d26d-5089-a5da-8ad6569bf4c4
+map_Kd concrete044dark.png
+newmtl m_16489577-58af-1805-6b40-f27c502bef62
+map_Kd dont_pass_the_yellow_line.png
+newmtl m_15ca6da9-1b9f-1627-f948-d7ee01d5378b
+map_Kd platform.png
+newmtl m_9ebf5b43-d692-33d2-2980-79ac667c7659
+map_Kd tactile_pavement.png
+newmtl none
