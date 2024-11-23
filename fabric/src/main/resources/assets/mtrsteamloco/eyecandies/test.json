@@ -84,6 +84,11 @@
     "model": "mtrsteamloco:eyecandies/kings_park.obj",
     "flipV": true
   },
+  "croftfoot": {
+    "name": "ScotRail Croftfoot Station Sign",
+    "model": "mtrsteamloco:eyecandies/croftfoot.obj",
+    "flipV": true
+  },
   "carmyle": {
     "name": "ScotRail Carmyle Station Sign",
     "model": "mtrsteamloco:eyecandies/carmyle.obj",
