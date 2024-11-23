@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "all": "jta:block/scotrail_blue"
+  },
+  "parent": "block/cube_all"
+}

@@ -32,6 +32,8 @@ public class BlockInit {
 
     public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);
 
+    public static final BlockRegistryObject SCOTRAIL_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "scotrail_blue"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
+
     public static final BlockRegistryObject ASPHALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asphalt"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject LIME_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "lime_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject GREEN_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "green_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
