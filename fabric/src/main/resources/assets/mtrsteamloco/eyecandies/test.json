@@ -79,6 +79,11 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "kings_park": {
+    "name": "ScotRail Kings Park Station Sign",
+    "model": "mtrsteamloco:eyecandies/kings_park.obj",
+    "flipV": true
+  },
   "carmyle": {
     "name": "ScotRail Carmyle Station Sign",
     "model": "mtrsteamloco:eyecandies/carmyle.obj",
