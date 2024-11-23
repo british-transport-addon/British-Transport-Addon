@@ -9,6 +9,21 @@
     "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
     "flipV": true
   },
+  "scotrail_planter_front": {
+    "name": "ScotRail Planter Front",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_front.obj",
+    "flipV": true
+  },
+  "scotrail_planter_middle": {
+    "name": "ScotRail Planter Middle",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_middle.obj",
+    "flipV": true
+  },
+  "scotrail_planter_back": {
+    "name": "ScotRail Planter Back",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_back.obj",
+    "flipV": true
+  },
   "scotrail_fence": {
     "name": "ScotRail Fence",
     "model": "mtrsteamloco:eyecandies/scotrail_fence.obj",
