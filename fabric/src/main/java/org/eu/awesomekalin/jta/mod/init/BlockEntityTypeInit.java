@@ -1,6 +1,7 @@
 package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.blocks.BarrierPlatformBlock;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
@@ -19,6 +20,15 @@ public class BlockEntityTypeInit {
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Block Entities");
     }
+
+    public static final BlockEntityTypeRegistryObject<BarrierPlatformBlock.BarrierPlatformBlockEntity> BARRIER_PLATFORM = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "barrier_platform"
+            ),
+            BarrierPlatformBlock.BarrierPlatformBlockEntity::new,
+            BlockInit.BARRIER_PLATFORM::get//update
+    );
 
     public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

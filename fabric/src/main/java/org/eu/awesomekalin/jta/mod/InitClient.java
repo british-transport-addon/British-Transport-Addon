@@ -1,6 +1,7 @@
 package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.*;
+import org.eu.awesomekalin.jta.mod.render.RenderBarrierPlatform;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
@@ -56,6 +57,11 @@ public final class InitClient {
                         0,
                         0xFF9900
                 )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BARRIER_PLATFORM,
+                RenderBarrierPlatform::new
         );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
@@ -391,6 +397,8 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BARRIER_PLATFORM);
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_BUSES);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), RoundelInit.ROUNDEL_COACHES);
