@@ -15,6 +15,16 @@
     "model": "mtrsteamloco:eyecandies/btp_poster_have_they_left_a_bag.obj",
     "flipV": true
   },
+  "btp_networkrail_poster_escalator_saftey": {
+    "name": "British Transport Network Rail Poster Escalator Saftey",
+    "model": "mtrsteamloco:eyecandies/btp_networkrail_poster_escalator_saftey.obj",
+    "flipV": true
+  },
+  "networkrail_poster_tresspass_detection_system": {
+    "name": "Network Rail Poster Trespass Detection System",
+    "model": "mtrsteamloco:eyecandies/networkrail_poster_tresspass_detection_system.obj",
+    "flipV": true
+  },
   "speaker": {
     "name": "Station Speaker",
     "model": "mtrsteamloco:eyecandies/speaker.obj",
