@@ -1,4 +1,20 @@
 {
+
+  "btp_poster_are_they_checking_security": {
+    "name": "British Transport Police Poster Are they Checking Security",
+    "model": "mtrsteamloco:eyecandies/btp_poster_are_they_checking_security.obj",
+    "flipV": true
+  },
+  "btp_poster_are_they_somewhere_sus": {
+    "name": "British Transport Police Poster Are they Somewhere they shouldnt be",
+    "model": "mtrsteamloco:eyecandies/btp_poster_are_they_somewhere_sus.obj",
+    "flipV": true
+  },
+  "btp_poster_have_they_left_a_bag": {
+    "name": "British Transport Police Poster Have they left a bag",
+    "model": "mtrsteamloco:eyecandies/btp_poster_have_they_left_a_bag.obj",
+    "flipV": true
+  },
   "speaker": {
     "name": "Station Speaker",
     "model": "mtrsteamloco:eyecandies/speaker.obj",
