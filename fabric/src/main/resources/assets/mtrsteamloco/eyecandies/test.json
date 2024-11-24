@@ -84,6 +84,11 @@
     "model": "mtrsteamloco:eyecandies/scotrail_platform_6.obj",
     "flipV": true
   },
+  "scotrail_poster_timetable": {
+    "name": "ScotRail Poster Timetable",
+    "model": "mtrsteamloco:eyecandies/scotrail_poster_timetable.obj",
+    "flipV": true
+  },
   "scotrail_buy_before_you_board": {
     "name": "ScotRail Buy Before You Board",
     "model": "mtrsteamloco:eyecandies/scotrail_buy_before_you_board.obj",
