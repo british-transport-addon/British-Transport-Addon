@@ -4,6 +4,11 @@
     "model": "mtrsteamloco:eyecandies/speaker.obj",
     "flipV": true
   },
+  "samaritans": {
+    "name": "Samaritans Sign",
+    "model": "mtrsteamloco:eyecandies/samaritans.obj",
+    "flipV": true
+  },
   "scotrail_station_light": {
     "name": "ScotRail Station Light",
     "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
