@@ -94,6 +94,16 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "whifflet": {
+    "name": "ScotRail Whifflet Station Sign",
+    "model": "mtrsteamloco:eyecandies/whifflet.obj",
+    "flipV": true
+  },
+  "coatbridge_central": {
+    "name": "ScotRail Coatbridge Central Station Sign",
+    "model": "mtrsteamloco:eyecandies/coatbridge_central.obj",
+    "flipV": true
+  },
   "kings_park": {
     "name": "ScotRail Kings Park Station Sign",
     "model": "mtrsteamloco:eyecandies/kings_park.obj",
