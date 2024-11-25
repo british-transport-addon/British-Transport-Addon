@@ -135,6 +135,11 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "dalmarnock": {
+    "name": "ScotRail Dalmarnock Station Sign",
+    "model": "mtrsteamloco:eyecandies/dalmarnock.obj",
+    "flipV": true
+  },
   "whifflet": {
     "name": "ScotRail Whifflet Station Sign",
     "model": "mtrsteamloco:eyecandies/whifflet.obj",
