@@ -139,6 +139,11 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "blantyre": {
+    "name": "ScotRail Blantyre Station Sign",
+    "model": "mtrsteamloco:eyecandies/blantyre.obj",
+    "flipV": true
+  },
   "dalmarnock": {
     "name": "ScotRail Dalmarnock Station Sign",
     "model": "mtrsteamloco:eyecandies/dalmarnock.obj",
