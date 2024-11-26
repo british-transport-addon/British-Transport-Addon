@@ -446,6 +446,26 @@
     "model": "mtrsteamloco:eyecandies/whistle_small.obj",
     "flipV": true
   },
+  "permissible_speed_30": {
+    "name": "British Permissible Speed 30",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_30.obj",
+    "flipV": true
+  },
+  "permissible_speed_40": {
+    "name": "British Permissible Speed 40",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_40.obj",
+    "flipV": true
+  },
+  "permissible_speed_50": {
+    "name": "British Permissible Speed 50",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_50.obj",
+    "flipV": true
+  },
+  "victorian_speed_50": {
+    "name": "British Victorian Speed 50",
+    "model": "mtrsteamloco:eyecandies/victorian_speed_50.obj",
+    "flipV": true
+  },
   "speed_5_large": {
     "name": "British Speed 5 (Large)",
     "model": "mtrsteamloco:eyecandies/speed_5_large.obj",
