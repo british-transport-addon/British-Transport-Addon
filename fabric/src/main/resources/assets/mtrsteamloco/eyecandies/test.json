@@ -1,5 +1,9 @@
 {
-
+  "stop_await_instructions_before_proceeding": {
+    "name": "Depot Stop Await Instructions Before Proceeding Sign",
+    "model": "mtrsteamloco:eyecandies/stop_await_instructions_before_proceeding.obj",
+    "flipV": true
+  },
   "btp_poster_are_they_checking_security": {
     "name": "British Transport Police Poster Are they Checking Security",
     "model": "mtrsteamloco:eyecandies/btp_poster_are_they_checking_security.obj",
