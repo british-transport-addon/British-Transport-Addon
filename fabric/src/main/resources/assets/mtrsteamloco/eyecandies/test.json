@@ -432,6 +432,16 @@
     "model": "mtrsteamloco:eyecandies/stop_look_listen.obj",
     "flipV": true
   },
+  "whistle_medium": {
+    "name": "British Whistle (Medium)",
+    "model": "mtrsteamloco:eyecandies/whistle_medium.obj",
+    "flipV": true
+  },
+  "whistle_small": {
+    "name": "British Whistle (Small)",
+    "model": "mtrsteamloco:eyecandies/whistle_small.obj",
+    "flipV": true
+  },
   "speed_5_large": {
     "name": "British Speed 5 (Large)",
     "model": "mtrsteamloco:eyecandies/speed_5_large.obj",
