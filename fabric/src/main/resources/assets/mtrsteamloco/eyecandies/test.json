@@ -139,6 +139,16 @@
     "model": "mtrsteamloco:eyecandies/newton.obj",
     "flipV": true
   },
+  "pollokshields_east": {
+    "name": "ScotRail Pollokshields East Station Sign",
+    "model": "mtrsteamloco:eyecandies/pollokshields_east.obj",
+    "flipV": true
+  },
+  "pollokshields_west": {
+    "name": "ScotRail Pollokshields West Station Sign",
+    "model": "mtrsteamloco:eyecandies/pollokshields_west.obj",
+    "flipV": true
+  },
   "blantyre": {
     "name": "ScotRail Blantyre Station Sign",
     "model": "mtrsteamloco:eyecandies/blantyre.obj",
