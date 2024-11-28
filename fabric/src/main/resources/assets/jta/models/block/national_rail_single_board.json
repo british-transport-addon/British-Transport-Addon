@@ -10,6 +10,7 @@
 			"from": [6, -16, -8],
 			"to": [10, 32, 24],
 			"faces": {
+				"north": {"uv": [6, 4, 10, 16], "texture": "#particle", "cullface": "south"},
 				"east": {"uv": [0, 4, 16, 16], "texture": "#particle"},
 				"south": {"uv": [6, 4, 10, 16], "texture": "#particle", "cullface": "south"},
 				"west": {"uv": [0, 4, 16, 16], "texture": "#particle"},
@@ -38,5 +39,15 @@
 				"west": {"uv": [0, 6, 16, 16], "texture": "#back"}
 			}
 		}
+	],
+	"groups": [
+		{
+			"name": "VoxelShapes",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0]
+		},
+		1,
+		2
 	]
 }
