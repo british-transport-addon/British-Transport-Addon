@@ -4,6 +4,11 @@
     "model": "mtrsteamloco:eyecandies/signal_box_long.obj",
     "flipV": true
   },
+  "lineside_electrical_building": {
+    "name": "Lineside Electrical Building",
+    "model": "mtrsteamloco:eyecandies/lineside_electrical_building.obj",
+    "flipV": true
+  },
   "stop_await_instructions_before_proceeding": {
     "name": "Depot Stop Await Instructions Before Proceeding Sign",
     "model": "mtrsteamloco:eyecandies/stop_await_instructions_before_proceeding.obj",

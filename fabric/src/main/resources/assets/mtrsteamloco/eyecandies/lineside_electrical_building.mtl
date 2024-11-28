@@ -1,0 +1,12 @@
+# Made in Blockbench 4.10.4
+newmtl m_23d02a61-b9a8-5a2c-b097-d47e1c11eef1
+map_Kd white_limestone_bricks.png
+newmtl m_e870a0db-21c2-dd61-1dec-52776b5da9b9
+map_Kd dark_blue.png
+newmtl m_ccb88056-c2a7-f4f9-c315-fb564d7063e5
+map_Kd window.png
+newmtl m_0474092a-56cf-72d4-efcf-43c0b4de6dfe
+map_Kd metal009dark.png
+newmtl m_325cf22c-a6ad-7eda-4e9a-fc615f0c4b1a
+map_Kd danger_electric_shock.png
+newmtl none
