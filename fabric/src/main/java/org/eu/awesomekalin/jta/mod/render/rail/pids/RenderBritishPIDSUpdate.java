@@ -210,7 +210,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             } else if (i == 2) {
                 renderText(graphicsHolder, "Calling At:  (Page " + (currentPage + 1) + " of " + totalPages + ")", color, ((maxWidth * scale) / 8) - 54, false);
             } else if (i == 15) {
-                renderText(graphicsHolder, "ScotRail", color, ((maxWidth * scale) / 8) - 15, false);
+                renderText(graphicsHolder, MinecraftClientData.getDashboardInstance().routeIdMap.get(arrivalResponse.getRouteId()).depots.stream().findFirst().get().getName().split("|")[0], color, ((maxWidth * scale) / 8) - 15, false);
             } else if (i == 16) {
                 renderText(graphicsHolder, "This train is formed of " + arrivalResponse.getCarCount() + " coaches.", color, ((maxWidth * scale) / 8) - 15, false);
             } else {
