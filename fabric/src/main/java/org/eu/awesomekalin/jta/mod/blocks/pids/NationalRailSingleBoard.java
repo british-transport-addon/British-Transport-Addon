@@ -24,9 +24,7 @@ public class NationalRailSingleBoard extends BlockPIDSBase {
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return BlockHelper.shapeUnion(
-                IBlock.getVoxelShapeByDirection(6, 0, 0, 10, 9, 16, IBlock.getStatePropertySafe(state, FACING)),
-                IBlock.getVoxelShapeByDirection(7.5, 9, 12.5, 8.5, 16, 13.5, IBlock.getStatePropertySafe(state, FACING))
-        );
+                IBlock.getVoxelShapeByDirection(6, -16, -8, 10, 32, 24, IBlock.getStatePropertySafe(state, FACING)));
     }
 
     @Override
