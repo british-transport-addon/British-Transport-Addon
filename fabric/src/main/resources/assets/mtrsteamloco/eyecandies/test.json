@@ -1,4 +1,19 @@
 {
+  "metal_bridge_end": {
+    "name": "Metal Bridge End",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_end.obj",
+    "flipV": true
+  },
+  "metal_bridge_left": {
+    "name": "Metal Bridge Left",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_left.obj",
+    "flipV": true
+  },
+  "metal_bridge_right": {
+    "name": "Metal Bridge Right",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_right.obj",
+    "flipV": true
+  },
   "signal_box_long": {
     "name": "Signal Box Long",
     "model": "mtrsteamloco:eyecandies/signal_box_long.obj",
