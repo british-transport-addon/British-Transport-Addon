@@ -98,7 +98,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolder, offset) -> {
             render(entity, blockPos, facing, arrivalResponseList, graphicsHolder, offset);
             if (entity instanceof BlockPIDSHorizontalBase.BlockEntityHorizontalBase) {
-                render(entity, blockPos.offset(facing), facing.getOpposite(), arrivalResponseList, graphicsHolder, offset);
+                render(entity, blockPos.offset(facing), facing.getOpposite(), arrivalResponseList.stream().filter(it -> !it.getIsTerminating()).collect(ObjectArrayList.toList()), graphicsHolder, offset);
             }
         });
     }
