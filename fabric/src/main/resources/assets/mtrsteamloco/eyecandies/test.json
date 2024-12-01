@@ -1,4 +1,19 @@
 {
+  "penalty_fare": {
+    "name": "Poster Penalty Fare",
+    "model": "mtrsteamloco:eyecandies/penalty_fare.obj",
+    "flipV": true
+  },
+  "northern_poster_play_fare": {
+    "name": "Northern Poster Play Fare",
+    "model": "mtrsteamloco:eyecandies/northern_poster_play_fare.obj",
+    "flipV": true
+  },
+  "northern_poster_explore_less": {
+    "name": "Northern Poster Explore Less",
+    "model": "mtrsteamloco:eyecandies/northern_poster_explore_less.obj",
+    "flipV": true
+  },
   "5g_tower_pole": {
     "name": "5G Tower Pole",
     "model": "mtrsteamloco:eyecandies/5g_tower_pole.obj",
