@@ -1,4 +1,9 @@
 {
+  "5g_tower_pole": {
+    "name": "5G Tower Pole",
+    "model": "mtrsteamloco:eyecandies/5g_tower_pole.obj",
+    "flipV": true
+  },
   "metal_bridge_end": {
     "name": "Metal Bridge End",
     "model": "mtrsteamloco:eyecandies/metal_bridge_end.obj",
