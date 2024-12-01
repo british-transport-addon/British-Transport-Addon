@@ -1,4 +1,14 @@
 {
+  "metal_fence": {
+    "name": "Metal Fence",
+    "model": "mtrsteamloco:eyecandies/metal_fence.obj",
+    "flipV": true
+  },
+  "steel_fence": {
+    "name": "Steel Fence",
+    "model": "mtrsteamloco:eyecandies/steel_fence.obj",
+    "flipV": true
+  },
   "penalty_fare": {
     "name": "Poster Penalty Fare",
     "model": "mtrsteamloco:eyecandies/penalty_fare.obj",
