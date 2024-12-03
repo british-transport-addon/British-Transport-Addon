@@ -9,6 +9,11 @@
     "model": "mtrsteamloco:eyecandies/bee_network_station_light.obj",
     "flipV": true
   },
+  "deansgate": {
+    "name": "Deansgate Station Sign",
+    "model": "mtrsteamloco:eyecandies/deansgate.obj",
+    "flipV": true
+  },
   "salford_crescent": {
     "name": "Salford Crescent Station Sign",
     "model": "mtrsteamloco:eyecandies/salford_crescent.obj",
