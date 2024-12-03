@@ -1,4 +1,9 @@
 {
+  "mud_brick_bridge_piece": {
+    "name": "Mud Brick Bridge Piece",
+    "model": "mtrsteamloco:eyecandies/mud_brick_bridge_piece.obj",
+    "flipV": true
+  },
   "bee_network_station_light": {
     "name": "Bee Network Station Light",
     "model": "mtrsteamloco:eyecandies/bee_network_station_light.obj",
