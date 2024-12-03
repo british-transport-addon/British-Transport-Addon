@@ -1,4 +1,9 @@
 {
+  "electric_trains_atherton_lines": {
+    "name": "Electric trains No access to Atherton Lines Sign",
+    "model": "mtrsteamloco:eyecandies/electric_trains_atherton_lines.obj",
+    "flipV": true
+  },
   "metal_fence": {
     "name": "Metal Fence",
     "model": "mtrsteamloco:eyecandies/metal_fence.obj",
