@@ -1,5 +1,5 @@
 {
   "name": "National Rail - Mud Brick Bridge Layer",
   "model": "mtrsteamloco:rails/mud_brick_bridge.obj",
-  "repeatInterval": 1.4
+  "repeatInterval": 1.8
 }
