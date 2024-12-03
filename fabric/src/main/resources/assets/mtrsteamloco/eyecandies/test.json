@@ -1,4 +1,14 @@
 {
+  "bee_network_station_light": {
+    "name": "Bee Network Station Light",
+    "model": "mtrsteamloco:eyecandies/bee_network_station_light.obj",
+    "flipV": true
+  },
+  "salford_crescent": {
+    "name": "Salford Crescent Station Sign",
+    "model": "mtrsteamloco:eyecandies/salford_crescent.obj",
+    "flipV": true
+  },
   "electric_trains_atherton_lines": {
     "name": "Electric trains No access to Atherton Lines Sign",
     "model": "mtrsteamloco:eyecandies/electric_trains_atherton_lines.obj",
