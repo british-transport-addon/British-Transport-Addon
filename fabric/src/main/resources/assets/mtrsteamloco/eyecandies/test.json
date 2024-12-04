@@ -506,9 +506,19 @@
     "model": "mtrsteamloco:eyecandies/banner_repeater_plate.obj",
     "flipV": true
   },
+  "banner_repeater_plate_large": {
+    "name": "Banner Signal Repeater Plate Large",
+    "model": "mtrsteamloco:eyecandies/banner_repeater_plate_large.obj",
+    "flipV": true
+  },
   "signal_plate": {
     "name": "Signal Plate",
     "model": "mtrsteamloco:eyecandies/signal_plate.obj",
+    "flipV": true
+  },
+  "signal_ladder_blocked": {
+    "name": "Signal Ladder Blocked",
+    "model": "mtrsteamloco:eyecandies/signal_ladder_blocked.obj",
     "flipV": true
   },
   "danger_overhead_wires_small": {
