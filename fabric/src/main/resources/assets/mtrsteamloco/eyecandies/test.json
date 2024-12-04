@@ -506,6 +506,16 @@
     "model": "mtrsteamloco:eyecandies/speed_direction_right_small.obj",
     "flipV": true
   },
+  "speed_direction_left_large": {
+    "name": "British Speed Direction Left (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_left_large.obj",
+    "flipV": true
+  },
+  "speed_direction_right_large": {
+    "name": "British Speed Direction Right (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_right_large.obj",
+    "flipV": true
+  },
   "electric_shock_risk_small": {
     "name": "Electric Shock Risk (Small)",
     "model": "mtrsteamloco:eyecandies/electric_shock_risk_small.obj",
