@@ -1,4 +1,9 @@
 {
+  "northern_billboard_1": {
+    "name": "Northern Billboard 1",
+    "model": "mtrsteamloco:eyecandies/northern_billboard_1.obj",
+    "flipV": true
+  },
   "mud_brick_bridge_piece": {
     "name": "Mud Brick Bridge Piece",
     "model": "mtrsteamloco:eyecandies/mud_brick_bridge_piece.obj",
