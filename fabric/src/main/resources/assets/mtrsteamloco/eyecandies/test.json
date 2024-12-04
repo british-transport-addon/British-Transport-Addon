@@ -641,6 +641,36 @@
     "model": "mtrsteamloco:eyecandies/speed_20_small.obj",
     "flipV": true
   },
+  "speed_25_large": {
+    "name": "British Speed 25 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_25_large.obj",
+    "flipV": true
+  },
+  "speed_25_medium": {
+    "name": "British Speed 25 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_25_medium.obj",
+    "flipV": true
+  },
+  "speed_25_small": {
+    "name": "British Speed 25 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_25_small.obj",
+    "flipV": true
+  },
+  "speed_35_large": {
+    "name": "British Speed 35 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_35_large.obj",
+    "flipV": true
+  },
+  "speed_35_medium": {
+    "name": "British Speed 35 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_35_medium.obj",
+    "flipV": true
+  },
+  "speed_35_small": {
+    "name": "British Speed 35 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_35_small.obj",
+    "flipV": true
+  },
   "speed_40_large": {
     "name": "British Speed 40 (Large)",
     "model": "mtrsteamloco:eyecandies/speed_40_large.obj",
