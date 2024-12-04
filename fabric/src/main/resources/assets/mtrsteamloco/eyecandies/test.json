@@ -481,6 +481,11 @@
     "model": "mtrsteamloco:eyecandies/british_signal_pole.obj",
     "flipV": true
   },
+  "signal_pole_angled": {
+    "name": "British Signal Pole Angled",
+    "model": "mtrsteamloco:eyecandies/signal_pole_angled.obj",
+    "flipV": true
+  },
   "british_signal_piece": {
     "name": "British Signal Piece",
     "model": "mtrsteamloco:eyecandies/british_signal_piece.obj",
