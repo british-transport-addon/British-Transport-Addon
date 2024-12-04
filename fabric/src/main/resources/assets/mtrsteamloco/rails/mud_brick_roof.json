@@ -1,0 +1,5 @@
+{
+  "name": "National Rail - Mud Brick Roof Layer",
+  "model": "mtrsteamloco:rails/mud_brick_roof.obj",
+  "repeatInterval": 0.9
+}
