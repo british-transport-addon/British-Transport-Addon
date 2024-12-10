@@ -28,6 +28,7 @@ public class BlockInit {
     public static final BlockRegistryObject PIDS_NATIONALRAIL3CLOCKWHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_3_clock_white"), () -> new Block(new NationalRail3ClockWhite()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL10CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_10_clock"), () -> new Block(new NationalRail10Clock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL10CLOCKWHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_10_clock_white"), () -> new Block(new NationalRail10ClockWhite()), CreativeTabInit.JTA_RAILWAYS);
+    public static final BlockRegistryObject PIDS_METROLINK3CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_3_clock"), () -> new Block(new Metrolink3Clock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "vertical_road_barrier"), () -> new Block(new VerticalRoadBarrier()), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);

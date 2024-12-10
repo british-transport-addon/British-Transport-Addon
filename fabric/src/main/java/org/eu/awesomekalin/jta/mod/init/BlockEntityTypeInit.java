@@ -83,6 +83,14 @@ public class BlockEntityTypeInit {
             NationalRailSingleBoardWhite.TileEntityNationalRailSingleBoardWhite::new,
             BlockInit.PIDS_NATIONALRAILSINGLEBOARD_WHITE::get//update
     );
+    public static final BlockEntityTypeRegistryObject<Metrolink3Clock.TileEntityMetrolink3Clock> PIDS_METROLINK3CLOCK = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "metrolink_3_clock"
+            ),
+            Metrolink3Clock.TileEntityMetrolink3Clock::new,
+            BlockInit.PIDS_METROLINK3CLOCK::get//update
+    );
     public static final BlockEntityTypeRegistryObject<NationalRail3Clock.TileEntityNationalRail3Clock> PIDS_NATIONALRAIL3CLOCK = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

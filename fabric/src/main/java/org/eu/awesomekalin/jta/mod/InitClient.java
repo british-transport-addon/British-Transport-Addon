@@ -46,6 +46,20 @@ public final class InitClient {
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.PIDS_METROLINK3CLOCK,
+                dispatcher -> new RenderMetrolink3Clock(
+                        dispatcher,
+                        20 / 16F,
+                        0.2F / 12,
+                        .5f,
+                        -.5f,
+                        .155F,
+                        0,
+                        0xFF9900
+                )
+        );
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCK,
                 dispatcher -> new RenderNationalRail3Clock(
                         dispatcher,
