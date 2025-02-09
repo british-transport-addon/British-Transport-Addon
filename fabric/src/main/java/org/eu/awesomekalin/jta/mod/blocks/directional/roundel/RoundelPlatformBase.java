@@ -16,7 +16,7 @@ public class RoundelPlatformBase extends DirectionalBlockExtension implements Bl
     private String defaultText;
 
     public RoundelPlatformBase(String defaultText) {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
         this.defaultText = defaultText;
     }
 

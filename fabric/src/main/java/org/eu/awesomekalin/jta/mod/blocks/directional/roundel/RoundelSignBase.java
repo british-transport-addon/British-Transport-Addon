@@ -16,7 +16,7 @@ public class RoundelSignBase extends DirectionalBlockExtension implements BlockW
     private String defaultText;
 
     public RoundelSignBase(String defaultText) {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
         this.defaultText = defaultText;
     }
 

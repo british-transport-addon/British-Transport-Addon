@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 
 public class FloorPropBase extends DirectionalBlockExtension {
     public FloorPropBase() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
 

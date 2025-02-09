@@ -11,7 +11,7 @@ import org.mtr.mapping.mapper.BlockWithEntity;
 public class ProjectionName extends DirectionalBlockExtension implements BlockWithEntity {
 
     public ProjectionName() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Override

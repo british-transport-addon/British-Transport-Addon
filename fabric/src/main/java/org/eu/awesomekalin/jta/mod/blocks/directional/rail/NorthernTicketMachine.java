@@ -6,7 +6,7 @@ import org.mtr.mapping.mapper.BlockHelper;
 
 public class NorthernTicketMachine extends DirectionalBlockExtension {
     public NorthernTicketMachine() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Override

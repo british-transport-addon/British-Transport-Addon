@@ -16,7 +16,7 @@ import java.util.List;
 
 public class UndergroundWhiteboard extends DirectionalBlockExtension implements BlockWithEntity {
     public UndergroundWhiteboard() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Nonnull

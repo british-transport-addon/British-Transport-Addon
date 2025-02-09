@@ -6,7 +6,7 @@ import org.mtr.mod.block.IBlock;
 
 public class WallSignBase extends DirectionalBlockExtension {
     public WallSignBase() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque());
     }
 
     @Override

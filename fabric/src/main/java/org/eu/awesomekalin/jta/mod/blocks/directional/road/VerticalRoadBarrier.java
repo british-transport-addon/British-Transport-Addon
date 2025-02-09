@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
 public class VerticalRoadBarrier extends DirectionalBlockExtension implements BlockWithEntity {
 
     public VerticalRoadBarrier() {
-        super(BlockHelper.createBlockSettings(true));
+        super(BlockHelper.createBlockSettings(true, false));
     }
     // how do the geckolib
 

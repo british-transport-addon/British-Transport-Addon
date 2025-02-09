@@ -16,7 +16,7 @@ public class RoundelBase extends DirectionalBlockExtension implements BlockWithE
     private String defaultText;
 
     public RoundelBase(String defaultText) {
-        super(BlockHelper.createBlockSettings(false, (blockState) -> {
+        super(BlockHelper.createBlockSettings(false, false, (blockState) -> {
             return 11;
         }).strength(4.0f).nonOpaque().dynamicBounds());
         this.defaultText = defaultText;

@@ -11,7 +11,7 @@ import org.mtr.mod.block.BlockPlatform;
 public class BarrierPlatformBlock extends BlockPlatform implements BlockWithEntity {
 
     public BarrierPlatformBlock() {
-        super(BlockHelper.createBlockSettings(false).dropsNothing().strength(10), false);
+        super(BlockHelper.createBlockSettings(false, false).dropsNothing().strength(10), false);
     }
 
     @Override

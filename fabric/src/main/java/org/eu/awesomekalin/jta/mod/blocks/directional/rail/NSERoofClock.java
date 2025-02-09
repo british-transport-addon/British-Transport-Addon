@@ -9,7 +9,7 @@ import org.mtr.mod.block.IBlock;
 
 public class NSERoofClock extends DirectionalBlockEntityBase {
     public NSERoofClock() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Override

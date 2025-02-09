@@ -11,7 +11,7 @@ import org.mtr.mod.block.BlockSignalBase;
 
 public class DispatchSignal extends DirectionalBlockEntityBase {
     public DispatchSignal() {
-        super(BlockHelper.createBlockSettings(false).strength(4.0f).nonOpaque().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Override
