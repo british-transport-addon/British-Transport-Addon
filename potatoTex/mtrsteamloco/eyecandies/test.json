@@ -1,0 +1,904 @@
+{
+  "northern_billboard_1": {
+    "name": "Northern Billboard 1",
+    "model": "mtrsteamloco:eyecandies/northern_billboard_1.obj",
+    "flipV": true
+  },
+  "mud_brick_bridge_piece": {
+    "name": "Mud Brick Bridge Piece",
+    "model": "mtrsteamloco:eyecandies/mud_brick_bridge_piece.obj",
+    "flipV": true
+  },
+  "bee_network_station_light": {
+    "name": "Bee Network Station Light",
+    "model": "mtrsteamloco:eyecandies/bee_network_station_light.obj",
+    "flipV": true
+  },
+  "deansgate": {
+    "name": "Deansgate Station Sign",
+    "model": "mtrsteamloco:eyecandies/deansgate.obj",
+    "flipV": true
+  },
+  "salford_crescent": {
+    "name": "Salford Crescent Station Sign",
+    "model": "mtrsteamloco:eyecandies/salford_crescent.obj",
+    "flipV": true
+  },
+  "electric_trains_atherton_lines": {
+    "name": "Electric trains No access to Atherton Lines Sign",
+    "model": "mtrsteamloco:eyecandies/electric_trains_atherton_lines.obj",
+    "flipV": true
+  },
+  "metal_fence": {
+    "name": "Metal Fence",
+    "model": "mtrsteamloco:eyecandies/metal_fence.obj",
+    "flipV": true
+  },
+  "steel_fence": {
+    "name": "Steel Fence",
+    "model": "mtrsteamloco:eyecandies/steel_fence.obj",
+    "flipV": true
+  },
+  "penalty_fare": {
+    "name": "Poster Penalty Fare",
+    "model": "mtrsteamloco:eyecandies/penalty_fare.obj",
+    "flipV": true
+  },
+  "northern_poster_play_fare": {
+    "name": "Northern Poster Play Fare",
+    "model": "mtrsteamloco:eyecandies/northern_poster_play_fare.obj",
+    "flipV": true
+  },
+  "northern_poster_explore_less": {
+    "name": "Northern Poster Explore Less",
+    "model": "mtrsteamloco:eyecandies/northern_poster_explore_less.obj",
+    "flipV": true
+  },
+  "5g_tower_pole": {
+    "name": "5G Tower Pole",
+    "model": "mtrsteamloco:eyecandies/5g_tower_pole.obj",
+    "flipV": true
+  },
+  "metal_bridge_end": {
+    "name": "Metal Bridge End",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_end.obj",
+    "flipV": true
+  },
+  "metal_bridge_left": {
+    "name": "Metal Bridge Left",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_left.obj",
+    "flipV": true
+  },
+  "metal_bridge_right": {
+    "name": "Metal Bridge Right",
+    "model": "mtrsteamloco:eyecandies/metal_bridge_right.obj",
+    "flipV": true
+  },
+  "signal_box_long": {
+    "name": "Signal Box Long",
+    "model": "mtrsteamloco:eyecandies/signal_box_long.obj",
+    "flipV": true
+  },
+  "lineside_electrical_building": {
+    "name": "Lineside Electrical Building",
+    "model": "mtrsteamloco:eyecandies/lineside_electrical_building.obj",
+    "flipV": true
+  },
+  "stop_await_instructions_before_proceeding": {
+    "name": "Depot Stop Await Instructions Before Proceeding Sign",
+    "model": "mtrsteamloco:eyecandies/stop_await_instructions_before_proceeding.obj",
+    "flipV": true
+  },
+  "btp_poster_are_they_checking_security": {
+    "name": "British Transport Police Poster Are they Checking Security",
+    "model": "mtrsteamloco:eyecandies/btp_poster_are_they_checking_security.obj",
+    "flipV": true
+  },
+  "btp_poster_are_they_somewhere_sus": {
+    "name": "British Transport Police Poster Are they Somewhere they shouldnt be",
+    "model": "mtrsteamloco:eyecandies/btp_poster_are_they_somewhere_sus.obj",
+    "flipV": true
+  },
+  "btp_poster_have_they_left_a_bag": {
+    "name": "British Transport Police Poster Have they left a bag",
+    "model": "mtrsteamloco:eyecandies/btp_poster_have_they_left_a_bag.obj",
+    "flipV": true
+  },
+  "btp_networkrail_poster_escalator_saftey": {
+    "name": "British Transport Network Rail Poster Escalator Saftey",
+    "model": "mtrsteamloco:eyecandies/btp_networkrail_poster_escalator_saftey.obj",
+    "flipV": true
+  },
+  "networkrail_poster_tresspass_detection_system": {
+    "name": "Network Rail Poster Trespass Detection System",
+    "model": "mtrsteamloco:eyecandies/networkrail_poster_tresspass_detection_system.obj",
+    "flipV": true
+  },
+  "speaker": {
+    "name": "Station Speaker",
+    "model": "mtrsteamloco:eyecandies/speaker.obj",
+    "flipV": true
+  },
+  "samaritans": {
+    "name": "Samaritans Sign",
+    "model": "mtrsteamloco:eyecandies/samaritans.obj",
+    "flipV": true
+  },
+  "scotrail_station_light": {
+    "name": "ScotRail Station Light",
+    "model": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
+    "flipV": true
+  },
+  "scotrail_planter_front": {
+    "name": "ScotRail Planter Front",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_front.obj",
+    "flipV": true
+  },
+  "scotrail_planter_middle": {
+    "name": "ScotRail Planter Middle",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_middle.obj",
+    "flipV": true
+  },
+  "scotrail_planter_back": {
+    "name": "ScotRail Planter Back",
+    "model": "mtrsteamloco:eyecandies/scotrail_planter_back.obj",
+    "flipV": true
+  },
+  "scotrail_fence": {
+    "name": "ScotRail Fence",
+    "model": "mtrsteamloco:eyecandies/scotrail_fence.obj",
+    "flipV": true
+  },
+  "scotrail_station_car_park": {
+    "name": "ScotRail Station Car Park Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_station_car_park.obj",
+    "flipV": true
+  },
+  "scotrail_way_out": {
+    "name": "ScotRail Way Out Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_way_out.obj",
+    "flipV": true
+  },
+  "scotrail_cctv_zone": {
+    "name": "ScotRail CCTV Zone Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_cctv_zone.obj",
+    "flipV": true
+  },
+  "scotrail_cctv_warning": {
+    "name": "ScotRail CCTV Warning Sign",
+    "model": "mtrsteamloco:eyecandies/scotrail_cctv_warning.obj",
+    "flipV": true
+  },
+  "scotrail_fence_end": {
+    "name": "ScotRail Fence End",
+    "model": "mtrsteamloco:eyecandies/scotrail_fence_end.obj",
+    "flipV": true
+  },
+  "scotrail_platform_1": {
+    "name": "ScotRail Platform 1",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_1.obj",
+    "flipV": true
+  },
+  "scotrail_platform_2": {
+    "name": "ScotRail Platform 2",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_2.obj",
+    "flipV": true
+  },
+  "scotrail_platform_3": {
+    "name": "ScotRail Platform 3",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_3.obj",
+    "flipV": true
+  },
+  "scotrail_platform_4": {
+    "name": "ScotRail Platform 4",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_4.obj",
+    "flipV": true
+  },
+  "scotrail_platform_5": {
+    "name": "ScotRail Platform 5",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_5.obj",
+    "flipV": true
+  },
+  "scotrail_platform_6": {
+    "name": "ScotRail Platform 6",
+    "model": "mtrsteamloco:eyecandies/scotrail_platform_6.obj",
+    "flipV": true
+  },
+  "scotrail_poster_timetable": {
+    "name": "ScotRail Poster Timetable",
+    "model": "mtrsteamloco:eyecandies/scotrail_poster_timetable.obj",
+    "flipV": true
+  },
+  "scotrail_poster_transformation": {
+    "name": "ScotRail Poster Transformation",
+    "model": "mtrsteamloco:eyecandies/scotrail_poster_transformation.obj",
+    "flipV": true
+  },
+  "scotrail_buy_before_you_board": {
+    "name": "ScotRail Buy Before You Board",
+    "model": "mtrsteamloco:eyecandies/scotrail_buy_before_you_board.obj",
+    "flipV": true
+  },
+  "newton": {
+    "name": "ScotRail Newton Station Sign",
+    "model": "mtrsteamloco:eyecandies/newton.obj",
+    "flipV": true
+  },
+  "pollokshields_east": {
+    "name": "ScotRail Pollokshields East Station Sign",
+    "model": "mtrsteamloco:eyecandies/pollokshields_east.obj",
+    "flipV": true
+  },
+  "pollokshields_west": {
+    "name": "ScotRail Pollokshields West Station Sign",
+    "model": "mtrsteamloco:eyecandies/pollokshields_west.obj",
+    "flipV": true
+  },
+  "blantyre": {
+    "name": "ScotRail Blantyre Station Sign",
+    "model": "mtrsteamloco:eyecandies/blantyre.obj",
+    "flipV": true
+  },
+  "dalmarnock": {
+    "name": "ScotRail Dalmarnock Station Sign",
+    "model": "mtrsteamloco:eyecandies/dalmarnock.obj",
+    "flipV": true
+  },
+  "whifflet": {
+    "name": "ScotRail Whifflet Station Sign",
+    "model": "mtrsteamloco:eyecandies/whifflet.obj",
+    "flipV": true
+  },
+  "coatbridge_central": {
+    "name": "ScotRail Coatbridge Central Station Sign",
+    "model": "mtrsteamloco:eyecandies/coatbridge_central.obj",
+    "flipV": true
+  },
+  "kings_park": {
+    "name": "ScotRail Kings Park Station Sign",
+    "model": "mtrsteamloco:eyecandies/kings_park.obj",
+    "flipV": true
+  },
+  "croftfoot": {
+    "name": "ScotRail Croftfoot Station Sign",
+    "model": "mtrsteamloco:eyecandies/croftfoot.obj",
+    "flipV": true
+  },
+  "carmyle": {
+    "name": "ScotRail Carmyle Station Sign",
+    "model": "mtrsteamloco:eyecandies/carmyle.obj",
+    "flipV": true
+  },
+  "cambuslang": {
+    "name": "ScotRail Cambuslang Station Sign",
+    "model": "mtrsteamloco:eyecandies/cambuslang.obj",
+    "flipV": true
+  },
+  "mount_vernon": {
+    "name": "ScotRail Mount Vernon Station Sign",
+    "model": "mtrsteamloco:eyecandies/mount_vernon.obj",
+    "flipV": true
+  },
+  "mount_florida": {
+    "name": "ScotRail Mount Florida Station Sign",
+    "model": "mtrsteamloco:eyecandies/mount_florida.obj",
+    "flipV": true
+  },
+  "mount_florida_info": {
+    "name": "ScotRail Mount Florida Station Info Sign",
+    "model": "mtrsteamloco:eyecandies/mount_florida_info.obj",
+    "flipV": true
+  },
+  "rutherglen": {
+    "name": "ScotRail Rutherglen Station Sign",
+    "model": "mtrsteamloco:eyecandies/rutherglen.obj",
+    "flipV": true
+  },
+  "burnside": {
+    "name": "ScotRail Burnside Station Sign",
+    "model": "mtrsteamloco:eyecandies/burnside.obj",
+    "flipV": true
+  },
+  "uddingston": {
+    "name": "ScotRail Uddingston Station Sign",
+    "model": "mtrsteamloco:eyecandies/uddingston.obj",
+    "flipV": true
+  },
+  "cathcart": {
+    "name": "ScotRail Cathcart Station Sign",
+    "model": "mtrsteamloco:eyecandies/cathcart.obj",
+    "flipV": true
+  },
+  "cathcart_info": {
+    "name": "ScotRail Cathcart Station Info Sign",
+    "model": "mtrsteamloco:eyecandies/cathcart_info.obj",
+    "flipV": true
+  },
+  "kirkhill": {
+    "name": "ScotRail Kirkhill Station Sign",
+    "model": "mtrsteamloco:eyecandies/kirkhill.obj",
+    "flipV": true
+  },
+  "kirkhill_info": {
+    "name": "ScotRail Kirkhill Station Info Sign",
+    "model": "mtrsteamloco:eyecandies/kirkhill_info.obj",
+    "flipV": true
+  },
+  "do_not_cross": {
+    "name": "Do Not Cross Sign",
+    "model": "mtrsteamloco:eyecandies/do_not_cross.obj",
+    "flipV": true
+  },
+  "cctv_in_operation": {
+    "name": "CCTV In Operation Sign",
+    "model": "mtrsteamloco:eyecandies/cctv_in_operation.obj",
+    "flipV": true
+  },
+  "aws": {
+    "name": "AWS",
+    "model": "mtrsteamloco:eyecandies/aws.obj",
+    "flipV": true
+  },
+  "bridge_authority_medium": {
+    "name": "Bridge Authority Medium",
+    "model": "mtrsteamloco:eyecandies/bridge_authority_medium.obj",
+    "flipV": true
+  },
+  "bridge_authority_large": {
+    "name": "Bridge Authority Large",
+    "model": "mtrsteamloco:eyecandies/bridge_authority_large.obj",
+    "flipV": true
+  },
+  "rails": {
+    "name": "National Rail Pile",
+    "model": "mtrsteamloco:eyecandies/rails.obj",
+    "flipV": true
+  },
+  "tresspass_small": {
+    "name": "Trespass Small",
+    "model": "mtrsteamloco:eyecandies/tresspass_small.obj",
+    "flipV": true
+  },
+  "passenger_do_not_cross_line": {
+    "name": "Passenger Do Not Cross Line Medium",
+    "model": "mtrsteamloco:eyecandies/passenger_do_not_cross_line.obj",
+    "flipV": true
+  },
+
+  "pids_pole": {
+    "name": "PIDS Pole",
+    "model": "mtrsteamloco:eyecandies/pids_pole.obj",
+    "flipV": true
+  },
+  "sleeper_car_stop": {
+    "name": "British Sleeper Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/sleeper_car_stop.obj",
+    "flipV": true
+  },
+  "s_car_stop": {
+    "name": "British S Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/s_car_stop.obj",
+    "flipV": true
+  },
+  "s_car_stop_380": {
+    "name": "British S Car Stop (Class 380) Marker",
+    "model": "mtrsteamloco:eyecandies/s_car_stop_380.obj",
+    "flipV": true
+  },
+  "2_car_stop": {
+    "name": "British 2 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/2_car_stop.obj",
+    "flipV": true
+  },
+  "3_car_stop": {
+    "name": "British 3 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/3_car_stop.obj",
+    "flipV": true
+  },
+  "4_car_stop": {
+    "name": "British 4 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/4_car_stop.obj",
+    "flipV": true
+  },
+  "5_car_stop": {
+    "name": "British 5 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/5_car_stop.obj",
+    "flipV": true
+  },
+  "6_car_stop": {
+    "name": "British 6 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/6_car_stop.obj",
+    "flipV": true
+  },
+  "6_8_car_stop": {
+    "name": "British 6-8 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/6_8_car_stop.obj",
+    "flipV": true
+  },
+  "9_12_car_stop": {
+    "name": "British 9-12 Car Stop Marker",
+    "model": "mtrsteamloco:eyecandies/9_12_car_stop.obj",
+    "flipV": true
+  },
+  "tram": {
+    "name": "British Tram Sign",
+    "model": "mtrsteamloco:eyecandies/tram.obj",
+    "flipV": true
+  },
+  "tramway": {
+    "name": "British Tramway Sign",
+    "model": "mtrsteamloco:eyecandies/tramway.obj",
+    "flipV": true
+  },
+
+  "steel_pole": {
+    "name": "British Steel Pole",
+    "model": "mtrsteamloco:eyecandies/steel_pole.obj",
+    "flipV": true
+  },
+  "steel_light_pole": {
+    "name": "British Steel Light Pole",
+    "model": "mtrsteamloco:eyecandies/british_steel_light_pole.obj",
+    "flipV": true
+  },
+  "steel_column": {
+    "name": "British Steel Column",
+    "model": "mtrsteamloco:eyecandies/steel_column.obj",
+    "flipV": true
+  },
+  "british_rail_buffer": {
+    "name": "British Rail Buffer",
+    "model": "mtrsteamloco:eyecandies/british_rail_buffer.obj",
+    "flipV": true
+  },
+  "eletrical_box_graffiti_1": {
+    "name": "Electrical Box With Graffiti 1",
+    "model": "mtrsteamloco:eyecandies/eletrical_box_graffiti_1.obj",
+    "flipV": true
+  },
+  "eletrical_box_graffiti_2": {
+    "name": "Electrical Box With Graffiti 2",
+    "model": "mtrsteamloco:eyecandies/eletrical_box_graffiti_2.obj",
+    "flipV": true
+  },
+  "large_eletrical_box_graffiti_1": {
+    "name": "Large Electrical Box With Graffiti 1",
+    "model": "mtrsteamloco:eyecandies/large_eletrical_box_graffiti_1.obj",
+    "flipV": true
+  },
+  "tpws_signal": {
+    "name": "TPWS Signal Magnets",
+    "model": "mtrsteamloco:eyecandies/tpws_signal.obj",
+    "flipV": true
+  },
+  "oss_sensor": {
+    "name": "TPWS Overspeed Sensor",
+    "model": "mtrsteamloco:eyecandies/oss_sensor.obj",
+    "flipV": true
+  },
+  "single_signal_pole": {
+    "name": "British Single Signal Pole",
+    "model": "mtrsteamloco:eyecandies/single_signal_pole.obj",
+    "flipV": true
+  },
+  "british_signal_pole": {
+    "name": "British Signal Pole Arched",
+    "model": "mtrsteamloco:eyecandies/british_signal_pole.obj",
+    "flipV": true
+  },
+  "signal_pole_angled": {
+    "name": "British Signal Pole Angled",
+    "model": "mtrsteamloco:eyecandies/signal_pole_angled.obj",
+    "flipV": true
+  },
+  "british_signal_piece": {
+    "name": "British Signal Piece",
+    "model": "mtrsteamloco:eyecandies/british_signal_piece.obj",
+    "flipV": true
+  },
+  "speed_direction_left_small": {
+    "name": "British Speed Direction Left (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_left_small.obj",
+    "flipV": true
+  },
+  "speed_direction_right_small": {
+    "name": "British Speed Direction Right (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_right_small.obj",
+    "flipV": true
+  },
+  "speed_direction_left_large": {
+    "name": "British Speed Direction Left (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_left_large.obj",
+    "flipV": true
+  },
+  "speed_direction_right_large": {
+    "name": "British Speed Direction Right (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_direction_right_large.obj",
+    "flipV": true
+  },
+  "electric_shock_risk_small": {
+    "name": "Electric Shock Risk (Small)",
+    "model": "mtrsteamloco:eyecandies/electric_shock_risk_small.obj",
+    "flipV": true
+  },
+  "banner_repeater_plate": {
+    "name": "Banner Signal Repeater Plate",
+    "model": "mtrsteamloco:eyecandies/banner_repeater_plate.obj",
+    "flipV": true
+  },
+  "banner_repeater_plate_large": {
+    "name": "Banner Signal Repeater Plate Large",
+    "model": "mtrsteamloco:eyecandies/banner_repeater_plate_large.obj",
+    "flipV": true
+  },
+  "signal_plate": {
+    "name": "Signal Plate",
+    "model": "mtrsteamloco:eyecandies/signal_plate.obj",
+    "flipV": true
+  },
+  "signal_ladder_blocked": {
+    "name": "Signal Ladder Blocked",
+    "model": "mtrsteamloco:eyecandies/signal_ladder_blocked.obj",
+    "flipV": true
+  },
+  "danger_overhead_wires_small": {
+    "name": "Danger Overhead Wires (Small)",
+    "model": "mtrsteamloco:eyecandies/danger_overhead_wires_small.obj",
+    "flipV": true
+  },
+  "danger_overhead_wires_large": {
+    "name": "Danger Overhead Wires (Large)",
+    "model": "mtrsteamloco:eyecandies/danger_overhead_wires_large.obj",
+    "flipV": true
+  },
+  "level_crossing": {
+    "name": "Level Crossing Sign",
+    "model": "mtrsteamloco:eyecandies/level_crossing.obj",
+    "flipV": true
+  },
+  "stop_look_listen": {
+    "name": "Stop Look Listen Sign",
+    "model": "mtrsteamloco:eyecandies/stop_look_listen.obj",
+    "flipV": true
+  },
+  "whistle_medium": {
+    "name": "British Whistle (Medium)",
+    "model": "mtrsteamloco:eyecandies/whistle_medium.obj",
+    "flipV": true
+  },
+  "whistle_small": {
+    "name": "British Whistle (Small)",
+    "model": "mtrsteamloco:eyecandies/whistle_small.obj",
+    "flipV": true
+  },
+  "permissible_speed_30": {
+    "name": "British Permissible Speed 30",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_30.obj",
+    "flipV": true
+  },
+  "permissible_speed_40": {
+    "name": "British Permissible Speed 40",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_40.obj",
+    "flipV": true
+  },
+  "permissible_speed_50": {
+    "name": "British Permissible Speed 50",
+    "model": "mtrsteamloco:eyecandies/permissible_speed_50.obj",
+    "flipV": true
+  },
+  "victorian_speed_50": {
+    "name": "British Victorian Speed 50",
+    "model": "mtrsteamloco:eyecandies/victorian_speed_50.obj",
+    "flipV": true
+  },
+  "speed_5_large": {
+    "name": "British Speed 5 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_5_large.obj",
+    "flipV": true
+  },
+  "speed_5_medium": {
+    "name": "British Speed 5 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_5_medium.obj",
+    "flipV": true
+  },
+  "speed_5_small": {
+    "name": "British Speed 5 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_5_small.obj",
+    "flipV": true
+  },
+  "speed_10_large": {
+    "name": "British Speed 10 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_10_large.obj",
+    "flipV": true
+  },
+  "speed_10_medium": {
+    "name": "British Speed 10 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_10_medium.obj",
+    "flipV": true
+  },
+  "speed_10_small": {
+    "name": "British Speed 10 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_10_small.obj",
+    "flipV": true
+  },
+  "speed_15_large": {
+    "name": "British Speed 15 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_15_large.obj",
+    "flipV": true
+  },
+  "speed_15_medium": {
+    "name": "British Speed 15 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_15_medium.obj",
+    "flipV": true
+  },
+  "speed_15_small": {
+    "name": "British Speed 15 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_15_small.obj",
+    "flipV": true
+  },
+  "speed_20_large": {
+    "name": "British Speed 20 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_20_large.obj",
+    "flipV": true
+  },
+  "speed_20_medium": {
+    "name": "British Speed 20 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_20_medium.obj",
+    "flipV": true
+  },
+  "speed_20_small": {
+    "name": "British Speed 20 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_20_small.obj",
+    "flipV": true
+  },
+  "speed_25_large": {
+    "name": "British Speed 25 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_25_large.obj",
+    "flipV": true
+  },
+  "speed_25_medium": {
+    "name": "British Speed 25 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_25_medium.obj",
+    "flipV": true
+  },
+  "speed_25_small": {
+    "name": "British Speed 25 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_25_small.obj",
+    "flipV": true
+  },
+  "speed_35_large": {
+    "name": "British Speed 35 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_35_large.obj",
+    "flipV": true
+  },
+  "speed_35_medium": {
+    "name": "British Speed 35 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_35_medium.obj",
+    "flipV": true
+  },
+  "speed_35_small": {
+    "name": "British Speed 35 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_35_small.obj",
+    "flipV": true
+  },
+  "speed_40_large": {
+    "name": "British Speed 40 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_40_large.obj",
+    "flipV": true
+  },
+  "speed_40_medium": {
+    "name": "British Speed 40 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_40_medium.obj",
+    "flipV": true
+  },
+  "speed_40_small": {
+    "name": "British Speed 40 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_40_small.obj",
+    "flipV": true
+  },
+  "speed_45_large": {
+    "name": "British Speed 45 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_45_large.obj",
+    "flipV": true
+  },
+  "speed_45_medium": {
+    "name": "British Speed 45 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_45_medium.obj",
+    "flipV": true
+  },
+  "speed_45_small": {
+    "name": "British Speed 45 (Small)",
+    "model": "mtrsteamloco:eyecandies/speed_45_small.obj",
+    "flipV": true
+  },
+  "speed_50_large": {
+    "name": "British Speed 50 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_50_large.obj",
+    "flipV": true
+  },
+  "speed_60_large": {
+    "name": "British Speed 60 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_60_large.obj",
+    "flipV": true
+  },
+  "speed_60_medium": {
+    "name": "British Speed 60 (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_60_medium.obj",
+    "flipV": true
+  },
+  "speed_60_dmu_large": {
+    "name": "British Speed 60 DMU (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_60_dmu_large.obj",
+    "flipV": true
+  },
+  "speed_60_dmu_medium": {
+    "name": "British Speed 60 DMU (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_60_dmu_medium.obj",
+    "flipV": true
+  },
+  "speed_70_large": {
+    "name": "British Speed 70 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_70_large.obj",
+    "flipV": true
+  },
+  "speed_75_large": {
+    "name": "British Speed 75 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_75_large.obj",
+    "flipV": true
+  },
+  "speed_80_large": {
+    "name": "British Speed 80 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_80_large.obj",
+    "flipV": true
+  },
+  "speed_90_large": {
+    "name": "British Speed 90 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_80_large.obj",
+    "flipV": true
+  },
+  "speed_80_mu_medium": {
+    "name": "British Speed 80 MU (Medium)",
+    "model": "mtrsteamloco:eyecandies/speed_80_mu_medium.obj",
+    "flipV": true
+  },
+  "speed_80_mu_large": {
+    "name": "British Speed 80 MU (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_80_mu_large.obj",
+    "flipV": true
+  },
+  "speed_100_large": {
+    "name": "British Speed 100 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_100_large.obj",
+    "flipV": true
+  },
+  "speed_110_large": {
+    "name": "British Speed 110 (Large)",
+    "model": "mtrsteamloco:eyecandies/speed_110_large.obj",
+    "flipV": true
+  },
+  "limited_clearance_large": {
+    "name": "Limited Clearance (Large)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_large.obj",
+    "flipV": true
+  },
+  "limited_clearance_medium": {
+    "name": "Limited Clearance (Medium)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_medium.obj",
+    "flipV": true
+  },
+  "limited_clearance_small": {
+    "name": "Limited Clearance (Small)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_small.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_large": {
+    "name": "Limited Clearance Rusty (Large)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_large.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_medium": {
+    "name": "Limited Clearance Rusty (Medium)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_medium.obj",
+    "flipV": true
+  },
+  "limited_clearance_rusty_small": {
+    "name": "Limited Clearance Rusty (Small)",
+    "model": "mtrsteamloco:eyecandies/limited_clearance_rusty_small.obj",
+    "flipV": true
+  },
+  "no_refuges_large": {
+    "name": "No Refuges (Large)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_large.obj",
+    "flipV": true
+  },
+  "no_refuges_medium": {
+    "name": "No Refuges (Medium)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_medium.obj",
+    "flipV": true
+  },
+  "no_refuges_small": {
+    "name": "No Refuges (Small)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_small.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_large": {
+    "name": "No Refuges Rusty (Large)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_large.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_medium": {
+    "name": "No Refuges Rusty (Medium)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_medium.obj",
+    "flipV": true
+  },
+  "no_refuges_rusty_small": {
+    "name": "No Refuges Rusty (Small)",
+    "model": "mtrsteamloco:eyecandies/no_refuges_rusty_small.obj",
+    "flipV": true
+  },
+  "route_a": {
+    "name": "British Route A",
+    "model": "mtrsteamloco:eyecandies/route_a.obj",
+    "flipV": true
+  },
+  "route_b": {
+    "name": "British Route B",
+    "model": "mtrsteamloco:eyecandies/route_b.obj",
+    "flipV": true
+  },
+  "route_c": {
+    "name": "British Route C",
+    "model": "mtrsteamloco:eyecandies/route_c.obj",
+    "flipV": true
+  },
+  "route_d": {
+    "name": "British Route D",
+    "model": "mtrsteamloco:eyecandies/route_d.obj",
+    "flipV": true
+  },
+  "route_e": {
+    "name": "British Route E",
+    "model": "mtrsteamloco:eyecandies/route_e.obj",
+    "flipV": true
+  },
+  "route_f": {
+    "name": "British Route F",
+    "model": "mtrsteamloco:eyecandies/route_f.obj",
+    "flipV": true
+  },
+  "route_g": {
+    "name": "British Route G",
+    "model": "mtrsteamloco:eyecandies/route_g.obj",
+    "flipV": true
+  },
+  "route_h": {
+    "name": "British Route H",
+    "model": "mtrsteamloco:eyecandies/route_h.obj",
+    "flipV": true
+  },
+  "route_x": {
+    "name": "British Route X",
+    "model": "mtrsteamloco:eyecandies/route_x.obj",
+    "flipV": true
+  },
+  "gantry_10": {
+    "name": "Gantry(10)",
+    "model": "mtrsteamloco:eyecandies/gantry_10.obj",
+    "flipV": true
+  },
+  "track_switch": {
+    "name": "Track Switch",
+    "model": "mtrsteamloco:eyecandies/track_switch.obj",
+    "flipV": true
+  },
+  "lineside_power_distributor": {
+    "name": "Lineside Power Distributor",
+    "model": "mtrsteamloco:eyecandies/lineside_power_distributor.obj",
+    "flipV": true
+  },
+  "anti_tresspass_rubber": {
+    "name": "Anti Trespass Rubber",
+    "model": "mtrsteamloco:eyecandies/anti_tresspass_rubber.obj",
+    "flipV": true
+  }
+}
