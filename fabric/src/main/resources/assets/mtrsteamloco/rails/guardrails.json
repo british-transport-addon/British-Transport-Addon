@@ -1,9 +1,0 @@
-{"guardrail":{"name":"British Steel Guardrail (Simple)",
-"model":"mtrsteamloco:rails/guardrail.obj",
-"repeatInterval": 0.9},
-"guardrail_central":{"name":"British Steel Guardrail (Central)",
-"model":"mtrsteamloco:rails/guardrail_central.obj",
-"repeatInterval": 0.9},
-"guardrail_double":{"name":"British Steel Guardrail (Double)",
-"model":"mtrsteamloco:rails/guardrail_double.obj",
-"repeatInterval": 0.9}}

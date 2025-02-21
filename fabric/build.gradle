@@ -4,6 +4,7 @@ import org.eu.awesomekalin.jta.mod.BuildTools
 plugins {
     id "fabric-loom" version "+"
 }
+
 repositories {
     mavenCentral()
     maven {

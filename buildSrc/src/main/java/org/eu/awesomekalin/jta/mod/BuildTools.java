@@ -98,11 +98,13 @@ public class BuildTools {
 
     public String getGeckolibVersion() {
         final String modIdString = "geckolib";
+        String versions = minecraftVersion;
+        if (versions == "1.20.1") versions = "1.20";
         if (Objects.equals(loader, "fabric")) {
-            final String[] fileName =  new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-fabric-", "").split("-");
+            final String[] fileName =  new ModId(modIdString, ModProvider.MODRINTH).getModFiles(versions, ModLoader.FABRIC, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-fabric-", "").split("-");
             return fileName[0] + ':' + fileName[1];
         } else {
-            final String[] fileName = new ModId(modIdString, ModProvider.MODRINTH).getModFiles(minecraftVersion, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-", "").split("-");
+            final String[] fileName = new ModId(modIdString, ModProvider.MODRINTH).getModFiles(versions, ModLoader.FORGE, "").get(0).fileName.split(".jar")[0].replace(modIdString + "-forge-", "").split("-");
             return fileName[0] + ':' + fileName[1];
         }
     }
