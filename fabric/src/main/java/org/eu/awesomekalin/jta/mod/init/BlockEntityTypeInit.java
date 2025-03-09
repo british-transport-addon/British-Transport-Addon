@@ -9,10 +9,7 @@ import org.eu.awesomekalin.jta.mod.blocks.directional.bus.LondonBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
 import org.eu.awesomekalin.jta.mod.blocks.pids.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.roundel.*;
-import org.eu.awesomekalin.jta.mod.blocks.signal.BannerRepeaterSignal;
-import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal1Aspect;
-import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal2Aspect;
-import org.eu.awesomekalin.jta.mod.entity.block.road.VerticalRoadBarrierBlockEntity;
+import org.eu.awesomekalin.jta.mod.blocks.signal.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
@@ -29,16 +26,6 @@ public class BlockEntityTypeInit {
             BarrierPlatformBlock.BarrierPlatformBlockEntity::new,
             BlockInit.BARRIER_PLATFORM::get//update
     );
-
-    public static final BlockEntityTypeRegistryObject<VerticalRoadBarrierBlockEntity> VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockEntityType(
-            new Identifier(
-                    Init.MOD_ID,
-                    "vertical_road_barrier"
-            ),
-            VerticalRoadBarrierBlockEntity::new,
-            BlockInit.VERTICAL_ROAD_BARRIER::get//update
-    );
-
 
     public static final BlockEntityTypeRegistryObject<BannerRepeaterSignal.BlockEntity> BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
@@ -65,6 +52,24 @@ public class BlockEntityTypeInit {
             ),
             DigitalBritishSignal2Aspect.BlockEntity::new,
             BlockInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<DirectionBritishSignal5Aspect.BlockEntity> DIRECTION_SIGNAL_LIGHT_5_ASPECT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "direction_signal_light_5_aspect"
+            ),
+            DirectionBritishSignal5Aspect.BlockEntity::new,
+            BlockInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<DirectionBritishSignal5AspectRight.BlockEntity> DIRECTION_SIGNAL_LIGHT_5_ASPECT_RIGHT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "direction_signal_light_5_aspect_right"
+            ),
+            DirectionBritishSignal5AspectRight.BlockEntity::new,
+            BlockInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT_RIGHT::get
     );
 
     public static final BlockEntityTypeRegistryObject<NationalRailSingleBoard.TileEntityNationalRailSingleBoard> PIDS_NATIONALRAILSINGLEBOARD = Init.REGISTRY.registerBlockEntityType(

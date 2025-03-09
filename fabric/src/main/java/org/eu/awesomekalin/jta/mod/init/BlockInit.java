@@ -5,11 +5,8 @@ import org.eu.awesomekalin.jta.mod.blocks.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
-import org.eu.awesomekalin.jta.mod.blocks.directional.road.VerticalRoadBarrier;
 import org.eu.awesomekalin.jta.mod.blocks.pids.*;
-import org.eu.awesomekalin.jta.mod.blocks.signal.BannerRepeaterSignal;
-import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal1Aspect;
-import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalBritishSignal2Aspect;
+import org.eu.awesomekalin.jta.mod.blocks.signal.*;
 import org.mtr.mapping.holder.Block;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
@@ -21,6 +18,8 @@ public class BlockInit {
     public static final BlockRegistryObject BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "banner_repeater_signal"), () -> new Block(new BannerRepeaterSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_1_aspect"), () -> new Block(new DigitalBritishSignal1Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_2_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_2_aspect"), () -> new Block(new DigitalBritishSignal2Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
+    public static final BlockRegistryObject DIRECTION_SIGNAL_LIGHT_5_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "direction_signal_light_5_aspect"), () -> new Block(new DirectionBritishSignal5Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
+    public static final BlockRegistryObject DIRECTION_SIGNAL_LIGHT_5_ASPECT_RIGHT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "direction_signal_light_5_aspect_right"), () -> new Block(new DirectionBritishSignal5AspectRight(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
 
     public static final BlockRegistryObject PIDS_NATIONALRAILSINGLEBOARD = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_single_board"), () -> new Block(new NationalRailSingleBoard()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAILSINGLEBOARD_WHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_single_board_white"), () -> new Block(new NationalRailSingleBoardWhite()), CreativeTabInit.JTA_RAILWAYS);
@@ -29,7 +28,6 @@ public class BlockInit {
     public static final BlockRegistryObject PIDS_NATIONALRAIL10CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_10_clock"), () -> new Block(new NationalRail10Clock()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_NATIONALRAIL10CLOCKWHITE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "national_rail_10_clock_white"), () -> new Block(new NationalRail10ClockWhite()), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject PIDS_METROLINK3CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_3_clock"), () -> new Block(new Metrolink3Clock()), CreativeTabInit.JTA_RAILWAYS);
-    public static final BlockRegistryObject VERTICAL_ROAD_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "vertical_road_barrier"), () -> new Block(new VerticalRoadBarrier()), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);
 
