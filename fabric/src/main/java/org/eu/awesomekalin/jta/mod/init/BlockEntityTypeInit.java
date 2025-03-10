@@ -41,7 +41,7 @@ public class BlockEntityTypeInit {
                     "crossing_signal"
             ),
             CrossingBritishSignal.BlockEntity::new,
-            BlockInit.BANNER_REPEATER_SIGNAL::get
+            BlockInit.CROSSING_SIGNAL::get
     );
 
     public static final BlockEntityTypeRegistryObject<DigitalBritishSignal1Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
