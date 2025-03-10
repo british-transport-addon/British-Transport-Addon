@@ -1,0 +1,92 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "is_22_5": "false",
+        "is_45": "false",
+        "facing": "north|south"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base"
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "false",
+        "is_45": "false",
+        "facing": "east|west"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "true",
+        "is_45": "false",
+        "facing": "north|south"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_22_5"
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "true",
+        "is_45": "false",
+        "facing": "east|west"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_22_5",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "false",
+        "is_45": "true",
+        "facing": "north|south"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_45"
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "false",
+        "is_45": "true",
+        "facing": "east|west"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_45",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "true",
+        "is_45": "true",
+        "facing": "north|south"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_67_5"
+      }
+    },
+    {
+      "when": {
+        "is_22_5": "true",
+        "is_45": "true",
+        "facing": "east|west"
+      },
+      "apply": {
+        "model": "jta:block/signal/crossing_signal_base_67_5",
+        "y": 90,
+        "uvlock": true
+      }
+    }
+  ]
+}

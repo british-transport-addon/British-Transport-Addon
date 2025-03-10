@@ -7,10 +7,7 @@ import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderBannerRepeaterSignal;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight1Aspect;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight2Aspect;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDirectionSignalLight5Aspect;
+import org.eu.awesomekalin.jta.mod.render.rail.signal.*;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
 import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
@@ -30,6 +27,9 @@ public final class InitClient {
                         dispatcher,
                         0xFF29D28F
                 ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.CROSSING_BRITISH_SIGNAL,
+                RenderCrossingSignal::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,

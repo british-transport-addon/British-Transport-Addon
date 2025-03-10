@@ -16,6 +16,7 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 public class BlockInit {
 
     public static final BlockRegistryObject BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "banner_repeater_signal"), () -> new Block(new BannerRepeaterSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
+    public static final BlockRegistryObject CROSSING_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_signal"), () -> new Block(new CrossingBritishSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_1_aspect"), () -> new Block(new DigitalBritishSignal1Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIGITAL_SIGNAL_LIGHT_2_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "digital_signal_light_2_aspect"), () -> new Block(new DigitalBritishSignal2Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject DIRECTION_SIGNAL_LIGHT_5_ASPECT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "direction_signal_light_5_aspect"), () -> new Block(new DirectionBritishSignal5Aspect(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
