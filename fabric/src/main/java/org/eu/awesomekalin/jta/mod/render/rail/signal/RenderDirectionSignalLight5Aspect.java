@@ -29,7 +29,7 @@ public class RenderDirectionSignalLight5Aspect<T extends BlockSignalBase.BlockEn
 
         boolean isSignalOn = occupiedAspect > 0; // If any aspect is active, turn all lights on
 
-        MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/white.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
+        MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
             storedMatrixTransformations.transform(graphicsHolder, offset);
 
             for (int i = 0; i < 5; i++) {

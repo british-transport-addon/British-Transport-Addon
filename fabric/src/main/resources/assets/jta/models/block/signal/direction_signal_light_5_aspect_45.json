@@ -6,8 +6,8 @@
 	},
 	"elements": [
 		{
-			"from": [4.75, 0, 5],
-			"to": [11.25, 10, 11],
+			"from": [4.75, -4, 5],
+			"to": [11.25, 6, 11],
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 0, 8]},
 			"faces": {
 				"north": {"uv": [4, 4, 12, 16], "texture": "#particle"},
