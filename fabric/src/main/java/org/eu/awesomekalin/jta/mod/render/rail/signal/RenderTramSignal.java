@@ -11,11 +11,11 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderDigitalSignalLight1Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
+public class RenderTramSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
 
 	private final int proceedColor;
 
-	public RenderDigitalSignalLight1Aspect(Argument dispatcher, int proceedColor) {
+	public RenderTramSignal(Argument dispatcher, int proceedColor) {
 		super(dispatcher, 12, 1);
 		this.proceedColor = proceedColor;
 	}

@@ -12,7 +12,7 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
 	private final boolean redOnTop;
 
