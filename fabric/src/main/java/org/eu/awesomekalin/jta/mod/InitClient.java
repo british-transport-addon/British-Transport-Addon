@@ -42,8 +42,7 @@ public final class InitClient {
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight2Aspect<>(
                         dispatcher,
-                        false,
-                        0xFF29D28F
+                        false
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
