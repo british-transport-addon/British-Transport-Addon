@@ -11,7 +11,7 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
 	private final int proceedColor;
 
