@@ -62,6 +62,25 @@ public class BlockEntityTypeInit {
             BlockInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT::get
     );
 
+
+    public static final BlockEntityTypeRegistryObject<ShuntSignal.BlockEntity> SHUNT_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "shunt_signal"
+            ),
+            ShuntSignal.BlockEntity::new,
+            BlockInit.SHUNT_SIGNAL::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<ShuntSignalRight.BlockEntity> SHUNT_SIGNAL_RIGHT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "shunt_signal_right"
+            ),
+            ShuntSignalRight.BlockEntity::new,
+            BlockInit.SHUNT_SIGNAL_RIGHT::get
+    );
+
     public static final BlockEntityTypeRegistryObject<DirectionBritishSignal5Aspect.BlockEntity> DIRECTION_SIGNAL_LIGHT_5_ASPECT = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

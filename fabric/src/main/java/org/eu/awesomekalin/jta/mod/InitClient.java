@@ -46,6 +46,19 @@ public final class InitClient {
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SHUNT_SIGNAL,
+                dispatcher -> new RenderShuntSignal<>(
+                        dispatcher,
+                        false
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SHUNT_SIGNAL_RIGHT,
+                dispatcher -> new RenderShuntSignal<>(
+                        dispatcher,
+                        true
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT,
                 dispatcher -> new RenderDirectionSignalLight5Aspect<>(
                         dispatcher,
