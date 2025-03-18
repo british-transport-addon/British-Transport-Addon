@@ -26,7 +26,7 @@ public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEnti
 		int topColor;
 		int bottomColor;
 
-		float topY = 0.3375F;
+		float topY = 0.2F;
 		float bottomY = 0.0625F;
 
 		switch (occupiedAspect) {
