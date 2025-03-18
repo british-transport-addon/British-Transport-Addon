@@ -12,7 +12,7 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
     private static final float SIZE = 0.1F;
     private static final float SIDE_OFFSET = 0.2F;
@@ -37,19 +37,38 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
         int rightColor;
         int topColor;
 
-        if (occupiedAspect == 0) { // On — Solid white, no flashing
-            leftColor = rightColor = topColor = ACTIVE_COLOR;
-        } else if (occupiedAspect == 1) { // Flashing white
-            if (topOffsetRight) {
-                leftColor = -65536; // Left stays solid
-                rightColor = isFlashing ? ACTIVE_COLOR : INACTIVE_COLOR; // Right flashes
-            } else {
-                leftColor = isFlashing ? ACTIVE_COLOR : INACTIVE_COLOR; // Left flashes
-                rightColor = -65536; // Right stays solid
+        switch (occupiedAspect) {
+            case 0 -> { // White (proceed)
+                if (topOffsetRight) {
+                    leftColor = INACTIVE_COLOR;
+                    rightColor = ACTIVE_COLOR;
+                } else {
+                    leftColor = ACTIVE_COLOR;
+                    rightColor = INACTIVE_COLOR;
+                }
+                topColor = ACTIVE_COLOR;
             }
-            topColor = !isFlashing ? ACTIVE_COLOR : INACTIVE_COLOR;
-        } else { // Off — All dim
-            leftColor = rightColor = topColor = INACTIVE_COLOR;
+            case 1 -> { // Red (stop)
+                leftColor = rightColor = -65536; // Red
+                topColor = INACTIVE_COLOR;
+            }
+            case 2 -> { // Single Yellow
+                if (topOffsetRight) {
+                    leftColor = INACTIVE_COLOR;
+                    rightColor = 0xFFFFFF00; // Yellow
+                } else {
+                    leftColor = 0xFFFFFF00; // Yellow
+                    rightColor = INACTIVE_COLOR;
+                }
+                topColor = INACTIVE_COLOR;
+            }
+            case 3 -> { // Double Yellow
+                leftColor = rightColor = 0xFFFFFF00; // Yellow
+                topColor = INACTIVE_COLOR;
+            }
+            default -> {
+                leftColor = rightColor = topColor = INACTIVE_COLOR;
+            }
         }
 
         // Left signal
@@ -84,4 +103,5 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
             graphicsHolder.pop();
         });
     }
+
 }
