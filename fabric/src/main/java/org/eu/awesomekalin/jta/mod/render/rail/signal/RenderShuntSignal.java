@@ -31,8 +31,6 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
 
     @Override
     protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
-        boolean isFlashing = (System.currentTimeMillis() / 500) % 2 == 0;
-
         int leftColor;
         int rightColor;
         int topColor;
