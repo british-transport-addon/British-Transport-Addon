@@ -92,9 +92,9 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
                                 color = 1;
                                 signalTimings.put(pos, System.currentTimeMillis());
                             } else {
-                                if (signalTimings.get(pos) - System.currentTimeMillis() < 15_000) {
+                                if (System.currentTimeMillis() - signalTimings.get(pos) < 15_000) {
                                     color = 2;
-                                } else if (signalTimings.get(pos) - System.currentTimeMillis() < 30_000) {
+                                } else if (System.currentTimeMillis() - signalTimings.get(pos) < 30_000) {
                                     color = 3;
                                 }
                             }
