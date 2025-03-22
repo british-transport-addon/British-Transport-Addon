@@ -21,7 +21,7 @@ public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBas
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
 		final float y = 0.085F;
 		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/" + (occupiedAspect > 0 ? "banner_horizontal" : "banner_angle") + ".png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);

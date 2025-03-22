@@ -30,6 +30,9 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.CROSSING_BRITISH_SIGNAL,
                 RenderCrossingSignal::new);
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.CROSSING_BRITISH_BARRIER,
+                RenderCrossingBarrier::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,

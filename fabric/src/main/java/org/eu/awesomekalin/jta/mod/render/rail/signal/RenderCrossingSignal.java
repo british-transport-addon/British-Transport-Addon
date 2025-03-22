@@ -24,7 +24,7 @@ public class RenderCrossingSignal<T extends BlockSignalBase.BlockEntityBase> ext
     protected final Map<BlockPos, Long> crossingTimings = new HashMap<>();
 
     @Override
-    protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+    protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
         final float xOffset = 0.4F;
         final float bottomYOffset = 0.1F; // Adjusted Y offset for bottom light
         final int activeColor = 0xFFFF0000; // Red (On)

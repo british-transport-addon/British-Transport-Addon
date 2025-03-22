@@ -30,7 +30,7 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
     }
 
     @Override
-    protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+    protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
         int leftColor;
         int rightColor;
         int topColor;

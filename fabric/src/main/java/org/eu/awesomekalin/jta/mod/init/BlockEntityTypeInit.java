@@ -43,6 +43,14 @@ public class BlockEntityTypeInit {
             CrossingBritishSignal.BlockEntity::new,
             BlockInit.CROSSING_SIGNAL::get
     );
+    public static final BlockEntityTypeRegistryObject<CrossingBritishBarrier.BlockEntity> CROSSING_BRITISH_BARRIER = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "crossing_barrier"
+            ),
+            CrossingBritishBarrier.BlockEntity::new,
+            BlockInit.CROSSING_BARRIER::get
+    );
 
     public static final BlockEntityTypeRegistryObject<DigitalBritishSignal1Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
             new Identifier(

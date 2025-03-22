@@ -99,7 +99,7 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
                                 }
                             }
 
-                            this.render(storedMatrixTransformationsNew, entity, tickDelta, color, isBackSide);
+                            this.render(storedMatrixTransformationsNew, entity, tickDelta, color, isBackSide, light);
                         }
                     }
 
@@ -108,7 +108,7 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
         }
     }
 
-    protected abstract void render(StoredMatrixTransformations var1, T var2, float var3, int var4, boolean var5);
+    protected abstract void render(StoredMatrixTransformations var1, T var2, float var3, int var4, boolean var5, int light);
 
     public static ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> getAspects(BlockPos blockPos, float angle) {
         ClientWorld clientWorld = MinecraftClient.getInstance().getWorldMapped();

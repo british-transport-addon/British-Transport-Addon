@@ -22,7 +22,7 @@ public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEnti
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
 		int topColor;
 		int bottomColor;
 
