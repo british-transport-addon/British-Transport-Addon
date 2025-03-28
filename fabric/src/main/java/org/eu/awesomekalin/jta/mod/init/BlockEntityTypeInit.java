@@ -391,6 +391,15 @@ public class BlockEntityTypeInit {
             BlockInit.DISPATCH_SIGNAL::get
     );
 
+    public static final BlockEntityTypeRegistryObject<RightAwaySignal.TileEntityDispatchSignal> RA_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "ra_signal"
+            ),
+            RightAwaySignal.TileEntityDispatchSignal::new,
+            BlockInit.RA_SIGNAL::get
+    );
+
     public static final BlockEntityTypeRegistryObject<UKBritishRailStationSignSimple.TileEntityBritishRailStationSign> BRITISH_RAIL_STATION_SIGN_SIMPLE = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

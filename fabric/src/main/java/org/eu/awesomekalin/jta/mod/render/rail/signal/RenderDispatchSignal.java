@@ -1,4 +1,4 @@
-package org.eu.awesomekalin.jta.mod.render.rail;
+package org.eu.awesomekalin.jta.mod.render.rail.signal;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.DispatchSignal;
@@ -13,15 +13,12 @@ import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
-import org.mtr.mod.render.MainRenderer;
-import org.mtr.mod.render.QueuedRenderLayer;
-import org.mtr.mod.render.RenderSignalBase;
-import org.mtr.mod.render.StoredMatrixTransformations;
+import org.mtr.mod.render.*;
 
 import javax.annotation.Nonnull;
 
 
-public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSignal> extends BlockEntityRenderer<T> implements IGui, IDrawing {
+public class RenderDispatchSignal<T extends DispatchSignal.TileEntityDispatchSignal> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -31,7 +28,7 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
     private final int textColor;
     private final Identifier font;
 
-    public DispatchSignalRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public RenderDispatchSignal(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -60,8 +57,6 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
         final BlockState state = world.getBlockState(pos);
         final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
-        final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
-        final int textWidth = GraphicsHolder.getTextWidth(roundelText);
 
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
@@ -69,11 +64,33 @@ public class DispatchSignalRender<T extends DispatchSignal.TileEntityDispatchSig
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(180);
         });
-        MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
-            storedMatrixTransformations.transform(graphicsHolderNew, offset);
-            render(graphicsHolderNew, roundelText, textWidth, light);
-            graphicsHolderNew.pop();
-        });
+
+        float angle = BlockSignalBase.getAngle(state);
+        ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderBritishSignalBase.getAspects(pos, angle + 90.0F);
+        IntArrayList detectedColors = (IntArrayList)aspects.left();
+        if (!detectedColors.isEmpty()) {
+            StoredMatrixTransformations storedMatrixTransformationsNew = storedMatrixTransformations.copy();
+            storedMatrixTransformationsNew.add((graphicsHolderNew) -> {
+                graphicsHolderNew.rotateYDegrees(-angle);
+            });
+            IntAVLTreeSet filterColors = entity.getSignalColors(false);
+
+            int color = 0;
+            if (aspects.right().intStream().anyMatch((a) -> {
+                return filterColors.isEmpty() || filterColors.contains(a);
+            })) {
+                return;
+            }
+
+            final MutableText roundelText = TextHelper.setStyle(TextHelper.literal(IGui.textOrUntitled("OFF")), style);
+            final int textWidth = GraphicsHolder.getTextWidth(roundelText);
+
+            MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
+                storedMatrixTransformations.transform(graphicsHolderNew, offset);
+                render(graphicsHolderNew, roundelText, textWidth, light);
+                graphicsHolderNew.pop();
+            });
+        }
     }
 
     private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {

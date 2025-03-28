@@ -1,18 +1,14 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
-import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.DirectionalBlockEntityBase;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.init.BlockInit;
-import org.jetbrains.annotations.Nullable;
 import org.mtr.core.tool.Angle;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.BlockSignalBase;
 
-public class DispatchSignal extends BlockSignalBase {
-    public DispatchSignal() {
+public class RightAwaySignal extends BlockSignalBase {
+    public RightAwaySignal() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
@@ -27,10 +23,10 @@ public class DispatchSignal extends BlockSignalBase {
         return new TileEntityDispatchSignal(blockPos, blockState);
     }
 
-    public static class TileEntityDispatchSignal extends BlockSignalBase.BlockEntityBase {
+    public static class TileEntityDispatchSignal extends BlockEntityBase {
 
         public TileEntityDispatchSignal(BlockPos pos, BlockState state) {
-            super(BlockEntityTypeInit.DISPATCH_SIGNAL.get(), false, pos, state);
+            super(BlockEntityTypeInit.RA_SIGNAL.get(), false, pos, state);
         }
 
         @Override

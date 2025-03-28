@@ -53,6 +53,7 @@ public class BlockInit {
     public static final BlockRegistryObject DARK_ENGLISH_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "dark_english_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject DISPATCH_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "dispatch_signal"), () -> new Block(new DispatchSignal()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject RA_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "ra_signal"), () -> new Block(new RightAwaySignal()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject AWS_DECORATION = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "aws"), () -> new Block(new AWSRailDecoration()), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject BRITISH_RAILWAY_GROUT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_railway_grout"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject UNDERGROUND_PLATFORM_END = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "underground_platform_end"), () -> new Block(new UndergroundPlatformEnd()), CreativeTabInit.JTA_BLOCKS);
