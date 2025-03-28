@@ -76,7 +76,7 @@ public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchS
             storedMatrixTransformationsNew.add((graphicsHolderNew) -> {
                 graphicsHolderNew.rotateYDegrees(-angle);
             });
-            IntAVLTreeSet filterColors = entity.getSignalColors(false);
+            IntAVLTreeSet filterColors = entity.getSignalColors(true);
 
             if (!aspects.right().intStream().anyMatch((a) -> {
                 return filterColors.isEmpty() || filterColors.contains(a);

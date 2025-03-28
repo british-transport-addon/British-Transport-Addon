@@ -73,7 +73,7 @@ public class RenderDispatchSignal<T extends DispatchSignal.TileEntityDispatchSig
             storedMatrixTransformationsNew.add((graphicsHolderNew) -> {
                 graphicsHolderNew.rotateYDegrees(-angle);
             });
-            IntAVLTreeSet filterColors = entity.getSignalColors(false);
+            IntAVLTreeSet filterColors = entity.getSignalColors(true);
 
             int color = 0;
             if (aspects.right().intStream().anyMatch((a) -> {
