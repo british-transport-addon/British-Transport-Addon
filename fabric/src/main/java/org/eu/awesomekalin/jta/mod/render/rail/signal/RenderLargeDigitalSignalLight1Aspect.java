@@ -1,0 +1,31 @@
+package org.eu.awesomekalin.jta.mod.render.rail.signal;
+
+import org.eu.awesomekalin.jta.mod.Init;
+import org.mtr.mapping.holder.Direction;
+import org.mtr.mapping.holder.Identifier;
+import org.mtr.mapping.mapper.GraphicsHolder;
+import org.mtr.mod.block.BlockSignalBase;
+import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.render.MainRenderer;
+import org.mtr.mod.render.QueuedRenderLayer;
+import org.mtr.mod.render.StoredMatrixTransformations;
+
+public class RenderLargeDigitalSignalLight1Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
+
+	private final int proceedColor;
+
+	public RenderLargeDigitalSignalLight1Aspect(Argument dispatcher, int proceedColor) {
+		super(dispatcher, 12, 1);
+		this.proceedColor = proceedColor;
+	}
+
+	@Override
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
+		final float y = 0.085F;
+		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
+			storedMatrixTransformations.transform(graphicsHolder, offset);
+			IDrawing.drawTexture(graphicsHolder, -0.25F, y - .025f, -0.19375F, 0.25F, y + 0.475F, -0.19375F, Direction.UP, occupiedAspect > 0 ? occupiedAspect == 1 ? -65536 : -22016 : proceedColor, GraphicsHolder.getDefaultLight());
+			graphicsHolder.pop();
+		});
+	}
+}

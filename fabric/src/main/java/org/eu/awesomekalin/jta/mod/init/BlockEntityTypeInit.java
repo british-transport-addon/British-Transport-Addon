@@ -61,6 +61,15 @@ public class BlockEntityTypeInit {
             BlockInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT::get
     );
 
+    public static final BlockEntityTypeRegistryObject<LargeDigitalSignal1Aspect.BlockEntity> LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "large_digital_signal_light_1_aspect"
+            ),
+            LargeDigitalSignal1Aspect.BlockEntity::new,
+            BlockInit.LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT::get
+    );
+
     public static final BlockEntityTypeRegistryObject<DigitalBritishSignal2Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_2_ASPECT = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,
@@ -68,6 +77,16 @@ public class BlockEntityTypeInit {
             ),
             DigitalBritishSignal2Aspect.BlockEntity::new,
             BlockInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT::get
+    );
+
+
+    public static final BlockEntityTypeRegistryObject<BritishSignal4Aspect.BlockEntity> BRITISH_SIGNAL_LIGHT_4_ASPECT = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "british_signal_light_4_aspect"
+            ),
+            BritishSignal4Aspect.BlockEntity::new,
+            BlockInit.BRITISH_SIGNAL_LIGHT_4_ASPECT::get
     );
 
 
@@ -380,6 +399,15 @@ public class BlockEntityTypeInit {
             BeeStationSign.TileEntityBeeStationSign::new,
             BlockInit.BEE_BUS_STATION_SIGN::get,
             BlockInit.BEE_INTERCHANGE_STATION_SIGN::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<DigitalRouteSignal.BlockEntity> DIGITAL_ROUTE_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "digital_route_signal"
+            ),
+            DigitalRouteSignal.BlockEntity::new,
+            BlockInit.DIGITAL_ROUTE_SIGNAL::get
     );
 
     public static final BlockEntityTypeRegistryObject<DispatchSignal.TileEntityDispatchSignal> DISPATCH_SIGNAL = Init.REGISTRY.registerBlockEntityType(

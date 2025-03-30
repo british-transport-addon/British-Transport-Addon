@@ -75,6 +75,7 @@ public class RenderDispatchSignal<T extends DispatchSignal.TileEntityDispatchSig
             });
             IntAVLTreeSet filterColors = entity.getSignalColors(true);
 
+
             int color = 0;
             if (aspects.right().intStream().anyMatch((a) -> {
                 return filterColors.isEmpty() || filterColors.contains(a);

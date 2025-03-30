@@ -42,10 +42,22 @@ public final class InitClient {
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT,
+                dispatcher -> new RenderLargeDigitalSignalLight1Aspect<>(
+                        dispatcher,
+                        0xFF29D28F
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight2Aspect<>(
                         dispatcher,
                         false
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BRITISH_SIGNAL_LIGHT_4_ASPECT,
+                dispatcher -> new RenderSignalLight4Aspect<>(
+                        dispatcher
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
@@ -372,6 +384,20 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIGITAL_ROUTE_SIGNAL,
+                dispatcher -> new RenderDigitalRouteSignal<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 6,
+                        0,
+                        .05F,
+                        0.19375F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DISPATCH_SIGNAL,
                 dispatcher -> new RenderDispatchSignal<>(
