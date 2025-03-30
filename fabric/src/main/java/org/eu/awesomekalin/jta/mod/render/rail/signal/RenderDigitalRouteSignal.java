@@ -56,16 +56,14 @@ public class RenderDigitalRouteSignal<T extends DigitalRouteSignal.BlockEntity> 
 
         final BlockPos pos = entity.getPos2();
         final BlockState state = world.getBlockState(pos);
-        final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
-
-        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
-        storedMatrixTransformations.add(graphicsHolderNew -> {
-            graphicsHolderNew.rotateYDegrees(-facing.asRotation());
-            graphicsHolderNew.rotateZDegrees(180);
-        });
 
         float angle = BlockSignalBase.getAngle(state);
+        final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+        storedMatrixTransformations.add(graphicsHolderNew -> {
+            graphicsHolderNew.rotateYDegrees(-angle);
+            graphicsHolderNew.rotateZDegrees(180);
+        });
         ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderBritishSignalBase.getAspects(pos, angle + 90.0F);
         IntArrayList detectedColors = (IntArrayList)aspects.left();
         if (!detectedColors.isEmpty()) {
