@@ -15,6 +15,7 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
 
+    public static final BlockRegistryObject TRAM_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "tram_signal"), () -> new Block(new TramSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "banner_repeater_signal"), () -> new Block(new BannerRepeaterSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject CROSSING_SIGNAL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_signal"), () -> new Block(new CrossingBritishSignal(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);
     public static final BlockRegistryObject CROSSING_BARRIER = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "crossing_barrier"), () -> new Block(new CrossingBritishBarrier(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.JTA_RAILWAYS);

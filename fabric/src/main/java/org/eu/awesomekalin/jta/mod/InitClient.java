@@ -35,6 +35,10 @@ public final class InitClient {
                 RenderCrossingBarrier::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.TRAM_SIGNAL,
+                RenderTramSignal::new);
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight1Aspect<>(
                         dispatcher,

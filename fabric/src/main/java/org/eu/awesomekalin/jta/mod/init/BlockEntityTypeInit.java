@@ -52,6 +52,15 @@ public class BlockEntityTypeInit {
             BlockInit.CROSSING_BARRIER::get
     );
 
+    public static final BlockEntityTypeRegistryObject<TramSignal.BlockEntity> TRAM_SIGNAL = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(
+                    Init.MOD_ID,
+                    "tram_signal"
+            ),
+            TramSignal.BlockEntity::new,
+            BlockInit.TRAM_SIGNAL::get
+    );
+
     public static final BlockEntityTypeRegistryObject<DigitalBritishSignal1Aspect.BlockEntity> DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
             new Identifier(
                     Init.MOD_ID,

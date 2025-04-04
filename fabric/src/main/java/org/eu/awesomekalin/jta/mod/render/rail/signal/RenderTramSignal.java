@@ -8,24 +8,33 @@ import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
-import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderTramSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderTramSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
-	private final int proceedColor;
-
-	public RenderTramSignal(Argument dispatcher, int proceedColor) {
-		super(dispatcher, 12, 1);
-		this.proceedColor = proceedColor;
+	public RenderTramSignal(Argument dispatcher) {
+		super(dispatcher, 12, 2);
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
-		final float y = 0.1625F;
-		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
+		Identifier texture;
+
+		switch (occupiedAspect) {
+			case 1:
+				texture = new Identifier(Init.MOD_ID, "textures/block/signal_horizontal.png");
+				break;
+			case 2:
+				texture = new Identifier(Init.MOD_ID, "textures/block/signal_dot.png");
+				break;
+			case 3:
+			default:
+				texture = new Identifier(Init.MOD_ID, "textures/block/signal_vertical.png");
+		}
+
+		MainRenderer.scheduleRender(texture, false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);
-			IDrawing.drawTexture(graphicsHolder, -0.15F, y - .025f, -0.19375F, 0.15F, y + 0.275F, -0.19375F, Direction.UP, occupiedAspect > 0 ? 0xFFFF0000 : proceedColor, GraphicsHolder.getDefaultLight());
+			IDrawing.drawTexture(graphicsHolder, -0.65F, -.4F, -0.19375F, 0.65F, 0.9F, -0.19375F, Direction.UP, 0xFFFFFFFF, GraphicsHolder.getDefaultLight());
 			graphicsHolder.pop();
 		});
 	}
