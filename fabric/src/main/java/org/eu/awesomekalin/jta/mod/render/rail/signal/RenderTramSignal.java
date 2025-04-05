@@ -18,23 +18,44 @@ public class RenderTramSignal<T extends BlockSignalBase.BlockEntityBase> extends
 
 	@Override
 	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
-		Identifier texture;
+		final Identifier texture = new Identifier(Init.MOD_ID, "textures/block/digital_signal.png");
+		final int activeColor = 0xFFFFFFFF;
+		final int inactiveColor = 0xFF222222;
 
-		switch (occupiedAspect) {
-			case 1:
-				texture = new Identifier(Init.MOD_ID, "textures/block/signal_horizontal.png");
-				break;
-			case 2:
-				texture = new Identifier(Init.MOD_ID, "textures/block/signal_dot.png");
-				break;
-			case 3:
-			default:
-				texture = new Identifier(Init.MOD_ID, "textures/block/signal_vertical.png");
-		}
+		final float spacing = 0.15F;
+		final float dotSize = 0.06F;
+		final float centerDotSize = 0.09F;
+		final float centerY = 0.4F;
 
 		MainRenderer.scheduleRender(texture, false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);
-			IDrawing.drawTexture(graphicsHolder, -0.65F, -.4F, -0.19375F, 0.65F, 0.9F, -0.19375F, Direction.UP, 0xFFFFFFFF, GraphicsHolder.getDefaultLight());
+
+			// Vertical (aspect 0 or 3)
+			for (int i = -2; i <= 2; i++) {
+				int color = (occupiedAspect == 0 || occupiedAspect == 3) ? activeColor : inactiveColor;
+				float y = centerY + (i * spacing);
+				IDrawing.drawTexture(graphicsHolder, -dotSize, y - dotSize, -0.19375F,
+						dotSize, y + dotSize, -0.19375F,
+						Direction.UP, color, GraphicsHolder.getDefaultLight());
+			}
+
+			// Horizontal (aspect 1)
+			for (int i = -2; i <= 2; i++) {
+				int color = (occupiedAspect == 1) ? activeColor : inactiveColor;
+				float x = i * spacing;
+				float y = centerY;
+				IDrawing.drawTexture(graphicsHolder, x - dotSize, y - dotSize, -0.19375F,
+						x + dotSize, y + dotSize, -0.19375F,
+						Direction.UP, color, GraphicsHolder.getDefaultLight());
+			}
+
+			// Dot (aspect 2)
+			if (occupiedAspect == 2) {
+                IDrawing.drawTexture(graphicsHolder, -centerDotSize, centerY - centerDotSize, -0.19375F,
+						centerDotSize, centerY + centerDotSize, -0.19375F,
+						Direction.UP, activeColor, GraphicsHolder.getDefaultLight());
+			}
+
 			graphicsHolder.pop();
 		});
 	}

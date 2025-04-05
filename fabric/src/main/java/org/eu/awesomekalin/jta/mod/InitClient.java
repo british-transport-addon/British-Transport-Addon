@@ -37,6 +37,9 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.TRAM_SIGNAL,
                 RenderTramSignal::new);
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.TRAM_JUNCTION_SIGNAL,
+                RenderTramJunctionSignal::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
