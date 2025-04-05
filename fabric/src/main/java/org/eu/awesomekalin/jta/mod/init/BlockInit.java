@@ -38,6 +38,7 @@ public class BlockInit {
     public static final BlockRegistryObject PIDS_METROLINK3CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "metrolink_3_clock"), () -> new Block(new Metrolink3Clock()), CreativeTabInit.JTA_RAILWAYS);
 
     public static final BlockRegistryObject BARRIER_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform"), () -> new Block(new BarrierPlatformBlock()), CreativeTabInit.JTA_BLOCKS);
+    public static final BlockRegistryObject BARRIER_PLATFORM_SLAB = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "barrier_platform_slab"), () -> new Block(new BarrierPlatformSlabBlock()), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject SCOTRAIL_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "scotrail_blue"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
 
