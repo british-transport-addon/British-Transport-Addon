@@ -78,7 +78,7 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
                                     float width = 0.03125F / (float)(!filterColors.isEmpty() && !filterColors.contains(signalColor) ? 8 : 1);
                                     MainRenderer.scheduleRender(new Identifier("mtr", "textures/block/white.png"), false, occupied ? QueuedRenderLayer.EXTERIOR : QueuedRenderLayer.LIGHT, (graphicsHolderNew, offset) -> {
                                         storedMatrixTransformationsNew.transform(graphicsHolderNew, offset);
-                                        IDrawing.drawTexture(graphicsHolderNew, x, this.colorIndicatorHeight, -0.15625F, x + 0.03125F, this.colorIndicatorHeight, -0.15625F, x + 0.03125F, this.colorIndicatorHeight, -0.15625F - width, x, this.colorIndicatorHeight, -0.15625F - width, 0.0F, 0.0F, 1.0F, 1.0F, Direction.UP, MainRenderer.getFlashingColor(signalColor | -16777216), GraphicsHolder.getDefaultLight());
+                                        IDrawing.drawTexture(graphicsHolderNew, x, this.colorIndicatorHeight, -0.15625F, x + 0.03125F, this.colorIndicatorHeight, -0.15625F, x + 0.03125F, this.colorIndicatorHeight, -0.15625F - width, x, this.colorIndicatorHeight, -0.15625F - width, 0.0F, 0.0F, 1.0F, 1.0F, Direction.UP, MainRenderer.getFlashingColor(signalColor | -16777216, 1), GraphicsHolder.getDefaultLight());
                                         graphicsHolderNew.pop();
                                     });
                                 }
@@ -127,7 +127,7 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
                         IntAVLTreeSet var10000 = rail.getSignalColors();
                         Objects.requireNonNull(detectedColors);
                         var10000.forEach(detectedColors::add);
-                        minecraftClientData.railIdToBlockedSignalColors.getOrDefault(rail.getHexId(), new LongArrayList()).forEach((color) -> {
+                        minecraftClientData.railIdToPreBlockedSignalColors.getOrDefault(rail.getHexId(), new LongArrayList()).forEach((color) -> {
                             occupiedColors.add((int)color);
                         });
                     }

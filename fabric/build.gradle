@@ -17,6 +17,20 @@ repositories {
         url = 'https://maven.parchmentmc.org'
     }
 
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
+    }
+
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
 
 }
@@ -32,10 +46,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${buildTools.getYarnVersion()}:v2"
     modImplementation "net.fabricmc:fabric-loader:${buildTools.getFabricVersion()}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${buildTools.getFabricApiVersion()}"
-    modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
-
-    modApi files('libs/cardinal-components-base-5.2.0.jar')
-    modApi files('libs/cardinal-components-entity-5.2.0.jar')
+    modImplementation "maven.modrinth:minecraft-transit-railway:FABRIC-${mtrVersion}+${minecraftVersion}"
 }
 
 java {
