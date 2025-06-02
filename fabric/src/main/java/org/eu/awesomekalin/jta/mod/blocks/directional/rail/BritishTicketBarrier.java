@@ -4,9 +4,11 @@ package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockHelper;
+import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
 import org.mtr.mod.block.IBlock;
+import org.mtr.mod.generated.lang.TranslationProvider;
 
 import java.util.List;
 
@@ -41,9 +43,11 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
     @Override
     public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         return IBlock.checkHoldingBrush(world, player, () -> {
-            state.with(new Property<>(LOCKED.data), !IBlock.getStatePropertySafe(state, LOCKED));
+            final boolean locked = !IBlock.getStatePropertySafe(state, LOCKED);
+            BlockState newState = state.with(new Property<>(LOCKED.data), locked);
 
-            world.setBlockState(pos, state);
+            world.setBlockState(pos, newState);
+            player.sendMessage(Text.of(TextHelper.translatable(locked ? "gui.jta.ticket_barrier_locked" : "gui.jta.ticket_barrier_unlocked").getString()), true);
         });
     }
 
