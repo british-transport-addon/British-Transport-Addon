@@ -6,7 +6,6 @@ import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
-import org.mtr.mod.block.BlockPlatform;
 import org.mtr.mod.block.BlockPlatformSlab;
 
 public class BarrierPlatformSlabBlock extends BlockPlatformSlab implements BlockWithEntity {

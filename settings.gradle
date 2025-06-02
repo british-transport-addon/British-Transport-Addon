@@ -15,7 +15,6 @@ plugins {
 include("fabric")
 include("forge")
 
-rootProject.name = "Jesses-Transit-Addon"
+rootProject.name = "British-Transport-Addon"
 include 'scripts'
 include 'common'
-
