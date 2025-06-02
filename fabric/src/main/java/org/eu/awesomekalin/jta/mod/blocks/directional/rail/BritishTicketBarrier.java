@@ -51,6 +51,6 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
     @Override
     public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
-        return IBlock.getVoxelShapeByDirection(12.0, 0.0, 0.0, 16.0, 24.0, 32.0, facing);
+        return IBlock.getVoxelShapeByDirection(12.0, 0.0, -16.0, 16.0, 24.0, 16.0, facing);
     }
 }
