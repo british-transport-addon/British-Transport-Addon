@@ -19,7 +19,7 @@
       "model": "jta:block/british_ticket_barrier_entrance_closed"
     },
     "facing=east,open=closed,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed",
+      "model": "jta:block/british_ticket_barrier_base",
       "y": 90
     },
     "facing=south,open=closed,locked=false": {
