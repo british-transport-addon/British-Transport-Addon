@@ -9,7 +9,6 @@ import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
 import org.eu.awesomekalin.jta.mod.render.rail.signal.*;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
-import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
 import org.mtr.mapping.holder.Style;
@@ -606,7 +605,8 @@ public final class InitClient {
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.UNDERGROUND_PLATFORM_END);
 
-        REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_ENTRANCE);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_EXIT);
 
         REGISTRY_CLIENT.init();
     }

@@ -1,14 +1,11 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
-
 import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
 import org.mtr.mod.block.IBlock;
-import org.mtr.mod.generated.lang.TranslationProvider;
 
 import java.util.List;
 
