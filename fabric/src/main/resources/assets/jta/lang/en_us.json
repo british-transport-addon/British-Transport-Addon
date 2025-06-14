@@ -131,6 +131,7 @@
     "block.jta.wall_northern_sign": "Station Sign (Northern, Wall)",
     "block.jta.wall_pole": "Wall",
     "block.jta.yellow_roadwork_barrier": "Roadwork Barrier (Yellow)",
+    "display.jta.builtin_aldi_advert": "Aldi Advert (Built-in)",
     "gui.jta.thrown_litter": "You have thrown away %sx %s.",
     "gui.jta.ticket_barrier_locked": "Locked Ticket Barrier",
     "gui.jta.ticket_barrier_unlocked": "Unlocked Ticket Barrier",

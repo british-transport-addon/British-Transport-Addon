@@ -1,0 +1,10 @@
+{
+    "displays": [
+        {
+            "id": "builtin_aldi_advert",
+            "name": "display.jta.builtin_aldi_advert",
+            "textureResource": "jta:textures/block/adverts/aldi.png",
+            "color": "004D91"
+        }
+    ]
+}

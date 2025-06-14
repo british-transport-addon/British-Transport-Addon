@@ -62,9 +62,7 @@ public final class InitClient {
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_SIGNAL_LIGHT_4_ASPECT,
-                dispatcher -> new RenderSignalLight4Aspect<>(
-                        dispatcher
-                ));
+                RenderSignalLight4Aspect::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.SHUNT_SIGNAL,
@@ -607,6 +605,8 @@ public final class InitClient {
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_ENTRANCE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_EXIT);
+
+        REGISTRY_CLIENT.eventRegistryClient.registerResourceReloadEvent(CustomResourceLoader::reload);
 
         REGISTRY_CLIENT.init();
     }
