@@ -5,6 +5,7 @@ import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.resource.DisplayResource;
 import org.mtr.libraries.com.google.gson.JsonObject;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.Object2ObjectAVLTreeMap;
+import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectImmutableList;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.ResourceManagerHelper;
@@ -15,6 +16,7 @@ import java.util.function.Function;
 
 public class CustomResourceLoader {
     public static final String CUSTOM_RESOURCES_ID = "jta_custom_resources";
+    public static final String DEFAULT_DISPLAY = "builtin_aldi_advert";
 
     public static final ObjectArrayList<DisplayResource> DISPLAYS = new ObjectArrayList<>();
     public static final Object2ObjectAVLTreeMap<String, DisplayResource> DISPLAYS_CACHE = new Object2ObjectAVLTreeMap<>();
@@ -52,5 +54,9 @@ public class CustomResourceLoader {
                 addedIds.add(id);
             }
         }
+    }
+
+    public static ObjectImmutableList<DisplayResource> getDisplays() {
+        return new ObjectImmutableList<>(DISPLAYS);
     }
 }

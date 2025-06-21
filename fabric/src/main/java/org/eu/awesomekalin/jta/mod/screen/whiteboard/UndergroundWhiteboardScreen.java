@@ -48,7 +48,6 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
     }
 
     public static UndergroundWhiteboardScreen handle(BlockPos pos) {
-        System.out.println("main handle stack");
         UndergroundWhiteboardScreen screen = new UndergroundWhiteboardScreen(pos);
         MinecraftClient.getInstance().openScreen(new Screen(screen));
         return screen;
