@@ -1,0 +1,39 @@
+{
+    "multipart": [
+        {
+            "when": {
+                "facing": "north"
+            },
+            "apply": {
+                "model": "jta:block/display_1x1",
+                "y": 180
+            }
+        },
+        {
+            "when": {
+                "facing": "east"
+            },
+            "apply": {
+                "model": "jta:block/display_1x1",
+                "y": -90
+            }
+        },
+        {
+            "when": {
+                "facing": "south"
+            },
+            "apply": {
+                "model": "jta:block/display_1x1"
+            }
+        },
+        {
+            "when": {
+                "facing": "west"
+            },
+            "apply": {
+                "model": "jta:block/display_1x1",
+                "y": 90
+            }
+        }
+    ]
+}

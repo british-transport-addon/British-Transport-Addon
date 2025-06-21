@@ -606,6 +606,8 @@ public final class InitClient {
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_ENTRANCE);
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_EXIT);
 
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DISPLAY_1x1);
+
         REGISTRY_CLIENT.eventRegistryClient.registerResourceReloadEvent(CustomResourceLoader::reload);
 
         REGISTRY_CLIENT.init();

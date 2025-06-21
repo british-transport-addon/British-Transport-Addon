@@ -1,6 +1,9 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
+import org.eu.awesomekalin.jta.mod.Init;
+import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.CustomResourceLoader;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
 import org.eu.awesomekalin.jta.mod.screen.DisplaySelectorScreen;
 import org.jetbrains.annotations.NotNull;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -9,27 +12,34 @@ import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockWithEntity;
 import org.mtr.mapping.mapper.DirectionHelper;
+import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.Blocks;
 import org.mtr.mod.block.IBlock;
+
+import java.util.List;
+import java.util.Objects;
 
 public class DisplayBlock extends BlockExtension implements DirectionHelper, BlockWithEntity {
     public final int width;
     public final int height;
-    private final BlockEntityType<?> type;
 
-    public DisplayBlock(int width, int height, BlockEntityType<?> type) {
+    public DisplayBlock(int width, int height) {
         super(Blocks.createDefaultBlockSettings(false));
         this.width = width;
         this.height = height;
-        this.type = type;
     }
 
     @NotNull
     @Override
     public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         return IBlock.checkHoldingBrush(world, player, () -> {
-            MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos)));
+            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenDisplaySelector(pos));
         });
+    }
+
+    @Override
+    public void addBlockProperties(List<HolderBase<?>> properties) {
+        properties.add(FACING);
     }
 
     @Override
@@ -40,7 +50,7 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new DisplayBlockEntity(type, blockPos, blockState, width, height);
+        return new DisplayBlockEntity(blockPos, blockState, width, height);
     }
 
     public static class DisplayBlockEntity extends BlockEntityExtension {
@@ -48,13 +58,31 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
         private final int width;
         private final int height;
 
-        public DisplayBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, int width, int height) {
-            super(type, pos, state);
+        public DisplayBlockEntity(BlockPos pos, BlockState state, int width, int height) {
+            super(Objects.requireNonNull(getType(width, height)), pos, state);
             selectedIds = new ObjectArrayList<>();
             selectedIds.add(CustomResourceLoader.DEFAULT_DISPLAY);
 
             this.width = width;
             this.height = height;
+        }
+
+        private static BlockEntityType<?> getType(int width, int height) {
+            switch (width + "x" + height) {
+                case "1x1":
+                    return BlockEntityTypeInit.DISPLAY_1x1.get();
+
+                default:
+                    return null;
+            }
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
+        public int getHeight() {
+            return height;
         }
     }
 }

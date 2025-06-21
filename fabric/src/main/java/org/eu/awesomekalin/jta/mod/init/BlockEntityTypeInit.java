@@ -2,6 +2,7 @@ package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.BarrierPlatformBlock;
+import org.eu.awesomekalin.jta.mod.blocks.directional.DisplayBlock;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeStationSign;
@@ -107,6 +108,12 @@ public class BlockEntityTypeInit {
             new Identifier(Init.MOD_ID, "dispatch_signal"),
             DispatchSignal.TileEntityDispatchSignal::new,
             BlockInit.DISPATCH_SIGNAL::get
+    );
+
+    public static final BlockEntityTypeRegistryObject<DisplayBlock.DisplayBlockEntity> DISPLAY_1x1 = Init.REGISTRY.registerBlockEntityType(
+            new Identifier(Init.MOD_ID, "display"),
+            (pos, state) -> new DisplayBlock.DisplayBlockEntity(pos, state, 1, 1),
+            BlockInit.DISPLAY_1x1::get
     );
 
     public static final BlockEntityTypeRegistryObject<LargeDigitalSignal1Aspect.BlockEntity> LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
