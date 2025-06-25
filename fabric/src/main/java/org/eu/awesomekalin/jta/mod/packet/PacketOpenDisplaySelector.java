@@ -26,6 +26,6 @@ public class PacketOpenDisplaySelector extends PacketHandler {
 
     @Override
     public void runClient() {
-        MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos)));
+        ClientPacketHelper.openDisplaySelector(pos);
     }
 }
