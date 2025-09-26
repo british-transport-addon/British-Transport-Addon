@@ -16,5 +16,5 @@ include("common")
 include("fabric")
 include("neoforge")
 
-rootProject.name = "British-Transport-Addon"
+rootProject.name = "British-Transit-Addon"
 include 'scripts'
