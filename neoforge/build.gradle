@@ -1,6 +1,17 @@
+plugins {
+    id 'com.gradleup.shadow'
+}
+
 architectury {
     platformSetupLoomIde()
     neoForge()
+}
+
+repositories {
+    maven {
+        name = "NeoForged"
+        url = "https://maven.neoforged.net/releases"
+    }
 }
 
 configurations {
@@ -22,7 +33,9 @@ configurations {
 
 dependencies {
     neoForge "net.neoforged:neoforge:${rootProject.neoforge_version}"
-    modApi "dev.architectury:architectury-neoforge:${rootProject.architectury_version}"
+
+    common(project(path: ":common", configuration: "namedElements")) { transitive false }
+    shadowBundle project(path: ":common", configuration: "transformProductionNeoForge")
 }
 
 processResources {
@@ -33,41 +46,11 @@ processResources {
     }
 }
 
-tasks.register("moveForgeBuilds") {
-    doLast {
-        delete fileTree("../build/release").matching {
-            include "**/neoforge*"
-        }
-        delete fileTree("../build/libs").matching {
-            include "**/neoforge*"
-        }
-        delete fileTree("../build/latest").matching {
-            include "**/neoforge*"
-        }
-        copy {
-            from "build/libs"
-            include "*${rootProject.minecraft_version}.jar"
-            into "../build/release"
-            rename "(.+)", "${rootProject.name}-\$1"
-        }
-        copy {
-            from "build/libs"
-            into "../build/latest"
-            rename { fileName -> "${rootProject.name}-${fileName.replace(rootProject.mod_version, "latest")}" }
-        }
-        copy {
-            from "build/libs"
-            include "*${rootProject.properties.minecraft_version}-dev-shadow.jar"
-            into "../build/libs"
-            rename "(.+)", "${rootProject.name}-\$1"
-        }
-    }
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = "dev-shadow"
 }
 
-afterEvaluate {
-    for (def task in it.tasks) {
-        if (task == tasks.build) {
-            task.finalizedBy tasks.moveForgeBuilds
-        }
-    }
+remapJar {
+    inputFile.set shadowJar.archiveFile
 }

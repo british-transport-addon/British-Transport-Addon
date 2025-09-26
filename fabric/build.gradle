@@ -1,3 +1,7 @@
+plugins {
+    id 'com.gradleup.shadow'
+}
+
 architectury {
     platformSetupLoomIde()
     fabric()
@@ -19,53 +23,26 @@ configurations {
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${rootProject.properties.fabric_loader_version}"
-    modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.properties.fabric_api_version}"
-    modApi "com.terraformersmc:modmenu:${rootProject.properties.mod_menu_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${rootProject.properties.fabric_api_version}"
+    modImplementation "com.terraformersmc:modmenu:${rootProject.properties.mod_menu_version}"
+
+    common(project(path: ':common', configuration: 'namedElements')) { transitive = false }
+    shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
 }
 
 processResources {
     inputs.property "version", project.version
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand version: project.version
     }
 }
 
-tasks.register("moveFabricBuilds") {
-    doLast {
-        delete fileTree("../build/release").matching {
-            include "**/fabric*"
-        }
-        delete fileTree("../build/libs").matching {
-            include "**/fabric*"
-        }
-        delete fileTree("../build/latest").matching {
-            include "**/fabric*"
-        }
-        copy {
-            from "build/libs"
-            include "*${rootProject.properties.minecraft_version}.jar"
-            into "../build/release"
-            rename "(.+)", "${rootProject.name}-\$1"
-        }
-        copy {
-            from "build/libs"
-            into "../build/latest"
-            rename { fileName -> "${rootProject.name}-${fileName.replace(rootProject.mod_version, "latest")}" }
-        }
-        copy {
-            from "build/libs"
-            include "*${rootProject.minecraft_version}-dev-shadow.jar"
-            into "../build/libs"
-            rename "(.+)", "${rootProject.name}-\$1"
-        }
-    }
+shadowJar {
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = "dev-shadow"
 }
 
-afterEvaluate {
-    for (def task in it.tasks) {
-        if (task == tasks.build) {
-            task.finalizedBy tasks.moveFabricBuilds
-        }
-    }
+remapJar {
+    inputFile.set shadowJar.archiveFile
 }

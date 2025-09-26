@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "jta"
+version = "${version}"
+displayName = "British Transit Addon"
+authors = ["AwesomeKalin55", "dash :D"]
+description = "British Transit Addon (BTA) is a collection of decorative and functional blocks for use with the MTR mod, primarily focused around stuff from the UK and British Isles"
+logoFile = "icon.png"
+
+[[dependencies.jta]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.4,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.4,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.jta]]
+modId = "mtr"
+type = "required"
+versionRange = "[4.1.0.beta-1,)"
+ordering = "NONE"
+side = "BOTH"

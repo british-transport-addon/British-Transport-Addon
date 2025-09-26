@@ -1,26 +1,10 @@
-dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${rootProject.properties.fabric_loader_version}"
-}
-
 architectury {
     common ("fabric", "neoforge")
 }
 
-task moveCommonBuilds() {
-    doLast {
-        delete fileTree("../build/libs").matching {
-            include "**/${rootProject.name}-common*"
-        }
-        delete fileTree("../build/latest").matching {
-            include "**/${rootProject.name}-common*"
-        }
-    }
-}
-
-afterEvaluate {
-    for (def task in it.tasks) {
-        if (task == tasks.build) {
-            task.finalizedBy tasks.moveCommonBuilds
-        }
-    }
+dependencies {
+    // We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    // Do NOT use other classes from Fabric Loader.
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
 }

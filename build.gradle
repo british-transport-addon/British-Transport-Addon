@@ -1,49 +1,35 @@
 plugins {
     id "java"
-    id "dev.architectury.loom" version "+" apply false
-    id "architectury-plugin" version "+"
+    id "dev.architectury.loom" version "1.11-SNAPSHOT" apply false
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id 'com.gradleup.shadow' version '8.3.6' apply false
 }
-
-group "org.eu.awesomekalin.jta"
-version rootProject.properties.version
 
 architectury {
     minecraft = project.properties.minecraft_version
+}
+
+allprojects {
+    group "org.eu.awesomekalin.jta"
+    version rootProject.properties.version
 }
 
 subprojects {
     apply plugin: 'dev.architectury.loom'   // Ensure Loom plugin is applied
     apply plugin: 'architectury-plugin'
 
-    version = rootProject.version + "+" + rootProject.properties.minecraft_version
-    group = rootProject.maven_group
-
     repositories {
-        maven { url = "https://maven.fabricmc.net/" }
-        maven { url "https://maven.neoforged.net/releases/" }
-        maven { url = "https://maven.terraformersmc.com/" } // Mod Menu
         flatDir { dirs "../libs" }
-        maven {
-            name = 'ParchmentMC'
-            url = 'https://maven.parchmentmc.org'
-        }
-    }
-
-    loom {
-        silentMojangMappingsLicense()
-    }
-
-    configurations {
-        shadowBundle
+        maven { url "https://repo.codemc.org/repository/maven-public" }
+        maven { url = "https://maven.terraformersmc.com/" }
     }
 
     dependencies {
         minecraft "com.mojang:minecraft:${rootProject.properties.minecraft_version}"
-        mappings loom.layered() {
-            officialMojangMappings()
-            parchment("org.parchmentmc.data:parchment-${rootProject.properties.parchment_minecraft_version}:${rootProject.properties.parchment_version}@zip")
+        mappings loom.layered {
+            it.mappings("net.fabricmc:yarn:$yarn_mappings:v2")
+            it.mappings("dev.architectury:yarn-mappings-patch-neoforge:$yarn_mappings_patch_neoforge_version")
         }
-        modImplementation "net.fabricmc:fabric-loader:${rootProject.properties.fabric_loader_version}"  // Correct usage of modImplementation
         implementation "mtr:mtr-common:${rootProject.properties.mtr_version}"
     }
 
