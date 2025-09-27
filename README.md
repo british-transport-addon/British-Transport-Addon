@@ -21,5 +21,3 @@ infrastructure. We aimed to provide major updates every week, but that never hap
 [London Underground Addon](https://github.com/cherbert/mtr-london-underground-addon/tree/4.0.0)
 
 [European Railways Addon](https://github.com/polserull/European-Railways-Addon/tree/master)
-
-[Simple Voice Chat](https://github.com/henkelmax/simple-voice-chat)
