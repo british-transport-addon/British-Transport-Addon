@@ -1,3 +1,7 @@
 {
-  "item.jta.asphalt": "Asphalt"
+  "item.jta.asphalt": "Asphalt",
+  "item.jta.aws": "AWS Magnet",
+  "item.jta.banner_repeater_signal": "Banner Repeater Signal",
+  "itemGroup.jta.blocks": "BTA Blocks",
+  "itemGroup.jta.railways": "BTA Railways"
 }

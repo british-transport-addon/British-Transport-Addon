@@ -30,7 +30,11 @@ subprojects {
             it.mappings("net.fabricmc:yarn:$yarn_mappings:v2")
             it.mappings("dev.architectury:yarn-mappings-patch-neoforge:$yarn_mappings_patch_neoforge_version")
         }
-        implementation "mtr:mtr-common:${rootProject.properties.mtr_version}"
+        modImplementation "mtr:mtr-common:${rootProject.properties.mtr_version}"
+        implementation "org.mtr:Shadow-Libraries-net:0.0.1"
+        implementation "org.mtr:Shadow-Libraries-util:0.0.1"
+        implementation "org.mtr:Transport-Simulation-Core:0.0.1"
+        implementation "com.logisticscraft:occlusionculling:+"
     }
 
     java {

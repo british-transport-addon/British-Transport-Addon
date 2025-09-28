@@ -7,6 +7,8 @@ import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import org.eu.awesomekalin.jta.JTA;
+import org.eu.awesomekalin.jta.blocks.directional.rail.AWSRailDecoration;
+import org.eu.awesomekalin.jta.blocks.signal.BannerRepeaterSignal;
 import org.mtr.registry.ObjectHolder;
 
 import java.util.function.BiFunction;
@@ -16,6 +18,9 @@ public final class BlockInit {
     private static ObjectAVLTreeSet<String> REGISTERED_IDENTIFIERS = new ObjectAVLTreeSet<>();
 
     public static final ObjectHolder<Block> ASPHALT = registerBlockWithBlockItem("asphalt", settings -> new Block(settings.strength(4.0f).nonOpaque().dynamicBounds()),true, CreativeTabs.JTA_BLOCKS);
+    public static final ObjectHolder<Block> AWS_DECORATION = registerBlockWithBlockItem("aws", AWSRailDecoration::new, false, CreativeTabs.JTA_BLOCKS);
+
+    public static final ObjectHolder<Block> BANNER_REPEATER_SIGNAL = registerBlockWithBlockItem("banner_repeater_signal", settings -> new BannerRepeaterSignal(settings), false, CreativeTabs.JTA_RAILWAYS);
 
     public static void init() {
         JTA.LOGGER.info("Initialising Blocks");
