@@ -7,9 +7,9 @@
             "color": "004D91"
         },
         {
-            "id": "builtin_aldi_advert3",
-            "name": "display.jta.builtin_aldi_advert",
-            "textureResource": "jta:textures/block/adverts/aldi.png",
+            "id": "builtin_asda_advert3",
+            "name": "Asda",
+            "textureResource": "jta:textures/block/adverts/asda_discount.png",
             "color": "004D91"
         }
     ]

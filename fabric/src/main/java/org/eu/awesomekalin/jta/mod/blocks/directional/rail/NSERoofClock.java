@@ -31,5 +31,5 @@ public class NSERoofClock extends DirectionalBlockEntityBase {
         public boolean shouldRender() {
             return true;
         }
-    }//Yes! Spam!
+    }
 }

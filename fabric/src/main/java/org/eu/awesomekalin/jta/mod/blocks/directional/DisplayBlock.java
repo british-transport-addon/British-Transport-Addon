@@ -65,10 +65,7 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
         private final ObjectArrayList<String> selectedIds;
         private final int width;
         private final int height;
-
-        public ObjectArrayList<String> getSelectedIds() {
-            return selectedIds;
-        }
+        private int frame = 0;
 
         public DisplayBlockEntity(BlockPos pos, BlockState state, int width, int height) {
             super(Objects.requireNonNull(getType(width, height)), pos, state);
@@ -124,6 +121,18 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
 
         public int getHeight() {
             return height;
+        }
+
+        public int getFrame() {
+            return frame;
+        }
+
+        public void setFrame(int frame) {
+            this.frame = frame;
+        }
+
+        public ObjectArrayList<String> getSelectedIds() {
+            return selectedIds;
         }
     }
 }

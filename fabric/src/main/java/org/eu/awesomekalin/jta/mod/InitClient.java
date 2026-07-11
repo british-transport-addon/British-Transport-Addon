@@ -2,6 +2,7 @@ package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.*;
 import org.eu.awesomekalin.jta.mod.render.RenderBarrierPlatform;
+import org.eu.awesomekalin.jta.mod.render.RenderDynamicDisplay;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
@@ -484,6 +485,11 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DISPLAY_1x1,
+                RenderDynamicDisplay::new
+        );
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BARRIER_PLATFORM);
 

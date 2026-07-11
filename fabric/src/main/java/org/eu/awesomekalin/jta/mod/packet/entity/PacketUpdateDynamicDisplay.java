@@ -43,6 +43,7 @@ public class PacketUpdateDynamicDisplay extends PacketHandler {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
         if (entity != null && entity.data instanceof DisplayBlock.DisplayBlockEntity) {
             ((DisplayBlock.DisplayBlockEntity) entity.data).setSelectedIds(selectedIds);
+            ((DisplayBlock.DisplayBlockEntity) entity.data).markDirty2();
         }
     }
 }
