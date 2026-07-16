@@ -7,25 +7,17 @@ import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
 import org.jetbrains.annotations.NotNull;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import org.mtr.mapping.holder.*;
-import org.mtr.mapping.mapper.BlockEntityExtension;
-import org.mtr.mapping.mapper.BlockExtension;
-import org.mtr.mapping.mapper.BlockWithEntity;
-import org.mtr.mapping.mapper.DirectionHelper;
+import org.mtr.mapping.mapper.*;
 import org.mtr.mapping.tool.HolderBase;
-import org.mtr.mod.Blocks;
 import org.mtr.mod.block.IBlock;
 
+import javax.annotation.Nonnull;
 import java.util.List;
-import java.util.Objects;
 
 public class DisplayBlock extends BlockExtension implements DirectionHelper, BlockWithEntity {
-    public final int width;
-    public final int height;
 
-    public DisplayBlock(int width, int height) {
-        super(Blocks.createDefaultBlockSettings(false));
-        this.width = width;
-        this.height = height;
+    public DisplayBlock() {
+        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().noCollision().dynamicBounds());
     }
 
     @NotNull
@@ -41,7 +33,11 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
                 selectedIds = new ObjectArrayList<>();
             }
 
-            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenDisplaySelector(pos, selectedIds));
+            if (entity != null && entity.data instanceof DisplayBlock.DisplayBlockEntity) {
+                Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenDisplaySelector(pos, selectedIds, ((DisplayBlock.DisplayBlockEntity) entity.data).getWidth(), ((DisplayBlock.DisplayBlockEntity) entity.data).getHeight()));
+            } else {
+                Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenDisplaySelector(pos, selectedIds, 1, 1));
+            }
         });
     }
 
@@ -58,27 +54,36 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
 
     @Override
     public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
-        return new DisplayBlockEntity(blockPos, blockState, width, height);
+        return new DisplayBlockEntity(blockPos, blockState);
+    }
+
+    @Nonnull
+    @Override
+    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        final Direction facing = IBlock.getStatePropertySafe(state, FACING);
+        return BlockHelper.shapeUnion(IBlock.getVoxelShapeByDirection(0, 0, 0, 16, 16, 1, facing));
     }
 
     public static class DisplayBlockEntity extends BlockEntityExtension {
         private final ObjectArrayList<String> selectedIds;
-        private final int width;
-        private final int height;
+        private int width;
+        private int height;
         private int frame = 0;
 
-        public DisplayBlockEntity(BlockPos pos, BlockState state, int width, int height) {
-            super(Objects.requireNonNull(getType(width, height)), pos, state);
+        public DisplayBlockEntity(BlockPos pos, BlockState state) {
+            super(BlockEntityTypeInit.DISPLAY.get(), pos, state);
             selectedIds = new ObjectArrayList<>();
             selectedIds.add(CustomResourceLoader.DEFAULT_DISPLAY);
 
-            this.width = width;
-            this.height = height;
+            this.width = 1;
+            this.height = 1;
         }
 
-        public void setSelectedIds(ObjectArrayList<String> selectedIds) {
+        public void setSelectedIds(ObjectArrayList<String> selectedIds, int width, int height) {
             this.selectedIds.clear();
             this.selectedIds.addAll(selectedIds);
+            this.width = width;
+            this.height = height;
         }
 
         @Override
@@ -89,6 +94,9 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
             for (int i = 0; i < totalImages; i++) {
                 selectedIds.add(compoundTag.getString("selected_" + i));
             }
+
+            width = compoundTag.getInt("width");
+            height = compoundTag.getInt("height");
 
             super.readCompoundTag(compoundTag);
         }
@@ -102,17 +110,10 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
                 compoundTag.putString("selected_" + i, selectedIds.get(i));
             }
 
+            compoundTag.putInt("width", width);
+            compoundTag.putInt("height", height);
+
             super.writeCompoundTag(compoundTag);
-        }
-
-        private static BlockEntityType<?> getType(int width, int height) {
-            switch (width + "x" + height) {
-                case "1x1":
-                    return BlockEntityTypeInit.DISPLAY_1x1.get();
-
-                default:
-                    return null;
-            }
         }
 
         public int getWidth() {

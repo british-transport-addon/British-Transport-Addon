@@ -42,32 +42,32 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
         }
 
         StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(
-                (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getX(),
-                (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getY(),
-                0.99 + blockEntity.getPos2().getZ()
+                0.5 + blockEntity.getPos2().getX(),
+                0.5 + blockEntity.getPos2().getY(),
+                0.98 + blockEntity.getPos2().getZ()
         );
 
         switch (facing) {
             case NORTH:
                 storedMatrixTransformations = new StoredMatrixTransformations(
-                        (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getX(),
-                        (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getY(),
-                        0.01 + blockEntity.getPos2().getZ()
+                        0.5 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
+                        0.02 + blockEntity.getPos2().getZ()
                 );
                 break;
 
             case EAST:
                 storedMatrixTransformations = new StoredMatrixTransformations(
-                        (0.99 * blockEntity.getWidth()) + blockEntity.getPos2().getX(),
-                        (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getY(),
+                        0.98 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
                         0.51 + blockEntity.getPos2().getZ()
                 );
                 break;
 
             case WEST:
                 storedMatrixTransformations = new StoredMatrixTransformations(
-                        (0.01 * blockEntity.getWidth()) + blockEntity.getPos2().getX(),
-                        (0.5 * blockEntity.getWidth()) + blockEntity.getPos2().getY(),
+                        0.02 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
                         0.51 + blockEntity.getPos2().getZ()
                 );
                 break;
@@ -82,9 +82,11 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
 
             graphicsHolderNew.rotateYDegrees(facing.asRotation());
 
-            IDrawing.drawTexture(graphicsHolderNew, -0.5F, -0.5F, blockEntity.getWidth(), blockEntity.getHeight(), Direction.UP, GraphicsHolder.getDefaultLight());
+            IDrawing.drawTexture(graphicsHolderNew, -0.5F * blockEntity.getWidth(), -0.5F * blockEntity.getHeight(), blockEntity.getWidth(), blockEntity.getHeight(), Direction.UP, GraphicsHolder.getDefaultLight());
             graphicsHolderNew.pop();
         });
+
+        renderBackground(blockEntity, facing);
     }
 
     private DisplayResource getDisplayResource(DisplayBlock.DisplayBlockEntity blockEntity) {
@@ -109,5 +111,50 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
         if (this.tickCounter == 601) tickCounter = 0;
 
         return CustomResourceLoader.getDisplays().get((int) selectedIndices.getLong(frame));
+    }
+
+    private void renderBackground(DisplayBlock.DisplayBlockEntity blockEntity, Direction facing) {
+        StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(
+                0.5 + blockEntity.getPos2().getX(),
+                0.5 + blockEntity.getPos2().getY(),
+                0.99 + blockEntity.getPos2().getZ()
+        );
+
+        switch (facing) {
+            case NORTH:
+                storedMatrixTransformations = new StoredMatrixTransformations(
+                        0.5 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
+                        0.01 + blockEntity.getPos2().getZ()
+                );
+                break;
+
+            case EAST:
+                storedMatrixTransformations = new StoredMatrixTransformations(
+                        0.99 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
+                        0.51 + blockEntity.getPos2().getZ()
+                );
+                break;
+
+            case WEST:
+                storedMatrixTransformations = new StoredMatrixTransformations(
+                        0.01 + blockEntity.getPos2().getX(),
+                        0.5 + blockEntity.getPos2().getY(),
+                        0.51 + blockEntity.getPos2().getZ()
+                );
+                break;
+        }
+
+        StoredMatrixTransformations finalStoredMatrixTransformations = storedMatrixTransformations;
+        MainRenderer.scheduleRender(new Identifier("jta", "textures/block/black.png"), false, QueuedRenderLayer.INTERIOR, (graphicsHolderNew, offset) -> {
+            finalStoredMatrixTransformations.transform(graphicsHolderNew, offset);
+            graphicsHolderNew.rotateZDegrees(180);
+
+            graphicsHolderNew.rotateYDegrees(facing.asRotation());
+
+            IDrawing.drawTexture(graphicsHolderNew, -0.5F * blockEntity.getWidth(), -0.5F * blockEntity.getHeight(), blockEntity.getWidth(), blockEntity.getHeight(), Direction.UP, GraphicsHolder.getDefaultLight());
+            graphicsHolderNew.pop();
+        });
     }
 }

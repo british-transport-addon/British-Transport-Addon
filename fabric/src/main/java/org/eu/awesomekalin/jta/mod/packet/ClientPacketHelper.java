@@ -8,7 +8,7 @@ import org.mtr.mapping.holder.MinecraftClient;
 import org.mtr.mapping.holder.Screen;
 
 public class ClientPacketHelper {
-    public static void openDisplaySelector(BlockPos pos, ObjectArrayList<String> selectedIds) {
-        MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos, selectedIds)));
+    public static void openDisplaySelector(BlockPos pos, ObjectArrayList<String> selectedIds, int width, int height) {
+        MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos, selectedIds, width, height)));
     }
 }

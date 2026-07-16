@@ -11,6 +11,8 @@ public class PacketUpdateDynamicDisplay extends PacketHandler {
     public final BlockPos blockPos;
     public ObjectArrayList<String> selectedIds;
     private final int numberOfIds;
+    private final int width;
+    private final int height;
 
     public PacketUpdateDynamicDisplay(PacketBufferReceiver receiver) {
         blockPos = BlockPos.fromLong(receiver.readLong());
@@ -21,28 +23,37 @@ public class PacketUpdateDynamicDisplay extends PacketHandler {
         for (int i = 0; i < numberOfIds; i++) {
             selectedIds.add(receiver.readString());
         }
+
+        width = receiver.readInt();
+        height = receiver.readInt();
     }
 
-    public PacketUpdateDynamicDisplay(BlockPos blockPos, ObjectArrayList<String> selectedIds) {
+    public PacketUpdateDynamicDisplay(BlockPos blockPos, ObjectArrayList<String> selectedIds, int width, int height) {
         this.blockPos = blockPos;
         this.selectedIds = selectedIds;
         this.numberOfIds = selectedIds.size();
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public void write(PacketBufferSender packetBufferSender) {
         packetBufferSender.writeLong(blockPos.asLong());
         packetBufferSender.writeInt(numberOfIds);
+
         for (int i = 0; i < numberOfIds; i++) {
             packetBufferSender.writeString(selectedIds.get(i));
         }
+
+        packetBufferSender.writeInt(width);
+        packetBufferSender.writeInt(height);
     }
 
     @Override
     public void runServer(MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
         if (entity != null && entity.data instanceof DisplayBlock.DisplayBlockEntity) {
-            ((DisplayBlock.DisplayBlockEntity) entity.data).setSelectedIds(selectedIds);
+            ((DisplayBlock.DisplayBlockEntity) entity.data).setSelectedIds(selectedIds, width, height);
             ((DisplayBlock.DisplayBlockEntity) entity.data).markDirty2();
         }
     }

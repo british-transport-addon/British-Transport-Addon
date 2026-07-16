@@ -110,10 +110,10 @@ public class BlockEntityTypeInit {
             BlockInit.DISPATCH_SIGNAL::get
     );
 
-    public static final BlockEntityTypeRegistryObject<DisplayBlock.DisplayBlockEntity> DISPLAY_1x1 = Init.REGISTRY.registerBlockEntityType(
+    public static final BlockEntityTypeRegistryObject<DisplayBlock.DisplayBlockEntity> DISPLAY = Init.REGISTRY.registerBlockEntityType(
             new Identifier(Init.MOD_ID, "display"),
-            (pos, state) -> new DisplayBlock.DisplayBlockEntity(pos, state, 1, 1),
-            BlockInit.DISPLAY_1x1::get
+            DisplayBlock.DisplayBlockEntity::new,
+            BlockInit.DISPLAY::get
     );
 
     public static final BlockEntityTypeRegistryObject<LargeDigitalSignal1Aspect.BlockEntity> LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT = Init.REGISTRY.registerBlockEntityType(
