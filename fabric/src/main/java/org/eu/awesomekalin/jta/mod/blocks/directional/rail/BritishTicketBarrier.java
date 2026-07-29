@@ -1,9 +1,11 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
-
+import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
+import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mapping.tool.HolderBase;
 import org.mtr.mod.block.BlockTicketBarrier;
+import org.mtr.mod.block.IBlock;
 
 import java.util.List;
 
@@ -34,5 +36,22 @@ public class BritishTicketBarrier extends BlockTicketBarrier {
         world.setBlockState(pos, state.with(new Property<>(LOCKED.data), false));
     }
 
-    // need to find a way to expand the hitbox horizontally coz tbh idk how.
+    @NotNull
+    @Override
+    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        return IBlock.checkHoldingBrush(world, player, () -> {
+            final boolean locked = !IBlock.getStatePropertySafe(state, LOCKED);
+            BlockState newState = state.with(new Property<>(LOCKED.data), locked);
+
+            world.setBlockState(pos, newState);
+            player.sendMessage(Text.of(TextHelper.translatable(locked ? "gui.jta.ticket_barrier_locked" : "gui.jta.ticket_barrier_unlocked").getString()), true);
+        });
+    }
+
+    @NotNull
+    @Override
+    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        final Direction facing = IBlock.getStatePropertySafe(state, FACING);
+        return IBlock.getVoxelShapeByDirection(12.0, 0.0, -16.0, 16.0, 24.0, 16.0, facing);
+    }
 }

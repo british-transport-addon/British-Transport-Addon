@@ -1,0 +1,172 @@
+{
+    "displays": [
+        {
+            "id": "builtin_aldi_advert",
+            "name": "display.jta.builtin_aldi_advert",
+            "textureResource": "jta:textures/block/adverts/aldi.png",
+            "color": "004D91"
+        },
+        {
+            "id": "builtin_asda_advert",
+            "name": "display.jta.builtin_asda_advert",
+            "textureResource": "jta:textures/block/adverts/asda_discount.png",
+            "color": "6BB321"
+        },
+        {
+            "id": "builtin_asda_advert_marmite",
+            "name": "display.jta.builtin_asda_marmite",
+            "textureResource": "jta:textures/block/adverts/asda_marmite.png",
+            "color": "000000"
+        },
+        {
+            "id": "builtin_burger_king_advert",
+            "name": "display.jta.builtin_burger_king_advert",
+            "textureResource": "jta:textures/block/adverts/burger_king.png",
+            "color": "FFBE10"
+        },
+        {
+            "id": "builtin_coop_advert",
+            "name": "display.jta.builtin_coop_advert",
+            "textureResource": "jta:textures/block/adverts/coop.png",
+            "color": "00B6DE"
+        },
+        {
+            "id": "builtin_costalight_advert",
+            "name": "display.jta.builtin_costalight_advert",
+            "textureResource": "jta:textures/block/adverts/costalight.png",
+            "color": "940831"
+        },
+        {
+            "id": "builtin_creme_egg_advert",
+            "name": "display.jta.builtin_creme_egg_advert",
+            "textureResource": "jta:textures/block/adverts/creme_egg.png",
+            "color": "312073"
+        },
+        {
+            "id": "builtin_dairy_milk_advert",
+            "name": "display.jta.builtin_dairy_milk_advert",
+            "textureResource": "jta:textures/block/adverts/dairy_milk.png",
+            "color": "312073"
+        },
+        {
+            "id": "builtin_ee_advert",
+            "name": "display.jta.builtin_ee_advert",
+            "textureResource": "jta:textures/block/adverts/ee.png",
+            "color": "FDE417"
+        },
+        {
+            "id": "builtin_halifax_advert",
+            "name": "display.jta.builtin_halifax_advert",
+            "textureResource": "jta:textures/block/adverts/halifax.png",
+            "color": "10558C"
+        },
+        {
+            "id": "builtin_heinz_advert",
+            "name": "display.jta.builtin_heinz_advert",
+            "textureResource": "jta:textures/block/adverts/heinz.png",
+            "color": "E11F18"
+        },
+        {
+            "id": "builtin_ikea_advert",
+            "name": "display.jta.builtin_ikea_advert",
+            "textureResource": "jta:textures/block/adverts/ikea.png",
+            "color": "EFDF3A"
+        },
+        {
+            "id": "builtin_ikea_advert_alt",
+            "name": "display.jta.builtin_ikea_advert_alt",
+            "textureResource": "jta:textures/block/adverts/ikea_alt.png",
+            "color": "EFDF3A"
+        },
+        {
+            "id": "builtin_jack_daniels_advert",
+            "name": "display.jta.builtin_jack_daniels_advert",
+            "textureResource": "jta:textures/block/adverts/jack_daniels.png",
+            "color": "000000"
+        },
+        {
+            "id": "builtin_jet2holidays_advert",
+            "name": "display.jta.builtin_jet2holidays_advert",
+            "textureResource": "jta:textures/block/adverts/jet2holidays.png",
+            "color": "D61C21"
+        },
+        {
+            "id": "builtin_kfc_advert",
+            "name": "display.jta.builtin_kfc_advert",
+            "textureResource": "jta:textures/block/adverts/kfc.png",
+            "color": "9A2E37"
+        },
+        {
+            "id": "builtin_kfc_advert_alt",
+            "name": "display.jta.builtin_kfc_advert_alt",
+            "textureResource": "jta:textues/block/adverts/kfc_alt.png",
+            "color": "9A2E37"
+        },
+        {
+            "id": "builtin_lush_advert",
+            "name": "display.jta.builtin_lush_advert",
+            "textureResource": "jta:textures/block/adverts/lush.png",
+            "color": "000000"
+        },
+        {
+            "id": "builtin_mcdonalds_advert",
+            "name": "display.jta.builtin_mcdonalds_advert",
+            "textureResource": "jta:textures/block/adverts/mcdonalds.png",
+            "color": "B50008"
+        },
+        {
+            "id": "builtin_next_advert",
+            "name": "display.jta.builtin_next_advert",
+            "textureResource": "jta:textures/block/adverts/next.png",
+            "color": "000000"
+        },
+        {
+            "id": "builtin_nike_advert",
+            "name": "display.jta.builtin_nike_advert",
+            "textureResource": "jta:textures/block/adverts/nike.png",
+            "color": "000000"
+        },
+        {
+            "id": "builtin_primark_advert",
+            "name": "display.jta.builtin_primark_advert",
+            "textureResource": "jta:textures/block/adverts/primark.png",
+            "color": "FFFFFF"
+        },
+        {
+            "id": "builtin_sainsburys_advert",
+            "name": "display.jta.builtin_sainsburys_advert",
+            "textureResource": "jta:textures/block/adverts/sainsburys.png",
+            "color": "F68E00"
+        },
+        {
+            "id": "builtin_samsung_s6_advert",
+            "name": "display.jta.builtin_samsung_s6_advert",
+            "textureResource": "jta:textures/block/adverts/samsung_s6.png",
+            "color": "635937"
+        },
+        {
+            "id": "builtin_smartwater_advert",
+            "name": "display.jta.builtin_bottle_o_waer_advert",
+            "textureResource": "jta:textures/block/adverts/smartwater.png",
+            "color": "214394"
+        },
+        {
+            "id": "builtin_tesco_advert",
+            "name": "display.jta.builtin_tesco_advert",
+            "textureResource": "jta:textures/block/adverts/tesco.png",
+            "color": "E40613"
+        },
+        {
+            "id": "builtin_tui_advert",
+            "name": "display.jta.builtin_tui_advert",
+            "textureResource": "jta:textures/block/adverts/tui.png",
+            "color": "BD2031"
+        },
+        {
+            "id": "builtin_uber_advert",
+            "name": "display.jta.builtin_uber_advert",
+            "textureResource": "jta:textures/block/adverts/uber.png",
+            "color": "000000"
+        }
+    ]
+}

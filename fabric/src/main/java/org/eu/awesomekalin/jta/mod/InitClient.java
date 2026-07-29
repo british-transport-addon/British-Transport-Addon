@@ -2,16 +2,14 @@ package org.eu.awesomekalin.jta.mod;
 
 import org.eu.awesomekalin.jta.mod.init.*;
 import org.eu.awesomekalin.jta.mod.render.RenderBarrierPlatform;
+import org.eu.awesomekalin.jta.mod.render.RenderDynamicDisplay;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeStationRender;
 import org.eu.awesomekalin.jta.mod.render.bus.LondonBusStopSignRender;
 import org.eu.awesomekalin.jta.mod.render.rail.*;
 import org.eu.awesomekalin.jta.mod.render.rail.pids.*;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderBannerRepeaterSignal;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight1Aspect;
-import org.eu.awesomekalin.jta.mod.render.rail.signal.RenderDigitalSignalLight2Aspect;
+import org.eu.awesomekalin.jta.mod.render.rail.signal.*;
 import org.eu.awesomekalin.jta.mod.render.roundel.*;
-import org.eu.awesomekalin.jta.mod.screen.FirstLoadScreen;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.holder.RenderLayer;
 import org.mtr.mapping.holder.Style;
@@ -29,6 +27,19 @@ public final class InitClient {
                         dispatcher,
                         0xFF29D28F
                 ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.CROSSING_BRITISH_SIGNAL,
+                RenderCrossingSignal::new);
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.CROSSING_BRITISH_BARRIER,
+                RenderCrossingBarrier::new);
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.TRAM_SIGNAL,
+                RenderTramSignal::new);
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.TRAM_JUNCTION_SIGNAL,
+                RenderTramJunctionSignal::new);
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
@@ -38,11 +49,47 @@ public final class InitClient {
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT,
+                dispatcher -> new RenderLargeDigitalSignalLight1Aspect<>(
+                        dispatcher,
+                        0xFF29D28F
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight2Aspect<>(
                         dispatcher,
-                        false,
-                        0xFF29D28F
+                        false
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.BRITISH_SIGNAL_LIGHT_4_ASPECT,
+                RenderSignalLight4Aspect::new);
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SHUNT_SIGNAL,
+                dispatcher -> new RenderShuntSignal<>(
+                        dispatcher,
+                        false
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.SHUNT_SIGNAL_RIGHT,
+                dispatcher -> new RenderShuntSignal<>(
+                        dispatcher,
+                        true
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT,
+                dispatcher -> new RenderDirectionSignalLight5Aspect<>(
+                        dispatcher,
+                        true
+                ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT_RIGHT,
+                dispatcher -> new RenderDirectionSignalLight5Aspect<>(
+                        dispatcher,
+                        false
                 ));
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
@@ -343,8 +390,35 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 ));
         REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DIGITAL_ROUTE_SIGNAL,
+                dispatcher -> new RenderDigitalRouteSignal<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 6,
+                        0,
+                        .05F,
+                        0.19375F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                )
+        );
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DISPATCH_SIGNAL,
-                dispatcher -> new DispatchSignalRender<>(
+                dispatcher -> new RenderDispatchSignal<>(
+                        dispatcher,
+                        32 / 16F,
+                        0.2F / 6,
+                        0,
+                        .05F,
+                        -0.10F,
+                        0,
+                        0xFFFFFFFF,
+                        Style.getDefaultFontIdMapped()
+                ));
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.RA_SIGNAL,
+                dispatcher -> new RenderRightAwaySignal<>(
                         dispatcher,
                         32 / 16F,
                         0.2F / 6,
@@ -411,6 +485,11 @@ public final class InitClient {
                         true,
                         Style.getDefaultFontIdMapped()
                 ));
+
+        REGISTRY_CLIENT.registerBlockEntityRenderer(
+                BlockEntityTypeInit.DISPLAY,
+                RenderDynamicDisplay::new
+        );
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getTranslucent(), BlockInit.BARRIER_PLATFORM);
 
@@ -530,7 +609,12 @@ public final class InitClient {
 
         REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.UNDERGROUND_PLATFORM_END);
 
-        REGISTRY_CLIENT.eventRegistryClient.registerStartClientTick(FirstLoadScreen::handle);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_ENTRANCE);
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.BRITISH_TICKET_BARRIER_EXIT);
+
+        REGISTRY_CLIENT.registerBlockRenderType(RenderLayer.getCutout(), BlockInit.DISPLAY);
+
+        REGISTRY_CLIENT.eventRegistryClient.registerResourceReloadEvent(CustomResourceLoader::reload);
 
         REGISTRY_CLIENT.init();
     }

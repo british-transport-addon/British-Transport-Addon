@@ -11,7 +11,7 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderDigitalSignalLight1Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderDigitalSignalLight1Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
 	private final int proceedColor;
 
@@ -21,7 +21,7 @@ public class RenderDigitalSignalLight1Aspect<T extends BlockSignalBase.BlockEnti
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
 		final float y = 0.1625F;
 		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);

@@ -2,7 +2,7 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import org.eu.awesomekalin.jta.mod.BuildTools
 
 plugins {
-    id "fabric-loom" version "+"
+    id "fabric-loom" version "1.10-SNAPSHOT"
 }
 
 repositories {
@@ -15,6 +15,20 @@ repositories {
     maven {
         name = 'ParchmentMC'
         url = 'https://maven.parchmentmc.org'
+    }
+
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
     }
 
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
@@ -32,11 +46,7 @@ dependencies {
     mappings "net.fabricmc:yarn:${buildTools.getYarnVersion()}:v2"
     modImplementation "net.fabricmc:fabric-loader:${buildTools.getFabricVersion()}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${buildTools.getFabricApiVersion()}"
-    modImplementation "org.mtr:MTR-fabric:${mtrVersion}+${minecraftVersion}-server"
-    modImplementation("software.bernie.geckolib:geckolib-fabric-${buildTools.getGeckolibVersion()}")
-
-    modApi files('libs/cardinal-components-base-5.2.0.jar')
-    modApi files('libs/cardinal-components-entity-5.2.0.jar')
+    modImplementation "maven.modrinth:minecraft-transit-railway:FABRIC-${mtrVersion}+${minecraftVersion}"
 }
 
 java {
@@ -53,7 +63,7 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/fabric.mod.template.json"
             into "src/main/resources"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": ""])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
             rename "(.+).template.json", "\$1.json"
         }
     } else {
@@ -61,68 +71,9 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/fabric.mod.template.json"
             into "src/main/resources"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3"])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
             rename "(.+).template.json", "\$1.json"
         }
-    }
-
-    if (!minecraftVersion.trim().equalsIgnoreCase('1.20.4') && !minecraftVersion.trim().equalsIgnoreCase('1.20.1') && !minecraftVersion.trim().equalsIgnoreCase('1.19.4')) {
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod/entity/block/road")
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/mod/entity/block/street")
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/render")
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../geckolib3/org/eu/awesomekalin/jta/mod/entity/block/road"
-            into "src/main/java/org/eu/awesomekalin/jta/mod/entity/block/road"
-        }
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../geckolib3/org/eu/awesomekalin/jta/mod/entity/block/street"
-            into "src/main/java/org/eu/awesomekalin/jta/mod/entity/block/street"
-        }
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../geckolib3/org/eu/awesomekalin/jta/platform-fabric/client/model"
-            into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
-        }
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../geckolib3/org/eu/awesomekalin/jta/platform-fabric/render"
-            into "src/main/java/org/eu/awesomekalin/jta/platform/render"
-        }
-    }
-
-    if (minecraftVersion.trim().equalsIgnoreCase("1.18.2") || minecraftVersion.trim().equalsIgnoreCase("1.17.1") || minecraftVersion.trim().equalsIgnoreCase("1.16.5")) {
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../pre-1.19/fabric/client/model"
-            into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
-        }
-    }
-}
-
-tasks.register("setupPotato") {
-    delete fileTree("src/main/resources/assets/jta/textures")
-
-    copy {
-        outputs.upToDateWhen { true }
-        from "../potatoTex/jta"
-        into "src/main/resources/assets/jta/textures"
-    }
-	
-	delete fileTree("src/main/resources/assets/mtrsteamloco")
-
-    copy {
-        outputs.upToDateWhen { true }
-        from "../potatoTex/mtrsteamloco"
-        into "src/main/resources/assets/mtrsteamloco"
     }
 }
 

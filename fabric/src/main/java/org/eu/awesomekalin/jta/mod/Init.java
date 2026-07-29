@@ -3,6 +3,8 @@ package org.eu.awesomekalin.jta.mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.eu.awesomekalin.jta.mod.init.*;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenLUWhiteboard;
 import org.eu.awesomekalin.jta.mod.packet.entity.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.Registry;
@@ -35,6 +37,9 @@ public class Init {
         REGISTRY.registerPacket(PacketUpdateSevenLineBlockEntity.class, PacketUpdateSevenLineBlockEntity::new);
         REGISTRY.registerPacket(PacketUpdateEightLineBlockEntity.class, PacketUpdateEightLineBlockEntity::new);
         REGISTRY.registerPacket(PacketUpdateNineLineBlockEntity.class, PacketUpdateNineLineBlockEntity::new);
+        REGISTRY.registerPacket(PacketOpenDisplaySelector.class, PacketOpenDisplaySelector::new);
+        REGISTRY.registerPacket(PacketOpenLUWhiteboard.class, PacketOpenLUWhiteboard::new);
+        REGISTRY.registerPacket(PacketUpdateDynamicDisplay.class, PacketUpdateDynamicDisplay::new);
 
         REGISTRY.init();
     }

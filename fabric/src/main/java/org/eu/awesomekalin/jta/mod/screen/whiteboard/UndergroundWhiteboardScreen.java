@@ -1,7 +1,9 @@
 package org.eu.awesomekalin.jta.mod.screen.whiteboard;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
 import org.eu.awesomekalin.jta.mod.packet.entity.PacketUpdateNineLineBlockEntity;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
@@ -45,13 +47,6 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
         line6 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine6().getString());
         line7 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine7().getString());
         line8 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine8().getString());
-    }
-
-    public static UndergroundWhiteboardScreen handle(BlockPos pos) {
-        System.out.println("main handle stack");
-        UndergroundWhiteboardScreen screen = new UndergroundWhiteboardScreen(pos);
-        MinecraftClient.getInstance().openScreen(new Screen(screen));
-        return screen;
     }
 
     @Override

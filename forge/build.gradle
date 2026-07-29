@@ -2,13 +2,28 @@ import org.apache.tools.ant.filters.ReplaceTokens
 import org.eu.awesomekalin.jta.mod.BuildTools
 
 plugins {
-    id "net.minecraftforge.gradle" version "+"
+    id "net.minecraftforge.gradle" version "6.+"
     id "org.spongepowered.mixin" version "+"
 }
 
 repositories {
     mavenCentral()
     maven { url = 'https://maven.maxhenkel.de/repository/public' }
+
+    repositories {
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "Modrinth"
+                    url = "https://api.modrinth.com/maven"
+                }
+            }
+            forRepositories(fg.repository) // Only add this if you're using ForgeGradle, otherwise remove this line
+            filter {
+                includeGroup "maven.modrinth"
+            }
+        }
+    }
 }
 
 final BuildTools buildTools = new BuildTools(minecraftVersion, "forge", project)
@@ -30,10 +45,8 @@ sourceSets.main.resources { srcDir "src/generated/resources" }
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${buildTools.getForgeVersion()}"
-    implementation fg.deobf("org.mtr:MTR-forge:${mtrVersion}+${minecraftVersion}-server")
+    implementation fg.deobf("maven.modrinth:minecraft-transit-railway:FORGE-${mtrVersion}+${minecraftVersion}")
     annotationProcessor "org.spongepowered:mixin:+:processor"
-    implementation files('libs/curios-forge-5.9.0+1.20.1.jar')
-    implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${buildTools.getGeckolibVersion()}")
 }
 
 mixin {
@@ -57,7 +70,7 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": ""])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
             rename "(.+).template.toml", "\$1.toml"
         }
     } else {
@@ -65,7 +78,7 @@ tasks.register("setupFiles") {
             outputs.upToDateWhen { false }
             from "src/main/mods.template.toml"
             into "src/main/resources/META-INF"
-            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version, "geckolib": "3"])
+            filter(ReplaceTokens, tokens: ["minecraft": minecraftVersion, "version": version])
             rename "(.+).template.toml", "\$1.toml"
         }
     }
@@ -97,28 +110,6 @@ tasks.register("setupFiles") {
         outputs.upToDateWhen { false }
         from "../fabric/src/main/resources/data"
         into "src/main/resources/data"
-    }
-
-    if (!minecraftVersion.trim().equalsIgnoreCase('1.20.4') && !minecraftVersion.trim().equalsIgnoreCase('1.20.1')) {
-        if (!minecraftVersion.trim().equalsIgnoreCase('1.19.4')) {
-            delete fileTree("src/main/java/org/eu/awesomekalin/jta/client/model")
-
-            copy {
-                outputs.upToDateWhen { false }
-                from "../geckolib3/org/eu/awesomekalin/jta/platform-forge/client/model"
-                into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
-            }
-        }
-    }
-
-    if (minecraftVersion.trim().equalsIgnoreCase("1.18.2") || minecraftVersion.trim().equalsIgnoreCase("1.17.1") || minecraftVersion.trim().equalsIgnoreCase("1.16.5")) {
-        delete fileTree("src/main/java/org/eu/awesomekalin/jta/platform/client/model")
-
-        copy {
-            outputs.upToDateWhen { false }
-            from "../pre-1.19/forge/client/model"
-            into "src/main/java/org/eu/awesomekalin/jta/platform/client/model"
-        }
     }
 }
 

@@ -1,6 +1,6 @@
 {
-  "textures": {
-    "all": "jta:block/ballast"
-  },
-  "parent": "minecraft:block/cube_all"
+    "textures": {
+        "all": "jta:block/ballast"
+    },
+    "parent": "minecraft:block/cube_all"
 }

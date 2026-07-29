@@ -12,23 +12,52 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderDigitalSignalLight2Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
 	private final boolean redOnTop;
-	private final int proceedColor;
 
-	public RenderDigitalSignalLight2Aspect(BlockEntityRenderer.Argument dispatcher, boolean redOnTop, int proceedColor) {
+	public RenderDigitalSignalLight2Aspect(BlockEntityRenderer.Argument dispatcher, boolean redOnTop) {
 		super(dispatcher, 12, 2);
 		this.redOnTop = redOnTop;
-		this.proceedColor = proceedColor;
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
-		final float y = occupiedAspect > 0 == redOnTop ? 0.4375F : 0.0625F;
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
+		int topColor;
+		int bottomColor;
+
+		float topY = .5F;
+		float bottomY = 0.0625F;
+
+		switch (occupiedAspect) {
+			case 1: // Red
+				topColor = 0xFF222222; // 0xFFFF0000 (Dim)
+				bottomColor = -65536; // 0xFFFF0000 (Red)
+				break;
+			case 2: // Yellow
+				topColor = 0xFF222222; // 0xFFFFAA00 (Dim)
+				bottomColor = -22016; // 0xFFFFAA00 (Yellow)
+				break;
+			case 3: // Yellow (both)
+				topColor = -22016; // 0xFFFFAA00 (Yellow)
+				bottomColor = -22016; // 0xFFFFAA00 (Yellow)
+				break;
+			default: // Green
+				topColor = 0xFF222222; // Dim
+				bottomColor = 0xFF29D28F; // Correct green
+		}
+
+		// Top signal
 		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);
-			IDrawing.drawTexture(graphicsHolder, -0.15F, y - .025f, -0.19375F, 0.15F, y + 0.275F, -0.19375F, Direction.UP, occupiedAspect > 0 ? 0xFFFF0000 : proceedColor, GraphicsHolder.getDefaultLight());
+			IDrawing.drawTexture(graphicsHolder, -0.15F, topY - .025f, -0.19375F, 0.15F, topY + 0.275F, -0.19375F, Direction.UP, topColor, GraphicsHolder.getDefaultLight());
+			graphicsHolder.pop();
+		});
+
+		// Bottom signal
+		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
+			storedMatrixTransformations.transform(graphicsHolder, offset);
+			IDrawing.drawTexture(graphicsHolder, -0.15F, bottomY - .025f, -0.19375F, 0.15F, bottomY + 0.275F, -0.19375F, Direction.UP, bottomColor, GraphicsHolder.getDefaultLight());
 			graphicsHolder.pop();
 		});
 	}

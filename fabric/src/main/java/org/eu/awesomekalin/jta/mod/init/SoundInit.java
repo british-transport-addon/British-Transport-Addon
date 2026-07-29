@@ -6,7 +6,8 @@ import org.mtr.mapping.registry.SoundEventRegistryObject;
 
 public class SoundInit {
     public static final SoundEventRegistryObject ELECTRICAL_HUM_1 = Init.REGISTRY.registerSoundEvent(new Identifier(Init.MOD_ID, "electrical_hum_1"));
-   public static void INIT() {
+
+    public static void INIT() {
         Init.LOGGER.debug("Registering JTA Sound Events.");
     }
 }

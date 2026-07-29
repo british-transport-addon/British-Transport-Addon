@@ -11,7 +11,7 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
+public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
 
 	private final int proceedColor;
 
@@ -21,9 +21,9 @@ public class RenderBannerRepeaterSignal<T extends BlockSignalBase.BlockEntityBas
 	}
 
 	@Override
-	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide) {
+	protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
 		final float y = 0.085F;
-		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/" + (occupiedAspect > 0 ? "banner_horizontal" : "banner_angle") + ".png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
+		MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/" + (occupiedAspect == 0 ? "banner_horizontal" : "banner_angle") + ".png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
 			storedMatrixTransformations.transform(graphicsHolder, offset);
 			IDrawing.drawTexture(graphicsHolder, -0.35F, y - .025f, -0.19375F, 0.35F, y + 0.675F, -0.19375F, Direction.UP, occupiedAspect > 0 ? 0xFFFFFFFF : proceedColor, GraphicsHolder.getDefaultLight());
 			graphicsHolder.pop();

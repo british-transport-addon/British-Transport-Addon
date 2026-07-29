@@ -1,8 +1,11 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.entity.block.NineLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenLUWhiteboard;
 import org.eu.awesomekalin.jta.mod.screen.whiteboard.UndergroundWhiteboardScreen;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
@@ -36,8 +39,9 @@ public class UndergroundWhiteboard extends DirectionalBlockExtension implements 
 
     @Override
     public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        UndergroundWhiteboardScreen.handle(pos);
-        return ActionResult.SUCCESS;
+        return IBlock.checkHoldingBrush(world, player, () -> {
+            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenLUWhiteboard(pos));
+        });
     }
 
     @Override

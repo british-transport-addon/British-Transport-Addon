@@ -195,7 +195,7 @@ public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> exten
 				final int color = arrival <= 0 ? entity.textColorArrived() : entity.textColor();
 				final String destination = destinationSplit[languageIndex];
 				final boolean isCjk = IGui.isCjk(destination);
-				final String destinationFormatted;
+				String destinationFormatted;
 
 				switch (arrivalResponse.getCircularState()) {
 					case CLOCKWISE:
@@ -209,6 +209,7 @@ public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> exten
 						break;
 				}
 				;
+				destinationFormatted = destinationFormatted.replace("Manchester ", "");
 				final String carLengthString = arrivalResponse.getCarCount() > 2 ? "     dbl" : "";
 				final String arrivalString;
 

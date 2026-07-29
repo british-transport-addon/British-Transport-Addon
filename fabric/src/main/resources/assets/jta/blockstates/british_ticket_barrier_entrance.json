@@ -19,7 +19,7 @@
       "model": "jta:block/british_ticket_barrier_entrance_closed"
     },
     "facing=east,open=closed,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_closed",
+      "model": "jta:block/british_ticket_barrier_base",
       "y": 90
     },
     "facing=south,open=closed,locked=false": {
@@ -31,18 +31,18 @@
       "y": 270
     },
     "facing=north,open=pending,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_pending"
+      "model": "jta:block/british_ticket_barrier_entrance_open"
     },
     "facing=east,open=pending,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_pending",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 90
     },
     "facing=south,open=pending,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_pending",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 180
     },
     "facing=west,open=pending,locked=false": {
-      "model": "jta:block/british_ticket_barrier_entrance_pending",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 270
     },
     "facing=north,open=open,locked=false": {
@@ -61,18 +61,18 @@
       "y": 270
     },
     "facing=north,open=open_concessionary": {
-      "model": "jta:block/british_ticket_barrier_entrance_open_concessionary"
+      "model": "jta:block/british_ticket_barrier_entrance_open"
     },
     "facing=east,open=open_concessionary": {
-      "model": "jta:block/british_ticket_barrier_entrance_open_concessionary",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 90
     },
     "facing=south,open=open_concessionary": {
-      "model": "jta:block/british_ticket_barrier_entrance_open_concessionary",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 180
     },
     "facing=west,open=open_concessionary": {
-      "model": "jta:block/british_ticket_barrier_entrance_open_concessionary",
+      "model": "jta:block/british_ticket_barrier_entrance_open",
       "y": 270
     }
   }
