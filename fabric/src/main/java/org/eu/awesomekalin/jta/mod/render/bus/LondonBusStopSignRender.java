@@ -77,6 +77,7 @@ public class LondonBusStopSignRender<T extends LondonBusStopSign.TileEntityLondo
             if (IS_22_5.booleanValue) graphicsHolderNew.rotateYDegrees(22.5F);
             if (IS_45.booleanValue) graphicsHolderNew.rotateYDegrees(45F);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             // away from traffic side.

@@ -28,7 +28,17 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
     private final int textColor;
     private final Identifier font;
 
-    public BeeBusStopSignRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public BeeBusStopSignRender(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -77,6 +87,7 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
             if (IS_22_5.booleanValue) graphicsHolderNew.rotateYDegrees(22.5F);
             if (IS_45.booleanValue) graphicsHolderNew.rotateYDegrees(45F);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             // away from traffic side.
