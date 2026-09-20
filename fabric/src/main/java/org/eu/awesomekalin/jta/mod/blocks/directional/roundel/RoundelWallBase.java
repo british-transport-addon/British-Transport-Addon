@@ -12,8 +12,7 @@ import org.mtr.mod.block.IBlock;
 import javax.annotation.Nonnull;
 
 public class RoundelWallBase extends DirectionalBlockExtension implements BlockWithEntity {
-
-    private String defaultText;
+    private final String defaultText;
 
     public RoundelWallBase(String defaultText) {
         super(BlockHelper.createBlockSettings(false, false, (blockState) -> {
@@ -22,14 +21,20 @@ public class RoundelWallBase extends DirectionalBlockExtension implements BlockW
         this.defaultText = defaultText;
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new RoundelBaseBlockEntity(blockPos, blockState, defaultText);
     }
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
                 IBlock.getVoxelShapeByDirection(-4, 0, 11.4, 20, 21, 13.4, facing),
@@ -37,15 +42,22 @@ public class RoundelWallBase extends DirectionalBlockExtension implements BlockW
     }
 
     @Override
-    public void onPlaced2(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+    public void onPlaced2(World world, @Nonnull BlockPos pos, BlockState state, LivingEntity placer, @Nonnull ItemStack itemStack) {
         assert placer != null;
         final Direction facing = placer.getHorizontalFacing().getOpposite().rotateYClockwise().rotateYClockwise();
         world.setBlockState(pos, state.with(new Property<>(FACING.data), facing.data));
     }
 
+    @Nonnull
     @Override
-    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-
+    public ActionResult onUse2(
+            @Nonnull BlockState state,
+            @Nonnull World world,
+            @Nonnull BlockPos pos,
+            PlayerEntity player,
+            @Nonnull Hand hand,
+            @Nonnull BlockHitResult hit
+    ) {
         return ActionResult.SUCCESS;
     }
 
@@ -53,11 +65,11 @@ public class RoundelWallBase extends DirectionalBlockExtension implements BlockW
         public RoundelBaseBlockEntity(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.ROUNDEL_WALL.get(), pos, state, "");
         }
+
         public RoundelBaseBlockEntity(BlockPos pos, BlockState state, String defaultText) {
             super(BlockEntityTypeInit.ROUNDEL_WALL.get(), pos, state, defaultText);
         }
 
-        // YOU FUCKING DICK./
         public boolean shouldRender() {
             return true;
         }
