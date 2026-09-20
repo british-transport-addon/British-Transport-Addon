@@ -1,11 +1,13 @@
 package org.eu.awesomekalin.jta.mod.render.rail.pids;
 
 import org.eu.awesomekalin.jta.mod.blocks.pids.NationalRailSingleBoard;
+import org.jetbrains.annotations.NotNull;
 import org.mtr.core.data.Platform;
 import org.mtr.core.data.RoutePlatformData;
 import org.mtr.core.data.Station;
 import org.mtr.core.operation.ArrivalResponse;
 import org.mtr.core.tool.Utilities;
+import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongAVLTreeSet;
 import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongArrayList;
 import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongCollection;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -28,6 +30,7 @@ import org.mtr.mod.generated.lang.TranslationProvider;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 
+import javax.annotation.Nonnull;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -35,7 +38,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> extends BlockEntityRenderer<T> implements IGui, Utilities {
-
     private final float startX;
     private final float startY;
     private final float startZ;
@@ -45,8 +47,20 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
     private final float textPadding;
 
     public static final int SWITCH_LANGUAGE_TICKS = 60;
+    private static final int PLATFORMS_PER_PAGE = 9; // 9 lines for platforms to fill up to 12 lines total
+    private static final int PAGE_SWITCH_INTERVAL = 20 * 1000; // 20 seconds in milliseconds
+    private long lastPageSwitchTime = System.currentTimeMillis(); // Track last page switch time
 
-    public RenderBritishPIDSUpdate(Argument dispatcher, float startX, float startY, float startZ, float maxHeight, int maxWidth, boolean rotate90, float textPadding) {
+    public RenderBritishPIDSUpdate(
+            Argument dispatcher,
+            float startX,
+            float startY,
+            float startZ,
+            float maxHeight,
+            int maxWidth,
+            boolean rotate90,
+            float textPadding
+    ) {
         super(dispatcher);
         this.startX = startX;
         this.startY = startY;
@@ -57,14 +71,8 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         this.textPadding = textPadding;
     }
 
-    private static final int PLATFORMS_PER_PAGE = 9; // 9 lines for platforms to fill up to 12 lines total
-    private static final int PAGE_SWITCH_INTERVAL = 20 * 1000; // 20 seconds in milliseconds
-    private int currentPage = 0; // Start on the first page
-    private long lastPageSwitchTime = System.currentTimeMillis(); // Track last page switch time
-
-
     @Override
-    public void render(T entity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
         final World world = entity.getWorld2();
         if (world == null) {
             return;
@@ -77,26 +85,31 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
 
         final Direction facing = IBlock.getStatePropertySafe(world, blockPos, DirectionHelper.FACING);
 
-        if (entity.getPlatformIds().isEmpty()) {
-            final LongArrayList platformIds = new LongArrayList();
-            if (entity instanceof BlockArrivalProjectorBase.BlockEntityArrivalProjectorBase) {
-                final Station station = InitClient.findStation(blockPos);
-                if (station != null) {
-                    station.savedRails.forEach(platform -> platformIds.add(platform.getId()));
-                }
-            } else {
-                InitClient.findClosePlatform(entity.getPos2().down(4), 5, platform -> platformIds.add(platform.getId()));
+        final LongAVLTreeSet platformIds = new LongAVLTreeSet();
+
+        if (entity instanceof BlockArrivalProjectorBase.BlockEntityArrivalProjectorBase) {
+            final Station station = InitClient.findStation(blockPos);
+
+            if (station != null) {
+                station.savedRails.forEach(platform -> platformIds.add(platform.getId()));
             }
-            getArrivalsAndRender(entity, blockPos, facing, platformIds);
         } else {
-            getArrivalsAndRender(entity, blockPos, facing, entity.getPlatformIds());
+            InitClient.findClosePlatform(entity.getPos2().down(4), 5, platform -> platformIds.add(platform.getId()));
         }
+
+        if (!entity.getPlatformIds().isEmpty() && platformIds.isEmpty()) {
+            platformIds.addAll(entity.getPlatformIds());
+        }
+
+        getArrivalsAndRender(entity, blockPos, facing, platformIds);
     }
 
     private void getArrivalsAndRender(T entity, BlockPos blockPos, Direction facing, LongCollection platformIds) {
         final ObjectArrayList<ArrivalResponse> arrivalResponseList = ArrivalsCacheClient.INSTANCE.requestArrivals(platformIds);
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolder, offset) -> {
             render(entity, blockPos, facing, arrivalResponseList, graphicsHolder, offset);
+
             if (entity instanceof BlockPIDSHorizontalBase.BlockEntityHorizontalBase) {
                 render(entity, blockPos.offset(facing), facing.getOpposite(), arrivalResponseList.stream().filter(it -> !it.getIsTerminating()).collect(ObjectArrayList.toList()), graphicsHolder, offset);
             }
@@ -107,6 +120,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         final float scale = 130 * entity.maxArrivals / maxHeight * textPadding;
         //final boolean hasDifferentCarLengths = hasDifferentCarLengths(arrivalResponseList);
         int arrivalIndex;
+
         try {
             arrivalIndex = Integer.parseInt(entity.getMessage(0).trim());
         } catch (Exception exception) {
@@ -119,6 +133,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         } catch (Exception exception) {
             return;
         }
+
         int color = entity.textColor();
 
         final String destinationFormatted = arrivalResponse.getDestination();
@@ -156,15 +171,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
                 int totalLines = entity.maxArrivals; // Assuming this is the total number of lines to render
                 int middleLine = totalLines / 2;
 
-                String stationName = (station != null) ? station.getName() : "Unknown";
-                String welcomeMessage = "Welcome to " + stationName + " station.";
-
-                // Calculate the padding required to center the message
-                int totalPadding = (int) (maxWidth * scale - welcomeMessage.length());
-                int paddingOnEachSide = totalPadding / 2;
-
-                // Create a centered message by adding padding spaces
-                String centeredMessage = " ".repeat(Math.max(0, paddingOnEachSide)) + welcomeMessage;
+                String centeredMessage = getCenteredMessage(station, scale);
 
                 // Render the centered message on the middle line
                 renderText(graphicsHolder, centeredMessage, color, maxWidth * scale, middleLine == i);
@@ -199,29 +206,38 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
             int totalPlatforms = upcomingPlatforms.size();
             int totalPages = (int) Math.ceil((double) totalPlatforms / PLATFORMS_PER_PAGE);
 
+            // Start on the first page
+            int currentPage = 0;
             int startIndex = currentPage * PLATFORMS_PER_PAGE;
             int endIndex = Math.min(startIndex + PLATFORMS_PER_PAGE, totalPlatforms);
 
             // Render different lines based on the value of i
-            if (i == 0) {
-                renderText(graphicsHolder, new SimpleDateFormat("HH:mm").format(new Date(arrivalResponse.getArrival() - arrivalResponse.getDeviation())), entity.textColor(), maxWidth * scale / 2, false);
-                renderText(graphicsHolder, languageIndex == 0 ? arrivalString : "Plat. " + arrivalResponse.getPlatformName(), entity.textColor(), ((maxWidth * scale) / 8) - 15, true);
-            } else if (i == 1) {
-                renderText(graphicsHolder, destinationFormatted, color, ((maxWidth * scale) / 8) - 15, false);
-            } else if (i == 2) {
-                renderText(graphicsHolder, "Calling At:  (Page " + (currentPage + 1) + " of " + totalPages + ")", color, ((maxWidth * scale) / 8) - 54, false);
-            } else if (i == 15) {
-                renderText(graphicsHolder, Arrays.stream(MinecraftClientData.getDashboardInstance().routeIdMap.get(arrivalResponse.getRouteId()).depots.stream().findFirst().orElse(null).getName().split("\\|")).findFirst().orElse("Network Rail"), color, ((maxWidth * scale) / 8) - 15, false);
-            } else if (i == 16) {
-                renderText(graphicsHolder, "This train is formed of " + arrivalResponse.getCarCount() + " coaches.", color, ((maxWidth * scale) / 8) - 15, false);
-            } else {
-                int platformIndex = i - 3 + startIndex;
-                if (platformIndex >= startIndex && platformIndex < endIndex) {
-                    Platform platform = upcomingPlatforms.get(platformIndex).platform;
-                    String platformName = platform.area.getName();
+            switch (i) {
+                case 0:
+                    renderText(graphicsHolder, new SimpleDateFormat("HH:mm").format(new Date(arrivalResponse.getArrival() - arrivalResponse.getDeviation())), entity.textColor(), maxWidth * scale / 2, false);
+                    renderText(graphicsHolder, languageIndex == 0 ? arrivalString : "Plat. " + arrivalResponse.getPlatformName(), entity.textColor(), ((maxWidth * scale) / 8) - 15, true);
+                    break;
+                case 1:
+                    renderText(graphicsHolder, destinationFormatted, color, ((maxWidth * scale) / 8) - 15, false);
+                    break;
+                case 2:
+                    renderText(graphicsHolder, "Calling At:  (Page " + (currentPage + 1) + " of " + totalPages + ")", color, ((maxWidth * scale) / 8) - 54, false);
+                    break;
+                case 15:
+                    renderText(graphicsHolder, Arrays.stream(MinecraftClientData.getDashboardInstance().routeIdMap.get(arrivalResponse.getRouteId()).depots.stream().findFirst().orElse(null).getName().split("\\|")).findFirst().orElse("Network Rail"), color, ((maxWidth * scale) / 8) - 15, false);
+                    break;
+                case 16:
+                    renderText(graphicsHolder, "This train is formed of " + arrivalResponse.getCarCount() + " coaches.", color, ((maxWidth * scale) / 8) - 15, false);
+                    break;
+                default:
+                    int platformIndex = i - 3 + startIndex;
 
-                    renderText(graphicsHolder, "| " + platformName, color, ((maxWidth * scale) / 8) - 40, false);
-                }
+                    if (platformIndex >= startIndex && platformIndex < endIndex) {
+                        Platform platform = upcomingPlatforms.get(platformIndex).platform;
+                        String platformName = platform.area.getName();
+
+                        renderText(graphicsHolder, "| " + platformName, color, ((maxWidth * scale) / 8) - 40, false);
+                    }
             }
 
             //renderText(graphicsHolder, "-".repeat((int) maxWidth), color,maxWidth * scale, false);
@@ -232,25 +248,51 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         graphicsHolder.pop();
     }
 
+    private @NotNull String getCenteredMessage(Station station, float scale) {
+        String stationName = (station != null) ? station.getName() : "Unknown";
+        String welcomeMessage = "Welcome to " + stationName + " station.";
+
+        // Calculate the padding required to center the message
+        int totalPadding = (int) (maxWidth * scale - welcomeMessage.length());
+        int paddingOnEachSide = totalPadding / 2;
+
+        // Create a centered message by adding padding spaces
+        return " ".repeat(Math.max(0, paddingOnEachSide)) + welcomeMessage;
+    }
+
     private static void renderText(GraphicsHolder graphicsHolder, String text, int color, float availableWidth, boolean rightAlign) {
         graphicsHolder.push();
         final int textWidth = GraphicsHolder.getTextWidth(text);
+
         if (availableWidth < textWidth) {
             graphicsHolder.scale(textWidth == 0 ? 1 : availableWidth / textWidth, 1, 1);
         }
+
         graphicsHolder.drawText(text, rightAlign ? Math.max(0, (int) availableWidth - textWidth) : 0, 0, color | ARGB_BLACK, false, GraphicsHolder.getDefaultLight());
         graphicsHolder.pop();
     }
 
     private static boolean hasDifferentCarLengths(ObjectArrayList<ArrivalResponse> arrivalResponseList) {
         int carCount = 0;
+
         for (final ArrivalResponse arrivalResponse : arrivalResponseList) {
             final int currentCarCount = arrivalResponse.getCarCount();
+
             if (carCount > 0 && currentCarCount != carCount) {
                 return true;
             }
+
             carCount = currentCarCount;
         }
+
         return false;
+    }
+
+    public long getLastPageSwitchTime() {
+        return lastPageSwitchTime;
+    }
+
+    public void setLastPageSwitchTime(long lastPageSwitchTime) {
+        this.lastPageSwitchTime = lastPageSwitchTime;
     }
 }
