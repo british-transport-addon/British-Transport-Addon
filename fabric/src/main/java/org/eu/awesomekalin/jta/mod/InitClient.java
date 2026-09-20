@@ -178,8 +178,6 @@ public final class InitClient {
                 BlockEntityTypeInit.PROJECTION_NAME,
                 dispatcher -> new ProjectionNameRender<>(
                         dispatcher,
-                        12 / 16F,
-                        0.2F / 8,
                         0F,
                         0F,
                         -.5F,

@@ -14,7 +14,6 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
-
 public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
     private final float maxScale;
@@ -25,7 +24,17 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
     private final int textColor;
     private final Identifier font;
 
-    public UndergroundWhiteboardRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public UndergroundWhiteboardRender(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -60,6 +69,7 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, entity.getLine0(), GraphicsHolder.getTextWidth(entity.getLine0()), light);
