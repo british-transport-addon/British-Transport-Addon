@@ -9,6 +9,8 @@ import org.mtr.mapping.registry.PacketHandler;
 import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;
 
+import javax.annotation.Nonnull;
+
 public final class PacketUpdateProjectionName extends PacketHandler {
     private final BlockPos blockPos;
     private final boolean isUppercase;
@@ -16,6 +18,7 @@ public final class PacketUpdateProjectionName extends PacketHandler {
     private final String suffix;
     private final float maxWidth;
     private final float maxScale;
+
     public PacketUpdateProjectionName(PacketBufferReceiver receiver) {
         blockPos = BlockPos.fromLong(receiver.readLong());
         isUppercase = receiver.readBoolean();
@@ -45,7 +48,7 @@ public final class PacketUpdateProjectionName extends PacketHandler {
     }
 
     @Override
-    public void runServer(MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
+    public void runServer(@Nonnull MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
         if (entity != null && entity.data instanceof ProjectionName.ProjectionNameBlockEntity) {
             ((ProjectionName.ProjectionNameBlockEntity) entity.data).setData(isUppercase, prefix, suffix, maxWidth, maxScale);
