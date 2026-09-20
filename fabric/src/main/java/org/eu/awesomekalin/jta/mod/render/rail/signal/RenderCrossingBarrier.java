@@ -5,7 +5,6 @@ import org.mtr.mapping.holder.BlockPos;
 import org.mtr.mapping.holder.Direction;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
-import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.render.MainRenderer;
@@ -16,7 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RenderCrossingBarrier<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
-
     private final Map<BlockPos, Long> barrierTimings = new HashMap<>();
 
     public RenderCrossingBarrier(BlockEntityRenderer.Argument dispatcher) {

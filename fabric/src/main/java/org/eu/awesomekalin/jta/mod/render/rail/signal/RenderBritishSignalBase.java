@@ -34,6 +34,8 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderRails;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
+import javax.annotation.Nonnull;
+
 public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEntityBase> extends BlockEntityRenderer<T> implements IBlock, IGui {
     protected final int aspects;
     private final float colorIndicatorHeight;
@@ -46,8 +48,10 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
         this.colorIndicatorHeight = (float)colorIndicatorHeight / 16.0F + 0.003125F;
     }
 
-    public final void render(T entity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+    public final void render(T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
         World world = entity.getWorld2();
+
+        // TODO: Fix this mess
         if (world != null) {
             ClientPlayerEntity clientPlayerEntity = MinecraftClient.getInstance().getPlayerMapped();
             if (clientPlayerEntity != null) {
@@ -102,7 +106,6 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
                             this.render(storedMatrixTransformationsNew, entity, tickDelta, color, isBackSide, light);
                         }
                     }
-
                 }
             }
         }
@@ -112,6 +115,7 @@ public abstract class RenderBritishSignalBase<T extends BlockSignalBase.BlockEnt
 
     public static ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> getAspects(BlockPos blockPos, float angle) {
         ClientWorld clientWorld = MinecraftClient.getInstance().getWorldMapped();
+        // TODO: Here too
         if (clientWorld == null) {
             return new ObjectObjectImmutablePair(new IntArrayList(), new IntAVLTreeSet());
         } else {

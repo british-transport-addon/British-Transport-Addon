@@ -13,7 +13,6 @@ import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
-
     private static final float SIZE = 0.1F;
     private static final float SIDE_OFFSET = 0.2F;
     private static final float HEIGHT = 0.3F;
@@ -30,7 +29,14 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
     }
 
     @Override
-    protected void render(StoredMatrixTransformations storedMatrixTransformations, T entity, float tickDelta, int occupiedAspect, boolean isBackSide, int light) {
+    protected void render(
+            StoredMatrixTransformations storedMatrixTransformations,
+            T entity,
+            float tickDelta,
+            int occupiedAspect,
+            boolean isBackSide,
+            int light
+    ) {
         int leftColor;
         int rightColor;
         int topColor;
@@ -70,34 +76,49 @@ public class RenderShuntSignal<T extends BlockSignalBase.BlockEntityBase> extend
         }
 
         // Left signal
-        MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
-            storedMatrixTransformations.transform(graphicsHolder, offset);
-            IDrawing.drawTexture(graphicsHolder,
-                    -SIDE_OFFSET - SIZE, HEIGHT - SIZE, -0.19375F,
-                    -SIDE_OFFSET + SIZE, HEIGHT + SIZE, -0.19375F,
-                    Direction.UP, leftColor, GraphicsHolder.getDefaultLight());
-            graphicsHolder.pop();
-        });
+        MainRenderer.scheduleRender(
+                new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"),
+                false,
+                QueuedRenderLayer.LIGHT,
+                (graphicsHolder, offset) -> {
+                    storedMatrixTransformations.transform(graphicsHolder, offset);
+                    IDrawing.drawTexture(graphicsHolder,
+                            -SIDE_OFFSET - SIZE, HEIGHT - SIZE, -0.19375F,
+                            -SIDE_OFFSET + SIZE, HEIGHT + SIZE, -0.19375F,
+                            Direction.UP, leftColor, GraphicsHolder.getDefaultLight());
+                    graphicsHolder.pop();
+                }
+        );
 
         // Right signal
-        MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
-            storedMatrixTransformations.transform(graphicsHolder, offset);
-            IDrawing.drawTexture(graphicsHolder,
-                    SIDE_OFFSET - SIZE, HEIGHT - SIZE, -0.19375F,
-                    SIDE_OFFSET + SIZE, HEIGHT + SIZE, -0.19375F,
-                    Direction.UP, rightColor, GraphicsHolder.getDefaultLight());
-            graphicsHolder.pop();
-        });
+        MainRenderer.scheduleRender(
+                new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"),
+                false,
+                QueuedRenderLayer.LIGHT,
+                (graphicsHolder, offset) -> {
+                    storedMatrixTransformations.transform(graphicsHolder, offset);
+                    IDrawing.drawTexture(graphicsHolder,
+                            SIDE_OFFSET - SIZE, HEIGHT - SIZE, -0.19375F,
+                            SIDE_OFFSET + SIZE, HEIGHT + SIZE, -0.19375F,
+                            Direction.UP, rightColor, GraphicsHolder.getDefaultLight());
+                    graphicsHolder.pop();
+                }
+        );
 
         // Top signal (offset left or right based on topOffsetRight)
         float topXOffset = topOffsetRight ? TOP_SIDE_OFFSET : -TOP_SIDE_OFFSET;
 
-        MainRenderer.scheduleRender(new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"), false, QueuedRenderLayer.LIGHT, (graphicsHolder, offset) -> {
-            storedMatrixTransformations.transform(graphicsHolder, offset);
-            IDrawing.drawTexture(graphicsHolder,
-                    topXOffset - SIZE, TOP_HEIGHT - SIZE, -0.19375F,
-                    topXOffset + SIZE, TOP_HEIGHT + SIZE, -0.19375F,
-                    Direction.UP, topColor, GraphicsHolder.getDefaultLight());
+        MainRenderer.scheduleRender(
+                new Identifier(Init.MOD_ID, "textures/block/digital_signal.png"),
+                false,
+                QueuedRenderLayer.LIGHT,
+                (graphicsHolder, offset) -> {
+                    storedMatrixTransformations.transform(graphicsHolder, offset);
+                    IDrawing.drawTexture(graphicsHolder,
+                            topXOffset - SIZE, TOP_HEIGHT - SIZE, -0.19375F,
+                            topXOffset + SIZE, TOP_HEIGHT + SIZE, -0.19375F,
+                            Direction.UP, topColor, GraphicsHolder.getDefaultLight()
+                    );
             graphicsHolder.pop();
         });
     }

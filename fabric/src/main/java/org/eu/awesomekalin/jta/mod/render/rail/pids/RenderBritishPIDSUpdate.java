@@ -213,23 +213,23 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
 
             // Render different lines based on the value of i
             switch (i) {
-                case 0:
+                case 0 -> {
                     renderText(graphicsHolder, new SimpleDateFormat("HH:mm").format(new Date(arrivalResponse.getArrival() - arrivalResponse.getDeviation())), entity.textColor(), maxWidth * scale / 2, false);
                     renderText(graphicsHolder, languageIndex == 0 ? arrivalString : "Plat. " + arrivalResponse.getPlatformName(), entity.textColor(), ((maxWidth * scale) / 8) - 15, true);
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     renderText(graphicsHolder, destinationFormatted, color, ((maxWidth * scale) / 8) - 15, false);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     renderText(graphicsHolder, "Calling At:  (Page " + (currentPage + 1) + " of " + totalPages + ")", color, ((maxWidth * scale) / 8) - 54, false);
-                    break;
-                case 15:
+                }
+                case 15 -> {
                     renderText(graphicsHolder, Arrays.stream(MinecraftClientData.getDashboardInstance().routeIdMap.get(arrivalResponse.getRouteId()).depots.stream().findFirst().orElse(null).getName().split("\\|")).findFirst().orElse("Network Rail"), color, ((maxWidth * scale) / 8) - 15, false);
-                    break;
-                case 16:
+                }
+                case 16 -> {
                     renderText(graphicsHolder, "This train is formed of " + arrivalResponse.getCarCount() + " coaches.", color, ((maxWidth * scale) / 8) - 15, false);
-                    break;
-                default:
+                }
+                default -> {
                     int platformIndex = i - 3 + startIndex;
 
                     if (platformIndex >= startIndex && platformIndex < endIndex) {
@@ -238,6 +238,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
 
                         renderText(graphicsHolder, "| " + platformName, color, ((maxWidth * scale) / 8) - 40, false);
                     }
+                }
             }
 
             //renderText(graphicsHolder, "-".repeat((int) maxWidth), color,maxWidth * scale, false);

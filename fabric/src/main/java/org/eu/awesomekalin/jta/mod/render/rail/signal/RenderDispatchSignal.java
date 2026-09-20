@@ -13,7 +13,9 @@ import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
-import org.mtr.mod.render.*;
+import org.mtr.mod.render.MainRenderer;
+import org.mtr.mod.render.QueuedRenderLayer;
+import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
 
@@ -28,7 +30,17 @@ public class RenderDispatchSignal<T extends DispatchSignal.TileEntityDispatchSig
     private final int textColor;
     private final Identifier font;
 
-    public RenderDispatchSignal(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public RenderDispatchSignal(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -68,6 +80,7 @@ public class RenderDispatchSignal<T extends DispatchSignal.TileEntityDispatchSig
         float angle = BlockSignalBase.getAngle(state);
         ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderBritishSignalBase.getAspects(pos, angle + 90.0F);
         IntArrayList detectedColors = (IntArrayList)aspects.left();
+
         if (!detectedColors.isEmpty()) {
             StoredMatrixTransformations storedMatrixTransformationsNew = storedMatrixTransformations.copy();
             storedMatrixTransformationsNew.add((graphicsHolderNew) -> {

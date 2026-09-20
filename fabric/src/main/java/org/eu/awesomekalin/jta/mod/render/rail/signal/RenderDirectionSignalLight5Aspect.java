@@ -13,7 +13,6 @@ import org.mtr.mod.render.RenderSignalBase;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 public class RenderDirectionSignalLight5Aspect<T extends BlockSignalBase.BlockEntityBase> extends RenderSignalBase<T> {
-
     private final boolean rightSignal; // Inverted left to right
 
     public RenderDirectionSignalLight5Aspect(BlockEntityRenderer.Argument dispatcher, boolean rightSignal) {

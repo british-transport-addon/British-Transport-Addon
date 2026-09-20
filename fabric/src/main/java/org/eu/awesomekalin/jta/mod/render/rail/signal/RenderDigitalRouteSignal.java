@@ -1,8 +1,6 @@
 package org.eu.awesomekalin.jta.mod.render.rail.signal;
 
 import org.eu.awesomekalin.jta.mod.Init;
-import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.DispatchSignal;
 import org.eu.awesomekalin.jta.mod.blocks.signal.DigitalRouteSignal;
 import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntAVLTreeSet;
 import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntArrayList;
@@ -10,15 +8,12 @@ import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectObjectImmutablePair
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
-import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.BlockSignalBase;
-import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
-import org.mtr.mod.screen.SignalColorScreen;
 
 import javax.annotation.Nonnull;
 
@@ -64,8 +59,10 @@ public class RenderDigitalRouteSignal<T extends DigitalRouteSignal.BlockEntity> 
             graphicsHolderNew.rotateYDegrees(-angle);
             graphicsHolderNew.rotateZDegrees(180);
         });
+
         ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderBritishSignalBase.getAspects(pos, angle + 90.0F);
         IntArrayList detectedColors = (IntArrayList)aspects.left();
+
         if (!detectedColors.isEmpty()) {
             StoredMatrixTransformations storedMatrixTransformationsNew = storedMatrixTransformations.copy();
             storedMatrixTransformationsNew.add((graphicsHolderNew) -> {
@@ -109,24 +106,31 @@ public class RenderDigitalRouteSignal<T extends DigitalRouteSignal.BlockEntity> 
             if (aspects.right().contains(MapColor.getMagentaMapped().getColorMapped())) {
                 route = 9;
             }
+
             if (aspects.right().contains(MapColor.getPinkMapped().getColorMapped())) {
                 route = 10;
             }
+
             if (aspects.right().contains(MapColor.getPurpleMapped().getColorMapped())) {
                 route = 11;
             }
+
             if (aspects.right().contains(MapColor.getRedMapped().getColorMapped())) {
                 route = 12;
             }
+
             if (aspects.right().contains(MapColor.getLightBlueMapped().getColorMapped())) {
                 route = 13;
             }
+
             if (aspects.right().contains(MapColor.getGrayMapped().getColorMapped())) {
                 route = 14;
             }
+
             if (aspects.right().contains(MapColor.getBlueMapped().getColorMapped())) {
                 route = 15;
             }
+
             if (aspects.right().contains(MapColor.getBlackMapped().getColorMapped())) {
                 route = 16;
             }
