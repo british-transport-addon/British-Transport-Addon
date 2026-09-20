@@ -13,14 +13,20 @@ import org.mtr.mod.packet.PacketOpenBlockEntityScreen;
 import javax.annotation.Nonnull;
 
 public class BeeBusStopSign extends PoleBase implements BlockWithEntity {
-
     public BeeBusStopSign() {
         super();
     }
 
     @Nonnull
     @Override
-    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse2(
+            @Nonnull BlockState state,
+            @Nonnull World world,
+            @Nonnull BlockPos pos,
+            PlayerEntity player,
+            @Nonnull Hand hand,
+            @Nonnull BlockHitResult hit
+    ) {
         return IBlock.checkHoldingBrush(world, player, () -> {
             final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
             final Direction hitSide = hit.getSide();
@@ -30,13 +36,13 @@ public class BeeBusStopSign extends PoleBase implements BlockWithEntity {
         });
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new TileEntityBeeBusSign(blockPos, blockState);
     }
 
     public static class TileEntityBeeBusSign extends BlockEntityExtension {
-
         private static final String KEY_TOWARDS_TEXT = "towards_text";
         private static final String KEY_SERVICES_TEXT_ONE = "services_text_one";
         private String towardsText;

@@ -5,7 +5,6 @@ import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.entity.block.NineLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenLUWhiteboard;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
