@@ -10,7 +10,6 @@ import org.mtr.mod.block.IBlock;
 import javax.annotation.Nonnull;
 
 public class NationalRail10Clock extends BlockPIDSHorizontalBase {
-
     public static final int MAX_ARRIVALS = 10;
 
     public NationalRail10Clock() {
@@ -19,7 +18,12 @@ public class NationalRail10Clock extends BlockPIDSHorizontalBase {
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         return BlockHelper.shapeUnion(
                 IBlock.getVoxelShapeByDirection(6, 0, 0, 10, 9, 16, IBlock.getStatePropertySafe(state, FACING)),
                 IBlock.getVoxelShapeByDirection(7.5, 9, 12.5, 8.5, 16, 13.5, IBlock.getStatePropertySafe(state, FACING))
@@ -28,12 +32,11 @@ public class NationalRail10Clock extends BlockPIDSHorizontalBase {
 
     @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state) {
         return new TileEntityNationalRail10Clock(pos, state);
     }
 
     public static class TileEntityNationalRail10Clock extends BlockEntityHorizontalBase {
-
         public TileEntityNationalRail10Clock(int maxArrivals, BlockEntityType<?> type, BlockPos pos, BlockState state) {
             super(maxArrivals, type, pos, state);
         }
