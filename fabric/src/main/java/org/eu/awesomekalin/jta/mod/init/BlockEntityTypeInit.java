@@ -15,10 +15,6 @@ import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockEntityTypeRegistryObject;
 
 public class BlockEntityTypeInit {
-    public static void INIT() {
-        Init.LOGGER.debug("Registering JTA Block Entities");
-    }
-
     public static final BlockEntityTypeRegistryObject<BannerRepeaterSignal.BlockEntity> BANNER_REPEATER_SIGNAL = Init.REGISTRY.registerBlockEntityType(
             new Identifier(Init.MOD_ID, "banner_repeater_signal"),
             BannerRepeaterSignal.BlockEntity::new,
@@ -395,4 +391,8 @@ public class BlockEntityTypeInit {
             UndergroundWhiteboard.UndergroundWhiteboardBlockEntity::new,
             BlockInit.UNDERGROUND_WHITEBOARD::get
     );
+
+    public static void INIT() {
+        Init.LOGGER.debug("Registering JTA Block Entities");
+    }
 }

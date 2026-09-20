@@ -21,7 +21,6 @@ public class Init {
         ItemInit.INIT();
         SignInit.INIT();
         BlockEntityTypeInit.INIT();
-        EntityTypeInit.INIT();
         CreativeTabInit.INIT();
         SoundInit.INIT();
 

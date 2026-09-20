@@ -14,7 +14,6 @@ import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class BlockInit {
-
     public static final BlockRegistryObject ASPHALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asphalt"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static final BlockRegistryObject AWS_DECORATION = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "aws"), () -> new Block(new AWSRailDecoration()), CreativeTabInit.JTA_BLOCKS);
 
@@ -109,7 +108,6 @@ public class BlockInit {
 
     public static final BlockRegistryObject YELLOW_NSE_ROOF_CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "yellow_nse_roof_clock"), () -> new Block(new NSERoofClock()), CreativeTabInit.JTA_RAILWAYS);
 
-    //public static final BlockRegistryObject BRITISH_TICKET_BARRIER_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "british_ticket_barrier_fence"), () -> new Block(new BritishTicketBarrierFence(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
     }
