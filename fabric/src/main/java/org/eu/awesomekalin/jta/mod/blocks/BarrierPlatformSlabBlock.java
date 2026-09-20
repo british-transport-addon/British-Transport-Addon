@@ -1,49 +1,45 @@
 package org.eu.awesomekalin.jta.mod.blocks;
 
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
 import org.mtr.mod.block.BlockPlatformSlab;
 
-public class BarrierPlatformSlabBlock extends BlockPlatformSlab implements BlockWithEntity {
+import javax.annotation.Nonnull;
 
+public class BarrierPlatformSlabBlock extends BlockPlatformSlab implements BlockWithEntity {
     public BarrierPlatformSlabBlock() {
         super(BlockHelper.createBlockSettings(false, false).dropsNothing().strength(10));
     }
 
     @Override
-    public boolean isSideInvisible2(BlockState state, BlockState stateFrom, Direction direction) {
-        if (direction == Direction.DOWN) return false;
-        return true;
-    }
-
-
-
-    @Override
-    public boolean isTranslucent2(BlockState state, BlockView world, BlockPos pos) {
-        return true;
+    public boolean isSideInvisible2(@Nonnull BlockState state, @Nonnull BlockState stateFrom, @Nonnull Direction direction) {
+        return direction != Direction.DOWN;
     }
 
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public boolean isTranslucent2(@Nonnull BlockState state, @Nonnull BlockView world, @Nonnull BlockPos pos) {
+        return true;
+    }
+
+    @Nonnull
+    @Override
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new BarrierPlatformBlockEntity(blockPos, blockState);
     }
 
-    @NotNull
+    @Nonnull
     @Override
-    public BlockRenderType getRenderType2(BlockState state) {
+    public BlockRenderType getRenderType2(@Nonnull BlockState state) {
         return BlockRenderType.INVISIBLE;
     }
 
     @Override
-    public float getAmbientOcclusionLightLevel2(BlockState state, BlockView world, BlockPos pos) {
+    public float getAmbientOcclusionLightLevel2(@Nonnull BlockState state, @Nonnull BlockView world, @Nonnull BlockPos pos) {
         return 1.0F;
     }
-
-
 
     public static class BarrierPlatformBlockEntity extends BlockEntityExtension {
         public BarrierPlatformBlockEntity(BlockPos blockPos, BlockState blockState) {
