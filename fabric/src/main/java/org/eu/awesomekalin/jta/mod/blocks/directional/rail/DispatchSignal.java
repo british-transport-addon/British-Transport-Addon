@@ -1,15 +1,13 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
-import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.DirectionalBlockEntityBase;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.init.BlockInit;
-import org.jetbrains.annotations.Nullable;
 import org.mtr.core.tool.Angle;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.BlockSignalBase;
+
+import javax.annotation.Nonnull;
 
 public class DispatchSignal extends BlockSignalBase {
     public DispatchSignal() {
@@ -22,24 +20,24 @@ public class DispatchSignal extends BlockSignalBase {
         return getDefaultState2().with(new Property<>(FACING.data), ctx.getPlayerFacing().data);
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new TileEntityDispatchSignal(blockPos, blockState);
     }
 
     public static class TileEntityDispatchSignal extends BlockSignalBase.BlockEntityBase {
-
         public TileEntityDispatchSignal(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.DISPATCH_SIGNAL.get(), false, pos, state);
         }
 
         @Override
-        public void writeCompoundTag(CompoundTag compoundTag) {
+        public void writeCompoundTag(@Nonnull CompoundTag compoundTag) {
             super.writeCompoundTag(compoundTag);
         }
 
         @Override
-        public void readCompoundTag(CompoundTag compoundTag) {
+        public void readCompoundTag(@Nonnull CompoundTag compoundTag) {
             super.readCompoundTag(compoundTag);
         }
 
