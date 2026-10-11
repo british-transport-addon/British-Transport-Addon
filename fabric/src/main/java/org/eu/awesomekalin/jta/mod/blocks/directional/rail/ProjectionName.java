@@ -29,7 +29,7 @@ public class ProjectionName extends DirectionalBlockExtension implements BlockWi
     @Nonnull
     @Override
     public ActionResult onUse2(@Nonnull BlockState state, @Nonnull World world, @Nonnull BlockPos pos, PlayerEntity player, @Nonnull Hand hand, @Nonnull BlockHitResult hit) {
-        ProjectionNameScreen.handle(pos);
+        ProjectionNameScreen.handle(pos); // TODO: Do not run on server side as this causes crashes
         return ActionResult.SUCCESS;
     }
 
