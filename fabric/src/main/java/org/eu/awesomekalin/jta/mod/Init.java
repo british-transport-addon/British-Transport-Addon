@@ -11,9 +11,8 @@ import org.mtr.mapping.registry.Registry;
 import org.mtr.mapping.tool.DummyClass;
 
 public class Init {
-
     public static final String MOD_ID = "jta";
-    public static final Logger LOGGER = LogManager.getLogger("Jesses-Transit-Addon");
+    public static final Logger LOGGER = LogManager.getLogger("British-Transport-Addon");
     public static final Registry REGISTRY = new Registry();
 
     public static void init() {
@@ -25,7 +24,7 @@ public class Init {
         SoundInit.INIT();
 
         DummyClass.enableLogging();
-        System.out.println("Setting up packet handlers");
+        LOGGER.info("Setting up packet handlers");
         REGISTRY.setupPackets(new Identifier(MOD_ID, "packet"));
         REGISTRY.registerPacket(PacketUpdateOneLineBlockEntity.class, PacketUpdateOneLineBlockEntity::new);
         REGISTRY.registerPacket(PacketUpdateTwoLineBlockEntity.class, PacketUpdateTwoLineBlockEntity::new);
