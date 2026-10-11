@@ -1,14 +1,11 @@
 package org.eu.awesomekalin.jta.mod.render.rail.pids;
 
-import org.eu.awesomekalin.jta.mod.blocks.pids.NationalRailSingleBoard;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.core.data.Platform;
 import org.mtr.core.data.RoutePlatformData;
 import org.mtr.core.data.Station;
 import org.mtr.core.operation.ArrivalResponse;
 import org.mtr.core.tool.Utilities;
 import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongAVLTreeSet;
-import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongArrayList;
 import org.mtr.libraries.it.unimi.dsi.fastutil.longs.LongCollection;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import org.mtr.mapping.holder.BlockPos;
@@ -26,7 +23,6 @@ import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.MinecraftClientData;
 import org.mtr.mod.data.ArrivalsCacheClient;
 import org.mtr.mod.data.IGui;
-import org.mtr.mod.generated.lang.TranslationProvider;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 
@@ -35,7 +31,6 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> extends BlockEntityRenderer<T> implements IGui, Utilities {
     private final float startX;
@@ -249,7 +244,7 @@ public class RenderBritishPIDSUpdate<T extends BlockPIDSBase.BlockEntityBase> ex
         graphicsHolder.pop();
     }
 
-    private @NotNull String getCenteredMessage(Station station, float scale) {
+    private @Nonnull String getCenteredMessage(Station station, float scale) {
         String stationName = (station != null) ? station.getName() : "Unknown";
         String welcomeMessage = "Welcome to " + stationName + " station.";
 
