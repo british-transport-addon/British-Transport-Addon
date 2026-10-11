@@ -66,6 +66,7 @@ public class RoundelSmallSignBaseRender<T extends RoundelSmallSignBase.RoundelBa
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);

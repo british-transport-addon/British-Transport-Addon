@@ -67,6 +67,7 @@ public class RoundelPlatformBaseRender<T extends RoundelPlatformBase.RoundelBase
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);

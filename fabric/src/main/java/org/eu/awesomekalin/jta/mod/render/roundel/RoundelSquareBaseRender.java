@@ -67,6 +67,7 @@ public class RoundelSquareBaseRender<T extends RoundelSquareBase.RoundelBaseBloc
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             for (int i = 0; i < 4; i++) {
