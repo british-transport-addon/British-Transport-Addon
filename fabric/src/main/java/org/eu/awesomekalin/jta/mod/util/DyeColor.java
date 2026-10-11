@@ -28,10 +28,12 @@ public enum DyeColor {
         this.id = id;
         this.name = name;
         this.signColor = signColor;
+
         int j = (color & 16711680) >> 16;
         int k = (color & '\uff00') >> 8;
-        int l = (color & 255) >> 0;
-        this.colorComponents = new float[]{(float) j / 255.0F, (float) k / 255.0F, (float) l / 255.0F};
+        int l = color & 255;
+
+        this.colorComponents = new float[] {(float) j / 255.0F, (float) k / 255.0F, (float) l / 255.0F};
         this.fireworkColor = fireworkColor;
     }
 
