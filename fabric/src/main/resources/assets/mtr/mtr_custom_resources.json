@@ -1,0 +1,4144 @@
+{
+    "objects": [
+        {
+            "id": "2_car_stop",
+            "name": "eyecandy.jta.2_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/2_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/2_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "3_car_stop",
+            "name": "eyecandy.jta.3_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/3_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/3_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "4_car_stop",
+            "name": "eyecandy.jta.4_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/4_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/4_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "5_car_stop",
+            "name": "eyecandy.jta.5_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/5_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/5_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "5g_tower_pole",
+            "name": "eyecandy.jta.5g_tower_pole",
+            "modelResource": "mtrsteamloco:eyecandies/5g_tower_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/5g_tower_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "6_8_car_stop",
+            "name": "eyecandy.jta.6_8_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/6_8_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/6_8_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "6_car_stop",
+            "name": "eyecandy.jta.6_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/6_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/6_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "9_12_car_stop",
+            "name": "eyecandy.jta.9_12_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/9_12_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/9_12_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "919CAD"
+        },
+        {
+            "id": "anti_tresspass_rubber",
+            "name": "eyecandy.jta.anti_tresspass_rubber",
+            "modelResource": "mtrsteamloco:eyecandies/anti_tresspass_rubber.obj",
+            "textureResource": "mtrsteamloco:eyecandies/anti_tresspass_rubber.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "aws",
+            "name": "eyecandy.jta.aws",
+            "modelResource": "mtrsteamloco:eyecandies/aws.obj",
+            "textureResource": "mtrsteamloco:eyecandies/aws.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "B09820"
+        },
+        {
+            "id": "banner_repeater_plate",
+            "name": "eyecandy.jta.banner_repeater_plate",
+            "modelResource": "mtrsteamloco:eyecandies/banner_repeater_plate.obj",
+            "textureResource": "mtrsteamloco:eyecandies/banner_repeater_plate.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFFFFF"
+        },
+        {
+            "id": "banner_repeater_plate_large",
+            "name": "eyecandy.jta.banner_repeater_plate_large",
+            "modelResource": "mtrsteamloco:eyecandies/banner_repeater_plate_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/banner_repeater_plate_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFFFFF"
+        },
+        {
+            "id": "bee_network_station_light",
+            "name": "eyecandy.jta.bee_network_station_light",
+            "modelResource": "mtrsteamloco:eyecandies/bee_network_station_light.obj",
+            "textureResource": "mtrsteamloco:eyecandies/bee_network_station_light.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "F8D404"
+        },
+        {
+            "id": "blantyre",
+            "name": "eyecandy.jta.blantyre",
+            "modelResource": "mtrsteamloco:eyecandies/blantyre.obj",
+            "textureResource": "mtrsteamloco:eyecandies/blantyre.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "bridge_authority_large",
+            "name": "eyecandy.jta.bridge_authority_large",
+            "modelResource": "mtrsteamloco:eyecandies/bridge_authority_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/bridge_authority_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E51C20"
+        },
+        {
+            "id": "bridge_authority_medium",
+            "name": "eyecandy.jta.bridge_authority_medium",
+            "modelResource": "mtrsteamloco:eyecandies/bridge_authority_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/bridge_authority_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E51C20"
+        },
+        {
+            "id": "british_rail_buffer",
+            "name": "eyecandy.jta.british_rail_buffer",
+            "modelResource": "mtrsteamloco:eyecandies/british_rail_buffer.obj",
+            "textureResource": "mtrsteamloco:eyecandies/british_rail_buffer.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E51C20"
+        },
+        {
+            "id": "british_signal_piece",
+            "name": "eyecandy.jta.british_signal_piece",
+            "modelResource": "mtrsteamloco:eyecandies/british_signal_piece.obj",
+            "textureResource": "mtrsteamloco:eyecandies/british_signal_piece.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "british_signal_pole",
+            "name": "eyecandy.jta.british_signal_pole",
+            "modelResource": "mtrsteamloco:eyecandies/british_signal_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/british_signal_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "btp_networkrail_poster_escalator_saftey",
+            "name": "eyecandy.jta.btp_networkrail_poster_escalator_saftey",
+            "modelResource": "mtrsteamloco:eyecandies/btp_networkrail_poster_escalator_saftey.obj",
+            "textureResource": "mtrsteamloco:eyecandies/btp_networkrail_poster_escalator_saftey.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "080130"
+        },
+        {
+            "id": "btp_poster_are_they_checking_security",
+            "name": "eyecandy.jta.btp_poster_are_they_checking_security",
+            "modelResource": "mtrsteamloco:eyecandies/btp_poster_are_they_checking_security.obj",
+            "textureResource": "mtrsteamloco:eyecandies/btp_poster_are_they_checking_security.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "00B0E1"
+        },
+        {
+            "id": "btp_poster_are_they_somewhere_sus",
+            "name": "eyecandy.jta.btp_poster_are_they_somewhere_sus",
+            "modelResource": "mtrsteamloco:eyecandies/btp_poster_are_they_somewhere_sus.obj",
+            "textureResource": "mtrsteamloco:eyecandies/btp_poster_are_they_somewhere_sus.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "00B0E1"
+        },
+        {
+            "id": "btp_poster_have_they_left_a_bag",
+            "name": "eyecandy.jta.btp_poster_have_they_left_a_bag",
+            "modelResource": "mtrsteamloco:eyecandies/btp_poster_have_they_left_a_bag.obj",
+            "textureResource": "mtrsteamloco:eyecandies/btp_poster_have_they_left_a_bag.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "00B0E1"
+        },
+        {
+            "id": "burnside",
+            "name": "eyecandy.jta.burnside",
+            "modelResource": "mtrsteamloco:eyecandies/burnside.obj",
+            "textureResource": "mtrsteamloco:eyecandies/burnside.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "cambuslang",
+            "name": "eyecandy.jta.cambuslang",
+            "modelResource": "mtrsteamloco:eyecandies/cambuslang.obj",
+            "textureResource": "mtrsteamloco:eyecandies/cambuslang.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "carmyle",
+            "name": "eyecandy.jta.carmyle",
+            "modelResource": "mtrsteamloco:eyecandies/carmyle.obj",
+            "textureResource": "mtrsteamloco:eyecandies/carmyle.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "cathcart",
+            "name": "eyecandy.jta.cathcart",
+            "modelResource": "mtrsteamloco:eyecandies/cathcart.obj",
+            "textureResource": "mtrsteamloco:eyecandies/cathcart.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "cathcart_info",
+            "name": "eyecandy.jta.cathcart_info",
+            "modelResource": "mtrsteamloco:eyecandies/cathcart_info.obj",
+            "textureResource": "mtrsteamloco:eyecandies/cathcart_info.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "cctv_in_operation",
+            "name": "eyecandy.jta.cctv_in_operation",
+            "modelResource": "mtrsteamloco:eyecandies/cctv_in_operation.obj",
+            "textureResource": "mtrsteamloco:eyecandies/cctv_in_operation.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FED700"
+        },
+        {
+            "id": "coatbridge_central",
+            "name": "eyecandy.jta.coatbridge_central",
+            "modelResource": "mtrsteamloco:eyecandies/coatbridge_central.obj",
+            "textureResource": "mtrsteamloco:eyecandies/coatbridge_central.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "croftfoot",
+            "name": "eyecandy.jta.croftfoot",
+            "modelResource": "mtrsteamloco:eyecandies/croftfoot.obj",
+            "textureResource": "mtrsteamloco:eyecandies/croftfoot.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "dalmarnock",
+            "name": "eyecandy.jta.dalmarnock",
+            "modelResource": "mtrsteamloco:eyecandies/dalmarnock.obj",
+            "textureResource": "mtrsteamloco:eyecandies/dalmarnock.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "danger_overhead_wires_large",
+            "name": "eyecandy.jta.danger_overhead_wires_large",
+            "modelResource": "mtrsteamloco:eyecandies/danger_overhead_wires_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/danger_overhead_wires_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "F9CC01"
+        },
+        {
+            "id": "danger_overhead_wires_small",
+            "name": "eyecandy.jta.danger_overhead_wires_small",
+            "modelResource": "mtrsteamloco:eyecandies/danger_overhead_wires_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/danger_overhead_wires_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "F9CC01"
+        },
+        {
+            "id": "deansgate",
+            "name": "eyecandy.jta.deansgate",
+            "modelResource": "mtrsteamloco:eyecandies/deansgate.obj",
+            "textureResource": "mtrsteamloco:eyecandies/deansgate.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FEE155"
+        },
+        {
+            "id": "do_not_cross",
+            "name": "eyecandy.jta.do_not_cross",
+            "modelResource": "mtrsteamloco:eyecandies/do_not_cross.obj",
+            "textureResource": "mtrsteamloco:eyecandies/do_not_cross.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E5363A"
+        },
+        {
+            "id": "electric_shock_risk_small",
+            "name": "eyecandy.jta.electric_shock_risk_small",
+            "modelResource": "mtrsteamloco:eyecandies/electric_shock_risk_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/electric_shock_risk_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "F9ED00"
+        },
+        {
+            "id": "electric_trains_atherton_lines",
+            "name": "eyecandy.jta.electric_trains_atherton_lines",
+            "modelResource": "mtrsteamloco:eyecandies/electric_trains_atherton_lines.obj",
+            "textureResource": "mtrsteamloco:eyecandies/electric_trains_atherton_lines.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E31837"
+        },
+        {
+            "id": "eletrical_box_graffiti_1",
+            "name": "eyecandy.jta.eletrical_box_graffiti_1",
+            "modelResource": "mtrsteamloco:eyecandies/eletrical_box_graffiti_1.obj",
+            "textureResource": "mtrsteamloco:eyecandies/eletrical_box_graffiti_1.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E9603C"
+        },
+        {
+            "id": "eletrical_box_graffiti_2",
+            "name": "eyecandy.jta.eletrical_box_graffiti_2",
+            "modelResource": "mtrsteamloco:eyecandies/eletrical_box_graffiti_2.obj",
+            "textureResource": "mtrsteamloco:eyecandies/eletrical_box_graffiti_2.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E9603C"
+        },
+        {
+            "id": "gantry_10",
+            "name": "eyecandy.jta.gantry_10",
+            "modelResource": "mtrsteamloco:eyecandies/gantry_10.obj",
+            "textureResource": "mtrsteamloco:eyecandies/gantry_10.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "kings_park",
+            "name": "eyecandy.jta.kings_park",
+            "modelResource": "mtrsteamloco:eyecandies/kings_park.obj",
+            "textureResource": "mtrsteamloco:eyecandies/kings_park.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "kirkhill",
+            "name": "eyecandy.jta.kirkhill",
+            "modelResource": "mtrsteamloco:eyecandies/kirkhill.obj",
+            "textureResource": "mtrsteamloco:eyecandies/kirkhill.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "kirkhill_info",
+            "name": "eyecandy.jta.kirkhill_info",
+            "modelResource": "mtrsteamloco:eyecandies/kirkhill_info.obj",
+            "textureResource": "mtrsteamloco:eyecandies/kirkhill_info.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "large_eletrical_box_graffiti_1",
+            "name": "eyecandy.jta.large_eletrical_box_graffiti_1",
+            "modelResource": "mtrsteamloco:eyecandies/large_eletrical_box_graffiti_1.obj",
+            "textureResource": "mtrsteamloco:eyecandies/large_eletrical_box_graffiti_1.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E9603C"
+        },
+        {
+            "id": "level_crossing",
+            "name": "eyecandy.jta.level_crossing",
+            "modelResource": "mtrsteamloco:eyecandies/level_crossing.obj",
+            "textureResource": "mtrsteamloco:eyecandies/level_crossing.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "C71131"
+        },
+        {
+            "id": "limited_clearance_large",
+            "name": "eyecandy.jta.limited_clearance_large",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "limited_clearance_medium",
+            "name": "eyecandy.jta.limited_clearance_medium",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "limited_clearance_rusty_large",
+            "name": "eyecandy.jta.limited_clearance_rusty_large",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "limited_clearance_rusty_medium",
+            "name": "eyecandy.jta.limited_clearance_rusty_medium",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "limited_clearance_rusty_small",
+            "name": "eyecandy.jta.limited_clearance_rusty_small",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_rusty_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "limited_clearance_small",
+            "name": "eyecandy.jta.limited_clearance_small",
+            "modelResource": "mtrsteamloco:eyecandies/limited_clearance_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/limited_clearance_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FC0000"
+        },
+        {
+            "id": "lineside_electrical_building",
+            "name": "eyecandy.jta.lineside_electrical_building",
+            "modelResource": "mtrsteamloco:eyecandies/lineside_electrical_building.obj",
+            "textureResource": "mtrsteamloco:eyecandies/lineside_electrical_building.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "F9ED00"
+        },
+        {
+            "id": "lineside_power_distributor",
+            "name": "eyecandy.jta.lineside_power_distributor",
+            "modelResource": "mtrsteamloco:eyecandies/lineside_power_distributor.obj",
+            "textureResource": "mtrsteamloco:eyecandies/lineside_power_distributor.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "B49A1F"
+        },
+        {
+            "id": "metal_bridge_end",
+            "name": "eyecandy.jta.metal_bridge_end",
+            "modelResource": "mtrsteamloco:eyecandies/metal_bridge_end.obj",
+            "textureResource": "mtrsteamloco:eyecandies/metal_bridge_end.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "metal_bridge_left",
+            "name": "eyecandy.jta.metal_bridge_left",
+            "modelResource": "mtrsteamloco:eyecandies/metal_bridge_left.obj",
+            "textureResource": "mtrsteamloco:eyecandies/metal_bridge_left.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "metal_bridge_right",
+            "name": "eyecandy.jta.metal_bridge_right",
+            "modelResource": "mtrsteamloco:eyecandies/metal_bridge_right.obj",
+            "textureResource": "mtrsteamloco:eyecandies/metal_bridge_right.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "metal_fence",
+            "name": "eyecandy.jta.metal_fence",
+            "modelResource": "mtrsteamloco:eyecandies/metal_fence.obj",
+            "textureResource": "mtrsteamloco:eyecandies/metal_fence.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "mount_florida",
+            "name": "eyecandy.jta.mount_florida",
+            "modelResource": "mtrsteamloco:eyecandies/mount_florida.obj",
+            "textureResource": "mtrsteamloco:eyecandies/mount_florida.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6C"
+        },
+        {
+            "id": "mount_florida_info",
+            "name": "eyecandy.jta.mount_florida_info",
+            "modelResource": "mtrsteamloco:eyecandies/mount_florida_info.obj",
+            "textureResource": "mtrsteamloco:eyecandies/mount_florida_info.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6C"
+        },
+        {
+            "id": "mount_vernon",
+            "name": "eyecandy.jta.mount_vernon",
+            "modelResource": "mtrsteamloco:eyecandies/mount_vernon.obj",
+            "textureResource": "mtrsteamloco:eyecandies/mount_vernon.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6C"
+        },
+        {
+            "id": "mud_brick_bridge_piece",
+            "name": "eyecandy.jta.mud_brick_bridge_piece",
+            "modelResource": "mtrsteamloco:eyecandies/mud_brick_bridge_piece.obj",
+            "textureResource": "mtrsteamloco:eyecandies/mud_brick_bridge_piece.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "77684E"
+        },
+        {
+            "id": "networkrail_poster_tresspass_detection_system",
+            "name": "eyecandy.jta.networkrail_poster_tresspass_detection_system",
+            "modelResource": "mtrsteamloco:eyecandies/networkrail_poster_tresspass_detection_system.obj",
+            "textureResource": "mtrsteamloco:eyecandies/networkrail_poster_tresspass_detection_system.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFD200"
+        },
+        {
+            "id": "newton",
+            "name": "eyecandy.jta.newton",
+            "modelResource": "mtrsteamloco:eyecandies/newton.obj",
+            "textureResource": "mtrsteamloco:eyecandies/newton.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "77684E"
+        },
+        {
+            "id": "no_refuges_large",
+            "name": "eyecandy.jta.no_refuges_large",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "no_refuges_medium",
+            "name": "eyecandy.jta.no_refuges_medium",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "no_refuges_rusty_large",
+            "name": "eyecandy.jta.no_refuges_rusty_large",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_rusty_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_rusty_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "no_refuges_rusty_medium",
+            "name": "eyecandy.jta.no_refuges_rusty_medium",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_rusty_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_rusty_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "no_refuges_rusty_small",
+            "name": "eyecandy.jta.no_refuges_rusty_small",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_rusty_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_rusty_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "no_refuges_small",
+            "name": "eyecandy.jta.no_refuges_small",
+            "modelResource": "mtrsteamloco:eyecandies/no_refuges_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/no_refuges_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1C4495"
+        },
+        {
+            "id": "northern_billboard_1",
+            "name": "eyecandy.jta.northern_billboard_1",
+            "modelResource": "mtrsteamloco:eyecandies/northern_billboard_1.obj",
+            "textureResource": "mtrsteamloco:eyecandies/northern_billboard_1.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0C96D5"
+        },
+        {
+            "id": "northern_poster_explore_less",
+            "name": "eyecandy.jta.northern_poster_explore_less",
+            "modelResource": "mtrsteamloco:eyecandies/northern_poster_explore_less.obj",
+            "textureResource": "mtrsteamloco:eyecandies/northern_poster_explore_less.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0099D5"
+        },
+        {
+            "id": "northern_poster_play_fare",
+            "name": "eyecandy.jta.northern_poster_play_fare",
+            "modelResource": "mtrsteamloco:eyecandies/northern_poster_play_fare.obj",
+            "textureResource": "mtrsteamloco:eyecandies/northern_poster_play_fare.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "EC174D"
+        },
+        {
+            "id": "oss_sensor",
+            "name": "eyecandy.jta.oss_sensor",
+            "modelResource": "mtrsteamloco:eyecandies/oss_sensor.obj",
+            "textureResource": "mtrsteamloco:eyecandies/oss_sensor.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "passenger_do_not_cross_line",
+            "name": "eyecandy.jta.passenger_do_not_cross_line",
+            "modelResource": "mtrsteamloco:eyecandies/passenger_do_not_cross_line.obj",
+            "textureResource": "mtrsteamloco:eyecandies/passenger_do_not_cross_line.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "C20008"
+        },
+        {
+            "id": "penalty_fare",
+            "name": "eyecandy.jta.penalty_fare",
+            "modelResource": "mtrsteamloco:eyecandies/penalty_fare.obj",
+            "textureResource": "mtrsteamloco:eyecandies/penalty_fare.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E9BC01"
+        },
+        {
+            "id": "permissible_speed_30",
+            "name": "eyecandy.jta.permissible_speed_30",
+            "modelResource": "mtrsteamloco:eyecandies/permissible_speed_30.obj",
+            "textureResource": "mtrsteamloco:eyecandies/permissible_speed_30.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFD200"
+        },
+        {
+            "id": "permissible_speed_40",
+            "name": "eyecandy.jta.permissible_speed_40",
+            "modelResource": "mtrsteamloco:eyecandies/permissible_speed_40.obj",
+            "textureResource": "mtrsteamloco:eyecandies/permissible_speed_40.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFD200"
+        },
+        {
+            "id": "permissible_speed_50",
+            "name": "eyecandy.jta.permissible_speed_50",
+            "modelResource": "mtrsteamloco:eyecandies/permissible_speed_50.obj",
+            "textureResource": "mtrsteamloco:eyecandies/permissible_speed_50.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FFD200"
+        },
+        {
+            "id": "pids_pole",
+            "name": "eyecandy.jta.pids_pole",
+            "modelResource": "mtrsteamloco:eyecandies/pids_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/pids_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "pollokshields_east",
+            "name": "eyecandy.jta.pollokshields_east",
+            "modelResource": "mtrsteamloco:eyecandies/pollokshields_east.obj",
+            "textureResource": "mtrsteamloco:eyecandies/pollokshields_east.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "pollokshields_west",
+            "name": "eyecandy.jta.pollokshields_west",
+            "modelResource": "mtrsteamloco:eyecandies/pollokshields_west.obj",
+            "textureResource": "mtrsteamloco:eyecandies/pollokshields_west.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "rails",
+            "name": "eyecandy.jta.rails",
+            "modelResource": "mtrsteamloco:eyecandies/rails.obj",
+            "textureResource": "mtrsteamloco:eyecandies/rails.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "route_a",
+            "name": "eyecandy.jta.route_a",
+            "modelResource": "mtrsteamloco:eyecandies/route_a.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_a.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_b",
+            "name": "eyecandy.jta.route_b",
+            "modelResource": "mtrsteamloco:eyecandies/route_b.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_b.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_c",
+            "name": "eyecandy.jta.route_c",
+            "modelResource": "mtrsteamloco:eyecandies/route_c.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_c.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_d",
+            "name": "eyecandy.jta.route_d",
+            "modelResource": "mtrsteamloco:eyecandies/route_d.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_d.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_e",
+            "name": "eyecandy.jta.route_e",
+            "modelResource": "mtrsteamloco:eyecandies/route_e.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_e.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_f",
+            "name": "eyecandy.jta.route_f",
+            "modelResource": "mtrsteamloco:eyecandies/route_f.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_f.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_g",
+            "name": "eyecandy.jta.route_g",
+            "modelResource": "mtrsteamloco:eyecandies/route_g.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_g.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_h",
+            "name": "eyecandy.jta.route_h",
+            "modelResource": "mtrsteamloco:eyecandies/route_h.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_h.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "route_x",
+            "name": "eyecandy.jta.route_x",
+            "modelResource": "mtrsteamloco:eyecandies/route_x.obj",
+            "textureResource": "mtrsteamloco:eyecandies/route_x.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "rutherglen",
+            "name": "eyecandy.jta.rutherglen",
+            "modelResource": "mtrsteamloco:eyecandies/rutherglen.obj",
+            "textureResource": "mtrsteamloco:eyecandies/rutherglen.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "s_car_stop",
+            "name": "eyecandy.jta.s_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/s_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/s_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "B5C2C9"
+        },
+        {
+            "id": "s_car_stop_380",
+            "name": "eyecandy.jta.s_car_stop_380",
+            "modelResource": "mtrsteamloco:eyecandies/s_car_stop_380.obj",
+            "textureResource": "mtrsteamloco:eyecandies/s_car_stop_380.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0025FA"
+        },
+        {
+            "id": "salford_crescent",
+            "name": "eyecandy.jta.salford_crescent",
+            "modelResource": "mtrsteamloco:eyecandies/salford_crescent.obj",
+            "textureResource": "mtrsteamloco:eyecandies/salford_crescent.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FEE155"
+        },
+        {
+            "id": "samaritans",
+            "name": "eyecandy.jta.samaritans",
+            "modelResource": "mtrsteamloco:eyecandies/samaritans.obj",
+            "textureResource": "mtrsteamloco:eyecandies/samaritans.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "00626F"
+        },
+        {
+            "id": "scotrail_buy_before_you_board",
+            "name": "eyecandy.jta.scotrail_buy_before_you_board",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_buy_before_you_board.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_buy_before_you_board.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_cctv_warning",
+            "name": "eyecandy.jta.scotrail_cctv_warning",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_cctv_warning.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_cctv_warning.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_cctv_zone",
+            "name": "eyecandy.jta.scotrail_cctv_zone",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_cctv_zone.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_cctv_zone.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_fence",
+            "name": "eyecandy.jta.scotrail_fence",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_fence.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_fence.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_fence_end",
+            "name": "eyecandy.jta.scotrail_fence_end",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_fence_end.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_fence_end.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_planter_back",
+            "name": "eyecandy.jta.scotrail_planter_back",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_planter_back.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_planter_back.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_planter_front",
+            "name": "eyecandy.jta.scotrail_planter_front",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_planter_front.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_planter_front.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_planter_middle",
+            "name": "eyecandy.jta.scotrail_planter_middle",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_planter_middle.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_planter_middle.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_1",
+            "name": "eyecandy.jta.scotrail_platform_1",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_1.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_1.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_2",
+            "name": "eyecandy.jta.scotrail_platform_2",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_2.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_2.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_3",
+            "name": "eyecandy.jta.scotrail_platform_3",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_3.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_3.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_4",
+            "name": "eyecandy.jta.scotrail_platform_4",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_4.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_4.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_5",
+            "name": "eyecandy.jta.scotrail_platform_5",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_5.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_5.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_platform_6",
+            "name": "eyecandy.jta.scotrail_platform_6",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_platform_6.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_platform_6.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_poster_timetable",
+            "name": "eyecandy.jta.scotrail_poster_timetable",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_poster_timetable.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_poster_timetable.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "3B94D2"
+        },
+        {
+            "id": "scotrail_poster_transformation",
+            "name": "eyecandy.jta.scotrail_poster_transformation",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_poster_transformation.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_poster_transformation.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "013D8F"
+        },
+        {
+            "id": "scotrail_station_car_park",
+            "name": "eyecandy.jta.scotrail_station_car_park",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_station_car_park.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_station_car_park.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_station_light",
+            "name": "eyecandy.jta.scotrail_station_light",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_station_light.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_station_light.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "scotrail_way_out",
+            "name": "eyecandy.jta.scotrail_way_out",
+            "modelResource": "mtrsteamloco:eyecandies/scotrail_way_out.obj",
+            "textureResource": "mtrsteamloco:eyecandies/scotrail_way_out.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "signal_box_long",
+            "name": "eyecandy.jta.signal_box_long",
+            "modelResource": "mtrsteamloco:eyecandies/signal_box_long.obj",
+            "textureResource": "mtrsteamloco:eyecandies/signal_box_long.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "766E4D"
+        },
+        {
+            "id": "signal_ladder_blocked",
+            "name": "eyecandy.jta.signal_ladder_blocked",
+            "modelResource": "mtrsteamloco:eyecandies/signal_ladder_blocked.obj",
+            "textureResource": "mtrsteamloco:eyecandies/signal_ladder_blocked.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "signal_plate",
+            "name": "eyecandy.jta.signal_plate",
+            "modelResource": "mtrsteamloco:eyecandies/signal_plate.obj",
+            "textureResource": "mtrsteamloco:eyecandies/signal_plate.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "signal_pole_angled",
+            "name": "eyecandy.jta.signal_pole_angled",
+            "modelResource": "mtrsteamloco:eyecandies/signal_pole_angled.obj",
+            "textureResource": "mtrsteamloco:eyecandies/signal_pole_angled.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "single_signal_pole",
+            "name": "eyecandy.jta.single_signal_pole",
+            "modelResource": "mtrsteamloco:eyecandies/single_signal_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/single_signal_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "sleeper_car_stop",
+            "name": "eyecandy.jta.sleeper_car_stop",
+            "modelResource": "mtrsteamloco:eyecandies/sleeper_car_stop.obj",
+            "textureResource": "mtrsteamloco:eyecandies/sleeper_car_stop.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "1A2B35"
+        },
+        {
+            "id": "speaker",
+            "name": "eyecandy.jta.speaker",
+            "modelResource": "mtrsteamloco:eyecandies/speaker.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speaker.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "speed_100_large",
+            "name": "eyecandy.jta.speed_100_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_100_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_100_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_10_large",
+            "name": "eyecandy.jta.speed_10_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_10_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_10_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_10_medium",
+            "name": "eyecandy.jta.speed_10_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_10_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_10_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_10_small",
+            "name": "eyecandy.jta.speed_10_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_10_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_10_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_110_large",
+            "name": "eyecandy.jta.speed_110_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_110_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_110_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_15_large",
+            "name": "eyecandy.jta.speed_15_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_15_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_15_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_15_medium",
+            "name": "eyecandy.jta.speed_15_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_15_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_15_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_15_small",
+            "name": "eyecandy.jta.speed_15_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_15_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_15_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_20_large",
+            "name": "eyecandy.jta.speed_20_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_20_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_20_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_20_medium",
+            "name": "eyecandy.jta.speed_20_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_20_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_20_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_20_small",
+            "name": "eyecandy.jta.speed_20_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_20_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_20_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_25_large",
+            "name": "eyecandy.jta.speed_25_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_25_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_25_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_25_medium",
+            "name": "eyecandy.jta.speed_25_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_25_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_25_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_25_small",
+            "name": "eyecandy.jta.speed_25_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_25_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_25_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_35_large",
+            "name": "eyecandy.jta.speed_35_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_35_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_35_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_35_medium",
+            "name": "eyecandy.jta.speed_35_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_35_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_35_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_35_small",
+            "name": "eyecandy.jta.speed_35_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_35_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_35_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_40_large",
+            "name": "eyecandy.jta.speed_40_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_40_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_40_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_40_medium",
+            "name": "eyecandy.jta.speed_40_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_40_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_40_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_40_small",
+            "name": "eyecandy.jta.speed_40_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_40_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_40_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_45_large",
+            "name": "eyecandy.jta.speed_45_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_45_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_45_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_45_medium",
+            "name": "eyecandy.jta.speed_45_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_45_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_45_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_45_small",
+            "name": "eyecandy.jta.speed_45_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_45_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_45_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_50_large",
+            "name": "eyecandy.jta.speed_50_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_50_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_50_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_5_large",
+            "name": "eyecandy.jta.speed_5_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_5_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_5_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_5_medium",
+            "name": "eyecandy.jta.speed_5_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_5_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_5_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_5_small",
+            "name": "eyecandy.jta.speed_5_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_5_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_5_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_60_dmu_large",
+            "name": "eyecandy.jta.speed_60_dmu_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_60_dmu_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_60_dmu_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_60_dmu_medium",
+            "name": "eyecandy.jta.speed_60_dmu_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_60_dmu_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_60_dmu_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_60_large",
+            "name": "eyecandy.jta.speed_60_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_60_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_60_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_60_medium",
+            "name": "eyecandy.jta.speed_60_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_60_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_60_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_70_large",
+            "name": "eyecandy.jta.speed_70_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_70_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_70_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_75_large",
+            "name": "eyecandy.jta.speed_75_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_75_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_75_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_80_large",
+            "name": "eyecandy.jta.speed_80_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_80_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_80_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_80_mu_large",
+            "name": "eyecandy.jta.speed_80_mu_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_80_mu_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_80_mu_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_80_mu_medium",
+            "name": "eyecandy.jta.speed_80_mu_medium",
+            "modelResource": "mtrsteamloco:eyecandies/speed_80_mu_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_80_mu_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_90_large",
+            "name": "eyecandy.jta.speed_90_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_80_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_80_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_direction_left_large",
+            "name": "eyecandy.jta.speed_direction_left_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_direction_left_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_direction_left_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_direction_left_small",
+            "name": "eyecandy.jta.speed_direction_left_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_direction_left_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_direction_left_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_direction_right_large",
+            "name": "eyecandy.jta.speed_direction_right_large",
+            "modelResource": "mtrsteamloco:eyecandies/speed_direction_right_large.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_direction_right_large.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "speed_direction_right_small",
+            "name": "eyecandy.jta.speed_direction_right_small",
+            "modelResource": "mtrsteamloco:eyecandies/speed_direction_right_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/speed_direction_right_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0000"
+        },
+        {
+            "id": "steel_column",
+            "name": "eyecandy.jta.steel_column",
+            "modelResource": "mtrsteamloco:eyecandies/steel_column.obj",
+            "textureResource": "mtrsteamloco:eyecandies/steel_column.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "steel_fence",
+            "name": "eyecandy.jta.steel_fence",
+            "modelResource": "mtrsteamloco:eyecandies/steel_fence.obj",
+            "textureResource": "mtrsteamloco:eyecandies/steel_fence.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "steel_light_pole",
+            "name": "eyecandy.jta.steel_light_pole",
+            "modelResource": "mtrsteamloco:eyecandies/british_steel_light_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/british_steel_light_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "steel_pole",
+            "name": "eyecandy.jta.steel_pole",
+            "modelResource": "mtrsteamloco:eyecandies/steel_pole.obj",
+            "textureResource": "mtrsteamloco:eyecandies/steel_pole.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "stop_await_instructions_before_proceeding",
+            "name": "eyecandy.jta.stop_await_instructions_before_proceeding",
+            "modelResource": "mtrsteamloco:eyecandies/stop_await_instructions_before_proceeding.obj",
+            "textureResource": "mtrsteamloco:eyecandies/stop_await_instructions_before_proceeding.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "FF0100"
+        },
+        {
+            "id": "stop_look_listen",
+            "name": "eyecandy.jta.stop_look_listen",
+            "modelResource": "mtrsteamloco:eyecandies/stop_look_listen.obj",
+            "textureResource": "mtrsteamloco:eyecandies/stop_look_listen.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "E11D38"
+        },
+        {
+            "id": "tpws_signal",
+            "name": "eyecandy.jta.tpws_signal",
+            "modelResource": "mtrsteamloco:eyecandies/tpws_signal.obj",
+            "textureResource": "mtrsteamloco:eyecandies/tpws_signal.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "track_switch",
+            "name": "eyecandy.jta.track_switch",
+            "modelResource": "mtrsteamloco:eyecandies/track_switch.obj",
+            "textureResource": "mtrsteamloco:eyecandies/track_switch.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "525455"
+        },
+        {
+            "id": "tram",
+            "name": "eyecandy.jta.tram",
+            "modelResource": "mtrsteamloco:eyecandies/tram.obj",
+            "textureResource": "mtrsteamloco:eyecandies/tram.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "007AC3"
+        },
+        {
+            "id": "tramway",
+            "name": "eyecandy.jta.tramway",
+            "modelResource": "mtrsteamloco:eyecandies/tramway.obj",
+            "textureResource": "mtrsteamloco:eyecandies/tramway.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "007AC3"
+        },
+        {
+            "id": "tresspass_small",
+            "name": "eyecandy.jta.tresspass_small",
+            "modelResource": "mtrsteamloco:eyecandies/tresspass_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/tresspass_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BB0106"
+        },
+        {
+            "id": "uddingston",
+            "name": "eyecandy.jta.uddingston",
+            "modelResource": "mtrsteamloco:eyecandies/uddingston.obj",
+            "textureResource": "mtrsteamloco:eyecandies/uddingston.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "victorian_speed_50",
+            "name": "eyecandy.jta.victorian_speed_50",
+            "modelResource": "mtrsteamloco:eyecandies/victorian_speed_50.obj",
+            "textureResource": "mtrsteamloco:eyecandies/victorian_speed_50.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "000000"
+        },
+        {
+            "id": "whifflet",
+            "name": "eyecandy.jta.whifflet",
+            "modelResource": "mtrsteamloco:eyecandies/whifflet.obj",
+            "textureResource": "mtrsteamloco:eyecandies/whifflet.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "0E2D6D"
+        },
+        {
+            "id": "whistle_medium",
+            "name": "eyecandy.jta.whistle_medium",
+            "modelResource": "mtrsteamloco:eyecandies/whistle_medium.obj",
+            "textureResource": "mtrsteamloco:eyecandies/whistle_medium.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        },
+        {
+            "id": "whistle_small",
+            "name": "eyecandy.jta.whistle_small",
+            "modelResource": "mtrsteamloco:eyecandies/whistle_small.obj",
+            "textureResource": "mtrsteamloco:eyecandies/whistle_small.mtl",
+            "flipTextureV": true,
+            "translation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "scale": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "color": "BABABA"
+        }
+    ]
+}
