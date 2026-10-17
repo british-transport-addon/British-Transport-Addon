@@ -44,10 +44,9 @@ public class ProjectionNameScreen extends ScreenExtension implements IGui {
         });
     }
 
-    public static ProjectionNameScreen handle(BlockPos pos) {
+    public static void handle(BlockPos pos) {
         ProjectionNameScreen screen = new ProjectionNameScreen(pos);
         MinecraftClient.getInstance().openScreen(new Screen(screen));
-        return screen;
     }
 
     @Override

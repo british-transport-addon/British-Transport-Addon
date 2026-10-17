@@ -1,12 +1,14 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.screen.station.ProjectionNameScreen;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenProjectionNameScreen;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
+import org.mtr.mod.block.IBlock;
 
 import javax.annotation.Nonnull;
 
@@ -29,8 +31,9 @@ public class ProjectionName extends DirectionalBlockExtension implements BlockWi
     @Nonnull
     @Override
     public ActionResult onUse2(@Nonnull BlockState state, @Nonnull World world, @Nonnull BlockPos pos, PlayerEntity player, @Nonnull Hand hand, @Nonnull BlockHitResult hit) {
-        ProjectionNameScreen.handle(pos); // TODO: Do not run on server side as this causes crashes
-        return ActionResult.SUCCESS;
+        return IBlock.checkHoldingBrush(world, player, () -> {
+            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenProjectionNameScreen(pos));
+        });
     }
 
     public static class ProjectionNameBlockEntity extends BlockEntityExtension {

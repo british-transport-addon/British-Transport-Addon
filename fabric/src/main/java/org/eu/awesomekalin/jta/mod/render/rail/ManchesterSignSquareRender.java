@@ -10,6 +10,7 @@ import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
@@ -51,7 +52,7 @@ public class ManchesterSignSquareRender<T extends ManchesterSignSquare.TileEntit
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;

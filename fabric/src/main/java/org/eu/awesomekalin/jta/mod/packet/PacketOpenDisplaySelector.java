@@ -1,7 +1,10 @@
 package org.eu.awesomekalin.jta.mod.packet;
 
+import org.eu.awesomekalin.jta.mod.screen.DisplaySelectorScreen;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import org.mtr.mapping.holder.BlockPos;
+import org.mtr.mapping.holder.MinecraftClient;
+import org.mtr.mapping.holder.Screen;
 import org.mtr.mapping.registry.PacketHandler;
 import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;
@@ -42,6 +45,6 @@ public class PacketOpenDisplaySelector extends PacketHandler {
 
     @Override
     public void runClient() {
-        ClientPacketHelper.openDisplaySelector(pos, selectedIds, width, height);
+        MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos, selectedIds, width, height)));
     }
 }

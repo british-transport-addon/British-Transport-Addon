@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.eu.awesomekalin.jta.mod.init.*;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenLUWhiteboard;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenProjectionNameScreen;
 import org.eu.awesomekalin.jta.mod.packet.entity.*;
 import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.Registry;
@@ -25,6 +26,7 @@ public class Init {
 
         DummyClass.enableLogging();
         LOGGER.info("Setting up packet handlers");
+
         REGISTRY.setupPackets(new Identifier(MOD_ID, "packet"));
         REGISTRY.registerPacket(PacketUpdateOneLineBlockEntity.class, PacketUpdateOneLineBlockEntity::new);
         REGISTRY.registerPacket(PacketUpdateTwoLineBlockEntity.class, PacketUpdateTwoLineBlockEntity::new);
@@ -37,6 +39,7 @@ public class Init {
         REGISTRY.registerPacket(PacketUpdateNineLineBlockEntity.class, PacketUpdateNineLineBlockEntity::new);
         REGISTRY.registerPacket(PacketOpenDisplaySelector.class, PacketOpenDisplaySelector::new);
         REGISTRY.registerPacket(PacketOpenLUWhiteboard.class, PacketOpenLUWhiteboard::new);
+        REGISTRY.registerPacket(PacketOpenProjectionNameScreen.class, PacketOpenProjectionNameScreen::new);
         REGISTRY.registerPacket(PacketUpdateDynamicDisplay.class, PacketUpdateDynamicDisplay::new);
 
         REGISTRY.init();
