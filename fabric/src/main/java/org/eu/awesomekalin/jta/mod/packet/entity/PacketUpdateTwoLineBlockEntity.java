@@ -27,9 +27,11 @@ public class PacketUpdateTwoLineBlockEntity extends PacketUpdateOneLineBlockEnti
     @Override
     public void runServer(MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
+
         if (entity != null && entity.data instanceof TwoLineBlockEntity) {
             ((TwoLineBlockEntity) entity.data).setLine1(MutableText.cast(Text.of(line1)));
         }
+
         super.runServer(minecraftServer, serverPlayerEntity);
     }
 }

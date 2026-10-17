@@ -10,11 +10,11 @@ import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
+import javax.annotation.Nonnull;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class RenderNationalRail3ClockWhite extends RenderBritishPIDS<NationalRail3ClockWhite.TileEntityNationalRail3ClockWhite> {
-
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -23,7 +23,16 @@ public class RenderNationalRail3ClockWhite extends RenderBritishPIDS<NationalRai
     private final float xTilt;
     private final int textColor;
 
-    public RenderNationalRail3ClockWhite(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor) {
+    public RenderNationalRail3ClockWhite(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor
+    ) {
         super(dispatcher, -1.75F, 7.5F, 6, 6.5F, 35, true, 1);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -35,9 +44,8 @@ public class RenderNationalRail3ClockWhite extends RenderBritishPIDS<NationalRai
     }
 
     @Override
-    public void render(NationalRail3ClockWhite.TileEntityNationalRail3ClockWhite entity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(@Nonnull NationalRail3ClockWhite.TileEntityNationalRail3ClockWhite entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
         super.render(entity, tickDelta, graphicsHolder, light, overlay);
-
 
         final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
@@ -63,6 +71,7 @@ public class RenderNationalRail3ClockWhite extends RenderBritishPIDS<NationalRai
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(90);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
@@ -74,8 +83,6 @@ public class RenderNationalRail3ClockWhite extends RenderBritishPIDS<NationalRai
             graphicsHolderNew.pop();
         });
     }
-
-
 
     private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {
         graphicsHolder.push();

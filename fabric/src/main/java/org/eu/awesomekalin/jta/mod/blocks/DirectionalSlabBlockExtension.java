@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.blocks;
 
 import org.mtr.core.tool.Angle;
-import org.mtr.libraries.org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.DirectionHelper;
 import org.mtr.mapping.mapper.SlabBlockExtension;
@@ -12,7 +11,6 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 public abstract class DirectionalSlabBlockExtension extends SlabBlockExtension implements DirectionHelper {
-
     public static final EnumProperty<EnumBooleanInverted> IS_22_5 = EnumProperty.of("is_22_5", EnumBooleanInverted.class);
     public static final EnumProperty<EnumBooleanInverted> IS_45 = EnumProperty.of("is_45", EnumBooleanInverted.class);
 
@@ -21,26 +19,39 @@ public abstract class DirectionalSlabBlockExtension extends SlabBlockExtension i
     }
 
     public static float getAngle(BlockState state) {
-        return IBlock.getStatePropertySafe(state, DirectionHelper.FACING).asRotation() + (IBlock.getStatePropertySafe(state, DirectionalSlabBlockExtension.IS_22_5).booleanValue ? 22.5F : 0) + (IBlock.getStatePropertySafe(state, DirectionalSlabBlockExtension.IS_45).booleanValue ? 45 : 0);
+        return IBlock.getStatePropertySafe(state, DirectionHelper.FACING)
+                .asRotation()
+                + (IBlock.getStatePropertySafe(state, DirectionalSlabBlockExtension.IS_22_5).booleanValue ? 22.5F : 0)
+                + (IBlock.getStatePropertySafe(state, DirectionalSlabBlockExtension.IS_45).booleanValue ? 45 : 0);
     }
 
     @Override
     public BlockState getPlacementState2(ItemPlacementContext ctx) {
         final int quadrant = Angle.getQuadrant(ctx.getPlayerYaw(), true);
-        return getDefaultState2().with(new Property<>(FACING.data), Direction.fromHorizontal(quadrant / 4).data.getOpposite()).with(new Property<>(IS_45.data), EnumBooleanInverted.fromBoolean(quadrant % 4 >= 2)).with(new Property<>(IS_22_5.data), EnumBooleanInverted.fromBoolean(quadrant % 2 == 1));
+        return getDefaultState2()
+                .with(new Property<>(FACING.data), Direction.fromHorizontal(quadrant / 4).data.getOpposite())
+                .with(new Property<>(IS_45.data), EnumBooleanInverted.fromBoolean(quadrant % 4 >= 2))
+                .with(new Property<>(IS_22_5.data), EnumBooleanInverted.fromBoolean(quadrant % 2 == 1));
     }
 
     @Override
-    public void addBlockProperties(List<HolderBase<?>> properties) {
+    public void addBlockProperties(@Nonnull List<HolderBase<?>> properties) {
         super.addBlockProperties(properties);
         properties.add(FACING);
         properties.add(IS_22_5);
         properties.add(IS_45);
     }
 
-    @NotNull
+    @Nonnull
     @Override
-    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse2(
+            @Nonnull BlockState state,
+            @Nonnull World world,
+            @Nonnull BlockPos pos,
+            PlayerEntity player,
+            @Nonnull Hand hand,
+            @Nonnull BlockHitResult hit
+    ) {
         player.sendMessage(Text.of("Facing: " + IBlock.getStatePropertySafe(state, FACING).getName() +
                 ", Type: " + IBlock.getStatePropertySafe(state, new EnumProperty(TYPE)).name() +
                 ", 22.5: " + IBlock.getStatePropertySafe(state, IS_22_5).booleanValue +
@@ -49,7 +60,6 @@ public abstract class DirectionalSlabBlockExtension extends SlabBlockExtension i
     }
 
     public enum EnumBooleanInverted implements StringIdentifiable {
-
         FALSE(false), TRUE(true);
         public final boolean booleanValue;
 

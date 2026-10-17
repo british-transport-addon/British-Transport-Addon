@@ -27,9 +27,11 @@ public class PacketUpdateFiveLineBlockEntity extends PacketUpdateFourLineBlockEn
     @Override
     public void runServer(MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
+
         if (entity != null && entity.data instanceof FiveLineBlockEntity) {
             ((FiveLineBlockEntity) entity.data).setLine4(MutableText.cast(Text.of(line4)));
         }
+
         super.runServer(minecraftServer, serverPlayerEntity);
     }
 }

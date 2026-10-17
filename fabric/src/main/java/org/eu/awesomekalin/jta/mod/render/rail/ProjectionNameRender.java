@@ -9,6 +9,7 @@ import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
@@ -17,8 +18,6 @@ import org.mtr.mod.render.StoredMatrixTransformations;
 import javax.annotation.Nonnull;
 
 public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
-    private final float maxWidth;
-    private final float maxScale;
     private final float xOffset;
     private final float yOffset;
     private final float zOffset;
@@ -26,10 +25,16 @@ public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEn
     private final int textColor;
     private final Identifier font;
 
-    public ProjectionNameRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public ProjectionNameRender(
+            Argument dispatcher,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
-        this.maxWidth = maxWidth;
-        this.maxScale = maxScale;
         this.xOffset = xOffset;
         this.yOffset = yOffset;
         this.zOffset = zOffset;
@@ -39,7 +44,7 @@ public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEn
     }
     @Override
     public void render(@Nonnull T entity, float v, @Nonnull GraphicsHolder graphicsHolder, int light, int i1) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;
@@ -62,7 +67,6 @@ public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEn
             text = MutableText.cast(Text.of((entity.getPrefix().getString() + " " + stationText + " " + entity.getSuffix().getString()).toUpperCase()));
         }
 
-
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
@@ -71,6 +75,7 @@ public class ProjectionNameRender<T extends ProjectionName.ProjectionNameBlockEn
 
         MutableText finalText = text;
         int width = GraphicsHolder.getTextWidth(finalText);
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) ->{
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, entity, finalText, width, light);

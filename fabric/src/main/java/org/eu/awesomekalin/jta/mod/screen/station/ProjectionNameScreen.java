@@ -9,6 +9,7 @@ import org.mtr.mapping.tool.TextCase;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
 
+import javax.annotation.Nonnull;
 import java.util.function.Consumer;
 
 public class ProjectionNameScreen extends ScreenExtension implements IGui {
@@ -19,11 +20,17 @@ public class ProjectionNameScreen extends ScreenExtension implements IGui {
     private final TextFieldWidgetExtension maxScale;
     private final CheckboxWidgetExtension isUppercase;
     private final ProjectionName.ProjectionNameBlockEntity cast;
+
     public ProjectionNameScreen(BlockPos pos) {
         this.pos = pos;
+
         ClientPlayerEntity player = MinecraftClient.getInstance().getPlayerMapped();
+        assert player != null;
+
         World world = player.getEntityWorld();
         BlockEntity entity = world.getBlockEntity(pos);
+        assert entity != null;
+
         cast = (ProjectionName.ProjectionNameBlockEntity) entity.data;
         prefix = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 10, TextCase.DEFAULT, "", "");
         suffix = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 10, TextCase.DEFAULT, "", "");
@@ -37,10 +44,9 @@ public class ProjectionNameScreen extends ScreenExtension implements IGui {
         });
     }
 
-    public static ProjectionNameScreen handle(BlockPos pos) {
+    public static void handle(BlockPos pos) {
         ProjectionNameScreen screen = new ProjectionNameScreen(pos);
         MinecraftClient.getInstance().openScreen(new Screen(screen));
-        return screen;
     }
 
     @Override
@@ -64,7 +70,7 @@ public class ProjectionNameScreen extends ScreenExtension implements IGui {
     }
 
     @Override
-    public void render(GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
+    public void render(@Nonnull GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
         prefix.render(graphicsHolder, mouseX, mouseY, delta);
         suffix.render(graphicsHolder, mouseX, mouseY, delta);
         isUppercase.render(graphicsHolder, mouseX, mouseY, delta);
@@ -72,11 +78,14 @@ public class ProjectionNameScreen extends ScreenExtension implements IGui {
         maxScale.render(graphicsHolder, mouseX, mouseY, delta);
 
         graphicsHolder.push();
+
         final GuiDrawing guiDrawing = new GuiDrawing(graphicsHolder);
         guiDrawing.beginDrawingRectangle();
         guiDrawing.drawRectangle(0, 0, getWidthMapped(), getHeightMapped(), ARGB_BLACK_TRANSLUCENT);
         guiDrawing.finishDrawingRectangle();
+
         super.render(graphicsHolder, mouseX, mouseY, delta);
+
         graphicsHolder.pop();
     }
 

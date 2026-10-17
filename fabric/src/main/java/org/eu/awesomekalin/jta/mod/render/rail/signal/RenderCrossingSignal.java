@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RenderCrossingSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
-
     public RenderCrossingSignal(BlockEntityRenderer.Argument dispatcher) {
         super(dispatcher, 12, 2);
     }

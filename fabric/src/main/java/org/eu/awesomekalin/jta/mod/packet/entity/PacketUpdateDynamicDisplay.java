@@ -7,6 +7,8 @@ import org.mtr.mapping.registry.PacketHandler;
 import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;
 
+import javax.annotation.Nonnull;
+
 public class PacketUpdateDynamicDisplay extends PacketHandler {
     public final BlockPos blockPos;
     public ObjectArrayList<String> selectedIds;
@@ -16,8 +18,7 @@ public class PacketUpdateDynamicDisplay extends PacketHandler {
 
     public PacketUpdateDynamicDisplay(PacketBufferReceiver receiver) {
         blockPos = BlockPos.fromLong(receiver.readLong());
-
-        selectedIds = new  ObjectArrayList<>();
+        selectedIds = new ObjectArrayList<>();
         numberOfIds = receiver.readInt();
 
         for (int i = 0; i < numberOfIds; i++) {
@@ -50,7 +51,7 @@ public class PacketUpdateDynamicDisplay extends PacketHandler {
     }
 
     @Override
-    public void runServer(MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
+    public void runServer(@Nonnull MinecraftServer minecraftServer, ServerPlayerEntity serverPlayerEntity) {
         final BlockEntity entity = serverPlayerEntity.getEntityWorld().getBlockEntity(blockPos);
         if (entity != null && entity.data instanceof DisplayBlock.DisplayBlockEntity) {
             ((DisplayBlock.DisplayBlockEntity) entity.data).setSelectedIds(selectedIds, width, height);

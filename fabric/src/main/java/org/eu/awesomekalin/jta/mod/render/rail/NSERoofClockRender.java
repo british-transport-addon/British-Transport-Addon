@@ -8,6 +8,7 @@ import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
@@ -28,7 +29,18 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
     private final boolean isDoubleSided;
     private final Identifier font;
 
-    public NSERoofClockRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, boolean isDoubleSided, Identifier font) {
+    public NSERoofClockRender(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            boolean isDoubleSided,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -43,7 +55,7 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;
@@ -68,6 +80,7 @@ public class NSERoofClockRender<T extends NSERoofClock.TileEntityNSERoofClock> e
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
             graphicsHolderNew.rotateZDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);

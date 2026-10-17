@@ -1,5 +1,6 @@
 package org.eu.awesomekalin.jta.mod.render.bus;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.BeeBusStopSign;
 import org.mtr.core.data.Station;
@@ -10,13 +11,13 @@ import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.InitClient;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
-
 
 public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
@@ -28,7 +29,17 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
     private final int textColor;
     private final Identifier font;
 
-    public BeeBusStopSignRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public BeeBusStopSignRender(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -42,7 +53,7 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;
@@ -77,6 +88,7 @@ public class BeeBusStopSignRender<T extends BeeBusStopSign.TileEntityBeeBusSign>
             if (IS_22_5.booleanValue) graphicsHolderNew.rotateYDegrees(22.5F);
             if (IS_45.booleanValue) graphicsHolderNew.rotateYDegrees(45F);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             // away from traffic side.

@@ -11,19 +11,13 @@ public class NationalRail10ClockWhite extends NationalRail10Clock {
 
     @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state) {
         return new TileEntityNationalRail10ClockWhite(pos, state);
     }
 
     public static class TileEntityNationalRail10ClockWhite extends TileEntityNationalRail10Clock {
-
         public TileEntityNationalRail10ClockWhite(BlockPos pos, BlockState state) {
             super(NationalRail10Clock.MAX_ARRIVALS, BlockEntityTypeInit.PIDS_NATIONALRAIL10CLOCKWHITE.get(), pos, state);
-        }
-
-        @Override
-        public boolean showArrivalNumber() {
-            return true;
         }
 
         @Override

@@ -5,7 +5,8 @@ import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.tool.HolderBase;
-import org.mtr.mod.block.*;
+import org.mtr.mod.block.BlockPIDSBase;
+import org.mtr.mod.block.IBlock;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -13,7 +14,6 @@ import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 
 public class NationalRailSingleBoard extends BlockPIDSBase {
-
     public static final int LINES = 17;
 
     public NationalRailSingleBoard() {
@@ -22,19 +22,24 @@ public class NationalRailSingleBoard extends BlockPIDSBase {
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         return BlockHelper.shapeUnion(
                 IBlock.getVoxelShapeByDirection(6, -16, -8, 10, 32, 24, IBlock.getStatePropertySafe(state, FACING)));
     }
 
     @Override
-    public void addBlockProperties(List<HolderBase<?>> properties) {
+    public void addBlockProperties(@Nonnull List<HolderBase<?>> properties) {
         super.addBlockProperties(properties);
         properties.add(FACING);
     }
 
     @Override
-    public void onPlaced2(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
+    public void onPlaced2(World world, @Nonnull BlockPos pos, BlockState state, LivingEntity placer, @Nonnull ItemStack itemStack) {
         assert placer != null;
         final Direction facing = placer.getHorizontalFacing().getOpposite().rotateYClockwise().rotateYClockwise();
         world.setBlockState(pos, state.with(new Property<>(FACING.data), facing.data));
@@ -42,7 +47,7 @@ public class NationalRailSingleBoard extends BlockPIDSBase {
 
     @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos pos, @Nonnull BlockState state) {
         return new TileEntityNationalRailSingleBoard(pos, state);
     }
 
@@ -55,20 +60,25 @@ public class NationalRailSingleBoard extends BlockPIDSBase {
     }
 
     public static class TileEntityNationalRailSingleBoard extends BlockPIDSBase.BlockEntityBase {
-
         public TileEntityNationalRailSingleBoard(int maxArrivals, BiPredicate<World, BlockPos> canStoreData, BiFunction<World, BlockPos, BlockPos> getBlockPosWithData, BlockEntityType<?> type, BlockPos pos, BlockState state) {
             super(maxArrivals, canStoreData, getBlockPosWithData, type, pos, state);
         }
 
         public TileEntityNationalRailSingleBoard(BlockPos pos, BlockState state) {
-            super(LINES, NationalRailSingleBoard::canStoreData, NationalRailSingleBoard::getBlockPosWithData, BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOARD.get(), pos, state);
+            super(
+                    LINES,
+                    NationalRailSingleBoard::canStoreData,
+                    NationalRailSingleBoard::getBlockPosWithData,
+                    BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOARD.get(),
+                    pos,
+                    state
+            );
         }
 
         @Override
         public boolean showArrivalNumber() {
             return false;
         }
-
 
         public boolean alternateLines() {
             return false;

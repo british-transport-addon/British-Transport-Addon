@@ -11,7 +11,6 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 public class RenderTramSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
-
 	public RenderTramSignal(Argument dispatcher) {
 		super(dispatcher, 12, 2);
 	}
