@@ -33,6 +33,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.eu.awesomekalin.jta.mod.util.TextRenderUtils.renderText;
+
 public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends BlockEntityRenderer<T> implements IGui, Utilities {
     private final float startX;
     private final float startY;
@@ -331,18 +333,6 @@ public class RenderBritishPIDS<T extends BlockPIDSBase.BlockEntityBase> extends 
 
             graphicsHolder.pop();
         }
-    }
-
-    private static void renderText(GraphicsHolder graphicsHolder, String text, int color, float availableWidth, boolean rightAlign) {
-        graphicsHolder.push();
-        final int textWidth = GraphicsHolder.getTextWidth(text);
-
-        if (availableWidth < textWidth) {
-            graphicsHolder.scale(textWidth == 0 ? 1 : availableWidth / textWidth, 1, 1);
-        }
-
-        graphicsHolder.drawText(text, rightAlign ? Math.max(0, (int) availableWidth - textWidth) : 0, 0, color | ARGB_BLACK, false, GraphicsHolder.getDefaultLight());
-        graphicsHolder.pop();
     }
 
     private static boolean hasDifferentCarLengths(ObjectArrayList<ArrivalResponse> arrivalResponseList) {

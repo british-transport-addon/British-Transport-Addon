@@ -27,6 +27,8 @@ import org.mtr.mod.render.QueuedRenderLayer;
 
 import javax.annotation.Nonnull;
 
+import static org.eu.awesomekalin.jta.mod.util.TextRenderUtils.renderText;
+
 public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> extends BlockEntityRenderer<T> implements IGui, Utilities {
 	private final float startX;
 	private final float startY;
@@ -121,12 +123,8 @@ public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> exten
 		}
 
 		String fullMessage = "There are ongoing engineering works across the Metrolink network. Please check before you travel.";
-		// Ensure the message length is longer than MAX_WIDTH to scroll
-		if (fullMessage.length() <= MAX_WIDTH) {
-			return fullMessage; // No scrolling needed
-		}
 
-		// Increment the scroll counter and only update scrollPosition every SCROLL_DELAY calls
+        // Increment the scroll counter and only update scrollPosition every SCROLL_DELAY calls
 		scrollCounter++;
 		if (scrollCounter >= SCROLL_DELAY) {
 			scrollPosition = (scrollPosition + 1) % fullMessage.length(); // Update scroll position
@@ -154,43 +152,27 @@ public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> exten
 		int arrivalIndex = entity.getDisplayPage() * entity.maxArrivals;
 
 		for (int i = 0; i < entity.maxArrivals; i++) {
-			final int languageTicks = (int) Math.floor(InitClient.getGameTick()) / SWITCH_LANGUAGE_TICKS;
-			final ArrivalResponse arrivalResponse;
-			final String customMessage = entity.getMessage(i);
-			final String[] destinationSplit;
-			final String[] customMessageSplit = customMessage.split("\\|");
-			final boolean renderCustomMessage;
-			final int languageIndex;
+			int languageTicks = (int) Math.floor(InitClient.getGameTick()) / SWITCH_LANGUAGE_TICKS;
+			ArrivalResponse arrivalResponse = null;
+			String customMessage = entity.getMessage(i);
+			String[] destinationSplit = new String[0];
+			String[] customMessageSplit = customMessage.split("\\|");
+			boolean renderCustomMessage = true;
+			int languageIndex = languageTicks % customMessageSplit.length;
 
-			if (entity.getHideArrival(i)) {
-				if (customMessage.isEmpty()) {
-					continue;
-				}
+			if (customMessage.isEmpty()) {
+				continue;
+			}
 
-				arrivalResponse = null;
-				destinationSplit = new String[0];
-				renderCustomMessage = true;
-				languageIndex = languageTicks % customMessageSplit.length;
-			} else {
-				arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
-				if (arrivalResponse == null) {
-					if (customMessage.isEmpty() || customMessageSplit.length == 0) {
-						continue;
-					}
+			arrivalResponse = Utilities.getElement(arrivalResponseList, arrivalIndex);
 
-					destinationSplit = new String[0];
-					renderCustomMessage = true;
-					languageIndex = languageTicks % customMessageSplit.length;
-				} else {
-					destinationSplit = arrivalResponse.getDestination().split("\\|");
-					final int messageCount = destinationSplit.length + (customMessage.isEmpty() ? 0 : customMessageSplit.length);
-					renderCustomMessage = languageTicks % messageCount >= destinationSplit.length;
+			if (!entity.getHideArrival(i) && arrivalResponse != null) {
+				destinationSplit = arrivalResponse.getDestination().split("\\|");
+				final int messageCount = destinationSplit.length + customMessageSplit.length;
+				renderCustomMessage = languageTicks % messageCount >= destinationSplit.length;
 
-					languageIndex = (languageTicks % messageCount) - (renderCustomMessage ? destinationSplit.length : 0);
-					if (!entity.alternateLines() || i % 2 == 1) {
-						arrivalIndex++;
-					}
-				}
+				languageIndex = (languageTicks % messageCount) - (renderCustomMessage ? destinationSplit.length : 0);
+				if (!entity.alternateLines() || i % 2 == 1) arrivalIndex++;
 			}
 
 			graphicsHolder.push();
@@ -200,89 +182,79 @@ public class RenderManchesterPIDS<T extends BlockPIDSBase.BlockEntityBase> exten
 			graphicsHolder.translate((startX - 8) / 16, -startY / 16 + i * maxHeight / entity.maxArrivals / 16, (startZ - 8) / 16 - SMALL_OFFSET * 2);
 			graphicsHolder.scale(1 / scale, 1 / scale, 1 / scale);
 
-			// TODO: Cleanup nested ifs
-
 			if (renderCustomMessage) {
 				renderText(graphicsHolder, customMessageSplit[languageIndex].replace(
 						"%info%",
 						getServiceInfo(arrivalResponseList.stream().findFirst().orElse(null), InitClient.findStation(entity.getPos2()))
 				), entity.textColor(), maxWidth * scale / 16, false);
+
+				graphicsHolder.pop();
+				continue;
+			}
+
+			final long arrival = (arrivalResponse.getArrival() - ArrivalsCacheClient.INSTANCE.getMillisOffset() - System.currentTimeMillis()) / 1000;
+			final int color = arrival <= 0 ? entity.textColorArrived() : entity.textColor();
+			final String destination = destinationSplit[languageIndex];
+			final boolean isCjk = IGui.isCjk(destination);
+
+			String destinationFormatted = switch (arrivalResponse.getCircularState()) {
+				case CLOCKWISE ->
+						(isCjk ? TranslationProvider.GUI_MTR_CLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_CLOCKWISE_VIA).getString(destination);
+				case ANTICLOCKWISE ->
+						(isCjk ? TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA).getString(destination);
+				default -> destination;
+			};
+
+			destinationFormatted = destinationFormatted.replace("Manchester ", "");
+			final String carLengthString = arrivalResponse.getCarCount() > 2 ? "     dbl" : "";
+			final String arrivalString;
+
+			if (arrival >= 60) {
+				arrivalString = (isCjk ? TranslationProvider.GUI_MTR_ARRIVAL_MIN_CJK : TranslationProvider.GUI_MTR_ARRIVAL_MIN).getString(arrival / 60);
+			} else if (arrival > 0) {
+				arrivalString = "Due";
 			} else {
-				final long arrival = (arrivalResponse.getArrival() - ArrivalsCacheClient.INSTANCE.getMillisOffset() - System.currentTimeMillis()) / 1000;
-				final int color = arrival <= 0 ? entity.textColorArrived() : entity.textColor();
-				final String destination = destinationSplit[languageIndex];
-				final boolean isCjk = IGui.isCjk(destination);
-				String destinationFormatted = switch (arrivalResponse.getCircularState()) {
-                    case CLOCKWISE ->
-                            (isCjk ? TranslationProvider.GUI_MTR_CLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_CLOCKWISE_VIA).getString(destination);
-                    case ANTICLOCKWISE ->
-                            (isCjk ? TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA_CJK : TranslationProvider.GUI_MTR_ANTICLOCKWISE_VIA).getString(destination);
-                    default -> destination;
-                };
+				arrivalString = "";
+			}
 
-				destinationFormatted = destinationFormatted.replace("Manchester ", "");
-				final String carLengthString = arrivalResponse.getCarCount() > 2 ? "     dbl" : "";
-				final String arrivalString;
-
-				if (arrival >= 60) {
-					arrivalString = (isCjk ? TranslationProvider.GUI_MTR_ARRIVAL_MIN_CJK : TranslationProvider.GUI_MTR_ARRIVAL_MIN).getString(arrival / 60);
-				} else if (arrival > 0) {
-					arrivalString = "Due";
+			if (entity.alternateLines()) {
+				if (i % 2 == 0) {
+					renderText(graphicsHolder, destinationFormatted, color, maxWidth * scale / 16, false);
 				} else {
-					arrivalString = "";
+					if (hasDifferentCarLengths) {
+						renderText(graphicsHolder, carLengthString, color, 32, false);
+						graphicsHolder.translate(32, 0, 0);
+					}
+
+					renderText(graphicsHolder, arrivalString, color, maxWidth * scale / 16 - (hasDifferentCarLengths ? 32 : 0), true);
+				}
+			} else {
+				final boolean showPlatformNumber = entity instanceof BlockArrivalProjectorBase.BlockEntityArrivalProjectorBase;
+
+				if (entity.showArrivalNumber()) {
+					renderText(graphicsHolder, String.valueOf(arrivalIndex), color, 12, false);
+					graphicsHolder.translate(12, 0, 0);
 				}
 
-				if (entity.alternateLines()) {
-					if (i % 2 == 0) {
-						renderText(graphicsHolder, destinationFormatted, color, maxWidth * scale / 16, false);
+				final float destinationWidth = maxWidth * scale / 16 - 40 - (hasDifferentCarLengths || showPlatformNumber ? showPlatformNumber ? 16 : 32 : 0) - (entity.showArrivalNumber() ? 12 : 0);
+				renderText(graphicsHolder, destinationFormatted, color, destinationWidth, false);
+				graphicsHolder.translate(destinationWidth, 0, 0);
+
+				if (hasDifferentCarLengths || showPlatformNumber) {
+					if (showPlatformNumber) {
+						renderText(graphicsHolder, arrivalResponse.getPlatformName(), color, 16, false);
+						graphicsHolder.translate(16, 0, 0);
 					} else {
-						if (hasDifferentCarLengths) {
-							renderText(graphicsHolder, carLengthString, color, 32, false);
-							graphicsHolder.translate(32, 0, 0);
-						}
-
-						renderText(graphicsHolder, arrivalString, color, maxWidth * scale / 16 - (hasDifferentCarLengths ? 32 : 0), true);
+						renderText(graphicsHolder, carLengthString, color, 32, false);
+						graphicsHolder.translate(32, 0, 0);
 					}
-				} else {
-					final boolean showPlatformNumber = entity instanceof BlockArrivalProjectorBase.BlockEntityArrivalProjectorBase;
-
-					if (entity.showArrivalNumber()) {
-						renderText(graphicsHolder, String.valueOf(arrivalIndex), color, 12, false);
-						graphicsHolder.translate(12, 0, 0);
-					}
-
-					final float destinationWidth = maxWidth * scale / 16 - 40 - (hasDifferentCarLengths || showPlatformNumber ? showPlatformNumber ? 16 : 32 : 0) - (entity.showArrivalNumber() ? 12 : 0);
-					renderText(graphicsHolder, destinationFormatted, color, destinationWidth, false);
-					graphicsHolder.translate(destinationWidth, 0, 0);
-
-					if (hasDifferentCarLengths || showPlatformNumber) {
-						if (showPlatformNumber) {
-							renderText(graphicsHolder, arrivalResponse.getPlatformName(), color, 16, false);
-							graphicsHolder.translate(16, 0, 0);
-						} else {
-							renderText(graphicsHolder, carLengthString, color, 32, false);
-							graphicsHolder.translate(32, 0, 0);
-						}
-					}
-
-					renderText(graphicsHolder, arrivalString, color, 40, true);
 				}
+
+				renderText(graphicsHolder, arrivalString, color, 40, true);
 			}
 
 			graphicsHolder.pop();
 		}
-	}
-
-	private static void renderText(GraphicsHolder graphicsHolder, String text, int color, float availableWidth, boolean rightAlign) {
-		graphicsHolder.push();
-		final int textWidth = GraphicsHolder.getTextWidth(text);
-
-		if (availableWidth < textWidth) {
-			graphicsHolder.scale(textWidth == 0 ? 1 : availableWidth / textWidth, 1, 1);
-		}
-
-		graphicsHolder.drawText(text, rightAlign ? Math.max(0, (int) availableWidth - textWidth) : 0, 0, color | ARGB_BLACK, false, GraphicsHolder.getDefaultLight());
-		graphicsHolder.pop();
 	}
 
 	private static boolean hasDifferentCarLengths(ObjectArrayList<ArrivalResponse> arrivalResponseList) {
