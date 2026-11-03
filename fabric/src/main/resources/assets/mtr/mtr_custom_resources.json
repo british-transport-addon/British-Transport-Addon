@@ -4140,5 +4140,103 @@
             },
             "color": "BABABA"
         }
+    ],
+    "rails": [
+        {
+            "id": "british_road",
+            "name": "rail.jta.british_road",
+            "modelResource": "mtrsteamloco:rails/british_road/british_road.obj",
+            "textureResource": "mtrsteamloco:rails/british_road/british_road.mtl",
+            "repeatInterval": 0.3,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_asphalt_pavement",
+            "name": "rail.jta.british_road_asphalt_pavement",
+            "modelResource": "mtrsteamloco:rails/british_road_asphalt_pavement/british_road_asphalt_pavement.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_asphalt_pavement/british_road_asphalt_pavement.mtl",
+            "repeatInterval": 0.6,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_asphalt_pavement_small",
+            "name": "rail.jta.british_road_asphalt_pavement_small",
+            "modelResource": "mtrsteamloco:rails/british_road_asphalt_pavement_small/british_road_asphalt_pavement_small.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_asphalt_pavement_small/british_road_asphalt_pavement_small.mtl",
+            "repeatInterval": 0.6,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_bus_stop",
+            "name": "rail.jta.british_road_bus_stop",
+            "modelResource": "mtrsteamloco:rails/british_road_bus_stop/british_road_bus_stop.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_bus_stop/british_road_bus_stop.mtl",
+            "repeatInterval": 12,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_junction",
+            "name": "rail.jta.british_road_junction",
+            "modelResource": "mtrsteamloco:rails/british_road_junction/british_road_junction.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_junction/british_road_junction.mtl",
+            "repeatInterval": 0.3,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_lime_bricks_pavement",
+            "name": "rail.jta.british_road_lime_bricks_pavement",
+            "modelResource": "mtrsteamloco:rails/british_road_lime_bricks_pavement/british_road_lime_bricks_pavement.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_lime_bricks_pavement/british_road_lime_bricks_pavement.mtl",
+            "repeatInterval": 0.6,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_neopolitan_bollard",
+            "name": "rail.jta.british_road_neopolitan_bollard",
+            "modelResource": "mtrsteamloco:rails/british_road_neopolitan_bollard/british_road_neopolitan_bollard.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_neopolitan_bollard/british_road_neopolitan_bollard.mtl",
+            "repeatInterval": 1.6,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_red_lines",
+            "name": "rail.jta.british_road_red_lines",
+            "modelResource": "mtrsteamloco:rails/british_road_red_lines/british_road_red_lines.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_red_lines/british_road_red_lines.mtl",
+            "repeatInterval": 0.3,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_yellow_lines",
+            "name": "rail.jta.british_road_yellow_lines",
+            "modelResource": "mtrsteamloco:rails/british_road_yellow_lines/british_road_yellow_lines.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_yellow_lines/british_road_yellow_lines.mtl",
+            "repeatInterval": 0.3,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_zebra_crossing",
+            "name": "rail.jta.british_road_zebra_crossing",
+            "modelResource": "mtrsteamloco:rails/british_road_zebra_crossing/british_road_zebra_crossing.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_zebra_crossing/british_road_zebra_crossing.mtl",
+            "repeatInterval": 6.2,
+            "flipTextureV": true
+        },
+        {
+            "id": "british_road_zebra_crossing_offset",
+            "name": "rail.jta.british_road_zebra_crossing_offset",
+            "modelResource": "mtrsteamloco:rails/british_road_zebra_crossing/british_road_zebra_crossing_offset.obj",
+            "textureResource": "mtrsteamloco:rails/british_road_zebra_crossing/british_road_zebra_crossing_offset.mtl",
+            "repeatInterval": 6.2,
+            "flipTextureV": true
+        },
+        {
+            "id": "nrtrack_british_platform",
+            "name": "rail.jta.nrtrack_british_platform",
+            "modelResource": "mtrsteamloco:rails/nrtrack_british_platform/track.obj",
+            "textureResource": "mtrsteamloco:rails/nrtrack_british_platform/track.mtl",
+            "repeatInterval": 0.9,
+            "flipTextureV": true
+        }
     ]
 }

@@ -349,5 +349,17 @@
     "itemGroup.jta.jta_posters": "BTA Posters",
     "itemGroup.jta.jta_railways": "BTA Railways",
     "itemGroup.jta.jta_roundels": "BTA Roundels",
-    "itemGroup.jta.jta_signs": "BTA Signs"
+    "itemGroup.jta.jta_signs": "BTA Signs",
+    "rail.jta.british_road": "British Road - Single Road",
+    "rail.jta.british_road_asphalt_pavement": "British Road - Asphalt Pavement",
+    "rail.jta.british_road_asphalt_pavement_small": "British Road - Asphalt Pavement (Small, Close)",
+    "rail.jta.british_road_bus_stop": "British Road - Single Road Bus Stop",
+    "rail.jta.british_road_junction": "British Road - Single Road (Junction)",
+    "rail.jta.british_road_lime_bricks_pavement": "British Road - Lime Bricks Pavement",
+    "rail.jta.british_road_neopolitan_bollard": "British Road - Neopolitan Bollard",
+    "rail.jta.british_road_red_lines": "British Road - Single Road With Double Red",
+    "rail.jta.british_road_yellow_lines": "British Road - Single Road With Double Yellow",
+    "rail.jta.british_road_zebra_crossing": "British Road - Single Road Zebra Crossing",
+    "rail.jta.british_road_zebra_crossing_offset": "British Road - Single Road Zebra Crossing (Offset)",
+    "rail.jta.nrtrack_british_platform": "National Rail - British Platform"
 }
