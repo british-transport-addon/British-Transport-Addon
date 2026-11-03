@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        maven { url = "https://maven.fabricmc.net/" }
+        maven { url = "https://maven.minecraftforge.net/" }
+        maven { url = "https://maven.theillusivec4.top/" }
+        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "org.gradle.toolchains.foojay-resolver-convention" version "+"
+}
+
+include("fabric")
+include("forge")
+
+rootProject.name = "British-Transport-Addon"
+include 'scripts'
+include 'common'
