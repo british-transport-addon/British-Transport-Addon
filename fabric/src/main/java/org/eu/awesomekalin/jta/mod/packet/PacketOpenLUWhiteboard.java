@@ -9,7 +9,7 @@ import org.mtr.mapping.tool.PacketBufferReceiver;
 import org.mtr.mapping.tool.PacketBufferSender;
 
 public class PacketOpenLUWhiteboard extends PacketHandler {
-    private BlockPos pos;
+    private final BlockPos pos;
 
     public PacketOpenLUWhiteboard(PacketBufferReceiver packetBufferReceiver) {
         this.pos = BlockPos.fromLong(packetBufferReceiver.readLong());

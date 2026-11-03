@@ -8,14 +8,18 @@ import org.mtr.mod.block.IBlock;
 import javax.annotation.Nonnull;
 
 public class StationHandrail extends DirectionalBlockExtension {
-
     public StationHandrail() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING).getOpposite();
         return IBlock.getVoxelShapeByDirection(0, 0, 0, 2, 16, 16, facing);
     }

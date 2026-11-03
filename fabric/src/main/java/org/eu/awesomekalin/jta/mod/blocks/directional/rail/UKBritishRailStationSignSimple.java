@@ -7,19 +7,20 @@ import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 
-public class UKBritishRailStationSignSimple extends DirectionalBlockEntityBase {
+import javax.annotation.Nonnull;
 
+public class UKBritishRailStationSignSimple extends DirectionalBlockEntityBase {
     public UKBritishRailStationSignSimple() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new TileEntityBritishRailStationSign(blockPos, blockState);
     }
 
     public static class TileEntityBritishRailStationSign extends BlockEntityExtension {
-
         public TileEntityBritishRailStationSign(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE.get(), pos, state);
         }
@@ -27,5 +28,5 @@ public class UKBritishRailStationSignSimple extends DirectionalBlockEntityBase {
         public boolean shouldRender() {
             return true;
         }
-    }//Yes! Spam!
+    }
 }

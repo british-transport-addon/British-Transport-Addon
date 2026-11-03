@@ -1,9 +1,7 @@
 package org.eu.awesomekalin.jta.mod.screen.whiteboard;
 
-import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.InitClient;
 import org.eu.awesomekalin.jta.mod.blocks.directional.UndergroundWhiteboard;
-import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
 import org.eu.awesomekalin.jta.mod.packet.entity.PacketUpdateNineLineBlockEntity;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
@@ -13,6 +11,8 @@ import org.mtr.mapping.mapper.TextFieldWidgetExtension;
 import org.mtr.mapping.tool.TextCase;
 import org.mtr.mod.client.IDrawing;
 import org.mtr.mod.data.IGui;
+
+import javax.annotation.Nonnull;
 
 public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui {
     private final TextFieldWidgetExtension line0;
@@ -25,19 +25,25 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
     private final TextFieldWidgetExtension line7;
     private final TextFieldWidgetExtension line8;
 
-    private BlockPos pos;
+    private final BlockPos pos;
     private final UndergroundWhiteboard.UndergroundWhiteboardBlockEntity cast;
 
     public UndergroundWhiteboardScreen(BlockPos pos) {
         this.pos = pos;
+
         ClientPlayerEntity player = MinecraftClient.getInstance().getPlayerMapped();
+        assert player != null;
+
         World world = player.getEntityWorld();
         BlockEntity entity = world.getBlockEntity(pos);
         assert entity != null;
+
         cast = (UndergroundWhiteboard.UndergroundWhiteboardBlockEntity) entity.data;
+
         for (MutableText text : cast.getMessages()) {
             System.out.println(text.getString());
         }
+
         line0 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine0().getString());
         line1 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine1().getString());
         line2 = new TextFieldWidgetExtension(0, 0, 0, SQUARE_SIZE, 30, TextCase.DEFAULT, "", cast.getLine2().getString());
@@ -84,7 +90,7 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
     }
 
     @Override
-    public void render(GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
+    public void render(@Nonnull GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
         line0.render(graphicsHolder, mouseX, mouseY, delta);
         line1.render(graphicsHolder, mouseX, mouseY, delta);
         line2.render(graphicsHolder, mouseX, mouseY, delta);
@@ -96,11 +102,14 @@ public class UndergroundWhiteboardScreen extends ScreenExtension implements IGui
         line8.render(graphicsHolder, mouseX, mouseY, delta);
 
         graphicsHolder.push();
+
         final GuiDrawing guiDrawing = new GuiDrawing(graphicsHolder);
         guiDrawing.beginDrawingRectangle();
         guiDrawing.drawRectangle(0, 0, getWidthMapped(), getHeightMapped(), ARGB_BLACK_TRANSLUCENT);
         guiDrawing.finishDrawingRectangle();
+
         super.render(graphicsHolder, mouseX, mouseY, delta);
+
         graphicsHolder.pop();
     }
 

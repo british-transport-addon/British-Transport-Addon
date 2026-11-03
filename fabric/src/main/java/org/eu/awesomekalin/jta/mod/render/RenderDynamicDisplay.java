@@ -16,6 +16,8 @@ import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
+import javax.annotation.Nonnull;
+
 public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.DisplayBlockEntity> {
     private int tickCounter = 0;
 
@@ -24,7 +26,13 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
     }
 
     @Override
-    public void render(DisplayBlock.DisplayBlockEntity blockEntity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(
+            DisplayBlock.DisplayBlockEntity blockEntity,
+            float tickDelta,
+            @Nonnull GraphicsHolder graphicsHolder,
+            int light,
+            int overlay
+    ) {
         tickCounter++;
         final World world = blockEntity.getWorld2();
         if (world == null) {
@@ -47,31 +55,24 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
                 0.98 + blockEntity.getPos2().getZ()
         );
 
-        switch (facing) {
-            case NORTH:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.5 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.02 + blockEntity.getPos2().getZ()
-                );
-                break;
-
-            case EAST:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.98 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.51 + blockEntity.getPos2().getZ()
-                );
-                break;
-
-            case WEST:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.02 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.51 + blockEntity.getPos2().getZ()
-                );
-                break;
-        }
+        storedMatrixTransformations = switch (facing) {
+            case NORTH -> new StoredMatrixTransformations(
+                    0.5 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.02 + blockEntity.getPos2().getZ()
+            );
+            case EAST -> new StoredMatrixTransformations(
+                    0.98 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.51 + blockEntity.getPos2().getZ()
+            );
+            case WEST -> new StoredMatrixTransformations(
+                    0.02 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.51 + blockEntity.getPos2().getZ()
+            );
+            default -> storedMatrixTransformations;
+        };
 
         DisplayResource displayResource = getDisplayResource(blockEntity);
 
@@ -120,31 +121,24 @@ public class RenderDynamicDisplay extends BlockEntityRenderer<DisplayBlock.Displ
                 0.99 + blockEntity.getPos2().getZ()
         );
 
-        switch (facing) {
-            case NORTH:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.5 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.01 + blockEntity.getPos2().getZ()
-                );
-                break;
-
-            case EAST:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.99 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.51 + blockEntity.getPos2().getZ()
-                );
-                break;
-
-            case WEST:
-                storedMatrixTransformations = new StoredMatrixTransformations(
-                        0.01 + blockEntity.getPos2().getX(),
-                        0.5 + blockEntity.getPos2().getY(),
-                        0.51 + blockEntity.getPos2().getZ()
-                );
-                break;
-        }
+        storedMatrixTransformations = switch (facing) {
+            case NORTH -> new StoredMatrixTransformations(
+                    0.5 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.01 + blockEntity.getPos2().getZ()
+            );
+            case EAST -> new StoredMatrixTransformations(
+                    0.99 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.51 + blockEntity.getPos2().getZ()
+            );
+            case WEST -> new StoredMatrixTransformations(
+                    0.01 + blockEntity.getPos2().getX(),
+                    0.5 + blockEntity.getPos2().getY(),
+                    0.51 + blockEntity.getPos2().getZ()
+            );
+            default -> storedMatrixTransformations;
+        };
 
         StoredMatrixTransformations finalStoredMatrixTransformations = storedMatrixTransformations;
         MainRenderer.scheduleRender(new Identifier("jta", "textures/block/black.png"), false, QueuedRenderLayer.INTERIOR, (graphicsHolderNew, offset) -> {

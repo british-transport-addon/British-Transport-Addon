@@ -16,6 +16,8 @@ import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mod.screen.DashboardListItem;
 import org.mtr.mod.screen.DashboardListSelectorScreen;
 
+import javax.annotation.Nonnull;
+
 public class DisplaySelectorScreen extends DashboardListSelectorScreen {
     private final BlockPos pos;
     private final ObjectImmutableList<DisplayResource> allDisplays = CustomResourceLoader.getDisplays();
@@ -42,7 +44,7 @@ public class DisplaySelectorScreen extends DashboardListSelectorScreen {
     }
 
     @Override
-    public void render(GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
+    public void render(@Nonnull GraphicsHolder graphicsHolder, int mouseX, int mouseY, float delta) {
         super.render(graphicsHolder, mouseX, mouseY, delta);
 
         if (renderSelectors) {
@@ -79,11 +81,10 @@ public class DisplaySelectorScreen extends DashboardListSelectorScreen {
         }
     }
 
-
-
     @Override
     protected void updateList() {
         super.updateList();
+
         final ClientPlayerEntity clientPlayerEntity = MinecraftClient.getInstance().getPlayerMapped();
 
         ObjectArrayList<String> selectedImages = new ObjectArrayList<>();

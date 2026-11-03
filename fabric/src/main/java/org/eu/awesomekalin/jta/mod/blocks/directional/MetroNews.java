@@ -12,10 +12,14 @@ public class MetroNews extends DirectionalBlockExtension {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
-
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
                 IBlock.getVoxelShapeByDirection(-2, 0, 6.5, 8, 3, 16, facing),

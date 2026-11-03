@@ -8,14 +8,18 @@ import org.mtr.mod.block.IBlock;
 import javax.annotation.Nonnull;
 
 public class FenceBase extends DirectionalBlockExtension {
-
     public FenceBase() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING).rotateYClockwise();
         return IBlock.getVoxelShapeByDirection(-2, 0, -10, 2, 32, 10, facing);
     }

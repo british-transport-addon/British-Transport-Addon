@@ -7,7 +7,6 @@ import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.registry.BlockRegistryObject;
 
 public class SignInit {
-
     public static final BlockRegistryObject PLATFORM_SIGN_BEE_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/bee_yellow/bee_yellow_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject PLATFORM_SIGN_BLACK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/black/black_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject PLATFORM_SIGN_BLUE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/blue/blue_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
@@ -25,6 +24,7 @@ public class SignInit {
     public static final BlockRegistryObject PLATFORM_SIGN_RUSTY = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/rusty/rusty_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject PLATFORM_SIGN_STEEL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/steel/steel_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
     public static final BlockRegistryObject PLATFORM_SIGN_YELLOW = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "sign/platform_sign/yellow/yellow_platform_sign"), () -> new Block(new PlatformSign()), CreativeTabInit.JTA_SIGNS);
+
     public static void INIT() {
         Init.LOGGER.debug("Registering British Transport Addon Signs");
     }

@@ -107,6 +107,7 @@ public class RoundelInit {
     public static final BlockRegistryObject ROUNDEL_SQUARE_TFL = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "roundel/generated/tfl/tfl_roundel_square"), () -> new Block(new RoundelSquareBase("")), CreativeTabInit.JTA_ROUNDELS);
     public static final BlockRegistryObject ROUNDEL_SQUARE_TRAMS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "roundel/generated/trams/trams_roundel_square"), () -> new Block(new RoundelSquareBase("")), CreativeTabInit.JTA_ROUNDELS);
     public static final BlockRegistryObject ROUNDEL_SQUARE_UNDERGROUND = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "roundel/generated/underground/underground_roundel_square"), () -> new Block(new RoundelSquareBase("")), CreativeTabInit.JTA_ROUNDELS);
+
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Roundels");
     }

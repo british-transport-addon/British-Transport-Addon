@@ -10,13 +10,12 @@ import org.mtr.mod.block.BlockSignalLightBase;
 import javax.annotation.Nonnull;
 
 public class DirectionBritishSignal5AspectRight extends BlockSignalLightBase {
-
     public DirectionBritishSignal5AspectRight(BlockSettings blockSettings) {
         super(blockSettings, 2, 14);
     }
 
     @Nonnull
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new DirectionBritishSignal5AspectRight.BlockEntity(blockPos, blockState);
     }
 

@@ -7,19 +7,20 @@ import org.mtr.mapping.holder.BlockState;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 
-public class MetrolinkSign extends DirectionalBlockEntityBase {
+import javax.annotation.Nonnull;
 
+public class MetrolinkSign extends DirectionalBlockEntityBase {
     public MetrolinkSign() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new MetrolinkSignEntity(blockPos, blockState);
     }
 
     public static class MetrolinkSignEntity extends BlockEntityExtension {
-
         public MetrolinkSignEntity(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.METROLINK_SIGN_ENTITY.get(), pos, state);
         }

@@ -39,17 +39,17 @@ public class CustomResourceLoader {
             }
         });
 
-        validateDataset("Displays", DISPLAYS, DisplayResource::getId);
+        validateDataset(DisplayResource::getId);
 
         Init.LOGGER.info("Loaded {} displays", DISPLAYS.size());
     }
 
-    private static <T> void validateDataset(String dataSetName, List<T> dataSet, Function<T, String> getId) {
+    private static <T> void validateDataset(Function<T, String> getId) {
         ObjectOpenHashSet<String> addedIds = new ObjectOpenHashSet<>();
-        for (T data : dataSet) {
+        for (T data : (List<T>) CustomResourceLoader.DISPLAYS) {
             String id = getId.apply(data);
             if (addedIds.contains(id)) {
-                Init.LOGGER.warn("JTA {} resource contains duplicated id {}!", dataSetName, id);
+                Init.LOGGER.warn("JTA {} resource contains duplicated id {}!", "Displays", id);
             } else {
                 addedIds.add(id);
             }

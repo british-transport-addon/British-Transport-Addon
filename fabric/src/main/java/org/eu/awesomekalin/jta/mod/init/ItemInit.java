@@ -10,7 +10,6 @@ import org.mtr.mapping.registry.BlockRegistryObject;
 import org.mtr.mapping.registry.ItemRegistryObject;
 
 public class ItemInit {
-
     public static final ItemRegistryObject FIFTY_POUND_NOTE = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "50_pound_note"), (a) -> new Item(new ItemSettings().maxCount(64)), CreativeTabInit.JTA_ITEMS);
     public static final ItemRegistryObject FIVE_POUND_NOTE = Init.REGISTRY.registerItem(new Identifier(Init.MOD_ID, "5_pound_note"), (a) -> new Item(new ItemSettings().maxCount(64)), CreativeTabInit.JTA_ITEMS);
 

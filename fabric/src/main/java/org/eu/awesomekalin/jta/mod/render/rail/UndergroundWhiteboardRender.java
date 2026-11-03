@@ -7,13 +7,13 @@ import org.mtr.mapping.mapper.BlockEntityRenderer;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
-
 
 public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.UndergroundWhiteboardBlockEntity> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
@@ -25,7 +25,17 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
     private final int textColor;
     private final Identifier font;
 
-    public UndergroundWhiteboardRender(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public UndergroundWhiteboardRender(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -39,7 +49,7 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
 
     @Override
     public void render(@Nonnull T entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;
@@ -60,6 +70,7 @@ public class UndergroundWhiteboardRender<T extends UndergroundWhiteboard.Undergr
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(180);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, entity.getLine0(), GraphicsHolder.getTextWidth(entity.getLine0()), light);

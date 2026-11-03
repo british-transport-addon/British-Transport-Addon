@@ -1,6 +1,9 @@
 package org.eu.awesomekalin.jta.mod;
 
-import org.eu.awesomekalin.jta.mod.init.*;
+import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
+import org.eu.awesomekalin.jta.mod.init.BlockInit;
+import org.eu.awesomekalin.jta.mod.init.CustomResourceLoader;
+import org.eu.awesomekalin.jta.mod.init.RoundelInit;
 import org.eu.awesomekalin.jta.mod.render.RenderBarrierPlatform;
 import org.eu.awesomekalin.jta.mod.render.RenderDynamicDisplay;
 import org.eu.awesomekalin.jta.mod.render.bus.BeeBusStopSignRender;
@@ -26,71 +29,89 @@ public final class InitClient {
                 dispatcher -> new RenderBannerRepeaterSignal<>(
                         dispatcher,
                         0xFF29D28F
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.CROSSING_BRITISH_SIGNAL,
-                RenderCrossingSignal::new);
+                RenderCrossingSignal::new
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.CROSSING_BRITISH_BARRIER,
-                RenderCrossingBarrier::new);
+                RenderCrossingBarrier::new
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.TRAM_SIGNAL,
-                RenderTramSignal::new);
+                RenderTramSignal::new
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.TRAM_JUNCTION_SIGNAL,
-                RenderTramJunctionSignal::new);
+                RenderTramJunctionSignal::new
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_1_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight1Aspect<>(
                         dispatcher,
                         0xFF29D28F
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.LARGE_DIGITAL_SIGNAL_LIGHT_1_ASPECT,
                 dispatcher -> new RenderLargeDigitalSignalLight1Aspect<>(
                         dispatcher,
                         0xFF29D28F
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_SIGNAL_LIGHT_2_ASPECT,
                 dispatcher -> new RenderDigitalSignalLight2Aspect<>(
                         dispatcher,
                         false
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_SIGNAL_LIGHT_4_ASPECT,
-                RenderSignalLight4Aspect::new);
+                RenderSignalLight4Aspect::new
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.SHUNT_SIGNAL,
                 dispatcher -> new RenderShuntSignal<>(
                         dispatcher,
                         false
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.SHUNT_SIGNAL_RIGHT,
                 dispatcher -> new RenderShuntSignal<>(
                         dispatcher,
                         true
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT,
                 dispatcher -> new RenderDirectionSignalLight5Aspect<>(
                         dispatcher,
                         true
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIRECTION_SIGNAL_LIGHT_5_ASPECT_RIGHT,
                 dispatcher -> new RenderDirectionSignalLight5Aspect<>(
                         dispatcher,
                         false
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_METROLINK3CLOCK,
@@ -129,10 +150,12 @@ public final class InitClient {
                 BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOARD,
                 RenderNationalRailSingleBoard::new
         );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAILSINGLEBOAR_DWHITE,
                 RenderNationalRailSingleBoardWhite::new
         );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL3CLOCKWHITE,
                 dispatcher -> new RenderNationalRail3ClockWhite(
@@ -146,6 +169,7 @@ public final class InitClient {
                         0xFFFFFF
                 )
         );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL10CLOCK,
                 dispatcher -> new RenderNationalRail10Clock(
@@ -159,6 +183,7 @@ public final class InitClient {
                         0xFF9900
                 )
         );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PIDS_NATIONALRAIL10CLOCKWHITE,
                 dispatcher -> new RenderNationalRail10ClockWhite(
@@ -173,13 +198,10 @@ public final class InitClient {
                 )
         );
 
-
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PROJECTION_NAME,
                 dispatcher -> new ProjectionNameRender<>(
                         dispatcher,
-                        12 / 16F,
-                        0.2F / 8,
                         0F,
                         0F,
                         -.5F,
@@ -321,7 +343,9 @@ public final class InitClient {
                         0,
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.MERSEYSIDE_SIGN_SQUARE,
                 dispatcher -> new MerseysideSignSquareRender<>(
@@ -334,7 +358,9 @@ public final class InitClient {
                         0,
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BEE_BUS_STOP,
                 dispatcher -> new BeeBusStopSignRender<>(
@@ -347,7 +373,9 @@ public final class InitClient {
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.LONDON_BUS_STOP,
                 dispatcher -> new LondonBusStopSignRender<>(
@@ -360,7 +388,9 @@ public final class InitClient {
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.METROLINK_SIGN_ENTITY,
                 dispatcher -> new MetrolinkSignRender<>(
@@ -374,7 +404,9 @@ public final class InitClient {
                         0xFF0F0F0F,
                         true,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BEE_STATION_SIGN_ENTITY,
                 dispatcher -> new BeeStationRender<>(
@@ -388,7 +420,9 @@ public final class InitClient {
                         0xFF0F0F0F,
                         true,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DIGITAL_ROUTE_SIGNAL,
                 dispatcher -> new RenderDigitalRouteSignal<>(
@@ -403,6 +437,7 @@ public final class InitClient {
                         Style.getDefaultFontIdMapped()
                 )
         );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DISPATCH_SIGNAL,
                 dispatcher -> new RenderDispatchSignal<>(
@@ -415,7 +450,9 @@ public final class InitClient {
                         0,
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.RA_SIGNAL,
                 dispatcher -> new RenderRightAwaySignal<>(
@@ -428,7 +465,8 @@ public final class InitClient {
                         0,
                         0xFFFFFFFF,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE,
@@ -443,7 +481,9 @@ public final class InitClient {
                         0xFF0F0F0F,
                         true,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.BRITISH_RAIL_STATION_SIGN_SIMPLE_WALL,
                 dispatcher -> new SimpleStationSignRenderWall<>(
@@ -456,7 +496,9 @@ public final class InitClient {
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
+
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.PLATFORM_SIGN,
                 dispatcher -> new PlatformSignRender<>(
@@ -469,7 +511,8 @@ public final class InitClient {
                         0,
                         0xFF0F0F0F,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.NSE_CLOCK,
@@ -484,7 +527,8 @@ public final class InitClient {
                         0xBED058,
                         true,
                         Style.getDefaultFontIdMapped()
-                ));
+                )
+        );
 
         REGISTRY_CLIENT.registerBlockEntityRenderer(
                 BlockEntityTypeInit.DISPLAY,

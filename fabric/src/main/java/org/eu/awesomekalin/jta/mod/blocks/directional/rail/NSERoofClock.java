@@ -7,23 +7,31 @@ import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.IBlock;
 
+import javax.annotation.Nonnull;
+
 public class NSERoofClock extends DirectionalBlockEntityBase {
     public NSERoofClock() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
+    @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         return IBlock.getVoxelShapeByDirection(-2, 0, 0, 18, 26, 8, IBlock.getStatePropertySafe(state, FACING).getOpposite());
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new NSERoofClock.TileEntityNSERoofClock(blockPos, blockState);
     }
 
     public static class TileEntityNSERoofClock extends BlockEntityExtension {
-
         public TileEntityNSERoofClock(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.NSE_CLOCK.get(), pos, state);
         }

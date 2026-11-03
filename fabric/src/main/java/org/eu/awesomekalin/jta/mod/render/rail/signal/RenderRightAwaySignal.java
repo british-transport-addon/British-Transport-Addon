@@ -1,7 +1,6 @@
 package org.eu.awesomekalin.jta.mod.render.rail.signal;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
-import org.eu.awesomekalin.jta.mod.blocks.directional.rail.DispatchSignal;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.RightAwaySignal;
 import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntAVLTreeSet;
 import org.mtr.libraries.it.unimi.dsi.fastutil.ints.IntArrayList;
@@ -13,13 +12,13 @@ import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.BlockSignalBase;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.client.IDrawing;
+import org.mtr.mod.config.Config;
 import org.mtr.mod.data.IGui;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
 import javax.annotation.Nonnull;
-
 
 public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchSignal> extends BlockEntityRenderer<T> implements IGui, IDrawing {
     private final float maxWidth;
@@ -31,7 +30,17 @@ public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchS
     private final int textColor;
     private final Identifier font;
 
-    public RenderRightAwaySignal(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor, Identifier font) {
+    public RenderRightAwaySignal(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor,
+            Identifier font
+    ) {
         super(dispatcher);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -45,7 +54,7 @@ public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchS
 
     @Override
     public void render(@Nonnull RightAwaySignal.TileEntityDispatchSignal entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
-        final Style style = Style.getEmptyMapped(); // TODO custom font not working
+        final Style style = Config.getClient().getUseMTRFont() ? Style.getEmptyMapped().withFont(font) : Style.getEmptyMapped();
 
         if (!entity.shouldRender()) {
             return;
@@ -60,7 +69,6 @@ public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchS
         final BlockState state = world.getBlockState(pos);
         final Direction facing = IBlock.getStatePropertySafe(state, DirectionalBlockExtension.FACING);
 
-
         final StoredMatrixTransformations storedMatrixTransformations = new StoredMatrixTransformations(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
         storedMatrixTransformations.add(graphicsHolderNew -> {
             graphicsHolderNew.rotateYDegrees(-facing.asRotation());
@@ -71,6 +79,7 @@ public class RenderRightAwaySignal<T extends RightAwaySignal.TileEntityDispatchS
         float angle = BlockSignalBase.getAngle(state);
         ObjectObjectImmutablePair<IntArrayList, IntAVLTreeSet> aspects = RenderBritishSignalBase.getAspects(pos, angle + 90.0F);
         IntArrayList detectedColors = (IntArrayList)aspects.left();
+
         if (!detectedColors.isEmpty()) {
             StoredMatrixTransformations storedMatrixTransformationsNew = storedMatrixTransformations.copy();
             storedMatrixTransformationsNew.add((graphicsHolderNew) -> {

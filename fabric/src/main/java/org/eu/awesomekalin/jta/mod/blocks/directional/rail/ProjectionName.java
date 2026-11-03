@@ -1,21 +1,25 @@
 package org.eu.awesomekalin.jta.mod.blocks.directional.rail;
 
+import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
-import org.eu.awesomekalin.jta.mod.screen.station.ProjectionNameScreen;
+import org.eu.awesomekalin.jta.mod.packet.PacketOpenProjectionNameScreen;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.mapper.BlockWithEntity;
+import org.mtr.mod.block.IBlock;
+
+import javax.annotation.Nonnull;
 
 public class ProjectionName extends DirectionalBlockExtension implements BlockWithEntity {
-
     public ProjectionName() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new ProjectionNameBlockEntity(blockPos, blockState);
     }
 
@@ -24,17 +28,18 @@ public class ProjectionName extends DirectionalBlockExtension implements BlockWi
         return side != Direction.UP && side != Direction.DOWN ? this.getDefaultState2().with(new Property<>(FACING.data), side.getOpposite().data) : null;
     }
 
+    @Nonnull
     @Override
-    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ProjectionNameScreen.handle(pos);
-        return ActionResult.SUCCESS;
+    public ActionResult onUse2(@Nonnull BlockState state, @Nonnull World world, @Nonnull BlockPos pos, PlayerEntity player, @Nonnull Hand hand, @Nonnull BlockHitResult hit) {
+        return IBlock.checkHoldingBrush(world, player, () -> {
+            Init.REGISTRY.sendPacketToClient(ServerPlayerEntity.cast(player), new PacketOpenProjectionNameScreen(pos));
+        });
     }
 
     public static class ProjectionNameBlockEntity extends BlockEntityExtension {
         private boolean toggleUppercase;
         private MutableText prefix, suffix;
         private float maxWidth, maxScale;
-
 
         public ProjectionNameBlockEntity(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.PROJECTION_NAME.get(), pos, state);
@@ -43,6 +48,34 @@ public class ProjectionName extends DirectionalBlockExtension implements BlockWi
             this.suffix = MutableText.cast(Text.of("Station"));
             this.maxWidth = 32 / 16F;
             this.maxScale = 0.2F / 8;
+        }
+
+        @Override
+        public void readCompoundTag(@Nonnull CompoundTag compoundTag) {
+            super.readCompoundTag(compoundTag);
+            this.toggleUppercase = compoundTag.getBoolean("toggleUppercase");
+            this.prefix = MutableText.cast(Text.of(compoundTag.getString("prefix")));
+            this.suffix = MutableText.cast(Text.of(compoundTag.getString("suffix")));
+            this.maxWidth = compoundTag.getFloat("maxWidth");
+            this.maxScale = compoundTag.getFloat("maxScale");
+        }
+
+        @Override
+        public void writeCompoundTag(@Nonnull CompoundTag compoundTag) {
+            super.writeCompoundTag(compoundTag);
+            compoundTag.putBoolean("toggleUppercase", toggleUppercase);
+            compoundTag.putString("prefix", prefix.getString());
+            compoundTag.putString("suffix", suffix.getString());
+            compoundTag.putFloat("maxWidth", maxWidth);
+            compoundTag.putFloat("maxScale", maxScale);
+        }
+
+        public void setData(boolean isUppercase, String prefix, String suffix, float maxWidth, float maxScale) {
+            this.toggleUppercase = isUppercase;
+            this.prefix = MutableText.cast(Text.of(prefix));
+            this.suffix = MutableText.cast(Text.of(suffix));
+            this.maxWidth = maxWidth;
+            this.maxScale = maxScale;
         }
 
         public MutableText getPrefix() {
@@ -64,37 +97,6 @@ public class ProjectionName extends DirectionalBlockExtension implements BlockWi
         public boolean isToggleUppercase() {
             return toggleUppercase;
         }
-
-        @Override
-        public void readCompoundTag(CompoundTag compoundTag) {
-            super.readCompoundTag(compoundTag);
-            this.toggleUppercase = compoundTag.getBoolean("toggleUppercase");
-            this.prefix = MutableText.cast(Text.of(compoundTag.getString("prefix")));
-            this.suffix = MutableText.cast(Text.of(compoundTag.getString("suffix")));
-            this.maxWidth = compoundTag.getFloat("maxWidth");
-            this.maxScale = compoundTag.getFloat("maxScale");
-        }
-
-        @Override
-        public void writeCompoundTag(CompoundTag compoundTag) {
-            super.writeCompoundTag(compoundTag);
-            compoundTag.putBoolean("toggleUppercase", toggleUppercase);
-            compoundTag.putString("prefix", prefix.getString());
-            compoundTag.putString("suffix", suffix.getString());
-            compoundTag.putFloat("maxWidth", maxWidth);
-            compoundTag.putFloat("maxScale", maxScale);
-        }
-
-        public void setData(boolean isUppercase, String prefix, String suffix, float maxWidth, float maxScale) {
-            this.toggleUppercase = isUppercase;
-            this.prefix = MutableText.cast(Text.of(prefix));
-            this.suffix = MutableText.cast(Text.of(suffix));
-            this.maxWidth = maxWidth;
-            this.maxScale = maxScale;
-        }
-
-        // we need menu fopr brush with two text box and toggle button
-        // i shall do packets
 
         public boolean shouldRender() {
             return true;

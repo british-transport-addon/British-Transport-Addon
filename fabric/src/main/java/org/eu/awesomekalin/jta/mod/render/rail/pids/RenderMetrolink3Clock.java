@@ -2,21 +2,19 @@ package org.eu.awesomekalin.jta.mod.render.rail.pids;
 
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.blocks.pids.Metrolink3Clock;
-import org.eu.awesomekalin.jta.mod.blocks.pids.NationalRail3Clock;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.GraphicsHolder;
 import org.mtr.mapping.mapper.TextHelper;
 import org.mtr.mod.block.IBlock;
 import org.mtr.mod.render.MainRenderer;
 import org.mtr.mod.render.QueuedRenderLayer;
-import org.mtr.mod.render.RenderPIDS;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
+import javax.annotation.Nonnull;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class RenderMetrolink3Clock extends RenderManchesterPIDS<Metrolink3Clock.TileEntityMetrolink3Clock> {
-
     private final float maxWidth;
     private final float maxScale;
     private final float xOffset;
@@ -25,7 +23,16 @@ public class RenderMetrolink3Clock extends RenderManchesterPIDS<Metrolink3Clock.
     private final float xTilt;
     private final int textColor;
 
-    public RenderMetrolink3Clock(Argument dispatcher, float maxWidth, float maxScale, float xOffset, float yOffset, float zOffset, float xTilt, int textColor) {
+    public RenderMetrolink3Clock(
+            Argument dispatcher,
+            float maxWidth,
+            float maxScale,
+            float xOffset,
+            float yOffset,
+            float zOffset,
+            float xTilt,
+            int textColor
+    ) {
         super(dispatcher, 1.5F, 7.5F, 6, 6.5F, 29, true, 1);
         this.maxWidth = maxWidth;
         this.maxScale = maxScale;
@@ -37,9 +44,8 @@ public class RenderMetrolink3Clock extends RenderManchesterPIDS<Metrolink3Clock.
     }
 
     @Override
-    public void render(Metrolink3Clock.TileEntityMetrolink3Clock entity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+    public void render(@Nonnull Metrolink3Clock.TileEntityMetrolink3Clock entity, float tickDelta, @Nonnull GraphicsHolder graphicsHolder, int light, int overlay) {
         super.render(entity, tickDelta, graphicsHolder, light, overlay);
-
 
         final Style style = Style.getEmptyMapped(); // TODO custom font not working
 
@@ -65,6 +71,7 @@ public class RenderMetrolink3Clock extends RenderManchesterPIDS<Metrolink3Clock.
             graphicsHolderNew.rotateZDegrees(180);
             graphicsHolderNew.rotateYDegrees(90);
         });
+
         MainRenderer.scheduleRender(QueuedRenderLayer.TEXT, (graphicsHolderNew, offset) -> {
             storedMatrixTransformations.transform(graphicsHolderNew, offset);
             render(graphicsHolderNew, roundelText, textWidth, light);
@@ -76,8 +83,6 @@ public class RenderMetrolink3Clock extends RenderManchesterPIDS<Metrolink3Clock.
             graphicsHolderNew.pop();
         });
     }
-
-
 
     private void render(GraphicsHolder graphicsHolder, MutableText roundelText, int textWidth, int light) {
         graphicsHolder.push();

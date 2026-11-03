@@ -4,7 +4,6 @@ import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
 import org.eu.awesomekalin.jta.mod.init.CustomResourceLoader;
 import org.eu.awesomekalin.jta.mod.packet.PacketOpenDisplaySelector;
-import org.jetbrains.annotations.NotNull;
 import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.*;
@@ -15,14 +14,36 @@ import javax.annotation.Nonnull;
 import java.util.List;
 
 public class DisplayBlock extends BlockExtension implements DirectionHelper, BlockWithEntity {
-
     public DisplayBlock() {
-        super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().noCollision().dynamicBounds());
+        super(BlockHelper.createBlockSettings(false, false)
+                .strength(4.0f)
+                .nonOpaque()
+                .noCollision()
+                .dynamicBounds()
+        );
     }
 
-    @NotNull
     @Override
-    public ActionResult onUse2(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public void addBlockProperties(List<HolderBase<?>> properties) {
+        properties.add(FACING);
+    }
+
+    @Override
+    public BlockState getPlacementState2(ItemPlacementContext ctx) {
+        final Direction facing = ctx.getPlayerFacing();
+        return getDefaultState2().with(new Property<>(FACING.data), facing.data);
+    }
+
+    @Nonnull
+    @Override
+    public ActionResult onUse2(
+            @Nonnull BlockState state,
+            @Nonnull World world,
+            @Nonnull BlockPos pos,
+            @Nonnull PlayerEntity player,
+            @Nonnull Hand hand,
+            @Nonnull BlockHitResult hit
+    ) {
         return IBlock.checkHoldingBrush(world, player, () -> {
             final BlockEntity entity = ServerPlayerEntity.cast(player).getEntityWorld().getBlockEntity(pos);
             ObjectArrayList<String> selectedIds;
@@ -41,25 +62,20 @@ public class DisplayBlock extends BlockExtension implements DirectionHelper, Blo
         });
     }
 
+    @Nonnull
     @Override
-    public void addBlockProperties(List<HolderBase<?>> properties) {
-        properties.add(FACING);
-    }
-
-    @Override
-    public BlockState getPlacementState2(ItemPlacementContext ctx) {
-        final Direction facing = ctx.getPlayerFacing();
-        return getDefaultState2().with(new Property<>(FACING.data), facing.data);
-    }
-
-    @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new DisplayBlockEntity(blockPos, blockState);
     }
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    public VoxelShape getOutlineShape2(
+            @Nonnull BlockState state,
+            @Nonnull BlockView world,
+            @Nonnull BlockPos pos,
+            @Nonnull ShapeContext context
+    ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(IBlock.getVoxelShapeByDirection(0, 0, 0, 16, 16, 1, facing));
     }

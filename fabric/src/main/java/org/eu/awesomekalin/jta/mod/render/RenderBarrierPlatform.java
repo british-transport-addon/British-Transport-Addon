@@ -15,14 +15,21 @@ import org.mtr.mod.render.QueuedRenderLayer;
 import org.mtr.mod.render.RenderRails;
 import org.mtr.mod.render.StoredMatrixTransformations;
 
-public class RenderBarrierPlatform extends BlockEntityRenderer<BarrierPlatformBlock.BarrierPlatformBlockEntity> {
+import javax.annotation.Nonnull;
 
+public class RenderBarrierPlatform extends BlockEntityRenderer<BarrierPlatformBlock.BarrierPlatformBlockEntity> {
 	public RenderBarrierPlatform(Argument dispatcher) {
 		super(dispatcher);
 	}
 
 	@Override
-	public void render(BarrierPlatformBlock.BarrierPlatformBlockEntity blockEntity, float tickDelta, GraphicsHolder graphicsHolder, int light, int overlay) {
+	public void render(
+			BarrierPlatformBlock.BarrierPlatformBlockEntity blockEntity,
+			float tickDelta,
+			@Nonnull GraphicsHolder graphicsHolder,
+			int light,
+			int overlay
+	) {
 		final World world = blockEntity.getWorld2();
 		if (world == null) {
 			return;
@@ -47,9 +54,8 @@ public class RenderBarrierPlatform extends BlockEntityRenderer<BarrierPlatformBl
 		}
 	}
 
-
 	@Override
-	public boolean isInRenderDistance(BarrierPlatformBlock.BarrierPlatformBlockEntity blockEntity, Vector3d position) {
+	public boolean isInRenderDistance(@Nonnull BarrierPlatformBlock.BarrierPlatformBlockEntity blockEntity, @Nonnull Vector3d position) {
 		return true;
 	}
 }

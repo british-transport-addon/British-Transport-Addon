@@ -11,13 +11,12 @@ import org.mtr.mod.block.BlockSignalLightBase;
 import javax.annotation.Nonnull;
 
 public class LargeDigitalSignal1Aspect extends BlockSignalLightBase {
-
     public LargeDigitalSignal1Aspect(BlockSettings blockSettings) {
         super(blockSettings, 2, 10);
     }
 
     @Nonnull
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new LargeDigitalSignal1Aspect.BlockEntity(blockPos, blockState);
     }
 

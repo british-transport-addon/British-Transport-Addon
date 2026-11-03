@@ -19,6 +19,7 @@ public class PacketOpenDisplaySelector extends PacketHandler {
         this.pos = BlockPos.fromLong(packetBufferReceiver.readLong());
         final int totalSelected =  packetBufferReceiver.readInt();
         this.selectedIds = new ObjectArrayList<>();
+
         for (int i = 0; i < totalSelected; i++) this.selectedIds.add(packetBufferReceiver.readString());
 
         this.width = packetBufferReceiver.readInt();
@@ -44,6 +45,6 @@ public class PacketOpenDisplaySelector extends PacketHandler {
 
     @Override
     public void runClient() {
-        ClientPacketHelper.openDisplaySelector(pos, selectedIds, width, height);
+        MinecraftClient.getInstance().openScreen(new Screen(DisplaySelectorScreen.create(pos, selectedIds, width, height)));
     }
 }

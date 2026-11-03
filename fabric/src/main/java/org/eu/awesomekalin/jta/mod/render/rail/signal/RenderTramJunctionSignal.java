@@ -15,7 +15,6 @@ import org.mtr.libraries.it.unimi.dsi.fastutil.objects.ObjectObjectImmutablePair
 import java.util.stream.Stream;
 
 public class RenderTramJunctionSignal<T extends BlockSignalBase.BlockEntityBase> extends RenderBritishSignalBase<T> {
-
 	public RenderTramJunctionSignal(Argument dispatcher) {
 		super(dispatcher, 12, 2);
 	}

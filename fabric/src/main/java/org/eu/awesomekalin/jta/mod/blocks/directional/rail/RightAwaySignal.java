@@ -7,6 +7,8 @@ import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mod.block.BlockSignalBase;
 
+import javax.annotation.Nonnull;
+
 public class RightAwaySignal extends BlockSignalBase {
     public RightAwaySignal() {
         super(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds());
@@ -18,24 +20,24 @@ public class RightAwaySignal extends BlockSignalBase {
         return getDefaultState2().with(new Property<>(FACING.data), ctx.getPlayerFacing().data);
     }
 
+    @Nonnull
     @Override
-    public BlockEntityExtension createBlockEntity(BlockPos blockPos, BlockState blockState) {
+    public BlockEntityExtension createBlockEntity(@Nonnull BlockPos blockPos, @Nonnull BlockState blockState) {
         return new TileEntityDispatchSignal(blockPos, blockState);
     }
 
     public static class TileEntityDispatchSignal extends BlockEntityBase {
-
         public TileEntityDispatchSignal(BlockPos pos, BlockState state) {
             super(BlockEntityTypeInit.RA_SIGNAL.get(), false, pos, state);
         }
 
         @Override
-        public void writeCompoundTag(CompoundTag compoundTag) {
+        public void writeCompoundTag(@Nonnull CompoundTag compoundTag) {
             super.writeCompoundTag(compoundTag);
         }
 
         @Override
-        public void readCompoundTag(CompoundTag compoundTag) {
+        public void readCompoundTag(@Nonnull CompoundTag compoundTag) {
             super.readCompoundTag(compoundTag);
         }
 
