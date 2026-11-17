@@ -1,0 +1,36 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "britishdeco:platform_top",
+		"3": "britishdeco:gray_bricks",
+		"particle": "britishdeco:platform_top"
+	},
+	"elements": [
+		{
+			"from": [0, 11, -0.25],
+			"to": [16, 16, 15.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 15.75]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 5], "texture": "#3"},
+				"east": {"uv": [0, 0, 16, 5], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 5], "texture": "#3"},
+				"west": {"uv": [0, 0, 16, 5], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#3"}
+			}
+		},
+		{
+			"from": [0, 0, 4.75],
+			"to": [16, 11, 15.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [16, 0, 15.75]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 11], "texture": "#3"},
+				"east": {"uv": [0, 0, 11, 11], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 11, 11], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#3"}
+			}
+		}
+	]
+}

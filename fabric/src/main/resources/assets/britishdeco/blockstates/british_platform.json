@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "britishdeco:block/british_platform"
+    },
+    "facing=south": {
+      "model": "britishdeco:block/british_platform",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "britishdeco:block/british_platform",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "britishdeco:block/british_platform",
+      "y": 270
+    }
+  }
+}

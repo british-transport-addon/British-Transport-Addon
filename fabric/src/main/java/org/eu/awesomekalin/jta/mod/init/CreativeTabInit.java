@@ -13,6 +13,7 @@ public class CreativeTabInit {
     public static final CreativeModeTabHolder JTA_RAILWAYS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_railways"), () -> new ItemStack(new ItemConvertible(BlockInit.BRITISH_RAIL_PLATFORM.get().data)));
     public static final CreativeModeTabHolder JTA_ROUNDELS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_roundels"), () -> new ItemStack(new ItemConvertible(RoundelInit.ROUNDEL_TFL.get().data)));
     public static final CreativeModeTabHolder JTA_SIGNS = Init.REGISTRY.createCreativeModeTabHolder(new Identifier(Init.MOD_ID, "jta_signs"), () -> new ItemStack(new ItemConvertible(SignInit.PLATFORM_SIGN_BLUE.get().data)));
+    public static final CreativeModeTabHolder BRITISHDECO_TAB = Init.REGISTRY.createCreativeModeTabHolder(new Identifier("britishdeco", "tab"), () -> new ItemStack(new ItemConvertible(BlockInit.BRITISH_PLATFORM.get().data)));
 
     public static void INIT() {
         Init.LOGGER.debug("Registering British Transport Addon Creative Tabs");

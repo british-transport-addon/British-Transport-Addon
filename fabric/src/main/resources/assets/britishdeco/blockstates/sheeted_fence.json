@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "britishdeco:block/sheeted_fence"
+    },
+    "facing=south": {
+      "model": "britishdeco:block/sheeted_fence",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "britishdeco:block/sheeted_fence",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "britishdeco:block/sheeted_fence",
+      "y": 270
+    }
+  }
+}

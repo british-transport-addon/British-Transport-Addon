@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "britishdeco:block/unauthorised_wallsign"
+    },
+    "facing=south": {
+      "model": "britishdeco:block/unauthorised_wallsign",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "britishdeco:block/unauthorised_wallsign",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "britishdeco:block/unauthorised_wallsign",
+      "y": 270
+    }
+  }
+}

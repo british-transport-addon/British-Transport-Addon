@@ -1,0 +1,38 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [162, 217],
+	"textures": {
+		"0": "britishdeco:stop_look_listen_decal",
+		"1": "britishdeco:color_gray",
+		"2": "britishdeco:metalsign_backing",
+		"particle": "britishdeco:metalsign_backing"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 0],
+			"to": [9, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.19753, 1.10599], "texture": "#1"},
+				"east": {"uv": [0, 0, 0.19753, 1.10599], "texture": "#1"},
+				"south": {"uv": [0, 0, 0.19753, 1.10599], "texture": "#1"},
+				"west": {"uv": [0, 0, 0.19753, 1.10599], "texture": "#1"},
+				"up": {"uv": [0, 0, 0.19753, 0.14747], "texture": "#1"},
+				"down": {"uv": [0, 0, 0.19753, 0.14747], "texture": "#1"}
+			}
+		},
+		{
+			"from": [5, 5, 2],
+			"to": [11, 14, 2.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 2, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 0, 9], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 9], "texture": "#1"},
+				"up": {"uv": [0, 0, 6, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 6, 0], "texture": "#1"}
+			}
+		}
+	]
+}

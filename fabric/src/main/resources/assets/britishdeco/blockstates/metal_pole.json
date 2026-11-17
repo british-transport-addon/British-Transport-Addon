@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "britishdeco:block/metal_pole"
+    },
+    "facing=south": {
+      "model": "britishdeco:block/metal_pole",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "britishdeco:block/metal_pole",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "britishdeco:block/metal_pole",
+      "y": 270
+    }
+  }
+}

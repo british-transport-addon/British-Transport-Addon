@@ -1,0 +1,23 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [162, 217],
+	"textures": {
+		"1": "britishdeco:color_gray",
+		"particle": "britishdeco:color_gray"
+	},
+	"elements": [
+		{
+			"from": [7, 0, 0],
+			"to": [9, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 0.19753, 1.17972], "texture": "#1"},
+				"east": {"uv": [0, 0, 0.19753, 1.17972], "texture": "#1"},
+				"south": {"uv": [0, 0, 0.19753, 1.17972], "texture": "#1"},
+				"west": {"uv": [0, 0, 0.19753, 1.17972], "texture": "#1"},
+				"up": {"uv": [0, 0, 0.19753, 0.14747], "texture": "#1"},
+				"down": {"uv": [0, 0, 0.19753, 0.14747], "texture": "#1"}
+			}
+		}
+	]
+}

@@ -2,6 +2,9 @@ package org.eu.awesomekalin.jta.mod.init;
 
 import org.eu.awesomekalin.jta.mod.Init;
 import org.eu.awesomekalin.jta.mod.blocks.*;
+import org.eu.awesomekalin.jta.mod.blocks.britishdeco.MetalPole;
+import org.eu.awesomekalin.jta.mod.blocks.britishdeco.SignBlock;
+import org.eu.awesomekalin.jta.mod.blocks.britishdeco.StopLookListen;
 import org.eu.awesomekalin.jta.mod.blocks.directional.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.bus.*;
 import org.eu.awesomekalin.jta.mod.blocks.directional.rail.*;
@@ -12,6 +15,7 @@ import org.mtr.mapping.holder.Identifier;
 import org.mtr.mapping.mapper.BlockExtension;
 import org.mtr.mapping.mapper.BlockHelper;
 import org.mtr.mapping.registry.BlockRegistryObject;
+import org.mtr.mod.block.BlockPlatform;
 
 public class BlockInit {
     public static final BlockRegistryObject ASPHALT = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "asphalt"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
@@ -107,6 +111,14 @@ public class BlockInit {
     public static final BlockRegistryObject WHITE_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "white_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(false, false).strength(4.0f).nonOpaque().dynamicBounds())), CreativeTabInit.JTA_BLOCKS);
 
     public static final BlockRegistryObject YELLOW_NSE_ROOF_CLOCK = Init.REGISTRY.registerBlockWithBlockItem(new Identifier(Init.MOD_ID, "yellow_nse_roof_clock"), () -> new Block(new NSERoofClock()), CreativeTabInit.JTA_RAILWAYS);
+
+    // BritishDeco blocks
+    public static final BlockRegistryObject BRITISH_PLATFORM = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "british_platform"), () -> new Block(new BlockPlatform(BlockHelper.createBlockSettings(false, false).nonOpaque(), true)), CreativeTabInit.BRITISHDECO_TAB);
+    public static final BlockRegistryObject GRAY_BRICKS = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "gray_bricks"), () -> new Block(new BlockExtension(BlockHelper.createBlockSettings(true, true))), CreativeTabInit.BRITISHDECO_TAB);
+    public static final BlockRegistryObject SHEETED_FENCE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "sheeted_fence"), () -> new Block(new SignBlock(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.BRITISHDECO_TAB);
+    public static final BlockRegistryObject STOP_LOOK_LISTEN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "stop_look_listen"), () -> new Block(new MetalPole(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.BRITISHDECO_TAB);
+    public static final BlockRegistryObject UNAUTHORISED_WALL_SIGN = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "unauthorised_wall_sign"), () -> new Block(new SignBlock(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.BRITISHDECO_TAB);
+    public static final BlockRegistryObject METAL_POLE = Init.REGISTRY.registerBlockWithBlockItem(new Identifier("britishdeco", "metal_pole"), () -> new Block(new MetalPole(BlockHelper.createBlockSettings(false, false))), CreativeTabInit.BRITISHDECO_TAB);
 
     public static void INIT() {
         Init.LOGGER.debug("Registering JTA Blocks");
