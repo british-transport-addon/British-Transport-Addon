@@ -1,4 +1,10 @@
 {
+    "block.britishdeco.british_platform": "British Platform",
+    "block.britishdeco.gray_bricks": "Gray Bricks",
+    "block.britishdeco.sheeted_fence": "Metal Sheeted Fence",
+    "block.britishdeco.stop_look_listen": "Stop Look Listen",
+    "block.britishdeco.unauthorised_wall_sign": "No Unauthorised Entry Sign",
+    "block.britishdeco.metal_pole": "Metal Pole",
     "block.jta.avanti_west_coast_sign": "Segnale Stazione (Avanti West Coast)",
     "block.jta.aws": "AWS Magnet",
     "block.jta.ballast": "Addestra Ballast",
@@ -343,6 +349,7 @@
     "gui.jta.thrown_litter": "Hai gettato %sx %s.",
     "gui.jta.ticket_barrier_locked": "Locked Ticket Barrier",
     "gui.jta.ticket_barrier_unlocked": "Unlocked Ticket Barrier",
+    "itemGroup.britishdeco.tab": "BritishDeco",
     "itemGroup.jta.jta_blocks": "BTA Blocks",
     "itemGroup.jta.jta_buses": "BTA Buses",
     "itemGroup.jta.jta_items": "BTA Items",
