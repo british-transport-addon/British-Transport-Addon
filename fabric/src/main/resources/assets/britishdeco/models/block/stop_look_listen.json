@@ -2,10 +2,10 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [162, 217],
 	"textures": {
-		"0": "britishdeco:stop_look_listen_decal",
-		"1": "britishdeco:color_gray",
-		"2": "britishdeco:metalsign_backing",
-		"particle": "britishdeco:metalsign_backing"
+		"0": "jta:britishdeco/stop_look_listen_decal",
+		"1": "jta:britishdeco/color_gray",
+		"2": "jta:britishdeco/metalsign_backing",
+		"particle": "jta:britishdeco/metalsign_backing"
 	},
 	"elements": [
 		{

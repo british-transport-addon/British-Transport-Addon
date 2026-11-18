@@ -1,8 +1,8 @@
 {
 	"credit": "Made with blockbench",
 	"textures": {
-		"1": "britishdeco:gray_bricks",
-		"particle": "britishdeco:gray_bricks"
+		"1": "jta:britishdeco/gray_bricks",
+		"particle": "jta:britishdeco/gray_bricks"
 	},
 	"elements": [
 		{
