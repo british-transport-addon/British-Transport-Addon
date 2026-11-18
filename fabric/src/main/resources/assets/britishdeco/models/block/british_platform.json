@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "jta:britishdeco/platform_top",
-		"3": "jta:britishdeco/gray_bricks",
-		"particle": "jta:britishdeco/platform_top"
+		"0": "jta:block/britishdeco/platform_top",
+		"3": "jta:block/britishdeco/gray_bricks",
+		"particle": "jta:block/britishdeco/platform_top"
 	},
 	"elements": [
 		{

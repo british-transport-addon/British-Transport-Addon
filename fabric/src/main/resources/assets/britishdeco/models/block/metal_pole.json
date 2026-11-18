@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [162, 217],
 	"textures": {
-		"1": "jta:britishdeco/color_gray",
-		"particle": "jta:britishdeco/color_gray"
+		"1": "jta:block/britishdeco/color_gray",
+		"particle": "jta:block/britishdeco/color_gray"
 	},
 	"elements": [
 		{

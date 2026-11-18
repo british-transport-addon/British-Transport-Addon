@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "jta:britishdeco/metal_sheeting",
-		"particle": "jta:britishdeco/metal_sheeting"
+		"0": "jta:block/britishdeco/metal_sheeting",
+		"particle": "jta:block/britishdeco/metal_sheeting"
 	},
 	"elements": [
 		{
