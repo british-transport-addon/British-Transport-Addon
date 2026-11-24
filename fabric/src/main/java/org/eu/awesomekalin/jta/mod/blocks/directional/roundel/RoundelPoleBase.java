@@ -37,8 +37,7 @@ public class RoundelPoleBase extends DirectionalBlockExtension implements BlockW
     ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
-                IBlock.getVoxelShapeByDirection(-4, 0, 11.4, 20, 21, 13.4, facing),
-                IBlock.getVoxelShapeByDirection(-4, 0, 2.85, 20, 21, 4.85, facing));
+                IBlock.getVoxelShapeByDirection(-4, 0, 0, 20, 21, 2.85, facing));
     }
 
     @Nonnull

@@ -1,4 +1,5 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"texture_size": [44, 44],
@@ -268,45 +269,71 @@
 		}
 	],
 	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, 3.25],
+			"scale": [0.22, 0.22, 0.22]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 0, 3.25],
+			"scale": [0.22, 0.22, 0.22]
+		},
 		"firstperson_righthand": {
+			"rotation": [0, -36.5, 0],
+			"translation": [5, -1.75, 0],
 			"scale": [0.8, 0.8, 0.8]
 		},
 		"firstperson_lefthand": {
+			"rotation": [0, -36.5, 0],
+			"translation": [0, -1.75, 0],
 			"scale": [0.8, 0.8, 0.8]
 		},
 		"ground": {
-			"translation": [0, 4, 0]
+			"translation": [0, 2, 5.25],
+			"scale": [0.43, 0.43, 0.43]
 		},
 		"gui": {
 			"rotation": [30, -44, 0],
-			"scale": [0.85, 0.85, 0.85]
+			"translation": [-4.25, -3.25, 0],
+			"scale": [0.54, 0.54, 0.54]
 		},
 		"head": {
 			"translation": [0, 12, 0]
+		},
+		"fixed": {
+			"translation": [0, -1.25, 10.75],
+			"scale": [0.79, 0.79, 0.79]
+		},
+		"on_shelf": {
+			"translation": [-0.25, 0, 7.5],
+			"scale": [0.77, 0.77, 0.77]
 		}
 	},
 	"groups": [
 		{
 			"name": "VoxelShapes",
 			"origin": [8, 8, 8],
+			"scope": 0,
 			"color": 0,
 			"children": [0]
 		},
 		{
 			"name": "Lower LU Pole Layer",
 			"origin": [0, 0, 0],
+			"scope": 0,
 			"color": 0,
 			"children": []
 		},
 		{
 			"name": "Upper LU Pole Layer",
 			"origin": [0, 0, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [1, 2, 3]
 		},
 		{
 			"name": "group",
 			"origin": [10.8091, -2.15014, 0],
+			"scope": 0,
 			"color": 0,
 			"children": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
 		}

@@ -3,6 +3,7 @@ package org.eu.awesomekalin.jta.mod.blocks.directional.roundel;
 import org.eu.awesomekalin.jta.mod.blocks.DirectionalBlockExtension;
 import org.eu.awesomekalin.jta.mod.entity.block.OneLineBlockEntity;
 import org.eu.awesomekalin.jta.mod.init.BlockEntityTypeInit;
+import org.jetbrains.annotations.NotNull;
 import org.mtr.mapping.holder.*;
 import org.mtr.mapping.mapper.BlockEntityExtension;
 import org.mtr.mapping.mapper.BlockHelper;
@@ -25,6 +26,11 @@ public class RoundelPlatformBase extends DirectionalBlockExtension implements Bl
         return new RoundelBaseBlockEntity(blockPos, blockState, defaultText);
     }
 
+    @Override
+    public @NotNull VoxelShape getCollisionShape2(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return VoxelShapes.empty();
+    }
+
     @Nonnull
     @Override
     public VoxelShape getOutlineShape2(
@@ -35,8 +41,7 @@ public class RoundelPlatformBase extends DirectionalBlockExtension implements Bl
     ) {
         final Direction facing = IBlock.getStatePropertySafe(state, FACING);
         return BlockHelper.shapeUnion(
-                IBlock.getVoxelShapeByDirection(-4, 0, 11.4, 20, 21, 13.4, facing),
-                IBlock.getVoxelShapeByDirection(-4, 0, 2.85, 20, 21, 4.85, facing));
+                IBlock.getVoxelShapeByDirection(-4, 0, 0, 20, 21, 2.85, facing));
     }
 
     @Nonnull

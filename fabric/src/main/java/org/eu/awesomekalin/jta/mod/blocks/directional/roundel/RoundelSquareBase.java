@@ -29,20 +29,6 @@ public class RoundelSquareBase extends DirectionalBlockExtension implements Bloc
 
     @Nonnull
     @Override
-    public VoxelShape getOutlineShape2(
-            @Nonnull BlockState state,
-            @Nonnull BlockView world,
-            @Nonnull BlockPos pos,
-            @Nonnull ShapeContext context
-    ) {
-        final Direction facing = IBlock.getStatePropertySafe(state, FACING);
-        return BlockHelper.shapeUnion(
-                IBlock.getVoxelShapeByDirection(-4, 0, 11.4, 20, 21, 13.4, facing),
-                IBlock.getVoxelShapeByDirection(-4, 0, 2.85, 20, 21, 4.85, facing));
-    }
-
-    @Nonnull
-    @Override
     public ActionResult onUse2(
             @Nonnull BlockState state,
             @Nonnull World world,
